@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="112"/>
+        </scene>
+        <!--Build Emoji View Controller-->
+        <scene sceneID="1n7-hk-6zf">
+            <objects>
+                <viewController storyboardIdentifier="BuildEmojiViewController" id="dZJ-bQ-Lo3" customClass="BuildEmojiViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sVC-Y7-yfa"/>
+                        <viewControllerLayoutGuide type="bottom" id="plY-Zq-kIY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ihJ-Mh-2Ve">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V5K-q7-6dQ">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvj-nD-dUg">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTW-2p-5ww">
+                                                <accessibility key="accessibilityConfiguration" hint="Canvas, this is where you compose your stickers" label="Canvas">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="302" id="7ko-AT-peC"/>
+                                            <constraint firstAttribute="height" constant="302" id="Qxf-c9-eVw"/>
+                                            <constraint firstAttribute="bottom" secondItem="uTW-2p-5ww" secondAttribute="bottom" id="RYa-u7-4su"/>
+                                            <constraint firstAttribute="trailing" secondItem="uTW-2p-5ww" secondAttribute="trailing" id="TuU-Mw-Buz"/>
+                                            <constraint firstItem="uTW-2p-5ww" firstAttribute="leading" secondItem="rvj-nD-dUg" secondAttribute="leading" id="XjG-jv-y0M"/>
+                                            <constraint firstItem="uTW-2p-5ww" firstAttribute="top" secondItem="rvj-nD-dUg" secondAttribute="top" id="Yme-E2-vX9"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-7e-wzA">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-uS-ipf" userLabel="Pick Emoji">
+                                                <accessibility key="accessibilityConfiguration" label="Add Emoji"/>
+                                                <state key="normal" image="Add Sticker"/>
+                                                <connections>
+                                                    <action selector="didTapPickEmoji:" destination="dZJ-bQ-Lo3" eventType="touchUpInside" id="VCI-Wf-qhG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-1V-P3n">
+                                                <accessibility key="accessibilityConfiguration" label="Save as sticker"/>
+                                                <state key="normal" image="Save Sticker"/>
+                                                <connections>
+                                                    <action selector="didTapSave:" destination="dZJ-bQ-Lo3" eventType="touchUpInside" id="a06-Jv-jxs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=compact" axis="vertical"/>
+                                        <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                                <variation key="widthClass=regular" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V5K-q7-6dQ" firstAttribute="centerY" secondItem="ihJ-Mh-2Ve" secondAttribute="centerY" id="2le-bp-kTh"/>
+                            <constraint firstItem="V5K-q7-6dQ" firstAttribute="centerX" secondItem="ihJ-Mh-2Ve" secondAttribute="centerX" id="hHO-3D-xsd"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="canvas" destination="uTW-2p-5ww" id="zM4-NU-JN9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGG-SL-nZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="-627"/>
+        </scene>
+        <!--Emoji Categories View Controller-->
+        <scene sceneID="UEs-3A-xFU">
+            <objects>
+                <pageViewController storyboardIdentifier="EmojiCategoriesViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="aFX-aU-bWo" customClass="EmojiCategoriesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2o-FG-7Xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2924" y="-627"/>
+        </scene>
+        <!--Emoji Category View Controller-->
+        <scene sceneID="srC-79-sRO">
+            <objects>
+                <collectionViewController storyboardIdentifier="EmojiCategoryViewController" id="z95-RQ-jJJ" customClass="EmojiCategoryViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Gxu-J7-4ty">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Qld-8m-0Ve">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCharacterCell" id="z4e-QT-bX6" customClass="EmojiCharacterCell" customModule="MessagesExtension" customModuleProvider="target">
+                                <frame key="frameInset" minX="10" minY="10" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9jb-zk-9rH"/>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="9jb-zk-9rH" firstAttribute="leading" secondItem="z4e-QT-bX6" secondAttribute="leading" id="HiS-JB-0t0"/>
+                                    <constraint firstAttribute="bottom" secondItem="9jb-zk-9rH" secondAttribute="bottom" id="LwV-2C-1zx"/>
+                                    <constraint firstItem="9jb-zk-9rH" firstAttribute="top" secondItem="z4e-QT-bX6" secondAttribute="top" id="UaV-Hf-ot7"/>
+                                    <constraint firstAttribute="trailing" secondItem="9jb-zk-9rH" secondAttribute="trailing" id="w6F-Om-N9Q"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="characterImage" destination="9jb-zk-9rH" id="Gjr-aP-UX8"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="z95-RQ-jJJ" id="Ilv-qg-BYg"/>
+                            <outlet property="delegate" destination="z95-RQ-jJJ" id="amq-vn-pqU"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smS-wR-gaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3665" y="-627"/>
+        </scene>
+        <!--Emoji Category Picker View Controller-->
+        <scene sceneID="8aE-nA-9Zh">
+            <objects>
+                <collectionViewController storyboardIdentifier="EmojiCategoryPickerViewController" id="tgQ-mh-8yL" customClass="EmojiCategoryPickerViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ix2-BT-frC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="scrollIndicatorInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OSI-Br-eRW" customClass="CenteredFlowLayout" customModule="MessagesExtension" customModuleProvider="target">
+                            <size key="itemSize" width="34" height="34"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="bqb-59-hPt" customClass="ImageCell" customModule="MessagesExtension" customModuleProvider="target">
+                                <frame key="frameInset" minX="12" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZO-zh-sGh"/>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="BZO-zh-sGh" firstAttribute="top" secondItem="bqb-59-hPt" secondAttribute="top" id="AHg-Fi-ff4"/>
+                                    <constraint firstAttribute="trailing" secondItem="BZO-zh-sGh" secondAttribute="trailing" id="cbS-R2-yRZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="BZO-zh-sGh" secondAttribute="bottom" id="eTz-do-i1q"/>
+                                    <constraint firstItem="BZO-zh-sGh" firstAttribute="leading" secondItem="bqb-59-hPt" secondAttribute="leading" id="xis-pK-Wdw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="BZO-zh-sGh" id="Gxr-Mr-Vf7"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tgQ-mh-8yL" id="04S-kg-JDT"/>
+                            <outlet property="delegate" destination="tgQ-mh-8yL" id="93e-DQ-6m9"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53X-2F-fOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4436" y="-627"/>
+        </scene>
+        <!--Stickers View Controller-->
+        <scene sceneID="7s6-Io-3Na">
+            <objects>
+                <collectionViewController storyboardIdentifier="StickersViewController" id="LtT-uZ-YfB" customClass="StickersViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="SS6-EY-F8d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UK3-ut-Aov">
+                            <size key="itemSize" width="80" height="80"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CreateCell" id="cs3-nB-Mnu" customClass="CreateCell" customModule="MessagesExtension" customModuleProvider="target">
+                                <frame key="frameInset" minX="10" minY="10" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Create Sticker" translatesAutoresizingMaskIntoConstraints="NO" id="DJW-nI-14V">
+                                            <accessibility key="accessibilityConfiguration" label="Create new sticker">
+                                                <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="DJW-nI-14V" firstAttribute="leading" secondItem="cs3-nB-Mnu" secondAttribute="leading" id="gMT-po-XP6"/>
+                                    <constraint firstAttribute="trailing" secondItem="DJW-nI-14V" secondAttribute="trailing" id="pGd-P6-5Nf"/>
+                                    <constraint firstItem="DJW-nI-14V" firstAttribute="top" secondItem="cs3-nB-Mnu" secondAttribute="top" id="peC-NY-UrO"/>
+                                    <constraint firstAttribute="bottom" secondItem="DJW-nI-14V" secondAttribute="bottom" id="xFS-5K-LFW"/>
+                                </constraints>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="4m6-cT-qN7" customClass="EmojiCell" customModule="MessagesExtension" customModuleProvider="target">
+                                <frame key="frameInset" minX="120" minY="10" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-pr-LaP" customClass="MSStickerView">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="7UB-pr-LaP" firstAttribute="top" secondItem="4m6-cT-qN7" secondAttribute="top" id="F7s-aW-cDa"/>
+                                    <constraint firstAttribute="trailing" secondItem="7UB-pr-LaP" secondAttribute="trailing" id="Vnq-fm-uvF"/>
+                                    <constraint firstItem="7UB-pr-LaP" firstAttribute="leading" secondItem="4m6-cT-qN7" secondAttribute="leading" id="Zgi-At-17O"/>
+                                    <constraint firstAttribute="bottom" secondItem="7UB-pr-LaP" secondAttribute="bottom" id="djc-FX-Lh6"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stickerView" destination="7UB-pr-LaP" id="dV3-ke-O0v"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="LtT-uZ-YfB" id="dtm-il-rGl"/>
+                            <outlet property="delegate" destination="LtT-uZ-YfB" id="Xsn-3a-uMF"/>
+                        </connections>
+                    </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHb-OO-fB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Add Sticker" width="54" height="54"/>
+        <image name="Create Sticker" width="54" height="54"/>
+        <image name="Save Sticker" width="54" height="54"/>
+    </resources>
+</document>
