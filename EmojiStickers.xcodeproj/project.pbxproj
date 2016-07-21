@@ -19,6 +19,7 @@
 		4C1C175A1D14C64000A20A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1C17591D14C64000A20A15 /* Assets.xcassets */; };
 		4C2510DE1D3D9D7A0084197B /* CenteredFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */; };
 		4C28B7521D20A10C003691C6 /* EmojiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28B7511D20A10C003691C6 /* EmojiDictionary.swift */; };
+		4C3353701D40FF0500B22375 /* sticker_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33536F1D40FF0500B22375 /* sticker_placeholder.png */; };
 		4C51F2721D3EC720006A3C15 /* SkinToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */; };
 		4C6300871D32C953008F2FC8 /* 1f453.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6300861D32C953008F2FC8 /* 1f453.pdf */; };
 		4C6300891D32CB9F008F2FC8 /* 1f576.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6300881D32CB9F008F2FC8 /* 1f576.pdf */; };
@@ -1846,7 +1847,6 @@
 		4C95BF711D1706CE00A0D90B /* StickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF701D1706CE00A0D90B /* StickersViewController.swift */; };
 		4C95BF741D17079500A0D90B /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF731D17079500A0D90B /* Emoji.swift */; };
 		4C95BF761D1707EB00A0D90B /* StickerCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF751D1707EB00A0D90B /* StickerCache.swift */; };
-		4C95BF781D17082F00A0D90B /* sticker_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C95BF771D17082F00A0D90B /* sticker_placeholder.png */; };
 		4C95BF7C1D170E8C00A0D90B /* EmojiHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF7B1D170E8C00A0D90B /* EmojiHistory.swift */; };
 		4C95BF7F1D17241600A0D90B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF7E1D17241600A0D90B /* UIImage+Extensions.swift */; };
 		4C95BF821D1749DF00A0D90B /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF811D1749DF00A0D90B /* EmojiCell.swift */; };
@@ -1913,6 +1913,7 @@
 		4C1C175B1D14C64000A20A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredFlowLayout.swift; sourceTree = "<group>"; };
 		4C28B7511D20A10C003691C6 /* EmojiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDictionary.swift; sourceTree = "<group>"; };
+		4C33536F1D40FF0500B22375 /* sticker_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_placeholder.png; sourceTree = "<group>"; };
 		4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkinToneViewController.swift; sourceTree = "<group>"; };
 		4C6300861D32C953008F2FC8 /* 1f453.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 1f453.pdf; path = Edited/1f453.pdf; sourceTree = "<group>"; };
 		4C6300881D32CB9F008F2FC8 /* 1f576.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 1f576.pdf; path = Edited/1f576.pdf; sourceTree = "<group>"; };
@@ -3740,7 +3741,6 @@
 		4C95BF701D1706CE00A0D90B /* StickersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickersViewController.swift; sourceTree = "<group>"; };
 		4C95BF731D17079500A0D90B /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		4C95BF751D1707EB00A0D90B /* StickerCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerCache.swift; sourceTree = "<group>"; };
-		4C95BF771D17082F00A0D90B /* sticker_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_placeholder.png; sourceTree = "<group>"; };
 		4C95BF7B1D170E8C00A0D90B /* EmojiHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiHistory.swift; sourceTree = "<group>"; };
 		4C95BF7E1D17241600A0D90B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		4C95BF811D1749DF00A0D90B /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
@@ -3844,8 +3844,8 @@
 				4C1C175B1D14C64000A20A15 /* Info.plist */,
 				4C6D184B1D1F01FF0083B12F /* EmojisList.plist */,
 				4C85BD081D2484D6003AAAEB /* SVG */,
-				4C95BF771D17082F00A0D90B /* sticker_placeholder.png */,
 				4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */,
+				4C33536F1D40FF0500B22375 /* sticker_placeholder.png */,
 			);
 			path = MessagesExtension;
 			sourceTree = "<group>";
@@ -6606,6 +6606,7 @@
 				4C85C8A11D2484E4003AAAEB /* 1f553.pdf in Resources */,
 				4C85C83D1D2484E4003AAAEB /* 1f4e2.pdf in Resources */,
 				4C85C6491D2484E4003AAAEB /* 1f3c3-1f3fe.pdf in Resources */,
+				4C3353701D40FF0500B22375 /* sticker_placeholder.png in Resources */,
 				4C85C8FA1D2484E4003AAAEB /* 1f5ff.pdf in Resources */,
 				4C85C4F31D2484E4003AAAEB /* 1f1f1-1f1fe.pdf in Resources */,
 				4C85C77B1D2484E4003AAAEB /* 1f470.pdf in Resources */,
@@ -6896,7 +6897,6 @@
 				4C85CA681D2484E5003AAAEB /* 1f93e-1f3ff.pdf in Resources */,
 				4C85C56E1D2484E4003AAAEB /* 1f1fd.pdf in Resources */,
 				4C85C4AB1D2484E4003AAAEB /* 1f1eb-1f1ef.pdf in Resources */,
-				4C95BF781D17082F00A0D90B /* sticker_placeholder.png in Resources */,
 				4C85CB511D2484E5003AAAEB /* 2b50.pdf in Resources */,
 				4C85C77F1D2484E4003AAAEB /* 1f471-1f3fe.pdf in Resources */,
 				4C85C5561D2484E4003AAAEB /* 1f1f9-1f1f9.pdf in Resources */,
