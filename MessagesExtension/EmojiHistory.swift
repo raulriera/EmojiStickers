@@ -11,7 +11,7 @@ import Foundation
 struct EmojiHistory {
     // MARK: Properties
     
-    private static let maximumHistorySize = 255
+    private static let maximumHistorySize = 25
     private static let userDefaultsKey = "emojiHistory"
     
     /// An array of previously created `Emoji`.

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -33,7 +34,7 @@
                         <viewControllerLayoutGuide type="bottom" id="plY-Zq-kIY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ihJ-Mh-2Ve">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V5K-q7-6dQ">
@@ -109,7 +110,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="EmojiCategoryViewController" id="z95-RQ-jJJ" customClass="EmojiCategoryViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Gxu-J7-4ty">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Qld-8m-0Ve">
@@ -145,6 +146,9 @@
                             <outlet property="delegate" destination="z95-RQ-jJJ" id="amq-vn-pqU"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="B24-Wd-FZZ" kind="show" identifier="Show Skin Tones" id="GrY-1T-xn1"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smS-wR-gaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +159,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="EmojiCategoryPickerViewController" id="tgQ-mh-8yL" customClass="EmojiCategoryPickerViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ix2-BT-frC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
@@ -197,12 +201,88 @@
             </objects>
             <point key="canvasLocation" x="4436" y="-627"/>
         </scene>
+        <!--Skin Tone View Controller-->
+        <scene sceneID="vkG-zc-DcP">
+            <objects>
+                <viewController id="B24-Wd-FZZ" customClass="SkinToneViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xII-BS-xnW"/>
+                        <viewControllerLayoutGuide type="bottom" id="gIq-lb-XHZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yHR-4Z-lT0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8hy-hv-hLk">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7o-yq-mrS">
+                                        <state key="normal" image="Skin-Tone-1"/>
+                                        <connections>
+                                            <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Ef8-BX-Rrb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shL-4W-oGk">
+                                        <state key="normal" image="Skin-Tone-2"/>
+                                        <connections>
+                                            <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Sup-BR-J2a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kA-Je-4Ht">
+                                        <state key="normal" image="Skin-Tone-3"/>
+                                        <connections>
+                                            <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="34d-LK-VZJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-jI-SFn">
+                                        <state key="normal" image="Skin-Tone-4"/>
+                                        <connections>
+                                            <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="pjF-0a-PVx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZk-aC-YCe">
+                                        <state key="normal" image="Skin-Tone-5"/>
+                                        <connections>
+                                            <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Ysx-ey-55f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw4-19-3Pg">
+                                        <state key="normal" image="Skin-Tone-6"/>
+                                        <connections>
+                                            <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="ngC-ha-XRk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8hy-hv-hLk" firstAttribute="top" secondItem="xII-BS-xnW" secondAttribute="bottom" id="DrT-4U-kiZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8hy-hv-hLk" secondAttribute="trailing" id="M4k-gE-Hna"/>
+                            <constraint firstItem="8hy-hv-hLk" firstAttribute="leading" secondItem="yHR-4Z-lT0" secondAttribute="leadingMargin" id="aWo-NO-jGL"/>
+                            <constraint firstItem="gIq-lb-XHZ" firstAttribute="top" secondItem="8hy-hv-hLk" secondAttribute="bottom" id="cct-L0-lvz"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="100"/>
+                    <connections>
+                        <outletCollection property="skinToneButtons" destination="q7o-yq-mrS" collectionClass="NSMutableArray" id="kvy-7A-0Ba"/>
+                        <outletCollection property="skinToneButtons" destination="shL-4W-oGk" collectionClass="NSMutableArray" id="eeR-KO-Gca"/>
+                        <outletCollection property="skinToneButtons" destination="3kA-Je-4Ht" collectionClass="NSMutableArray" id="nn7-cT-Xul"/>
+                        <outletCollection property="skinToneButtons" destination="GAL-jI-SFn" collectionClass="NSMutableArray" id="3DE-Ii-Gj6"/>
+                        <outletCollection property="skinToneButtons" destination="oZk-aC-YCe" collectionClass="NSMutableArray" id="mUf-mm-3ri"/>
+                        <outletCollection property="skinToneButtons" destination="Lw4-19-3Pg" collectionClass="NSMutableArray" id="cXR-IV-amk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zR6-Ee-buT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3665" y="-1288"/>
+        </scene>
         <!--Stickers View Controller-->
         <scene sceneID="7s6-Io-3Na">
             <objects>
                 <collectionViewController storyboardIdentifier="StickersViewController" id="LtT-uZ-YfB" customClass="StickersViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="SS6-EY-F8d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UK3-ut-Aov">
@@ -235,7 +315,7 @@
                                 </constraints>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="4m6-cT-qN7" customClass="EmojiCell" customModule="MessagesExtension" customModuleProvider="target">
-                                <frame key="frameInset" minX="120" minY="10" width="80" height="80"/>
+                                <frame key="frameInset" minX="101.5" minY="10" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -273,5 +353,11 @@
         <image name="Add Sticker" width="54" height="54"/>
         <image name="Create Sticker" width="54" height="54"/>
         <image name="Save Sticker" width="54" height="54"/>
+        <image name="Skin-Tone-1" width="44" height="44"/>
+        <image name="Skin-Tone-2" width="44" height="44"/>
+        <image name="Skin-Tone-3" width="44" height="44"/>
+        <image name="Skin-Tone-4" width="44" height="44"/>
+        <image name="Skin-Tone-5" width="44" height="44"/>
+        <image name="Skin-Tone-6" width="44" height="44"/>
     </resources>
 </document>

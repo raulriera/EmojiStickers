@@ -49,6 +49,23 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 		collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems())
 	}
 	
+	// MARK: Segues
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "Show Skin Tones", let sender = sender as? UIView, let controller = segue.destinationViewController as? SkinToneViewController {
+			
+			controller.onSelected = { [weak self] _ in
+				self?.collectionView?.reloadData()
+				controller.dismiss(animated: true, completion: nil)
+			}
+			
+			controller.modalPresentationStyle = .popover
+			controller.popoverPresentationController?.delegate = self
+			controller.popoverPresentationController?.sourceView = sender
+			controller.popoverPresentationController?.sourceRect = sender.bounds.insetBy(dx: sender.bounds.midX, dy: sender.bounds.midY)
+		}
+	}
+	
 	// MARK: UICollectionViewDelegateFlowLayout
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -67,8 +84,31 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	// MARK: UICollectionViewDelegate
 	
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		let emoji = category.value[indexPath.row]
-		delegate?.emojiCategoryViewController(self, didSelect: emoji)
+		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let representedEmoji = cell.representedEmoji {
+			delegate?.emojiCategoryViewController(self, didSelect: representedEmoji)
+		}
+	}
+	
+	// These following 3 methods take care of long pressing the cells and display
+	// an option controller, we will override this and present out skin tone selector
+	
+	override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let representedEmoji = cell.representedEmoji, representedEmoji.canHaveSkinToneModifier {
+			performSegue(withIdentifier: "Show Skin Tones", sender: cell)
+		}
+		
+		// We alwas return true in this method because we don't want the user to select the emoji
+		// if they are "trying out" to see which one brings up the skin tone chooser
+		return true
+	}
+	
+	override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: AnyObject?) -> Bool {
+		// Don't do anything here, see collectionView:shouldShowMenuForItemAt instead
+		return false
+	}
+	
+	override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: AnyObject?) {
+		// Don't do anything here, see collectionView:shouldShowMenuForItemAt instead
 	}
 	
 	// MARK: UICollectionViewDataSource
@@ -86,7 +126,10 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	private func dequeueEmojiCharacterCell(at indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: EmojiCharacterCell.reuseIdentifier, for: indexPath) as? EmojiCharacterCell else { fatalError("Unable to dequeue am EmojiCharacterCell") }
 		
-		let emojiCharacter = category.value[indexPath.row]
+		var emojiCharacter = category.value[indexPath.row]
+		if emojiCharacter.canHaveSkinToneModifier {
+			emojiCharacter = emojiCharacter + SkinToneCache.load().tone
+		}
 		
 		let emojiOne = EmojiOne(character: emojiCharacter) {
 			if let urlForDocument = Bundle.main.urlForResource(emojiCharacter.utf, withExtension: "pdf") {
@@ -115,5 +158,11 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 		}
 		
 		return cell
+	}
+}
+
+extension EmojiCategoryViewController: UIPopoverPresentationControllerDelegate {
+	func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+		return .none
 	}
 }

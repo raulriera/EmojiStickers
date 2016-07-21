@@ -19,6 +19,7 @@
 		4C1C175A1D14C64000A20A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1C17591D14C64000A20A15 /* Assets.xcassets */; };
 		4C2510DE1D3D9D7A0084197B /* CenteredFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */; };
 		4C28B7521D20A10C003691C6 /* EmojiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28B7511D20A10C003691C6 /* EmojiDictionary.swift */; };
+		4C51F2721D3EC720006A3C15 /* SkinToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */; };
 		4C6300871D32C953008F2FC8 /* 1f453.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6300861D32C953008F2FC8 /* 1f453.pdf */; };
 		4C6300891D32CB9F008F2FC8 /* 1f576.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6300881D32CB9F008F2FC8 /* 1f576.pdf */; };
 		4C6D184C1D1F01FF0083B12F /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C6D184B1D1F01FF0083B12F /* EmojisList.plist */; };
@@ -1853,6 +1854,7 @@
 		4CB39DB31D1B67C5009D447A /* UIView+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB39DB21D1B67C5009D447A /* UIView+Geometry.swift */; };
 		4CB85B5F1D2724F500F3227A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB85B5E1D2724F500F3227A /* ImageCache.swift */; };
 		4CB85B611D272C8100F3227A /* EmojiOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB85B601D272C8100F3227A /* EmojiOne.swift */; };
+		4CC9E5F61D40392B00668D26 /* SkinToneCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */; };
 		4CCB4DD41D3C31E0001EF33E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */; };
 		4CCB4DD61D3CE4B5001EF33E /* 1f3f3-1f308.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB4DD51D3CE4B5001EF33E /* 1f3f3-1f308.pdf */; };
 		4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */; };
@@ -1911,6 +1913,7 @@
 		4C1C175B1D14C64000A20A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredFlowLayout.swift; sourceTree = "<group>"; };
 		4C28B7511D20A10C003691C6 /* EmojiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDictionary.swift; sourceTree = "<group>"; };
+		4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkinToneViewController.swift; sourceTree = "<group>"; };
 		4C6300861D32C953008F2FC8 /* 1f453.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 1f453.pdf; path = Edited/1f453.pdf; sourceTree = "<group>"; };
 		4C6300881D32CB9F008F2FC8 /* 1f576.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 1f576.pdf; path = Edited/1f576.pdf; sourceTree = "<group>"; };
 		4C6D184B1D1F01FF0083B12F /* EmojisList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmojisList.plist; sourceTree = "<group>"; };
@@ -3745,6 +3748,7 @@
 		4CB39DB21D1B67C5009D447A /* UIView+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Geometry.swift"; sourceTree = "<group>"; };
 		4CB85B5E1D2724F500F3227A /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		4CB85B601D272C8100F3227A /* EmojiOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiOne.swift; sourceTree = "<group>"; };
+		4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkinToneCache.swift; sourceTree = "<group>"; };
 		4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4CCB4DD51D3CE4B5001EF33E /* 1f3f3-1f308.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f3f3-1f308.pdf"; sourceTree = "<group>"; };
 		4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
@@ -3832,6 +3836,7 @@
 				4CB85B5E1D2724F500F3227A /* ImageCache.swift */,
 				4C95BF801D1749D300A0D90B /* Views */,
 				4C95BF7B1D170E8C00A0D90B /* EmojiHistory.swift */,
+				4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */,
 				4C28B7511D20A10C003691C6 /* EmojiDictionary.swift */,
 				4C95BF721D17078C00A0D90B /* Model */,
 				4C1C17561D14C64000A20A15 /* MainInterface.storyboard */,
@@ -5700,6 +5705,7 @@
 				4C136A1D1D16F5F50065DC28 /* BuildEmojiViewController.swift */,
 				4C95BF701D1706CE00A0D90B /* StickersViewController.swift */,
 				4C1C17541D14C64000A20A15 /* MessagesViewController.swift */,
+				4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -7674,6 +7680,8 @@
 				4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */,
 				4CCB4DD41D3C31E0001EF33E /* UIViewController+Extensions.swift in Sources */,
 				4CB85B5F1D2724F500F3227A /* ImageCache.swift in Sources */,
+				4CC9E5F61D40392B00668D26 /* SkinToneCache.swift in Sources */,
+				4C51F2721D3EC720006A3C15 /* SkinToneViewController.swift in Sources */,
 				4C6D18521D1F2FE60083B12F /* EmojiView.swift in Sources */,
 				4C95BF821D1749DF00A0D90B /* EmojiCell.swift in Sources */,
 				4C95BF761D1707EB00A0D90B /* StickerCache.swift in Sources */,
