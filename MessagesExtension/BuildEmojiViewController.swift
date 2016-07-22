@@ -63,12 +63,40 @@ class BuildEmojiViewController: UIViewController {
 		
 		controller.didMove(toParentViewController: self)
 		
-		controller.selectEmojiHandler = { emoji, categoryIndex in
+		controller.selectEmojiHandler = { emoji, categoryIndex, selectionRect in
 			self.lastUsedCategory = categoryIndex
 			let emojiView = EmojiView(character: emoji)
-			
+
+			let originalRect = emojiView.frame
+			emojiView.frame = selectionRect
+
+			// Let's create an animation along a path that will show
+			// the emoji flying from where we selected it, to its final
+			// position in the canvas
+			let path = UIBezierPath()
+			path.move(to: selectionRect.origin)
+			path.addQuadCurve(to: self.canvas.convert(self.canvas.center, to: self.canvas.superview), controlPoint: CGPoint(x: 5, y: 5))
+
+			let moveAnimation = CAKeyframeAnimation(keyPath: "position")
+			moveAnimation.path = path.cgPath
+			moveAnimation.duration = 0.2
+
+			let resizeAnimation = CAKeyframeAnimation(keyPath: "bounds.size")
+			resizeAnimation.values = [NSValue(cgSize: selectionRect.size),
+			                          NSValue(cgSize: originalRect.size)]
+			resizeAnimation.duration = 0.2
+
+			// Because animations don't really change the properties of a view
+			// set the properties after they are finished so they stay in the
+			// position and size they animated to. Let's set the final state right before
+			// we anymore to get rid of the "flicker" effect
+			emojiView.frame = originalRect
 			emojiView.center = self.canvas.convert(self.canvas.center, to: self.canvas.superview)
-			
+
+			// Add the animations
+			emojiView.layer.add(moveAnimation, forKey: "animate position along path")
+			emojiView.layer.add(resizeAnimation, forKey: "animate size along path")
+
 			self.canvas.addSubview(emojiView)
 			
 			self.createRotateGestureRecognizer(targetView: emojiView)

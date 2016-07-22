@@ -9,7 +9,7 @@
 import UIKit
 
 class EmojiCategoriesViewController: UIPageViewController {
-	typealias SelectEmojiHandler = (String, Int) -> ()
+	typealias SelectEmojiHandler = (String, Int, CGRect) -> ()
 	
 	// MARK: Properties
 	
@@ -102,8 +102,8 @@ class EmojiCategoriesViewController: UIPageViewController {
 }
 
 extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
-	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String) {
-		selectEmojiHandler?(emoji, currentIndex)
+	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String, at rect: CGRect) {
+		selectEmojiHandler?(emoji, currentIndex, rect)
 	}
 }
 

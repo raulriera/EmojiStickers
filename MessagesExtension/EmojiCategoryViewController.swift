@@ -13,7 +13,7 @@ A delegate protocol for the `EmojiCategoryViewController` class.
 */
 protocol EmojiCategoryViewControllerDelegate: class {
 	/// Called when the user selects an emoji in the `EmojiCategoryViewController`.
-	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String)
+	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String, at rect: CGRect)
 }
 
 class EmojiCategoryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -85,7 +85,11 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let representedEmoji = cell.representedEmoji {
-			delegate?.emojiCategoryViewController(self, didSelect: representedEmoji)
+
+			let attributes = collectionView.layoutAttributesForItem(at: indexPath)
+			let rect = collectionView.convert(attributes?.frame ?? CGRect.zero, to: collectionView.superview)
+
+			delegate?.emojiCategoryViewController(self, didSelect: representedEmoji, at: rect)
 		}
 	}
 	
