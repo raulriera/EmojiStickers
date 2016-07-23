@@ -75,16 +75,22 @@ class BuildEmojiViewController: UIViewController {
 			// position in the canvas
 			let path = UIBezierPath()
 			path.move(to: selectionRect.origin)
-			path.addQuadCurve(to: self.canvas.convert(self.canvas.center, to: self.canvas.superview), controlPoint: CGPoint(x: 5, y: 5))
+
+			// Get the corners of the screen with an inset
+			let corners = self.view.bounds.insetBy(dx: 25, dy: 25).corners()
+			// Pick a random point as the control
+			let controlPoint = corners.shuffled()[0]
+
+			path.addQuadCurve(to: self.canvas.convert(self.canvas.center, to: self.canvas.superview), controlPoint: controlPoint)
 
 			let moveAnimation = CAKeyframeAnimation(keyPath: "position")
 			moveAnimation.path = path.cgPath
-			moveAnimation.duration = 0.2
+			moveAnimation.duration = 0.3
 
 			let resizeAnimation = CAKeyframeAnimation(keyPath: "bounds.size")
 			resizeAnimation.values = [NSValue(cgSize: selectionRect.size),
 			                          NSValue(cgSize: originalRect.size)]
-			resizeAnimation.duration = 0.2
+			resizeAnimation.duration = 0.3
 
 			// Because animations don't really change the properties of a view
 			// set the properties after they are finished so they stay in the
