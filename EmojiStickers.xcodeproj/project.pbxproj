@@ -27,7 +27,6 @@
 		4C6D18501D1F065A0083B12F /* EmojiCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D184F1D1F065A0083B12F /* EmojiCharacterCell.swift */; };
 		4C6D18521D1F2FE60083B12F /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D18511D1F2FE60083B12F /* EmojiView.swift */; };
 		4C751E711D4432EF00BC3101 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C751E701D4432EF00BC3101 /* Collection+Extensions.swift */; };
-		4C751E731D44331000BC3101 /* CGRect+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C751E721D44331000BC3101 /* CGRect+Geometry.swift */; };
 		4C85C4311D2484E4003AAAEB /* 0023.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C85BD0A1D2484D6003AAAEB /* 0023.pdf */; };
 		4C85C4331D2484E4003AAAEB /* 002a.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C85BD0C1D2484D6003AAAEB /* 002a.pdf */; };
 		4C85C4351D2484E4003AAAEB /* 0030.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C85BD0E1D2484D6003AAAEB /* 0030.pdf */; };
@@ -1923,7 +1922,6 @@
 		4C6D184F1D1F065A0083B12F /* EmojiCharacterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCharacterCell.swift; sourceTree = "<group>"; };
 		4C6D18511D1F2FE60083B12F /* EmojiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		4C751E701D4432EF00BC3101 /* Collection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
-		4C751E721D44331000BC3101 /* CGRect+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Geometry.swift"; sourceTree = "<group>"; };
 		4C85BD0A1D2484D6003AAAEB /* 0023.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 0023.pdf; sourceTree = "<group>"; };
 		4C85BD0C1D2484D6003AAAEB /* 002a.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 002a.pdf; sourceTree = "<group>"; };
 		4C85BD0E1D2484D6003AAAEB /* 0030.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 0030.pdf; sourceTree = "<group>"; };
@@ -3786,7 +3784,6 @@
 		4C136A1A1D16E75F0065DC28 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4C751E721D44331000BC3101 /* CGRect+Geometry.swift */,
 				4C751E701D4432EF00BC3101 /* Collection+Extensions.swift */,
 				4C136A1B1D16E7690065DC28 /* String+Emoji.swift */,
 				4C85E67A1D31A525009C1B1D /* String+Extensions.swift */,
@@ -7678,7 +7675,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C136A1E1D16F5F50065DC28 /* BuildEmojiViewController.swift in Sources */,
-				4C751E731D44331000BC3101 /* CGRect+Geometry.swift in Sources */,
 				4C85E67B1D31A525009C1B1D /* String+Extensions.swift in Sources */,
 				4C2510DE1D3D9D7A0084197B /* CenteredFlowLayout.swift in Sources */,
 				4CE8B7A01D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift in Sources */,

@@ -85,9 +85,11 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let representedEmoji = cell.representedEmoji {
-
 			let attributes = collectionView.layoutAttributesForItem(at: indexPath)
-			let rect = collectionView.convert(attributes?.frame ?? CGRect.zero, to: collectionView.superview)
+			var rect = collectionView.convert(attributes?.frame ?? CGRect.zero, to: collectionView.superview)
+			// Correct all the section insets and contentInsets in the collection views
+			// TODO: Find a better way to do this?
+			rect.origin = CGPoint(x: rect.origin.x, y: rect.origin.y + 34 + sectionInset.top + sectionInset.bottom)
 
 			delegate?.emojiCategoryViewController(self, didSelect: representedEmoji, at: rect)
 		}
