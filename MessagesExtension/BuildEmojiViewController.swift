@@ -63,38 +63,10 @@ class BuildEmojiViewController: UIViewController {
 		
 		controller.didMove(toParentViewController: self)
 		
-		controller.selectEmojiHandler = { emoji, categoryIndex, selectionRect in
-			self.lastUsedCategory = categoryIndex
-			let emojiView = EmojiView(character: emoji)
-
-			// Convert the point to the canvas coordinates
-			emojiView.frame = emojiView.convert(selectionRect, to: self.canvas)
-
-			self.canvas.addSubview(emojiView)
-
-			UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .beginFromCurrentState, animations: {
-				//emojiView.frame = originalRect
-				emojiView.center = self.canvas.convert(self.canvas.center, to: self.canvas.superview)
-				}, completion: { _ in
-
-					UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
-						emojiView.bounds.size = emojiView.defaultSize
-						}, completion: nil)
-			})
-
-			self.createRotateGestureRecognizer(targetView: emojiView)
-			self.createPinchGestureRecognizer(targetView: emojiView)
-			self.createPanGestureRecognizer(targetView: emojiView)
-			self.createDoubleTapGestureRecognizer(targetView: emojiView)
-			self.createTapGestureRecognizer(targetView: emojiView)
-						
-			// Remove any existing child controllers.
-			self.removeChildViewControllers()
-		}
-		
+		controller.selectEmojiHandler = handleEmojiSelection
 		controller.changePage(to: lastUsedCategory, animated: false)
 	}
-	
+
 	@IBAction func didTapSave(_ sender: UIButton) {
 		guard canvas.subviews.isEmpty == false else { return }
 
@@ -118,13 +90,41 @@ class BuildEmojiViewController: UIViewController {
 		}
 	}
 	
-	// MARK:
+	// MARK: Private
 	
 	private func instantiateEmojiCategoriesController() -> UIViewController {
 		// Instantiate a `EmojiCategoriesViewController` and present it.
 		guard let controller = storyboard?.instantiateViewController(withIdentifier: EmojiCategoriesViewController.storyboardIdentifier) as? EmojiCategoriesViewController else { fatalError("Unable to instantiate a EmojiCategoriesViewController from the storyboard") }
 		
 		return controller
+	}
+
+	private func handleEmojiSelection(emoji: String, categoryIndex: Int, selectionRect: CGRect) -> () {
+		lastUsedCategory = categoryIndex
+		let emojiView = EmojiView(character: emoji)
+
+		// Convert the point to the canvas coordinates
+		emojiView.frame = emojiView.convert(selectionRect, to: canvas)
+
+		canvas.addSubview(emojiView)
+
+		UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: {
+			emojiView.center = self.canvas.convert(self.canvas.center, to: self.canvas.superview)
+			}, completion: { _ in
+
+				UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
+						emojiView.bounds.size = emojiView.defaultSize
+				}, completion: nil)
+			})
+
+		createRotateGestureRecognizer(targetView: emojiView)
+		createPinchGestureRecognizer(targetView: emojiView)
+		createPanGestureRecognizer(targetView: emojiView)
+		createDoubleTapGestureRecognizer(targetView: emojiView)
+		createTapGestureRecognizer(targetView: emojiView)
+
+		// Remove any existing child controllers.
+		removeChildViewControllers()
 	}
 }
 
