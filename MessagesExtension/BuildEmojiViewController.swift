@@ -103,9 +103,11 @@ class BuildEmojiViewController: UIViewController {
 		lastUsedCategory = categoryIndex
 		let emojiView = EmojiView(character: emoji)
 
-		// Convert the point to the canvas coordinates
+		// Convert the point to the canvas coordinates, while
+		// also inseting the point because it appears it won't take into
+		// consideration the navigation bar
 		emojiView.frame = emojiView.convert(selectionRect, to: canvas)
-
+		emojiView.frame.origin = emojiView.frame.origin.insetBy(dx: 0, dy: view.frame.origin.y)
 		canvas.addSubview(emojiView)
 
 		UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: {
