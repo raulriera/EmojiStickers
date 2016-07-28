@@ -287,13 +287,13 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UK3-ut-Aov">
                             <size key="itemSize" width="80" height="80"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="44"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CreateCell" id="cs3-nB-Mnu" customClass="CreateCell" customModule="MessagesExtension" customModuleProvider="target">
-                                <frame key="frameInset" minX="10" minY="10" width="80" height="80"/>
+                                <frame key="frameInset" minX="10" minY="54" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -315,7 +315,7 @@
                                 </constraints>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="4m6-cT-qN7" customClass="EmojiCell" customModule="MessagesExtension" customModuleProvider="target">
-                                <frame key="frameInset" minX="101.5" minY="10" width="80" height="80"/>
+                                <frame key="frameInset" minX="101.5" minY="54" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -324,19 +324,59 @@
                                         <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-pr-LaP" customClass="MSStickerView">
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-NR-ByN">
+                                            <state key="normal" image="Delete Sticker"/>
+                                            <connections>
+                                                <action selector="deleteTapped:" destination="4m6-cT-qN7" eventType="touchUpInside" id="vbl-Hk-pbX"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="w3U-NR-ByN" firstAttribute="leading" secondItem="4m6-cT-qN7" secondAttribute="leading" id="9xb-ti-8f2"/>
                                     <constraint firstItem="7UB-pr-LaP" firstAttribute="top" secondItem="4m6-cT-qN7" secondAttribute="top" id="F7s-aW-cDa"/>
                                     <constraint firstAttribute="trailing" secondItem="7UB-pr-LaP" secondAttribute="trailing" id="Vnq-fm-uvF"/>
                                     <constraint firstItem="7UB-pr-LaP" firstAttribute="leading" secondItem="4m6-cT-qN7" secondAttribute="leading" id="Zgi-At-17O"/>
                                     <constraint firstAttribute="bottom" secondItem="7UB-pr-LaP" secondAttribute="bottom" id="djc-FX-Lh6"/>
+                                    <constraint firstItem="w3U-NR-ByN" firstAttribute="top" secondItem="4m6-cT-qN7" secondAttribute="top" id="nyA-Gb-aHp"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="deleteButton" destination="w3U-NR-ByN" id="UUe-03-RNB"/>
                                     <outlet property="stickerView" destination="7UB-pr-LaP" id="dV3-ke-O0v"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EditCollectionReusableView" id="bZV-fC-OeE" customClass="EditCollectionReusableView" customModule="MessagesExtension" customModuleProvider="target">
+                            <frame key="frameInset" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-wL-vvS">
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="didTapEdit:" destination="bZV-fC-OeE" eventType="touchUpInside" id="WPg-z5-RcJ"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="EMOJI STICKERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-eO-LTY">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="0vx-wL-vvS" firstAttribute="trailing" secondItem="bZV-fC-OeE" secondAttribute="trailingMargin" id="7LD-a9-ziw"/>
+                                <constraint firstItem="0vx-wL-vvS" firstAttribute="top" secondItem="bZV-fC-OeE" secondAttribute="topMargin" id="NCu-hp-Rsp"/>
+                                <constraint firstItem="0vx-wL-vvS" firstAttribute="leading" secondItem="sxn-eO-LTY" secondAttribute="trailing" constant="8" id="Obt-rQ-wQs"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="0vx-wL-vvS" secondAttribute="bottom" id="PBO-54-qHp"/>
+                                <constraint firstItem="sxn-eO-LTY" firstAttribute="centerY" secondItem="0vx-wL-vvS" secondAttribute="centerY" id="VZZ-4M-eqz"/>
+                                <constraint firstItem="sxn-eO-LTY" firstAttribute="leading" secondItem="bZV-fC-OeE" secondAttribute="leadingMargin" constant="12" id="lTZ-36-xNq"/>
+                                <constraint firstItem="0vx-wL-vvS" firstAttribute="centerY" secondItem="bZV-fC-OeE" secondAttribute="centerY" id="v9u-AT-git"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="editButton" destination="0vx-wL-vvS" id="hvp-EX-qLr"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="LtT-uZ-YfB" id="dtm-il-rGl"/>
                             <outlet property="delegate" destination="LtT-uZ-YfB" id="Xsn-3a-uMF"/>
@@ -346,12 +386,13 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHb-OO-fB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955" y="112"/>
+            <point key="canvasLocation" x="954.39999999999998" y="111.99400299850076"/>
         </scene>
     </scenes>
     <resources>
         <image name="Add Sticker" width="54" height="54"/>
         <image name="Create Sticker" width="54" height="54"/>
+        <image name="Delete Sticker" width="34" height="34"/>
         <image name="Save Sticker" width="54" height="54"/>
         <image name="Skin-Tone-1" width="44" height="44"/>
         <image name="Skin-Tone-2" width="44" height="44"/>

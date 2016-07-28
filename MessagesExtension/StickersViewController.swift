@@ -22,13 +22,24 @@ class StickersViewController: UICollectionViewController {
         case sticker(Emoji)
         case create
     }
+
+	/// An enumeration that represents the current status of the collection view
+	enum CollectionViewStatus {
+		case browsing
+		case editing
+	}
     
     // MARK: Properties
     
     static let storyboardIdentifier = "StickersViewController"
     weak var delegate: StickersViewControllerDelegate?
 
-    private let items: [CollectionViewItem]
+	private var status: CollectionViewStatus = .browsing {
+		didSet {
+			collectionView?.reloadData()
+		}
+	}
+    private var items: [CollectionViewItem]
     private let stickerCache = StickerCache.cache
     
     // MARK: Initialization
@@ -42,8 +53,18 @@ class StickersViewController: UICollectionViewController {
         items.insert(.create, at: 0)
         
         self.items = items
+
         super.init(coder: aDecoder)
     }
+
+	// MARK: Life cycle
+
+	override func didMove(toParentViewController parent: UIViewController?) {
+		super.didMove(toParentViewController: parent)
+
+		// Offset the collection view content to hide the "EditCollectionReusableView"
+		collectionView?.contentOffset = CGPoint(x: 0, y: 44)
+	}
 		
     // MARK: Convenience
 	
@@ -55,6 +76,7 @@ class StickersViewController: UICollectionViewController {
         // Use a placeholder sticker while we fetch the real one from the cache.
         let cache = StickerCache.cache
         cell.stickerView.sticker = cache.placeholderSticker
+		cell.collectionViewStatus = status
         
         // Fetch the sticker for the emoji from the cache.
         cache.sticker(for: emoji) { sticker in
@@ -73,6 +95,17 @@ class StickersViewController: UICollectionViewController {
         
         return cell
     }
+
+	private func dequeueEditStickersReusableView(at indexPath: IndexPath) -> UICollectionReusableView {
+		guard let view = collectionView?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: EditCollectionReusableView.reuseIdentifier, for: indexPath) as? EditCollectionReusableView else { fatalError("Unable to dequeue a EditCollectionReusableView") }
+
+		view.collectionViewStatus = status
+		view.toggleEditModeHandler = { [weak self] newStatus in
+			self?.status = newStatus
+		}
+
+		return view
+	}
 }
 
 // MARK: UICollectionViewDataSource
@@ -95,12 +128,28 @@ extension StickersViewController {
             return dequeueCreateCell(at: indexPath)
         }
     }
+
+	override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+		return dequeueEditStickersReusableView(at: indexPath)
+	}
 }
 
 // MARK: UICollectionViewDelegate
 
 extension StickersViewController {
-    
+
+	override func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+		guard status == .editing else { return false }
+		// We can move all cells except the first one
+		return indexPath.row != 0
+	}
+
+	override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+		// TODO: Update the contents of EmojiHistory so this new order 
+		// gets stored for future references
+		swap(&items[sourceIndexPath.row], &items[destinationIndexPath.row])
+	}
+
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.row]
         
