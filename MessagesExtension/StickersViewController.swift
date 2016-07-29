@@ -39,7 +39,25 @@ class StickersViewController: UICollectionViewController {
 			collectionView?.reloadData()
 		}
 	}
-    private var items: [CollectionViewItem]
+	private var items: [CollectionViewItem] {
+		didSet {
+			let emojis: [Emoji] = items.dropFirst().flatMap { item in
+				switch item {
+				case .sticker(let emoji):
+					return emoji
+				case .create:
+					return nil
+				}
+			}
+
+			// Get the history and update the content with the 
+			// reversed order of the current items. We do this
+			// because we reversed this when we loaded the history
+			// for the first time
+			var history = EmojiHistory.load()
+			history.update(with: emojis.reversed())
+		}
+	}
     private let stickerCache = StickerCache.cache
     
     // MARK: Initialization
@@ -77,7 +95,8 @@ class StickersViewController: UICollectionViewController {
         let cache = StickerCache.cache
         cell.stickerView.sticker = cache.placeholderSticker
 		cell.collectionViewStatus = status
-        
+		cell.deleteHandler = handleDeleteEmojiSticker
+
         // Fetch the sticker for the emoji from the cache.
         cache.sticker(for: emoji) { sticker in
             OperationQueue.main.addOperation {
@@ -105,6 +124,33 @@ class StickersViewController: UICollectionViewController {
 		}
 
 		return view
+	}
+
+	// MARK:
+
+	private func handleDeleteEmojiSticker(sticker: Emoji) {
+		// Remove the first index, that is always the create button
+		// transform everything to an emoji so it can be queried 
+		// easier. We don't need nils
+		let stickers: [Emoji] = items.dropFirst().flatMap { item in
+			switch item {
+			case .sticker(let emoji):
+				return emoji
+			case .create:
+				return nil
+			}
+		}
+
+		collectionView?.performBatchUpdates({ 
+			// Find the index path we want to delete
+			guard let stickerIndex = stickers.index(where: { $0 == sticker }) else { return }
+			// Shift the index by 1 because the first index is always the "create sticker" button
+			let indexPath = IndexPath(row: stickerIndex + 1, section: 0)
+			// Delete the item from the dataSource
+			self.items.remove(at: indexPath.row)
+			// Remove from the collectionView
+			self.collectionView?.deleteItems(at: [indexPath])
+		}, completion: nil)
 	}
 }
 
@@ -145,9 +191,17 @@ extension StickersViewController {
 	}
 
 	override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-		// TODO: Update the contents of EmojiHistory so this new order 
-		// gets stored for future references
+		// Copy the array so the compiler doesn't get crazy with the computed property
+		// and the following `swap`
+		var items = self.items
 		swap(&items[sourceIndexPath.row], &items[destinationIndexPath.row])
+		// Update the array
+		self.items = items
+	}
+
+	override func collectionView(_ collectionView: UICollectionView, targetIndexPathForMoveFromItemAt originalIndexPath: IndexPath, toProposedIndexPath proposedIndexPath: IndexPath) -> IndexPath {
+		// Don't allow the first row to be replaced
+		return proposedIndexPath.row == 0 ? originalIndexPath : proposedIndexPath
 	}
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -10,6 +10,8 @@ import UIKit
 import Messages
 
 class EmojiCell: UICollectionViewCell {
+	typealias DeleteHandler = (Emoji) -> Void
+
 	@IBOutlet weak var stickerView: MSStickerView!
 	@IBOutlet private weak var deleteButton: UIButton!
 
@@ -20,11 +22,13 @@ class EmojiCell: UICollectionViewCell {
 			updateStatus()
 		}
 	}
+	var deleteHandler: DeleteHandler?
 
 	// MARK: IBActions
 
 	@IBAction func deleteTapped(_ sender: UIButton) {
-		print("DELETE TAPPED")
+		guard let representedEmoji = representedEmoji else { return }
+		deleteHandler?(representedEmoji)
 	}
 
 	// MARK: Private

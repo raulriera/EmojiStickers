@@ -11,7 +11,7 @@ import Foundation
 struct EmojiHistory {
     // MARK: Properties
     
-    private static let maximumHistorySize = 25
+    private static let maximumHistorySize = 250
     private static let userDefaultsKey = "emojiHistory"
     
     /// An array of previously created `Emoji`.
@@ -53,10 +53,10 @@ struct EmojiHistory {
     
     /// Saves the history.
     func save() {
-        // Save a maximum number ice creams.
+        // Save a maximum number of stickers.
         let emojisToSave = emojis.suffix(EmojiHistory.maximumHistorySize)
         
-        // Map the emojis to an array of UUID strings.
+        // Map the stickers to an array of UUID strings.
         let stickersUUIDStrings: [String] = emojisToSave.map { $0.uuid.uuidString }
         
         let defaults = UserDefaults.standard
@@ -73,6 +73,11 @@ struct EmojiHistory {
         
         emojis = newEmojis
     }
+
+	mutating func update(with emojis: [Emoji]) {
+		self.emojis = emojis
+		save()
+	}
 }
 
 /**

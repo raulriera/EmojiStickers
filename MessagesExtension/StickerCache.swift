@@ -35,8 +35,7 @@ class StickerCache {
     
     private init() {
         let fileManager = FileManager.default
-        //let tempPath = NSTemporaryDirectory()
-        let directoryName = "stickers"//UUID().uuidString
+        let directoryName = "stickers"
 		let tempPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
         do {
