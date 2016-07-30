@@ -50,10 +50,6 @@ class StickersViewController: UICollectionViewController {
 				}
 			}
 
-			// Get the history and update the content with the 
-			// reversed order of the current items. We do this
-			// because we reversed this when we loaded the history
-			// for the first time
 			var history = EmojiHistory.load()
 			history.update(with: emojis.reversed())
 		}

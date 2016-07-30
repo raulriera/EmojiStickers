@@ -10,22 +10,21 @@ import UIKit
 import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
-	
+
     // MARK: - Conversation Handling
     
     override func willBecomeActive(with conversation: MSConversation) {
         super.willBecomeActive(with: conversation)
-        
-        // Present the view controller for the appropriate presentation style.
-        presentViewController(for: presentationStyle)
+		// Present the view controller for the appropriate presentation style.
+		presentViewController(for: presentationStyle)
     }
     
     // MARK: MSMessagesAppViewController
-    
-    override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-		// Present the view controller for the appropriate presentation style.
-        presentViewController(for: presentationStyle)
-    }
+
+	override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+		super.didTransition(to: presentationStyle)
+		presentViewController(for: presentationStyle)
+	}
     
     // MARK: Private
     
@@ -64,7 +63,7 @@ class MessagesViewController: MSMessagesAppViewController {
 		} else {
 			controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
 		}
-		
+
         controller.didMove(toParentViewController: self)
     }
     
