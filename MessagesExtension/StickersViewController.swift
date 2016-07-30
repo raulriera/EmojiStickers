@@ -147,6 +147,9 @@ class StickersViewController: UICollectionViewController {
 			// Remove from the collectionView
 			self.collectionView?.deleteItems(at: [indexPath])
 		}, completion: nil)
+
+		// Delete the sticker from the cache
+		stickerCache.delete(sticker)
 	}
 }
 

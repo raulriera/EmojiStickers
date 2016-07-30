@@ -95,4 +95,27 @@ class StickerCache {
         // Add the operation to the queue to start the work.
         queue.addOperation(operation)
     }
+
+	func delete(_ emoji: Emoji) {
+		// Determine the URL for the sticker.
+		let fileName = emoji.uuid.uuidString + ".png"
+		guard let url = try? cacheURL.appendingPathComponent(fileName) else { fatalError("Unable to create sticker URL") }
+
+		// Create an operation to process the request.
+		let operation = BlockOperation {
+			// Check if the sticker already exists at the URL.
+			let fileManager = FileManager.default
+			guard !fileManager.fileExists(atPath: url.absoluteString!) else { return }
+
+			do {
+				try fileManager.removeItem(at: url)
+			}
+			catch {
+				print("Unable to remove sticker: \(error)")
+			}
+		}
+
+		// Add the operation to the queue to start the work.
+		queue.addOperation(operation)
+	}
 }

@@ -18,15 +18,18 @@ class EditCollectionReusableView: UICollectionReusableView {
 	var collectionViewStatus: StickersViewController.CollectionViewStatus = .browsing
 
 	@IBAction func didTapEdit(_ sender: UIButton) {
+		let buttonTitle: String
+		
 		switch collectionViewStatus {
 		case .browsing:
-			sender.setTitle("Done", for: .normal)
+			buttonTitle = NSLocalizedString("Done", comment: "Button when the user wants to stop editing the stickers")
 			collectionViewStatus = .editing
 		case .editing:
-			sender.setTitle("Edit", for: .normal)
+			buttonTitle = NSLocalizedString("Edit", comment: "Button when the user wants to start editing the stickers")
 			collectionViewStatus = .browsing
 		}
 
+		sender.setTitle(buttonTitle, for: .normal)
 		toggleEditModeHandler?(collectionViewStatus)
 	}
 }

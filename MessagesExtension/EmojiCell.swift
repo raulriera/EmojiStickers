@@ -19,10 +19,19 @@ class EmojiCell: UICollectionViewCell {
 	var representedEmoji: Emoji?
 	var collectionViewStatus: StickersViewController.CollectionViewStatus = .browsing {
 		didSet {
+			guard collectionViewStatus != oldValue else { return }
 			updateStatus()
 		}
 	}
 	var deleteHandler: DeleteHandler?
+
+	override func prepareForReuse() {
+		super.prepareForReuse()
+
+		if case .editing = collectionViewStatus {
+			startJiggling()
+		}
+	}
 
 	// MARK: IBActions
 
@@ -49,7 +58,7 @@ class EmojiCell: UICollectionViewCell {
 
 	private func startJiggling() {
 		for animation in CAKeyframeAnimation.jiggle() {
-			contentView.layer.add(animation, forKey: nil)
+			contentView.layer.add(animation, forKey: animation.keyPath)
 		}
 	}
 
