@@ -46,13 +46,13 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 			minimumInteritemSpacing = 20
 		}
 		
-		collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems())
+		collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems)
 	}
 	
 	// MARK: Segues
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-		if segue.identifier == "Show Skin Tones", let sender = sender as? UIView, let controller = segue.destinationViewController as? SkinToneViewController {
+		if segue.identifier == "Show Skin Tones", let sender = sender as? UIView, let controller = segue.destination as? SkinToneViewController {
 			
 			controller.onSelected = { [weak self] _ in
 				self?.collectionView?.reloadData()
@@ -135,7 +135,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 		}
 		
 		let emojiOne = EmojiOne(character: emojiCharacter) {
-			if let urlForDocument = Bundle.main.urlForResource(emojiCharacter.utf, withExtension: "pdf") {
+			if let urlForDocument = Bundle.main.url(forResource: emojiCharacter.utf, withExtension: "pdf") {
 				let document = CGPDFDocument(urlForDocument)!
 				let image = UIImage(document: document)
 				return image

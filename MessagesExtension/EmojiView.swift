@@ -19,7 +19,7 @@ class EmojiView: UIImageView {
 	init(character: String) {
 		self.character = character
 		super.init(frame: CGRect(origin: .zero, size: defaultSize))
-		backgroundColor = .clear()
+		backgroundColor = .clear
 		isUserInteractionEnabled = true
 		
 		isAccessibilityElement = true
@@ -40,7 +40,7 @@ class EmojiView: UIImageView {
 	// MARK: Private
 	
 	private func updateImageFromPDF() {
-		if let urlForDocument = Bundle.main.urlForResource(character.utf, withExtension: "pdf") {
+		if let urlForDocument = Bundle.main.url(forResource: character.utf, withExtension: "pdf") {
 			let document = CGPDFDocument(urlForDocument)!
 			let image = UIImage(document: document, at: bounds.size)
 			self.image = image

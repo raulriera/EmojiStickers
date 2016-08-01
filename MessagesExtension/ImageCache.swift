@@ -71,13 +71,13 @@ final class ImageCache {
 	
 	func image(for cachable: Cachable, completion: (image: UIImage) -> Void) {
 		let fileName = cachable.identifier + ".png"
-		guard let url = try? cacheURL.appendingPathComponent(fileName) else { fatalError("Unable to create image URL") }
+		let url = cacheURL.appendingPathComponent(fileName)
 		
 		// Create an operation to process the request.
 		let operation = BlockOperation {
 			// Check if the image already exists at the URL.
 			let fileManager = FileManager.default
-			guard fileManager.fileExists(atPath: url.path!) == false else {
+			guard fileManager.fileExists(atPath: url.path) == false else {
 				return
 			}
 			
@@ -95,7 +95,7 @@ final class ImageCache {
 		
 		// Set the operation's completion block to call the request's completion handler.
 		operation.completionBlock = {
-			guard let imagePath = url.path, let image = UIImage(contentsOfFile: imagePath) else {
+			guard let image = UIImage(contentsOfFile: url.path) else {
 				print("Failed to read image from \(url)")
 				return
 			}

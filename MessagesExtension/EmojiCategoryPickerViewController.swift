@@ -84,8 +84,8 @@ class EmojiCategoryPickerViewController: UICollectionViewController {
 		
 		let shape = CAShapeLayer()
 		shape.path = mask.path
-		shape.fillColor = UIColor.clear().cgColor
-		shape.strokeColor = UIColor.lightGray().cgColor
+		shape.fillColor = UIColor.clear.cgColor
+		shape.strokeColor = UIColor.lightGray.cgColor
 		shape.borderWidth = 0.5
 		shape.name = "roundedBar"
 		

@@ -35,7 +35,7 @@ struct EmojiDictionary {
 	}
 	
 	init() {
-		let path = Bundle.main.pathForResource("EmojisList", ofType: "plist")!
+		let path = Bundle.main.path(forResource: "EmojisList", ofType: "plist")!
 		let dictionary = NSDictionary(contentsOfFile: path)!
 		let contentsOfFile = dictionary as! [String: [String]]
 		

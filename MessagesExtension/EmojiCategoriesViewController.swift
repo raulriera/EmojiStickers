@@ -31,7 +31,7 @@ class EmojiCategoriesViewController: UIPageViewController {
 		dataSource = self
 		delegate = self
 		
-		view.backgroundColor = UIColor.groupTableViewBackground()
+		view.backgroundColor = UIColor.groupTableViewBackground
 		
 		presentCategoryPickerController()
 		changePage(to: 0)

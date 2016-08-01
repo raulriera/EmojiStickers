@@ -20,7 +20,7 @@ class StickerCache {
      sticker is being fetched from the cache.
      */
     let placeholderSticker: MSSticker = {
-        guard let placeholderURL = Bundle.main.urlForResource("sticker_placeholder", withExtension: "png") else { fatalError("Unable to find placeholder sticker image") }
+		guard let placeholderURL = Bundle.main.url(forResource: "sticker_placeholder", withExtension: "png") else { fatalError("Unable to find placeholder sticker image") }
         
         do {
             let description = NSLocalizedString("An emoji sticker", comment: "")
@@ -39,11 +39,10 @@ class StickerCache {
 		let tempPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
         do {
-            try cacheURL = URL(fileURLWithPath: tempPath).appendingPathComponent(directoryName)
-            try fileManager.createDirectory(at: cacheURL, withIntermediateDirectories: true, attributes: nil)
+			cacheURL = URL(fileURLWithPath: tempPath).appendingPathComponent(directoryName)
+			try fileManager.createDirectory(at: cacheURL, withIntermediateDirectories: true, attributes: nil)
         }
         catch {
-			
 			fatalError("Unable to create cache URL: \(error)")
         }
     }
@@ -63,13 +62,13 @@ class StickerCache {
     func sticker(for emoji: Emoji, completion: (sticker: MSSticker) -> Void) {        
         // Determine the URL for the sticker.
         let fileName = emoji.uuid.uuidString + ".png"
-        guard let url = try? cacheURL.appendingPathComponent(fileName) else { fatalError("Unable to create sticker URL") }
+        let url = cacheURL.appendingPathComponent(fileName)
         
         // Create an operation to process the request.
         let operation = BlockOperation {
             // Check if the sticker already exists at the URL.
             let fileManager = FileManager.default
-            guard !fileManager.fileExists(atPath: url.absoluteString!) else { return }
+            guard !fileManager.fileExists(atPath: url.absoluteString) else { return }
             
             // Create the sticker image and write it to disk.
 			guard let image = emoji.image else { return }
@@ -99,13 +98,13 @@ class StickerCache {
 	func delete(_ emoji: Emoji) {
 		// Determine the URL for the sticker.
 		let fileName = emoji.uuid.uuidString + ".png"
-		guard let url = try? cacheURL.appendingPathComponent(fileName) else { fatalError("Unable to create sticker URL") }
+		let url = cacheURL.appendingPathComponent(fileName)
 
 		// Create an operation to process the request.
 		let operation = BlockOperation {
 			// Check if the sticker already exists at the URL.
 			let fileManager = FileManager.default
-			guard !fileManager.fileExists(atPath: url.absoluteString!) else { return }
+			guard !fileManager.fileExists(atPath: url.absoluteString) else { return }
 
 			do {
 				try fileManager.removeItem(at: url)

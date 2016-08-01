@@ -23,7 +23,7 @@ class BuildEmojiViewController: UIViewController {
 	@IBOutlet private weak var canvas: UIView! {
 		didSet {
 			canvas.superview?.layer.borderWidth = 0.5
-			canvas.superview?.layer.borderColor = UIColor.lightGray().cgColor
+			canvas.superview?.layer.borderColor = UIColor.lightGray.cgColor
 			canvas.superview?.layer.cornerRadius = 4.0
 		}
 	}
@@ -213,7 +213,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 				view.isUserInteractionEnabled = false
 				
 				UIView.animate(withDuration: 0.2, delay: 0.05, options: .curveEaseIn, animations: {
-					view.transform = view.transform.scaleBy(x: 0.1, y: 0.1)
+					view.transform = view.transform.scaledBy(x: 0.1, y: 0.1)
 					view.alpha = 0
 				}) { _ in
 					view.removeFromSuperview()
@@ -234,7 +234,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 			return
 		}
 		
-		view.bounds = view.bounds.apply(transform: CGAffineTransform(scaleX: recognizer.scale, y: recognizer.scale))
+		view.bounds = view.bounds.applying(CGAffineTransform(scaleX: recognizer.scale, y: recognizer.scale))
 		
 		recognizer.scale = 1
 		
@@ -247,7 +247,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	
 	func handleRotate(recognizer: UIRotationGestureRecognizer) {
 		guard let view = recognizer.view else { return }
-		view.transform = view.transform.rotate(recognizer.rotation)
+		view.transform = view.transform.rotated(by: recognizer.rotation)
 		recognizer.rotation = 0
 	}
 }
