@@ -134,11 +134,7 @@ class BuildEmojiViewController: UIViewController {
 // MARK: UIGestureRecognizerDelegate
 
 extension BuildEmojiViewController: UIGestureRecognizerDelegate {
-	
-	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-		return true
-	}
-	
+
 	// MARK: Gesture Helpers
 	
 	func createTapGestureRecognizer(targetView: UIView) {
