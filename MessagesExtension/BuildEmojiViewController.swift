@@ -159,9 +159,9 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	}
 	
 	func createPanGestureRecognizer(targetView: UIView) {
+		// Don't include this gesture in the delegate, we don't want it
+		// to run simultaneously with any other gesture
 		let gesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
-		gesture.delegate = self
-		
 		targetView.addGestureRecognizer(gesture)
 	}
 	
