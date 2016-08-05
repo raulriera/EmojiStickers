@@ -54,7 +54,6 @@ class StickersViewController: UICollectionViewController {
 			history.update(with: emojis.reversed())
 		}
 	}
-    private let stickerCache = StickerCache.cache
     
     // MARK: Initialization
     
@@ -91,7 +90,11 @@ class StickersViewController: UICollectionViewController {
         let cache = StickerCache.cache
         cell.stickerView.sticker = cache.placeholderSticker
 		cell.collectionViewStatus = status
-		cell.deleteHandler = handleDeleteEmojiSticker
+		// Wrap around in a closure so we can break the retain cycle
+		// if we assign the value directly
+		cell.deleteHandler = { [weak self] in
+			self?.handleDeleteEmojiSticker(sticker: $0)
+		}
 
         // Fetch the sticker for the emoji from the cache.
         cache.sticker(for: emoji) { sticker in
@@ -136,20 +139,20 @@ class StickersViewController: UICollectionViewController {
 				return nil
 			}
 		}
-
-		collectionView?.performBatchUpdates({ 
+		
+		collectionView?.performBatchUpdates({ [weak self] in
 			// Find the index path we want to delete
 			guard let stickerIndex = stickers.index(where: { $0 == sticker }) else { return }
 			// Shift the index by 1 because the first index is always the "create sticker" button
 			let indexPath = IndexPath(row: stickerIndex + 1, section: 0)
 			// Delete the item from the dataSource
-			self.items.remove(at: indexPath.row)
+			self?.items.remove(at: indexPath.row)
 			// Remove from the collectionView
-			self.collectionView?.deleteItems(at: [indexPath])
+			self?.collectionView?.deleteItems(at: [indexPath])
 		}, completion: nil)
 
 		// Delete the sticker from the cache
-		stickerCache.delete(sticker)
+		StickerCache.cache.delete(sticker)
 	}
 }
 
