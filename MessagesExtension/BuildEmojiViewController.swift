@@ -127,6 +127,7 @@ class BuildEmojiViewController: UIViewController {
 		createRotateGestureRecognizer(targetView: emojiView)
 		createPinchGestureRecognizer(targetView: emojiView)
 		createPanGestureRecognizer(targetView: emojiView)
+		createLongTapGestureRecognizer(targetView: emojiView)
 
 		// Remove any existing child controllers.
 		removeChildViewControllers()
@@ -156,6 +157,13 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		
 		targetView.addGestureRecognizer(gesture)
 		return gesture
+	}
+
+	func createLongTapGestureRecognizer(targetView: UIView) {
+		// Don't include this gesture in the delegate, we don't want it
+		// to run simultaneously with any other gesture
+		let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
+		targetView.addGestureRecognizer(gesture)
 	}
 	
 	func createPanGestureRecognizer(targetView: UIView) {
@@ -201,6 +209,21 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 			}, completion: { _ in
 				view.setNeedsImageUpdate()
 		})
+	}
+
+	func handleLongTap(recognizer: UILongPressGestureRecognizer) {
+		guard let view = recognizer.view else { return }
+
+		if case .began = recognizer.state {
+			let flip = CGAffineTransform(scaleX: -1, y: 1)
+			view.isUserInteractionEnabled = false
+
+			UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
+				view.transform = view.transform.concatenating(flip)
+				}, completion: { _ in
+					view.isUserInteractionEnabled = true
+			})
+		}
 	}
 	
 	func handlePan(recognizer: UIPanGestureRecognizer) {
