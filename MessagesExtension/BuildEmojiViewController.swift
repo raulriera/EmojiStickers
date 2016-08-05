@@ -26,7 +26,10 @@ class BuildEmojiViewController: UIViewController {
 			canvas.superview?.layer.borderColor = UIColor.lightGray.cgColor
 			canvas.superview?.layer.cornerRadius = 4.0
 
-			createTapGestureRecognizer(targetView: canvas)
+			let singleTap = createTapGestureRecognizer(targetView: canvas)
+			let doubleTap = createDoubleTapGestureRecognizer(targetView: canvas)
+
+			singleTap.require(toFail: doubleTap)
 		}
 	}
 	
@@ -124,7 +127,6 @@ class BuildEmojiViewController: UIViewController {
 		createRotateGestureRecognizer(targetView: emojiView)
 		createPinchGestureRecognizer(targetView: emojiView)
 		createPanGestureRecognizer(targetView: emojiView)
-		createDoubleTapGestureRecognizer(targetView: emojiView)
 
 		// Remove any existing child controllers.
 		removeChildViewControllers()
@@ -137,18 +139,19 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 
 	// MARK: Gesture Helpers
 	
-	func createTapGestureRecognizer(targetView: UIView) {
+	func createTapGestureRecognizer(targetView: UIView) -> UITapGestureRecognizer {
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-		
 		targetView.addGestureRecognizer(gesture)
+		return gesture
 	}
 	
-	func createDoubleTapGestureRecognizer(targetView: UIView) {
+	func createDoubleTapGestureRecognizer(targetView: UIView) -> UITapGestureRecognizer {
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap))
 		gesture.numberOfTapsRequired = 2
 		gesture.delegate = self
 		
 		targetView.addGestureRecognizer(gesture)
+		return gesture
 	}
 	
 	func createPanGestureRecognizer(targetView: UIView) {
@@ -185,8 +188,9 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	}
 	
 	func handleDoubleTap(recognizer: UITapGestureRecognizer) {
-		guard let view = recognizer.view as? EmojiView else { return }
-		
+		let point = recognizer.location(in: canvas)
+		guard let view = canvas.hitTest(point, with: nil) as? EmojiView else { return }
+
 		UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
 			view.transform = .identity
 			view.bounds.size = view.defaultSize
