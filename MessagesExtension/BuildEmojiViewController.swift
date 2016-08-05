@@ -25,6 +25,8 @@ class BuildEmojiViewController: UIViewController {
 			canvas.superview?.layer.borderWidth = 0.5
 			canvas.superview?.layer.borderColor = UIColor.lightGray.cgColor
 			canvas.superview?.layer.cornerRadius = 4.0
+
+			createTapGestureRecognizer(targetView: canvas)
 		}
 	}
 	
@@ -123,7 +125,6 @@ class BuildEmojiViewController: UIViewController {
 		createPinchGestureRecognizer(targetView: emojiView)
 		createPanGestureRecognizer(targetView: emojiView)
 		createDoubleTapGestureRecognizer(targetView: emojiView)
-		createTapGestureRecognizer(targetView: emojiView)
 
 		// Remove any existing child controllers.
 		removeChildViewControllers()
@@ -178,8 +179,13 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	// MARK: Gesture Handlers
 	
 	func handleTap(recognizer: UITapGestureRecognizer) {
-		guard let view = recognizer.view else { return }
-		view.superview?.bringSubview(toFront: view)
+		guard let _ = recognizer.view else { return }
+
+		// Bring the emoji at the bottom to the top,
+		// this way we can cycle through all of them by just tapping
+		if let bottomView = canvas.subviews.first {
+			bottomView.superview?.bringSubview(toFront: bottomView)
+		}
 	}
 	
 	func handleDoubleTap(recognizer: UITapGestureRecognizer) {
