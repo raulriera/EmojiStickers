@@ -190,24 +190,32 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	// MARK: Gesture Handlers
 	
 	func handleTap(recognizer: UITapGestureRecognizer) {
-		guard let _ = recognizer.view else { return }
+		let point = recognizer.location(in: canvas)
+		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
 
-		// Bring the emoji at the bottom to the top,
-		// this way we can cycle through all of them by just tapping
-		if let bottomView = canvas.subviews.first {
-			bottomView.superview?.bringSubview(toFront: bottomView)
+		// Check the tapped view against all subviews
+		// if it intersect with any, bring it to the front.
+		for subview in canvas.subviews {
+			if subview.frame.intersects(tappedView.frame) {
+				if tappedView == subview {
+					tappedView.superview?.bringSubview(toFront: tappedView)
+				} else {
+					subview.superview?.bringSubview(toFront: subview)
+				}
+				return
+			}
 		}
 	}
 	
 	func handleDoubleTap(recognizer: UITapGestureRecognizer) {
 		let point = recognizer.location(in: canvas)
-		guard let view = canvas.hitTest(point, with: nil) as? EmojiView else { return }
+		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
 
 		UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
-			view.transform = .identity
-			view.bounds.size = view.defaultSize
+			tappedView.transform = .identity
+			tappedView.bounds.size = tappedView.defaultSize
 			}, completion: { _ in
-				view.setNeedsImageUpdate()
+				tappedView.setNeedsImageUpdate()
 		})
 	}
 
