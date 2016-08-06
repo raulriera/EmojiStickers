@@ -11,7 +11,12 @@ import UIKit
 class EditCollectionReusableView: UICollectionReusableView {
 	typealias ToggleEditModeHandler = (StickersViewController.CollectionViewStatus) -> Void
 
-	@IBOutlet private weak var editButton: UIButton!
+	@IBOutlet private weak var editButton: UIButton! {
+		didSet {
+			let buttonTitle = NSLocalizedString("Edit", comment: "Button when the user wants to start editing the stickers")
+			editButton.setTitle(buttonTitle, for: .normal)
+		}
+	}
 
 	static let reuseIdentifier = "EditCollectionReusableView"
 	var toggleEditModeHandler: ToggleEditModeHandler?

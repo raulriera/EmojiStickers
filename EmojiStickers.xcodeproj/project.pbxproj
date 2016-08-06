@@ -1861,6 +1861,7 @@
 		4CC9E5F61D40392B00668D26 /* SkinToneCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */; };
 		4CCB4DD41D3C31E0001EF33E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */; };
 		4CCB4DD61D3CE4B5001EF33E /* 1f3f3-1f308.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB4DD51D3CE4B5001EF33E /* 1f3f3-1f308.pdf */; };
+		4CE102051D5566F300EAD044 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE102071D5566F300EAD044 /* Localizable.strings */; };
 		4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */; };
 		4CE8B7A01D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79F1D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift */; };
 		4CF3476F1D2AFED100A48945 /* 2a-20e3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF347631D2AFED100A48945 /* 2a-20e3.pdf */; };
@@ -3759,6 +3760,15 @@
 		4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkinToneCache.swift; sourceTree = "<group>"; };
 		4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4CCB4DD51D3CE4B5001EF33E /* 1f3f3-1f308.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f3f3-1f308.pdf"; sourceTree = "<group>"; };
+		4CE102061D5566F300EAD044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE102081D5566F500EAD044 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE102091D55689C00EAD044 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE1020A1D5568DC00EAD044 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE1020B1D55696B00EAD044 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE1020C1D556A7700EAD044 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4CE1020D1D556B1800EAD044 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE1020E1D556B8100EAD044 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE1020F1D556C0500EAD044 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		4CE8B79F1D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCategoryPickerViewController.swift; sourceTree = "<group>"; };
 		4CF347631D2AFED100A48945 /* 2a-20e3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "2a-20e3.pdf"; sourceTree = "<group>"; };
@@ -3856,6 +3866,7 @@
 				4C6D184B1D1F01FF0083B12F /* EmojisList.plist */,
 				4C85BD081D2484D6003AAAEB /* SVG */,
 				4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */,
+				4CE102071D5566F300EAD044 /* Localizable.strings */,
 				4C33536F1D40FF0500B22375 /* sticker_placeholder.png */,
 			);
 			path = MessagesExtension;
@@ -5812,6 +5823,14 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				it,
+				fr,
+				de,
+				"zh-Hans",
+				ja,
+				ko,
+				nl,
 			);
 			mainGroup = 4C1C173B1D14C64000A20A15;
 			productRefGroup = 4C1C17431D14C64000A20A15 /* Products */;
@@ -7082,6 +7101,7 @@
 				4C85C6341D2484E4003AAAEB /* 1f3b1.pdf in Resources */,
 				4C85C4B41D2484E4003AAAEB /* 1f1ec-1f1ea.pdf in Resources */,
 				4C85CA5B1D2484E5003AAAEB /* 1f93c-1f3fe.pdf in Resources */,
+				4CE102051D5566F300EAD044 /* Localizable.strings in Resources */,
 				4C85CA2E1D2484E5003AAAEB /* 1f933-1f3fc.pdf in Resources */,
 				4C85C4B61D2484E4003AAAEB /* 1f1ec-1f1ec.pdf in Resources */,
 				4C85C4471D2484E4003AAAEB /* 0039.pdf in Resources */,
@@ -7734,6 +7754,22 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
+		4CE102071D5566F300EAD044 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CE102061D5566F300EAD044 /* Base */,
+				4CE102081D5566F500EAD044 /* es */,
+				4CE102091D55689C00EAD044 /* it */,
+				4CE1020A1D5568DC00EAD044 /* fr */,
+				4CE1020B1D55696B00EAD044 /* de */,
+				4CE1020C1D556A7700EAD044 /* zh-Hans */,
+				4CE1020D1D556B1800EAD044 /* ja */,
+				4CE1020E1D556B8100EAD044 /* ko */,
+				4CE1020F1D556C0500EAD044 /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -7741,6 +7777,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -7788,6 +7825,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
