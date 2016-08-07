@@ -30,6 +30,8 @@ class BuildEmojiViewController: UIViewController {
 			let doubleTap = createDoubleTapGestureRecognizer(targetView: canvas)
 
 			singleTap.require(toFail: doubleTap)
+
+			createLongTapGestureRecognizer(targetView: canvas)
 		}
 	}
 	
@@ -127,7 +129,6 @@ class BuildEmojiViewController: UIViewController {
 		createRotateGestureRecognizer(targetView: emojiView)
 		createPinchGestureRecognizer(targetView: emojiView)
 		createPanGestureRecognizer(targetView: emojiView)
-		createLongTapGestureRecognizer(targetView: emojiView)
 
 		// Remove any existing child controllers.
 		removeChildViewControllers()
@@ -145,6 +146,8 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	// MARK: Gesture Helpers
 	
 	func createTapGestureRecognizer(targetView: UIView) -> UITapGestureRecognizer {
+		// Don't include this gesture in the delegate, we don't want it
+		// to run simultaneously with any other gesture
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
 		targetView.addGestureRecognizer(gesture)
 		return gesture
@@ -163,6 +166,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		// Don't include this gesture in the delegate, we don't want it
 		// to run simultaneously with any other gesture
 		let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
+		gesture.minimumPressDuration = 1.0
 		targetView.addGestureRecognizer(gesture)
 	}
 	
@@ -211,27 +215,28 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		let point = recognizer.location(in: canvas)
 		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
 
+		if case .ended = recognizer.state {
+			let flip = CGAffineTransform(scaleX: -1, y: 1)
+			tappedView.isUserInteractionEnabled = false
+
+			UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
+				tappedView.transform = tappedView.transform.concatenating(flip)
+				}, completion: { _ in
+					tappedView.isUserInteractionEnabled = true
+			})
+		}
+	}
+
+	func handleLongTap(recognizer: UILongPressGestureRecognizer) {
+		let point = recognizer.location(in: canvas)
+		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
+
 		UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
 			tappedView.transform = .identity
 			tappedView.bounds.size = tappedView.defaultSize
 			}, completion: { _ in
 				tappedView.setNeedsImageUpdate()
 		})
-	}
-
-	func handleLongTap(recognizer: UILongPressGestureRecognizer) {
-		guard let view = recognizer.view else { return }
-
-		if case .began = recognizer.state {
-			let flip = CGAffineTransform(scaleX: -1, y: 1)
-			view.isUserInteractionEnabled = false
-
-			UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
-				view.transform = view.transform.concatenating(flip)
-				}, completion: { _ in
-					view.isUserInteractionEnabled = true
-			})
-		}
 	}
 	
 	func handlePan(recognizer: UIPanGestureRecognizer) {
