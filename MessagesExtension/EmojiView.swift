@@ -13,6 +13,9 @@ class EmojiView: UIImageView {
 	// MARK: Properties
 	let defaultSize = CGSize(width: 250, height: 250)
 	let character: String
+	var isFlipped: Bool {
+		return image?.imageOrientation == .upMirrored
+	}
 	
 	// MARK: Initialisers
 	
@@ -32,9 +35,19 @@ class EmojiView: UIImageView {
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	
+
+	// MARK:
+
 	func setNeedsImageUpdate() {
 		updateImageFromPDF()
+	}
+
+	func flipped() {
+		if isFlipped {
+			image = UIImage(cgImage: image!.cgImage!, scale: 0, orientation: .up)
+		} else {
+			image = UIImage(cgImage: image!.cgImage!, scale: 0, orientation: .upMirrored)
+		}
 	}
 	
 	// MARK: Private
@@ -43,7 +56,9 @@ class EmojiView: UIImageView {
 		if let urlForDocument = Bundle.main.url(forResource: character.utf, withExtension: "pdf") {
 			let document = CGPDFDocument(urlForDocument)!
 			let image = UIImage(document: document, at: bounds.size)
-			self.image = image
+
+			// If the image was already rendered, maintain the current "flip" state
+			self.image = isFlipped ? UIImage(cgImage: image.cgImage!, scale: 0, orientation: .upMirrored) : image
 		} else {
 			print("Did not find document for \(character.utf)")
 		}

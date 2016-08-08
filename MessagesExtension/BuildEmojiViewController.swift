@@ -216,13 +216,14 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
 
 		if case .ended = recognizer.state {
-			let flip = CGAffineTransform(scaleX: -1, y: 1)
 			tappedView.isUserInteractionEnabled = false
 
-			UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
-				tappedView.transform = tappedView.transform.concatenating(flip)
-				}, completion: { _ in
-					tappedView.isUserInteractionEnabled = true
+			let direction: UIViewAnimationOptions = tappedView.isFlipped ? .transitionFlipFromLeft : .transitionFlipFromRight
+
+			UIView.transition(with: tappedView, duration: 0.20, options: direction, animations: {
+				tappedView.flipped()
+			}, completion: { _ in
+				tappedView.isUserInteractionEnabled = true
 			})
 		}
 	}
@@ -234,6 +235,11 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
 			tappedView.transform = .identity
 			tappedView.bounds.size = tappedView.defaultSize
+
+			if tappedView.isFlipped {
+				tappedView.flipped()
+			}
+
 			}, completion: { _ in
 				tappedView.setNeedsImageUpdate()
 		})
