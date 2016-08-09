@@ -292,8 +292,10 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		
 		// When the use stops pinching the view, render it again
 		// so it always looks crispy
-		if case .ended = recognizer.state {
+		switch recognizer.state {
+		case .ended, .cancelled:
 			view.setNeedsImageUpdate()
+		default: break;
 		}
 	}
 	
