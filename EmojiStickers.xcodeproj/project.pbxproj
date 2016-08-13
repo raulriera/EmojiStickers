@@ -28,7 +28,6 @@
 		4C6D184C1D1F01FF0083B12F /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C6D184B1D1F01FF0083B12F /* EmojisList.plist */; };
 		4C6D18501D1F065A0083B12F /* EmojiCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D184F1D1F065A0083B12F /* EmojiCharacterCell.swift */; };
 		4C6D18521D1F2FE60083B12F /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D18511D1F2FE60083B12F /* EmojiView.swift */; };
-		4C751E711D4432EF00BC3101 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C751E701D4432EF00BC3101 /* Collection+Extensions.swift */; };
 		4C85C4311D2484E4003AAAEB /* 0023.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C85BD0A1D2484D6003AAAEB /* 0023.pdf */; };
 		4C85C4331D2484E4003AAAEB /* 002a.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C85BD0C1D2484D6003AAAEB /* 002a.pdf */; };
 		4C85C4351D2484E4003AAAEB /* 0030.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C85BD0E1D2484D6003AAAEB /* 0030.pdf */; };
@@ -1855,7 +1854,6 @@
 		4C95BF821D1749DF00A0D90B /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF811D1749DF00A0D90B /* EmojiCell.swift */; };
 		4C95BF841D174A4000A0D90B /* CreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF831D174A4000A0D90B /* CreateCell.swift */; };
 		4CB285041D47F8A4002FC2CC /* EditCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB285031D47F8A4002FC2CC /* EditCollectionReusableView.swift */; };
-		4CB39DB31D1B67C5009D447A /* UIView+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB39DB21D1B67C5009D447A /* UIView+Geometry.swift */; };
 		4CB85B5F1D2724F500F3227A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB85B5E1D2724F500F3227A /* ImageCache.swift */; };
 		4CB85B611D272C8100F3227A /* EmojiOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB85B601D272C8100F3227A /* EmojiOne.swift */; };
 		4CC9E5F61D40392B00668D26 /* SkinToneCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */; };
@@ -1927,7 +1925,6 @@
 		4C6D184B1D1F01FF0083B12F /* EmojisList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmojisList.plist; sourceTree = "<group>"; };
 		4C6D184F1D1F065A0083B12F /* EmojiCharacterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCharacterCell.swift; sourceTree = "<group>"; };
 		4C6D18511D1F2FE60083B12F /* EmojiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
-		4C751E701D4432EF00BC3101 /* Collection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		4C85BD0A1D2484D6003AAAEB /* 0023.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 0023.pdf; sourceTree = "<group>"; };
 		4C85BD0C1D2484D6003AAAEB /* 002a.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 002a.pdf; sourceTree = "<group>"; };
 		4C85BD0E1D2484D6003AAAEB /* 0030.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 0030.pdf; sourceTree = "<group>"; };
@@ -3754,7 +3751,6 @@
 		4C95BF811D1749DF00A0D90B /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		4C95BF831D174A4000A0D90B /* CreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCell.swift; sourceTree = "<group>"; };
 		4CB285031D47F8A4002FC2CC /* EditCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCollectionReusableView.swift; sourceTree = "<group>"; };
-		4CB39DB21D1B67C5009D447A /* UIView+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Geometry.swift"; sourceTree = "<group>"; };
 		4CB85B5E1D2724F500F3227A /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		4CB85B601D272C8100F3227A /* EmojiOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiOne.swift; sourceTree = "<group>"; };
 		4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkinToneCache.swift; sourceTree = "<group>"; };
@@ -3800,12 +3796,10 @@
 		4C136A1A1D16E75F0065DC28 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4C751E701D4432EF00BC3101 /* Collection+Extensions.swift */,
 				4C5524D41D45372F00B3BF99 /* CGPoint+Geometry.swift */,
 				4C136A1B1D16E7690065DC28 /* String+Emoji.swift */,
 				4C85E67A1D31A525009C1B1D /* String+Extensions.swift */,
 				4C95BF7E1D17241600A0D90B /* UIImage+Extensions.swift */,
-				4CB39DB21D1B67C5009D447A /* UIView+Geometry.swift */,
 				4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */,
 				4C240AB01D4A174D003927A2 /* CAKeyframeAnimation+Extensions.swift */,
 			);
@@ -7712,7 +7706,6 @@
 				4C95BF741D17079500A0D90B /* Emoji.swift in Sources */,
 				4C95BF841D174A4000A0D90B /* CreateCell.swift in Sources */,
 				4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */,
-				4C751E711D4432EF00BC3101 /* Collection+Extensions.swift in Sources */,
 				4CCB4DD41D3C31E0001EF33E /* UIViewController+Extensions.swift in Sources */,
 				4CB85B5F1D2724F500F3227A /* ImageCache.swift in Sources */,
 				4CC9E5F61D40392B00668D26 /* SkinToneCache.swift in Sources */,
@@ -7728,7 +7721,6 @@
 				4C28B7521D20A10C003691C6 /* EmojiDictionary.swift in Sources */,
 				4C136A1C1D16E7690065DC28 /* String+Emoji.swift in Sources */,
 				4C1C17551D14C64000A20A15 /* MessagesViewController.swift in Sources */,
-				4CB39DB31D1B67C5009D447A /* UIView+Geometry.swift in Sources */,
 				4C95BF7F1D17241600A0D90B /* UIImage+Extensions.swift in Sources */,
 				4C95BF711D1706CE00A0D90B /* StickersViewController.swift in Sources */,
 				4CB85B611D272C8100F3227A /* EmojiOne.swift in Sources */,
