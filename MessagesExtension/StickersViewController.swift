@@ -193,10 +193,14 @@ extension StickersViewController {
 	}
 
 	override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-		// Copy the array so the compiler doesn't get crazy with the computed property
-		// and the following `swap`
+		// Copy the array so we are not calling the observer more times than we actually need to
 		var items = self.items
-		swap(&items[sourceIndexPath.row], &items[destinationIndexPath.row])
+
+		// Move the item to the new posiiton
+		let item = items[sourceIndexPath.row]
+		items.remove(at: sourceIndexPath.row)
+		items.insert(item, at: destinationIndexPath.row)
+
 		// Update the array
 		self.items = items
 	}
