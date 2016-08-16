@@ -20,7 +20,7 @@ class BuildEmojiViewController: UIViewController {
     
     // MARK: IBOutlets
 	
-	@IBOutlet private weak var canvas: UIView! {
+	@IBOutlet fileprivate weak var canvas: UIView! {
 		didSet {
 			canvas.superview?.layer.borderWidth = 0.5
 			canvas.superview?.layer.borderColor = UIColor.lightGray.cgColor

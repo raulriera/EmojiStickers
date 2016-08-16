@@ -5800,12 +5800,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = R64MTWS872;
 						DevelopmentTeamName = "Raul Riera";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					4C1C174B1D14C64000A20A15 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = R64MTWS872;
 						DevelopmentTeamName = "Raul Riera";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};

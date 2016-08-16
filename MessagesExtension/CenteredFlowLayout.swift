@@ -21,7 +21,7 @@ class CenteredFlowLayout: UICollectionViewFlowLayout {
 			attributes.append(attributesCopy)
 		}
 		
-		var rowCollections = [NSNumber:[UICollectionViewLayoutAttributes]]()
+		var rowCollections = [Float: [UICollectionViewLayoutAttributes]]()
 		
 		for itemAttributes in attributes {
 			
@@ -29,7 +29,7 @@ class CenteredFlowLayout: UICollectionViewFlowLayout {
 			let midYPlus = midYRound + 1
 			let midYMinus = midYRound - 1
 			
-			var key: NSNumber?
+			var key: Float?
 			
 			if let _ = rowCollections[midYPlus] {
 				key = midYPlus

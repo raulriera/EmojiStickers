@@ -54,7 +54,7 @@ class EmojiView: UIImageView {
 	
 	private func updateImageFromPDF() {
 		if let urlForDocument = Bundle.main.url(forResource: character.utf, withExtension: "pdf") {
-			let document = CGPDFDocument(urlForDocument)!
+			let document = CGPDFDocument(urlForDocument as CFURL)!
 			let image = UIImage(document: document, at: bounds.size)
 
 			// If the image was already rendered, maintain the current "flip" state

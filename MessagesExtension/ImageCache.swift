@@ -69,7 +69,7 @@ final class ImageCache {
 	
 	// MARK
 	
-	func image(for cachable: Cachable, completion: (image: UIImage) -> Void) {
+	func image(for cachable: Cachable, completion: @escaping (_ image: UIImage) -> Void) {
 		let fileName = cachable.identifier + ".png"
 		let url = cacheURL.appendingPathComponent(fileName)
 		
@@ -99,7 +99,7 @@ final class ImageCache {
 				print("Failed to read image from \(url)")
 				return
 			}
-			completion(image: image)
+			completion(image)
 		}
 		
 		// Add the operation to the queue to start the work.

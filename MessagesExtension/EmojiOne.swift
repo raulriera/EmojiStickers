@@ -12,7 +12,7 @@ struct EmojiOne {
 	let character: String
 	let image: () -> UIImage
 	
-	init(character: String, image: () -> UIImage) {
+	init(character: String, image: @escaping () -> UIImage) {
 		self.character = character
 		self.image = image
 	}

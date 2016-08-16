@@ -59,7 +59,7 @@ class StickerCache {
     
     // MARK
     
-    func sticker(for emoji: Emoji, completion: (sticker: MSSticker) -> Void) {        
+    func sticker(for emoji: Emoji, completion: @escaping (_ sticker: MSSticker) -> Void) {        
         // Determine the URL for the sticker.
         let fileName = emoji.uuid.uuidString + ".png"
         let url = cacheURL.appendingPathComponent(fileName)
@@ -85,7 +85,7 @@ class StickerCache {
         operation.completionBlock = {
             do {
                 let sticker = try MSSticker(contentsOfFileURL: url, localizedDescription: "Emoji Sticker")
-                completion(sticker: sticker)
+                completion(sticker)
             } catch {
                 print("Failed to write image to cache, error: \(error)")
             }

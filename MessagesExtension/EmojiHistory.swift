@@ -11,11 +11,11 @@ import Foundation
 struct EmojiHistory {
     // MARK: Properties
     
-    private static let maximumHistorySize = 250
-    private static let userDefaultsKey = "emojiHistory"
+    fileprivate static let maximumHistorySize = 250
+    fileprivate static let userDefaultsKey = "emojiHistory"
     
     /// An array of previously created `Emoji`.
-    private var emojis: [Emoji]
+    fileprivate var emojis: [Emoji]
     
     var count: Int {
         return emojis.count
@@ -81,22 +81,22 @@ struct EmojiHistory {
 }
 
 /**
- Extends `EmojiHistory` to conform to the `Sequence` protocol so it can be used
- in for..in statements.
- */
+Extends `EmojiHistory` to conform to the `Sequence` protocol so it can be used
+in for..in statements.
+*/
 extension EmojiHistory: Sequence {
-    typealias Iterator = AnyIterator<Emoji>
-    
-    func makeIterator() -> Iterator {
-        var index = 0
-        
-        return Iterator {
-            guard index < self.emojis.count else { return nil }
-            
-            let emoji = self.emojis[index]
-            index += 1
-            
-            return emoji
-        }
-    }
+	typealias Iterator = AnyIterator<Emoji>
+
+	func makeIterator() -> Iterator {
+		var index = 0
+
+		return Iterator {
+			guard index < self.emojis.count else { return nil }
+
+			let emoji = self.emojis[index]
+			index += 1
+
+			return emoji
+		}
+	}
 }

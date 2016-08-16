@@ -51,7 +51,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	
 	// MARK: Segues
 	
-	override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "Show Skin Tones", let sender = sender as? UIView, let controller = segue.destination as? SkinToneViewController {
 			
 			controller.onSelected = { [weak self] _ in
@@ -105,12 +105,12 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 		return true
 	}
 	
-	override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: AnyObject?) -> Bool {
+	override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
 		// Don't do anything here, see collectionView:shouldShowMenuForItemAt instead
 		return false
 	}
 	
-	override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: AnyObject?) {
+	override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
 		// Don't do anything here, see collectionView:shouldShowMenuForItemAt instead
 	}
 	
@@ -136,7 +136,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 		
 		let emojiOne = EmojiOne(character: emojiCharacter) {
 			if let urlForDocument = Bundle.main.url(forResource: emojiCharacter.utf, withExtension: "pdf") {
-				let document = CGPDFDocument(urlForDocument)!
+				let document = CGPDFDocument(urlForDocument as CFURL)!
 				let image = UIImage(document: document)
 				return image
 			} else {
