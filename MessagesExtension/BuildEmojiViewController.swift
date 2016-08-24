@@ -71,7 +71,14 @@ class BuildEmojiViewController: UIViewController {
 		controller.didMove(toParentViewController: self)
 		
 		controller.selectEmojiHandler = handleEmojiSelection
-		controller.changePage(to: lastUsedCategory, animated: false)
+
+		// It's rude to show the user en empty page of emojis, if they have
+		// no recent emojis, just go to the next page
+		if RecentEmojiCache.load().emojis.isEmpty && lastUsedCategory == 0 {
+			controller.changePage(to: 1, animated: false)
+		} else {
+			controller.changePage(to: lastUsedCategory, animated: false)
+		}
 	}
 
 	@IBAction func didTapSave(_ sender: UIButton) {

@@ -24,6 +24,7 @@ struct EmojiDictionary {
 	}
 	
 	enum Keys: String {
+		case recent = "Recent"
 		case people = "People"
 		case nature = "Nature"
 		case foodAndDrinks = "FoodAndDrinks"
@@ -40,6 +41,7 @@ struct EmojiDictionary {
 		let contentsOfFile = dictionary as! [String: [String]]
 		
 		self.categories = [
+			Category(key: .recent, value: RecentEmojiCache.load().emojis.reversed()),
 			Category(key: .people, value: contentsOfFile[Keys.people.rawValue]!),
 			Category(key: .nature, value: contentsOfFile[Keys.nature.rawValue]!),
 			Category(key: .foodAndDrinks, value: contentsOfFile[Keys.foodAndDrinks.rawValue]!),

@@ -15,7 +15,7 @@ class EmojiCategoriesViewController: UIPageViewController {
 	
 	static let storyboardIdentifier = "EmojiCategoriesViewController"
 	var selectEmojiHandler: SelectEmojiHandler?
-	
+
 	fileprivate weak var categoryPickerViewController: EmojiCategoryPickerViewController?
 	fileprivate let emojis = EmojiDictionary()
 	fileprivate var currentIndex: Int {
@@ -32,9 +32,8 @@ class EmojiCategoriesViewController: UIPageViewController {
 		delegate = self
 		
 		view.backgroundColor = UIColor.groupTableViewBackground
-		
+
 		presentCategoryPickerController()
-		changePage(to: 0)
 	}
 	
 	func changePage(to newPage: Int, animated: Bool = true) {
@@ -103,6 +102,10 @@ class EmojiCategoriesViewController: UIPageViewController {
 
 extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
 	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String, at rect: CGRect) {
+		// Update the recently used emoji cache
+		var recentEmojis = RecentEmojiCache.load()
+		recentEmojis.append(emoji.emojiUnmodified)
+
 		selectEmojiHandler?(emoji, currentIndex, rect)
 	}
 }
