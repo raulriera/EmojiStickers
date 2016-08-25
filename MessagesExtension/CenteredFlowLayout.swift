@@ -11,7 +11,6 @@ import UIKit
 class CenteredFlowLayout: UICollectionViewFlowLayout {
 	
 	override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-		
 		var attributes = [UICollectionViewLayoutAttributes]()
 		
 		let superAttributes = super.layoutAttributesForElements(in: rect)
@@ -74,7 +73,7 @@ class CenteredFlowLayout: UICollectionViewFlowLayout {
 					interitemSpacing = spacing
 				}
 			}
-			
+
 			let aggregateInteritemSpacing = interitemSpacing * CGFloat(itemsInRow-1)
 			
 			var aggregateItemWidths: CGFloat = 0.0
@@ -82,8 +81,8 @@ class CenteredFlowLayout: UICollectionViewFlowLayout {
 			for itemAttributes in itemAttributesArray {
 				aggregateItemWidths += itemAttributes.frame.width
 			}
-			
-			let alignmentWidth = aggregateItemWidths + aggregateInteritemSpacing
+
+			let alignmentWidth = min(aggregateItemWidths + aggregateInteritemSpacing, collectionViewWidth + interitemSpacing)
 			let alignmentXOffset = abs((collectionViewWidth - alignmentWidth) / 2.0)
 			
 			var previousFrame = CGRect.zero
