@@ -173,7 +173,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		// Don't include this gesture in the delegate, we don't want it
 		// to run simultaneously with any other gesture
 		let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
-		gesture.minimumPressDuration = 1.0
+		gesture.minimumPressDuration = 2.0
 		targetView.addGestureRecognizer(gesture)
 	}
 	
