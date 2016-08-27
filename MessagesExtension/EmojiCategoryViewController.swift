@@ -25,7 +25,6 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	private var cellSize: CGSize = CGSize(width: 50, height: 50)
 	private var sectionInset: UIEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 	private var minimumInteritemSpacing: CGFloat = 20
-	private let offsetCache = EmojiCategoryOffsetCache.load()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -53,7 +52,8 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
-		// Hack the planet!, we want to restore the last offset used. Check if 
+		let offsetCache = EmojiCategoryOffsetCache.load()
+		// Hack the planet!, we want to restore the last offset used. Check if
 		// its different than zero. If so, hide the collection view to prevent a 
 		// "visual jump" to the offset. Lastly, wrap everythign in a timer so 
 		// we can actually scroll there, otherwise it doesn't do anything.
@@ -61,9 +61,9 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 			self.collectionView?.isHidden = true
 
 			Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
-				self.collectionView?.setContentOffset(self.offsetCache.offset, animated: false)
+				self.collectionView?.setContentOffset(offsetCache.offset, animated: false)
 				self.collectionView?.isHidden = false
-				self.offsetCache.save(offset: .zero)
+				offsetCache.save(offset: .zero)
 			}
 		}
 	}
@@ -108,7 +108,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 			let rect = collectionView.convert(attributes?.frame ?? CGRect.zero, to: collectionView.superview)
 
 			// Save the current scroll position
-			offsetCache.save(offset: collectionView.contentOffset)
+			EmojiCategoryOffsetCache.load().save(offset: collectionView.contentOffset)
 
 			// Notify the delegate that we selected an emoji
 			delegate?.emojiCategoryViewController(self, didSelect: representedEmoji, at: rect)
