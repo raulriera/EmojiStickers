@@ -25,8 +25,10 @@ class EmojiCategoryPickerViewController: UICollectionViewController {
 	}
 	var selectedCategory: Int = 0 {
 		didSet {
-			let indexPath = IndexPath(item: selectedCategory, section: 0)
-			collectionView?.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+			Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+				let indexPath = IndexPath(item: self.selectedCategory, section: 0)
+				self.collectionView?.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+			}
 		}
 	}
 	
