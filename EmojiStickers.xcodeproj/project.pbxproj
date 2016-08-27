@@ -21,6 +21,7 @@
 		4C2510DE1D3D9D7A0084197B /* CenteredFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */; };
 		4C28B7521D20A10C003691C6 /* EmojiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C28B7511D20A10C003691C6 /* EmojiDictionary.swift */; };
 		4C3353701D40FF0500B22375 /* sticker_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33536F1D40FF0500B22375 /* sticker_placeholder.png */; };
+		4C3EF19C1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EF19B1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift */; };
 		4C51F2721D3EC720006A3C15 /* SkinToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */; };
 		4C5524D51D45372F00B3BF99 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5524D41D45372F00B3BF99 /* CGPoint+Geometry.swift */; };
 		4C6300871D32C953008F2FC8 /* 1f453.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6300861D32C953008F2FC8 /* 1f453.pdf */; };
@@ -1919,6 +1920,7 @@
 		4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredFlowLayout.swift; sourceTree = "<group>"; };
 		4C28B7511D20A10C003691C6 /* EmojiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDictionary.swift; sourceTree = "<group>"; };
 		4C33536F1D40FF0500B22375 /* sticker_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_placeholder.png; sourceTree = "<group>"; };
+		4C3EF19B1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCategoryOffsetCache.swift; sourceTree = "<group>"; };
 		4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkinToneViewController.swift; sourceTree = "<group>"; };
 		4C5524D41D45372F00B3BF99 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
 		4C6300861D32C953008F2FC8 /* 1f453.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 1f453.pdf; path = Edited/1f453.pdf; sourceTree = "<group>"; };
@@ -3854,6 +3856,7 @@
 				4C95BF801D1749D300A0D90B /* Views */,
 				4C95BF7B1D170E8C00A0D90B /* EmojiHistory.swift */,
 				4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */,
+				4C3EF19B1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift */,
 				4CC9FB111D6E569900376F33 /* RecentEmojiCache.swift */,
 				4C28B7511D20A10C003691C6 /* EmojiDictionary.swift */,
 				4C95BF721D17078C00A0D90B /* Model */,
@@ -7711,6 +7714,7 @@
 				4C95BF741D17079500A0D90B /* Emoji.swift in Sources */,
 				4C95BF841D174A4000A0D90B /* CreateCell.swift in Sources */,
 				4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */,
+				4C3EF19C1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift in Sources */,
 				4CCB4DD41D3C31E0001EF33E /* UIViewController+Extensions.swift in Sources */,
 				4CB85B5F1D2724F500F3227A /* ImageCache.swift in Sources */,
 				4CC9E5F61D40392B00668D26 /* SkinToneCache.swift in Sources */,

@@ -34,7 +34,16 @@ class BuildEmojiViewController: UIViewController {
 			createLongTapGestureRecognizer(targetView: canvas)
 		}
 	}
-	
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+
+		// Reset the offset to zero, because we don't want any
+		// unexpected "jumpts" to scrolls positions. Given that the app
+		// shut down but the position was still saved
+		EmojiCategoryOffsetCache.load().save(offset: .zero)
+	}
+
 	override func willMove(toParentViewController parent: UIViewController?) {
 		super.willMove(toParentViewController: parent)
 		
