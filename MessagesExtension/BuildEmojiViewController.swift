@@ -35,20 +35,26 @@ class BuildEmojiViewController: UIViewController {
 		}
 	}
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
+	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+		super.viewWillTransition(to: size, with: coordinator)
 
-		// Reset the offset to zero, because we don't want any
-		// unexpected "jumpts" to scrolls positions. Given that the app
-		// shut down but the position was still saved
-		EmojiCategoryOffsetCache.load().save(offset: .zero)
+		// If the view size changed (rotation or iPad resizing) reset the offset
+		// otherwise it is going to appear in an unexpected scroll position for the user
+		resetOffsetCache()
 	}
 
 	override func willMove(toParentViewController parent: UIViewController?) {
 		super.willMove(toParentViewController: parent)
-		
-		guard parent == nil else { return }
-		removeChildViewControllers()
+
+		// Are we closing this View Controller?
+		if parent == nil {
+			removeChildViewControllers()
+		} else {
+			// Reset the offset to zero, because we don't want any
+			// unexpected "jumpts" to scrolls positions. Given that the app
+			// shut down but the position was still saved.
+			resetOffsetCache()
+		}
 	}
 	
     // MARK: Properties
@@ -148,6 +154,10 @@ class BuildEmojiViewController: UIViewController {
 
 		// Remove any existing child controllers.
 		removeChildViewControllers()
+	}
+
+	private func resetOffsetCache() {
+		EmojiCategoryOffsetCache.load().save(offset: .zero)
 	}
 }
 
