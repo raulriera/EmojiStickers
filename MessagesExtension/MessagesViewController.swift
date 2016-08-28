@@ -40,14 +40,20 @@ class MessagesViewController: MSMessagesAppViewController {
         
         // Remove any existing child controllers.
         for child in childViewControllers {
-            child.willMove(toParentViewController: nil)
-            child.view.removeFromSuperview()
-            child.removeFromParentViewController()
+			UIView.animate(withDuration: 0.25, animations: { 
+				child.view.alpha = 0
+
+			}, completion: { _ in
+				child.willMove(toParentViewController: nil)
+				child.view.removeFromSuperview()
+				child.removeFromParentViewController()
+			})
         }
         
         // Embed the new controller.
         addChildViewController(controller)
-        
+
+		controller.view.alpha = 0
         controller.view.frame = view.bounds
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(controller.view)
@@ -65,6 +71,10 @@ class MessagesViewController: MSMessagesAppViewController {
 		}
 
         controller.didMove(toParentViewController: self)
+
+		UIView.animate(withDuration: 0.25) {
+			controller.view.alpha = 1
+		}
     }
     
     private func instantiateBuildEmojiController() -> UIViewController {
