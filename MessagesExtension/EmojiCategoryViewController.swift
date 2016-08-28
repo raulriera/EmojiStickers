@@ -154,7 +154,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 		
 		var emojiCharacter = category.value[indexPath.row]
 		if emojiCharacter.canHaveSkinToneModifier {
-			emojiCharacter = emojiCharacter + SkinToneCache.load().tone
+			emojiCharacter = emojiCharacter.applying(skinTone: SkinToneCache.load().tone)
 		}
 		
 		let emojiOne = EmojiOne(character: emojiCharacter) {

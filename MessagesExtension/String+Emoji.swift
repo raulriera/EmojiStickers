@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-	var emojiSkinToneModifiers: [String] {
+	private var emojiSkinToneModifiers: [String] {
 		return [ "🏻", "🏼", "🏽", "🏾", "🏿" ]
 	}
 	
@@ -41,5 +41,21 @@ extension String {
 	var utf: String {
 		// Remove the "fe0f" that seems to be added to some of them
 		return unicodeScalars.map { String($0.value, radix: 16, uppercase: false) }.filter { $0 != "fe0f" && $0 != "200d" }.joined(separator: "-")
+	}
+
+	func applying(skinTone: String) -> String {
+		var currentString = self
+
+		if currentString.hasGenderSign == false {
+			return currentString + skinTone
+		} else {
+			let genderSign = currentString.characters.popLast()!
+
+			return currentString.emojiUnmodified + skinTone + String(genderSign)
+		}
+	}
+
+	private var hasGenderSign: Bool {
+		return contains("♀️") || contains("♂")
 	}
 }
