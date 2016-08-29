@@ -104,7 +104,8 @@ extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
 	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String, at rect: CGRect) {
 		// Update the recently used emoji cache
 		var recentEmojis = RecentEmojiCache.load()
-		recentEmojis.append(emoji.emojiUnmodified)
+		// We need to use the unmodified version while keeping the gender sign
+		recentEmojis.append(emoji.emojiUnmodifiedPreservingGenderSign)
 
 		selectEmojiHandler?(emoji, currentIndex, rect)
 	}

@@ -26,6 +26,15 @@ extension String {
 		
 		return "\(characters.first!)"
 	}
+
+	var emojiUnmodifiedPreservingGenderSign: String {
+		if hasGenderSign {
+			let genderSign = characters.last!
+			return emojiUnmodified + String(genderSign)
+		}
+
+		return emojiUnmodified
+	}
 	
 	var canHaveSkinToneModifier: Bool {
 		guard !EmojiDictionary.blacklist.contains(self) else { return false }
@@ -44,14 +53,12 @@ extension String {
 	}
 
 	func applying(skinTone: String) -> String {
-		var currentString = self
-
-		if currentString.hasGenderSign == false {
-			return currentString + skinTone
+		if hasGenderSign == false {
+			return self + skinTone
 		} else {
-			let genderSign = currentString.characters.popLast()!
+			let genderSign = characters.last!
 
-			return currentString.emojiUnmodified + skinTone + String(genderSign)
+			return emojiUnmodified + skinTone + String(genderSign)
 		}
 	}
 
