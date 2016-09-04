@@ -19,6 +19,25 @@ protocol BuildEmojiViewControllerDelegate: class {
 class BuildEmojiViewController: UIViewController {
     
     // MARK: IBOutlets
+	@IBOutlet private weak var pickEmojiButton: UIButton! {
+		didSet {
+			let frame1 = UIImage(named: "Add Sticker-1")!
+			let frame2 = UIImage(named: "Add Sticker-2")!
+			let frame3 = UIImage(named: "Add Sticker-3")!
+
+			pickEmojiButton.imageView?.animationImages = [frame1, frame2, frame3, frame2, frame1]
+			pickEmojiButton.imageView?.animationDuration = 0.35
+			pickEmojiButton.imageView?.animationRepeatCount = 1
+
+			Timer.scheduledTimer(withTimeInterval: 3.5, repeats: true) { [weak self] timer in
+				self?.pickEmojiButton.imageView?.startAnimating()
+
+				if self == nil {
+					timer.invalidate()
+				}
+			}
+		}
+	}
 	
 	@IBOutlet fileprivate weak var canvas: UIView! {
 		didSet {

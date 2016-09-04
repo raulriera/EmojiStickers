@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11191" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11156"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,7 +61,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-uS-ipf" userLabel="Pick Emoji">
                                                 <accessibility key="accessibilityConfiguration" label="Add Emoji"/>
-                                                <state key="normal" image="Add Sticker"/>
+                                                <state key="normal" image="Add Sticker-1"/>
                                                 <connections>
                                                     <action selector="didTapPickEmoji:" destination="dZJ-bQ-Lo3" eventType="touchUpInside" id="VCI-Wf-qhG"/>
                                                 </connections>
@@ -91,6 +91,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="canvas" destination="uTW-2p-5ww" id="zM4-NU-JN9"/>
+                        <outlet property="pickEmojiButton" destination="mzX-uS-ipf" id="wam-LR-pBS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGG-SL-nZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -390,7 +391,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add Sticker" width="54" height="54"/>
+        <image name="Add Sticker-1" width="54" height="54"/>
         <image name="Create Sticker" width="54" height="54"/>
         <image name="Delete Sticker" width="34" height="34"/>
         <image name="Save Sticker" width="54" height="54"/>
