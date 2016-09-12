@@ -11,6 +11,23 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
 
+	var state: State = .browsing {
+		didSet {
+			if case .browsing = state {
+				requestPresentationStyle(.compact)
+				presentViewController(for: .compact)
+			} else {
+				requestPresentationStyle(.expanded)
+				presentViewController(for: .expanded)
+			}
+		}
+	}
+
+	enum State {
+		case browsing
+		case creating
+	}
+
     // MARK: - Conversation Handling
     
     override func willBecomeActive(with conversation: MSConversation) {
@@ -23,7 +40,12 @@ class MessagesViewController: MSMessagesAppViewController {
 
 	override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
 		super.didTransition(to: presentationStyle)
-		presentViewController(for: presentationStyle)
+
+		// If the state is "creating an emoji" but the presentation is "compact"
+		// then switch to "browsing emojis" because the creating state doesn't fit
+		if case .creating = state, presentationStyle == .compact {
+			state = .browsing
+		}
 	}
     
     // MARK: Private
@@ -31,7 +53,7 @@ class MessagesViewController: MSMessagesAppViewController {
     private func presentViewController(for presentationStyle: MSMessagesAppPresentationStyle) {
         // Determine the controller to present.
         let controller: UIViewController
-        if presentationStyle == .compact {
+        if case .browsing = state {
             // Show a list of previously created emojis.
             controller = instantiateStickersController()
         } else {
@@ -100,11 +122,7 @@ class MessagesViewController: MSMessagesAppViewController {
 
 extension MessagesViewController: BuildEmojiViewControllerDelegate {
     func buildEmojiViewController(_ controller: BuildEmojiViewController, didFinish emoji: Emoji) {
-		/*
-		The user tapped the save button and has finished creating the sticker.
-		Change the presentation style to `.compact`.
-		*/
-		requestPresentationStyle(.compact)
+		state = .browsing
     }
 }
 
@@ -112,10 +130,6 @@ extension MessagesViewController: BuildEmojiViewControllerDelegate {
 
 extension MessagesViewController: StickersViewControllerDelegate {
     func stickersViewControllerDidSelectCreate(_ controller: StickersViewController) {
-        /*
-         The user tapped the create icon to start creating a new sticker.
-         Change the presentation style to `.expanded`.
-         */
-        requestPresentationStyle(.expanded)
+		state = .creating
     }
 }
