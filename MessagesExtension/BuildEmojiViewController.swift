@@ -24,8 +24,9 @@ class BuildEmojiViewController: UIViewController {
 			let frame1 = UIImage(named: "Add Sticker-1")!
 			let frame2 = UIImage(named: "Add Sticker-2")!
 			let frame3 = UIImage(named: "Add Sticker-3")!
+			let frame4 = UIImage(named: "Add Sticker-4")!
 
-			pickEmojiButton.imageView?.animationImages = [frame1, frame2, frame3, frame2, frame1]
+			pickEmojiButton.imageView?.animationImages = [frame1, frame2, frame3, frame4, frame3, frame2, frame1]
 			pickEmojiButton.imageView?.animationDuration = 0.35
 			pickEmojiButton.imageView?.animationRepeatCount = 1
 
