@@ -11,7 +11,7 @@ import Foundation
 struct EmojiDictionary {
 	// These emojis shouldn't have a skin tone modifier, but they act like they do
 	// so skip these
-	static let blacklist = ["😀", "😬", "😁", "😂", "😃", "😄", "😅", "😆", "😇", "😉", "😊", "🙂", "🙃", "☺️", "😋", "😌", "😍", "😘", "😗", "😙", "😚", "😜", "😝", "😛", "🤑", "🤓", "😎", "🤗", "😏", "😶", "😐", "😑", "😒", "🙄", "🤔", "😳", "😞", "😟", "😠", "😡", "😔", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "😤", "😮", "😱", "😨", "😰", "😯", "😦", "😧", "😢", "😥", "😪", "😓", "😭", "😵", "😲", "🤐", "😷", "🤒", "🤕", "😴", "😈", "👿", "🏂"]
+	static let blacklist = ["😀", "😬", "😁", "😂", "😃", "😄", "😅", "😆", "😇", "😉", "😊", "🙂", "🙃", "☺️", "😋", "😌", "😍", "😘", "😗", "😙", "😚", "😜", "😝", "😛", "🤑", "🤓", "😎", "🤗", "😏", "😶", "😐", "😑", "😒", "🙄", "🤔", "😳", "😞", "😟", "😠", "😡", "😔", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "😤", "😮", "😱", "😨", "😰", "😯", "😦", "😧", "😢", "😥", "😪", "😓", "😭", "😵", "😲", "🤐", "😷", "🤒", "🤕", "😴", "😈", "👿", "🏂", "🤕🎃", "👨🎃", "👩🎃"]
 	let categories: [Category]
 	
 	struct Category {
@@ -33,6 +33,7 @@ struct EmojiDictionary {
 		case objects = "Objects"
 		case symbols = "Symbols"
 		case flags = "Flags"
+		case seasons = "Seasons"
 	}
 	
 	init() {
@@ -49,7 +50,8 @@ struct EmojiDictionary {
 			Category(key: .travelAndPlaces, value: contentsOfFile[Keys.travelAndPlaces.rawValue]!),
 			Category(key: .objects, value: contentsOfFile[Keys.objects.rawValue]!),
 			Category(key: .symbols, value: contentsOfFile[Keys.symbols.rawValue]!),
-			Category(key: .flags, value: contentsOfFile[Keys.flags.rawValue]!)
+			Category(key: .flags, value: contentsOfFile[Keys.flags.rawValue]!),
+			Category(key: .seasons, value: contentsOfFile[Keys.seasons.rawValue]!)
 		]
 	}
 }

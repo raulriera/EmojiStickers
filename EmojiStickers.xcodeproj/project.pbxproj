@@ -1861,6 +1861,13 @@
 		4CC9FB121D6E569900376F33 /* RecentEmojiCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9FB111D6E569900376F33 /* RecentEmojiCache.swift */; };
 		4CCB4DD41D3C31E0001EF33E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */; };
 		4CCB4DD61D3CE4B5001EF33E /* 1f3f3-1f308.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB4DD51D3CE4B5001EF33E /* 1f3f3-1f308.pdf */; };
+		4CCBF5931DA9978800E587A1 /* 1f3a9-1f383-31-20e3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF58D1DA9978800E587A1 /* 1f3a9-1f383-31-20e3.pdf */; };
+		4CCBF5941DA9978800E587A1 /* 1f3a9-1f383-32-20e3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF58E1DA9978800E587A1 /* 1f3a9-1f383-32-20e3.pdf */; };
+		4CCBF5951DA9978800E587A1 /* 1f444-1f383.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF58F1DA9978800E587A1 /* 1f444-1f383.pdf */; };
+		4CCBF5981DA9978800E587A1 /* 1f915-1f383.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF5921DA9978800E587A1 /* 1f915-1f383.pdf */; };
+		4CCBF59A1DA99B2000E587A1 /* 1f4a4-1f383.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF5991DA99B2000E587A1 /* 1f4a4-1f383.pdf */; };
+		4CCBF59E1DA99CAE00E587A1 /* 1f468-1f383.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF59C1DA99CAE00E587A1 /* 1f468-1f383.pdf */; };
+		4CCBF59F1DA99CAE00E587A1 /* 1f469-1f383.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF59D1DA99CAE00E587A1 /* 1f469-1f383.pdf */; };
 		4CE102051D5566F300EAD044 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE102071D5566F300EAD044 /* Localizable.strings */; };
 		4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */; };
 		4CE8B7A01D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79F1D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift */; };
@@ -3760,6 +3767,13 @@
 		4CC9FB111D6E569900376F33 /* RecentEmojiCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentEmojiCache.swift; sourceTree = "<group>"; };
 		4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4CCB4DD51D3CE4B5001EF33E /* 1f3f3-1f308.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f3f3-1f308.pdf"; sourceTree = "<group>"; };
+		4CCBF58D1DA9978800E587A1 /* 1f3a9-1f383-31-20e3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f3a9-1f383-31-20e3.pdf"; path = "Edited/Halloween/1f3a9-1f383-31-20e3.pdf"; sourceTree = "<group>"; };
+		4CCBF58E1DA9978800E587A1 /* 1f3a9-1f383-32-20e3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f3a9-1f383-32-20e3.pdf"; path = "Edited/Halloween/1f3a9-1f383-32-20e3.pdf"; sourceTree = "<group>"; };
+		4CCBF58F1DA9978800E587A1 /* 1f444-1f383.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f444-1f383.pdf"; path = "Edited/Halloween/1f444-1f383.pdf"; sourceTree = "<group>"; };
+		4CCBF5921DA9978800E587A1 /* 1f915-1f383.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f915-1f383.pdf"; path = "Edited/Halloween/1f915-1f383.pdf"; sourceTree = "<group>"; };
+		4CCBF5991DA99B2000E587A1 /* 1f4a4-1f383.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f4a4-1f383.pdf"; path = "Edited/Halloween/1f4a4-1f383.pdf"; sourceTree = "<group>"; };
+		4CCBF59C1DA99CAE00E587A1 /* 1f468-1f383.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f468-1f383.pdf"; path = "Edited/Halloween/1f468-1f383.pdf"; sourceTree = "<group>"; };
+		4CCBF59D1DA99CAE00E587A1 /* 1f469-1f383.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f469-1f383.pdf"; path = "Edited/Halloween/1f469-1f383.pdf"; sourceTree = "<group>"; };
 		4CE102061D5566F300EAD044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CE102081D5566F500EAD044 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CE102091D55689C00EAD044 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -5707,6 +5721,7 @@
 				4C85C42F1D2484E4003AAAEB /* 3299.pdf */,
 				4C85BD211D2484D6003AAAEB /* a9.pdf */,
 				4C85BD221D2484D6003AAAEB /* ae.pdf */,
+				4CCBF59B1DA99B2900E587A1 /* Halloween */,
 			);
 			path = SVG;
 			sourceTree = "<group>";
@@ -5743,6 +5758,20 @@
 				4CB285031D47F8A4002FC2CC /* EditCollectionReusableView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		4CCBF59B1DA99B2900E587A1 /* Halloween */ = {
+			isa = PBXGroup;
+			children = (
+				4CCBF58D1DA9978800E587A1 /* 1f3a9-1f383-31-20e3.pdf */,
+				4CCBF58E1DA9978800E587A1 /* 1f3a9-1f383-32-20e3.pdf */,
+				4CCBF58F1DA9978800E587A1 /* 1f444-1f383.pdf */,
+				4CCBF5921DA9978800E587A1 /* 1f915-1f383.pdf */,
+				4CCBF5991DA99B2000E587A1 /* 1f4a4-1f383.pdf */,
+				4CCBF59C1DA99CAE00E587A1 /* 1f468-1f383.pdf */,
+				4CCBF59D1DA99CAE00E587A1 /* 1f469-1f383.pdf */,
+			);
+			name = Halloween;
 			sourceTree = "<group>";
 		};
 		4CE8B79E1D2F2CFC00B929CF /* Emoji Picker */ = {
@@ -5865,6 +5894,7 @@
 				4C85C6BB1D2484E4003AAAEB /* 1f422.pdf in Resources */,
 				4C85C5D31D2484E4003AAAEB /* 1f350.pdf in Resources */,
 				4C85C60A1D2484E4003AAAEB /* 1f385-1f3fd.pdf in Resources */,
+				4CCBF59F1DA99CAE00E587A1 /* 1f469-1f383.pdf in Resources */,
 				4C85CB481D2484E5003AAAEB /* 27b0.pdf in Resources */,
 				4C85C5731D2484E4003AAAEB /* 1f1ff-1f1f2.pdf in Resources */,
 				4C85C7D61D2484E4003AAAEB /* 1f486-1f3ff.pdf in Resources */,
@@ -6195,6 +6225,7 @@
 				4C85C6E61D2484E4003AAAEB /* 1f443-1f3ff.pdf in Resources */,
 				4C85C9621D2484E4003AAAEB /* 1f64d-1f3fc.pdf in Resources */,
 				4C85C9E61D2484E5003AAAEB /* 1f6f5.pdf in Resources */,
+				4CCBF5931DA9978800E587A1 /* 1f3a9-1f383-31-20e3.pdf in Resources */,
 				4C85CA4C1D2484E5003AAAEB /* 1f938-1f3fc.pdf in Resources */,
 				4C85C5661D2484E4003AAAEB /* 1f1fb-1f1ee.pdf in Resources */,
 				4C85C5E01D2484E4003AAAEB /* 1f35d.pdf in Resources */,
@@ -6226,6 +6257,7 @@
 				4C85C8791D2484E4003AAAEB /* 1f51f.pdf in Resources */,
 				4C85C4E21D2484E4003AAAEB /* 1f1f0-1f1f3.pdf in Resources */,
 				4C85CA101D2484E5003AAAEB /* 1f91d-1f3fd.pdf in Resources */,
+				4CCBF5981DA9978800E587A1 /* 1f915-1f383.pdf in Resources */,
 				4C85C81A1D2484E4003AAAEB /* 1f4bf.pdf in Resources */,
 				4C85C6C71D2484E4003AAAEB /* 1f42e.pdf in Resources */,
 				4C85C9B61D2484E5003AAAEB /* 1f6b5-1f3ff.pdf in Resources */,
@@ -6443,6 +6475,7 @@
 				4C85C9451D2484E4003AAAEB /* 1f645.pdf in Resources */,
 				4C85C8341D2484E4003AAAEB /* 1f4d9.pdf in Resources */,
 				4C85CA4F1D2484E5003AAAEB /* 1f938-1f3ff.pdf in Resources */,
+				4CCBF59E1DA99CAE00E587A1 /* 1f468-1f383.pdf in Resources */,
 				4C85C9EA1D2484E5003AAAEB /* 1f912.pdf in Resources */,
 				4C85C9051D2484E4003AAAEB /* 1f60a.pdf in Resources */,
 				4C85CA421D2484E5003AAAEB /* 1f936-1f3fe.pdf in Resources */,
@@ -7181,6 +7214,7 @@
 				4C85C69C1D2484E4003AAAEB /* 1f403.pdf in Resources */,
 				4C85CB501D2484E5003AAAEB /* 2b1c.pdf in Resources */,
 				4C85C7921D2484E4003AAAEB /* 1f474-1f3ff.pdf in Resources */,
+				4CCBF5951DA9978800E587A1 /* 1f444-1f383.pdf in Resources */,
 				4C85CA491D2484E5003AAAEB /* 1f937-1f3ff.pdf in Resources */,
 				4C85C7271D2484E4003AAAEB /* 1f450-1f3fc.pdf in Resources */,
 				4C85C5F61D2484E4003AAAEB /* 1f373.pdf in Resources */,
@@ -7431,6 +7465,7 @@
 				4C85CA6E1D2484E5003AAAEB /* 1f944.pdf in Resources */,
 				4C85C7F81D2484E4003AAAEB /* 1f4a2.pdf in Resources */,
 				4C85C7AE1D2484E4003AAAEB /* 1f47b.pdf in Resources */,
+				4CCBF5941DA9978800E587A1 /* 1f3a9-1f383-32-20e3.pdf in Resources */,
 				4C85C4C81D2484E4003AAAEB /* 1f1ed-1f1f7.pdf in Resources */,
 				4C85C8701D2484E4003AAAEB /* 1f516.pdf in Resources */,
 				4C85C63F1D2484E4003AAAEB /* 1f3bc.pdf in Resources */,
@@ -7693,6 +7728,7 @@
 				4C85C8B61D2484E4003AAAEB /* 1f56f.pdf in Resources */,
 				4C85C6261D2484E4003AAAEB /* 1f3a3.pdf in Resources */,
 				4C85CA671D2484E5003AAAEB /* 1f93e-1f3fe.pdf in Resources */,
+				4CCBF59A1DA99B2000E587A1 /* 1f4a4-1f383.pdf in Resources */,
 				4C85C7AA1D2484E4003AAAEB /* 1f478-1f3ff.pdf in Resources */,
 				4C85C68A1D2484E4003AAAEB /* 1f3ee.pdf in Resources */,
 			);

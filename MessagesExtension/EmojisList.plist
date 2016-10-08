@@ -1380,5 +1380,15 @@
 		<string>🇿🇲</string>
 		<string>🇿🇼</string>
 	</array>
+	<key>Seasons</key>
+	<array>
+		<string>🎩🎃1️⃣</string>
+		<string>🎩🎃2️⃣</string>
+		<string>🤕🎃</string>
+		<string>👄🎃</string>
+		<string>👨🎃</string>
+		<string>👩🎃</string>
+		<string>💤🎃</string>
+	</array>
 </dict>
 </plist>
