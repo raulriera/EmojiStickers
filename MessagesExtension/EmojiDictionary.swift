@@ -30,7 +30,7 @@ struct EmojiDictionary {
 		case objects = "Objects"
 		case symbols = "Symbols"
 		case flags = "Flags"
-		case seasons = "Seasons"
+		case custom = "Custom"
 	}
 	
 	init() {
@@ -48,7 +48,7 @@ struct EmojiDictionary {
 			Category(key: .objects, value: contentsOfFile[Keys.objects.rawValue]!),
 			Category(key: .symbols, value: contentsOfFile[Keys.symbols.rawValue]!),
 			Category(key: .flags, value: contentsOfFile[Keys.flags.rawValue]!),
-			Category(key: .seasons, value: contentsOfFile[Keys.seasons.rawValue]!)
+			Category(key: .custom, value: contentsOfFile[Keys.custom.rawValue]!)
 		]
 	}
 
@@ -57,8 +57,8 @@ struct EmojiDictionary {
 	func blacklist() -> [String] {
 		var blacklist = ["😀", "😬", "😁", "😂", "😃", "😄", "😅", "😆", "😇", "😉", "😊", "🙂", "🙃", "☺️", "😋", "😌", "😍", "😘", "😗", "😙", "😚", "😜", "😝", "😛", "🤑", "🤓", "😎", "🤗", "😏", "😶", "😐", "😑", "😒", "🙄", "🤔", "😳", "😞", "😟", "😠", "😡", "😔", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "😤", "😮", "😱", "😨", "😰", "😯", "😦", "😧", "😢", "😥", "😪", "😓", "😭", "😵", "😲", "🤐", "😷", "🤒", "🤕", "😴", "😈", "👿", "🏂"]
 
-		if let seasons = categories.last?.value {
-			blacklist.append(contentsOf: seasons)
+		if let custom = categories.last?.value {
+			blacklist.append(contentsOf: custom)
 		}
 
 		return blacklist
