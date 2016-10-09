@@ -8,7 +8,12 @@
 
 import Foundation
 
+// Create this private static version of the emoji dictionary
+// so we are not creating this every single time (which fetches the disk)
+private let _emojiDictionary = EmojiDictionary()
+
 extension String {
+
 	private var emojiSkinToneModifiers: [String] {
 		return [ "🏻", "🏼", "🏽", "🏾", "🏿" ]
 	}
@@ -37,7 +42,7 @@ extension String {
 	}
 	
 	var canHaveSkinToneModifier: Bool {
-		guard !EmojiDictionary.blacklist.contains(self) else { return false }
+		guard !_emojiDictionary.blacklist().contains(self) else { return false }
 
 		if characters.count == 0 {
 			return false

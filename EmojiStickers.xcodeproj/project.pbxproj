@@ -1868,6 +1868,10 @@
 		4CCBF59A1DA99B2000E587A1 /* 1f4a4-1f383.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF5991DA99B2000E587A1 /* 1f4a4-1f383.pdf */; };
 		4CCBF59E1DA99CAE00E587A1 /* 1f468-1f383.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF59C1DA99CAE00E587A1 /* 1f468-1f383.pdf */; };
 		4CCBF59F1DA99CAE00E587A1 /* 1f469-1f383.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF59D1DA99CAE00E587A1 /* 1f469-1f383.pdf */; };
+		4CCBF5A41DA9BDE300E587A1 /* 1f3a9-1f383-33-20e3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF5A01DA9BDE300E587A1 /* 1f3a9-1f383-33-20e3.pdf */; };
+		4CCBF5A51DA9BDE300E587A1 /* 1f3a9-1f383-34-20e3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF5A11DA9BDE300E587A1 /* 1f3a9-1f383-34-20e3.pdf */; };
+		4CCBF5A61DA9BDE300E587A1 /* 1f455-1f383-31-20e3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF5A21DA9BDE300E587A1 /* 1f455-1f383-31-20e3.pdf */; };
+		4CCBF5A71DA9BDE300E587A1 /* 1f455-1f383-32-20e3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBF5A31DA9BDE300E587A1 /* 1f455-1f383-32-20e3.pdf */; };
 		4CE102051D5566F300EAD044 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE102071D5566F300EAD044 /* Localizable.strings */; };
 		4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */; };
 		4CE8B7A01D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79F1D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift */; };
@@ -3774,6 +3778,10 @@
 		4CCBF5991DA99B2000E587A1 /* 1f4a4-1f383.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f4a4-1f383.pdf"; path = "Edited/Halloween/1f4a4-1f383.pdf"; sourceTree = "<group>"; };
 		4CCBF59C1DA99CAE00E587A1 /* 1f468-1f383.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f468-1f383.pdf"; path = "Edited/Halloween/1f468-1f383.pdf"; sourceTree = "<group>"; };
 		4CCBF59D1DA99CAE00E587A1 /* 1f469-1f383.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f469-1f383.pdf"; path = "Edited/Halloween/1f469-1f383.pdf"; sourceTree = "<group>"; };
+		4CCBF5A01DA9BDE300E587A1 /* 1f3a9-1f383-33-20e3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f3a9-1f383-33-20e3.pdf"; path = "Edited/Halloween/1f3a9-1f383-33-20e3.pdf"; sourceTree = "<group>"; };
+		4CCBF5A11DA9BDE300E587A1 /* 1f3a9-1f383-34-20e3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f3a9-1f383-34-20e3.pdf"; path = "Edited/Halloween/1f3a9-1f383-34-20e3.pdf"; sourceTree = "<group>"; };
+		4CCBF5A21DA9BDE300E587A1 /* 1f455-1f383-31-20e3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f455-1f383-31-20e3.pdf"; path = "Edited/Halloween/1f455-1f383-31-20e3.pdf"; sourceTree = "<group>"; };
+		4CCBF5A31DA9BDE300E587A1 /* 1f455-1f383-32-20e3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "1f455-1f383-32-20e3.pdf"; path = "Edited/Halloween/1f455-1f383-32-20e3.pdf"; sourceTree = "<group>"; };
 		4CE102061D5566F300EAD044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CE102081D5566F500EAD044 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CE102091D55689C00EAD044 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -5770,6 +5778,10 @@
 				4CCBF5991DA99B2000E587A1 /* 1f4a4-1f383.pdf */,
 				4CCBF59C1DA99CAE00E587A1 /* 1f468-1f383.pdf */,
 				4CCBF59D1DA99CAE00E587A1 /* 1f469-1f383.pdf */,
+				4CCBF5A01DA9BDE300E587A1 /* 1f3a9-1f383-33-20e3.pdf */,
+				4CCBF5A11DA9BDE300E587A1 /* 1f3a9-1f383-34-20e3.pdf */,
+				4CCBF5A21DA9BDE300E587A1 /* 1f455-1f383-31-20e3.pdf */,
+				4CCBF5A31DA9BDE300E587A1 /* 1f455-1f383-32-20e3.pdf */,
 			);
 			name = Halloween;
 			sourceTree = "<group>";
@@ -6147,6 +6159,7 @@
 				4C85C5741D2484E4003AAAEB /* 1f1ff-1f1fc.pdf in Resources */,
 				4C85CA6F1D2484E5003AAAEB /* 1f945.pdf in Resources */,
 				4C85C6381D2484E4003AAAEB /* 1f3b5.pdf in Resources */,
+				4CCBF5A41DA9BDE300E587A1 /* 1f3a9-1f383-33-20e3.pdf in Resources */,
 				4C85CA8F1D2484E5003AAAEB /* 1f98b.pdf in Resources */,
 				4C85C97A1D2484E4003AAAEB /* 1f687.pdf in Resources */,
 				4C85CB4F1D2484E5003AAAEB /* 2b1b.pdf in Resources */,
@@ -6399,6 +6412,7 @@
 				4C85C5CA1D2484E4003AAAEB /* 1f347.pdf in Resources */,
 				4C85C7D21D2484E4003AAAEB /* 1f486-1f3fb.pdf in Resources */,
 				4C85C4871D2484E4003AAAEB /* 1f1e8-1f1ec.pdf in Resources */,
+				4CCBF5A61DA9BDE300E587A1 /* 1f455-1f383-31-20e3.pdf in Resources */,
 				4C85CA981D2484E5003AAAEB /* 2049.pdf in Resources */,
 				4C85C55F1D2484E4003AAAEB /* 1f1fa-1f1fe.pdf in Resources */,
 				4C85C9431D2484E4003AAAEB /* 1f645-1f3fe.pdf in Resources */,
@@ -6852,6 +6866,7 @@
 				4C85C6501D2484E4003AAAEB /* 1f3c4-1f3ff.pdf in Resources */,
 				4C85C75E1D2484E4003AAAEB /* 1f469-1f3fb.pdf in Resources */,
 				4C85C7E61D2484E4003AAAEB /* 1f490.pdf in Resources */,
+				4CCBF5A71DA9BDE300E587A1 /* 1f455-1f383-32-20e3.pdf in Resources */,
 				4C85C6181D2484E4003AAAEB /* 1f390.pdf in Resources */,
 				4C85CB1B1D2484E5003AAAEB /* 270a-1f3fd.pdf in Resources */,
 				4C85C6B51D2484E4003AAAEB /* 1f41c.pdf in Resources */,
@@ -7584,6 +7599,7 @@
 				4C85C70A1D2484E4003AAAEB /* 1f44b-1f3fd.pdf in Resources */,
 				4C85C7941D2484E4003AAAEB /* 1f475-1f3fb.pdf in Resources */,
 				4C85CB3F1D2484E5003AAAEB /* 2754.pdf in Resources */,
+				4CCBF5A51DA9BDE300E587A1 /* 1f3a9-1f383-34-20e3.pdf in Resources */,
 				4C85CB211D2484E5003AAAEB /* 270b-1f3fd.pdf in Resources */,
 				4C85C4B21D2484E4003AAAEB /* 1f1ec-1f1e7.pdf in Resources */,
 				4C85CAF41D2484E5003AAAEB /* 26a1.pdf in Resources */,

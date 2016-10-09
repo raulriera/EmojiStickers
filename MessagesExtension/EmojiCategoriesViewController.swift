@@ -16,12 +16,12 @@ class EmojiCategoriesViewController: UIPageViewController {
 	static let storyboardIdentifier = "EmojiCategoriesViewController"
 	var selectEmojiHandler: SelectEmojiHandler?
 
+	fileprivate let emojiDictionary = EmojiDictionary()
 	fileprivate weak var categoryPickerViewController: EmojiCategoryPickerViewController?
-	fileprivate let emojis = EmojiDictionary()
 	fileprivate var currentIndex: Int {
 		guard let visibleViewController = viewControllers?.first as? EmojiCategoryViewController,
 			let category = visibleViewController.category,
-			let index = emojis.categories.index(where: { $0 == category }) else { return 0 }
+			let index = emojiDictionary.categories.index(where: { $0 == category }) else { return 0 }
 		
 		return index
 	}
@@ -46,7 +46,7 @@ class EmojiCategoriesViewController: UIPageViewController {
 		}
 		
 		// Skip to the selected section
-		let viewController = newEmojiCategoryViewController(emojis.categories[newPage])
+		let viewController = newEmojiCategoryViewController(emojiDictionary.categories[newPage])
 		setViewControllers([viewController],
 		                   direction: animationDirection,
 		                   animated: animated,
@@ -81,7 +81,7 @@ class EmojiCategoriesViewController: UIPageViewController {
 	fileprivate func instantiateCategoryPickerViewController() -> EmojiCategoryPickerViewController {
 		guard let controller = storyboard?.instantiateViewController(withIdentifier: EmojiCategoryPickerViewController.storyboardIdentifier) as? EmojiCategoryPickerViewController else { fatalError("Unable to instantiate a EmojiCategoryPickerViewController from the storyboard") }
 		
-		controller.categories = emojis.categories
+		controller.categories = emojiDictionary.categories
 		controller.delegate = self
 		
 		return controller
@@ -104,8 +104,15 @@ extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
 	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String, at rect: CGRect) {
 		// Update the recently used emoji cache
 		var recentEmojis = RecentEmojiCache.load()
-		// We need to use the unmodified version while keeping the gender sign
-		recentEmojis.append(emoji.emojiUnmodifiedPreservingGenderSign)
+
+		// If the emoji is one of the blacklisted ones, just append it. We can't modify
+		// those anyway
+		if emojiDictionary.blacklist().contains(emoji) {
+			recentEmojis.append(emoji)
+		} else {
+			// We need to use the unmodified version while keeping the gender sign
+			recentEmojis.append(emoji.emojiUnmodifiedPreservingGenderSign)
+		}
 
 		selectEmojiHandler?(emoji, currentIndex, rect)
 	}
@@ -132,17 +139,17 @@ extension EmojiCategoriesViewController: UIPageViewControllerDataSource {
 			return nil
 		}
 		
-		guard emojis.categories.count > previousIndex else {
+		guard emojiDictionary.categories.count > previousIndex else {
 			return nil
 		}
 		
-		return newEmojiCategoryViewController(emojis.categories[previousIndex])
+		return newEmojiCategoryViewController(emojiDictionary.categories[previousIndex])
 	}
 	
 	func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
 		
 		let nextIndex = currentIndex + 1
-		let stationsCount = emojis.categories.count
+		let stationsCount = emojiDictionary.categories.count
 		
 		guard stationsCount != nextIndex else {
 			return nil
@@ -152,7 +159,7 @@ extension EmojiCategoriesViewController: UIPageViewControllerDataSource {
 			return nil
 		}
 		
-		return newEmojiCategoryViewController(emojis.categories[nextIndex])
+		return newEmojiCategoryViewController(emojiDictionary.categories[nextIndex])
 	}
 }
 
