@@ -39,7 +39,7 @@ class StickerCache {
 		let tempPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
         do {
-			cacheURL = URL(fileURLWithPath: tempPath).appendingPathComponent(directoryName)
+			cacheURL = URL(fileURLWithPath: tempPath).appendingPathComponent(directoryName, isDirectory: true)
 			try fileManager.createDirectory(at: cacheURL, withIntermediateDirectories: true, attributes: nil)
         }
         catch {
@@ -62,8 +62,8 @@ class StickerCache {
     func sticker(for emoji: Emoji, completion: @escaping (_ sticker: MSSticker) -> Void) {        
         // Determine the URL for the sticker.
         let fileName = emoji.uuid.uuidString + ".png"
-        let url = cacheURL.appendingPathComponent(fileName)
-        
+		let url = cacheURL.appendingPathComponent(fileName, isDirectory: false)
+
         // Create an operation to process the request.
         let operation = BlockOperation {
             // Check if the sticker already exists at the URL.
@@ -98,7 +98,7 @@ class StickerCache {
 	func delete(_ emoji: Emoji) {
 		// Determine the URL for the sticker.
 		let fileName = emoji.uuid.uuidString + ".png"
-		let url = cacheURL.appendingPathComponent(fileName)
+		let url = cacheURL.appendingPathComponent(fileName, isDirectory: false)
 
 		// Create an operation to process the request.
 		let operation = BlockOperation {

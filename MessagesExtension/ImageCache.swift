@@ -71,7 +71,7 @@ final class ImageCache {
 	
 	func image(for cachable: Cachable, completion: @escaping (_ image: UIImage) -> Void) {
 		let fileName = cachable.identifier + ".png"
-		let url = cacheURL.appendingPathComponent(fileName)
+		let url = cacheURL.appendingPathComponent(fileName, isDirectory: false)
 		
 		// Create an operation to process the request.
 		let operation = BlockOperation {
