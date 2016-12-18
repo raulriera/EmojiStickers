@@ -7912,6 +7912,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = R64MTWS872;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers.MessagesExtension;
@@ -7926,6 +7927,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = R64MTWS872;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers.MessagesExtension;
@@ -7942,6 +7944,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = R64MTWS872;
 				INFOPLIST_FILE = EmojiStickers/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -7956,6 +7959,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = R64MTWS872;
 				INFOPLIST_FILE = EmojiStickers/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
