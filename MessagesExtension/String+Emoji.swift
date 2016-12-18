@@ -42,7 +42,7 @@ extension String {
 	}
 	
 	var canHaveSkinToneModifier: Bool {
-		guard !_emojiDictionary.blacklist().contains(self) else { return false }
+		guard _emojiDictionary.blacklist().contains(self) == false else { return false }
 
 		if characters.count == 0 {
 			return false
