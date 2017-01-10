@@ -82,6 +82,13 @@ class BuildEmojiViewController: UIViewController {
     static let storyboardIdentifier = "BuildEmojiViewController"
     weak var delegate: BuildEmojiViewControllerDelegate?
 	private var lastUsedCategory: Int = 0
+	fileprivate var isViewInsideCanvas: Bool = true {
+		didSet {
+			if oldValue != isViewInsideCanvas {
+				UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+			}
+		}
+	}
 		
 	// MARK: IBActions
 	
@@ -301,7 +308,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		
 		recognizer.setTranslation(.zero, in: self.view)
 				
-		let isViewInsideCanvas = canvas.bounds.contains(view.center)
+		isViewInsideCanvas = canvas.bounds.contains(view.center)
 		
 		switch recognizer.state {
 		case .changed:
