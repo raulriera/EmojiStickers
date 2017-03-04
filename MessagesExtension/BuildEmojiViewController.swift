@@ -52,6 +52,9 @@ class BuildEmojiViewController: UIViewController {
 			singleTap.require(toFail: doubleTap)
 
 			createLongTapGestureRecognizer(targetView: canvas)
+			createRotateGestureRecognizer(targetView: canvas)
+			createPinchGestureRecognizer(targetView: canvas)
+			createPanGestureRecognizer(targetView: canvas)
 		}
 	}
 
@@ -175,10 +178,6 @@ class BuildEmojiViewController: UIViewController {
 				}, completion: nil)
 			})
 
-		createRotateGestureRecognizer(targetView: emojiView)
-		createPinchGestureRecognizer(targetView: emojiView)
-		createPanGestureRecognizer(targetView: emojiView)
-
 		// Remove any existing child controllers.
 		removeChildViewControllers()
 	}
@@ -299,7 +298,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	}
 	
 	func handlePan(recognizer: UIPanGestureRecognizer) {
-		guard let view = recognizer.view else { return }
+		guard let view = canvas.subviews.last else { return }
 
 		let translation = recognizer.translation(in: self.view)
 		
@@ -328,7 +327,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	}
 	
 	func handlePinch(recognizer: UIPinchGestureRecognizer) {
-		guard let view = recognizer.view as? EmojiView else { return }
+		guard let lastView = canvas.subviews.last, let view = lastView as? EmojiView else { return }
 
 		// Prevent the emoji from growing too large
 		let maximumSize: CGSize = CGSize(width: 900, height: 900)
@@ -353,7 +352,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	}
 	
 	func handleRotate(recognizer: UIRotationGestureRecognizer) {
-		guard let view = recognizer.view else { return }
+		guard let view = canvas.subviews.last else { return }
 		view.transform = view.transform.rotated(by: recognizer.rotation)
 		recognizer.rotation = 0
 	}
