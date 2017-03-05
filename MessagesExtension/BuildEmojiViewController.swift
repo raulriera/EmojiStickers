@@ -16,9 +16,31 @@ protocol BuildEmojiViewControllerDelegate: class {
 	func buildEmojiViewController(_ controller: BuildEmojiViewController, didFinish emoji: Emoji)
 }
 
+class EmojiCanvas: UIView {
+	func select(view: UIView) {
+		guard let view = view as? EmojiView else { return }
+		unselect()
+		view.isSelected = true
+	}
+
+	func selectLastView() {
+		guard let lastView = subviews.last else { return }
+		select(view: lastView)
+	}
+
+	func unselect() {
+		guard let emojiViews = subviews as? [EmojiView] else { return }
+
+		for subview in emojiViews {
+			subview.isSelected = false
+		}
+	}
+}
+
 class BuildEmojiViewController: UIViewController {
-    
+
     // MARK: IBOutlets
+
 	@IBOutlet private weak var pickEmojiButton: UIButton! {
 		didSet {
 			let frame1 = UIImage(named: "Add Sticker-1")!
@@ -40,7 +62,7 @@ class BuildEmojiViewController: UIViewController {
 		}
 	}
 	
-	@IBOutlet fileprivate weak var canvas: UIView! {
+	@IBOutlet fileprivate weak var canvas: EmojiCanvas! {
 		didSet {
 			canvas.superview?.layer.borderWidth = 0.5
 			canvas.superview?.layer.borderColor = UIColor.lightGray.cgColor
@@ -56,6 +78,8 @@ class BuildEmojiViewController: UIViewController {
 			createPinchGestureRecognizer(targetView: canvas)
 		}
 	}
+
+	// MARK: Overrides
 
 	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 		super.viewWillTransition(to: size, with: coordinator)
@@ -127,6 +151,7 @@ class BuildEmojiViewController: UIViewController {
 
 	@IBAction func didTapSave(_ sender: UIButton) {
 		guard canvas.subviews.isEmpty == false else { return }
+		canvas.unselect()
 
 		let image = UIImage(view: canvas)
 		let emoji = Emoji(uuid: UUID(), image: image)
@@ -178,6 +203,8 @@ class BuildEmojiViewController: UIViewController {
 		})
 
 		createPanGestureRecognizer(targetView: emojiView)
+
+		canvas.select(view: emojiView)
 
 		// Remove any existing child controllers.
 		removeChildViewControllers()
@@ -255,7 +282,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	
 	func handleTap(recognizer: UITapGestureRecognizer) {
 		let point = recognizer.location(in: canvas)
-		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
+		guard let tappedView = canvas.hitTest(point, with: nil) else { return }
 
 		// Check the tapped view against all subviews
 		// if it intersect with any, bring it to the front.
@@ -263,8 +290,10 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 			if subview.frame.intersects(tappedView.frame) {
 				if tappedView == subview {
 					tappedView.superview?.bringSubview(toFront: tappedView)
+					canvas.select(view: tappedView)
 				} else {
 					subview.superview?.bringSubview(toFront: subview)
+					canvas.select(view: subview)
 				}
 				return
 			}
@@ -329,6 +358,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 					view.alpha = 0
 				}) { _ in
 					view.removeFromSuperview()
+					self.canvas.selectLastView()
 				}
 			}
 		}

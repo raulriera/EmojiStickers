@@ -11,17 +11,34 @@ import UIKit
 class EmojiView: UIImageView {
 	
 	// MARK: Properties
+
 	let defaultSize = CGSize(width: 250, height: 250)
 	let character: String
 	var isFlipped: Bool {
 		return image?.imageOrientation == .upMirrored
+	}
+	var isSelected: Bool {
+		didSet {
+			if isSelected {
+				layer.borderColor = UIColor.lightGray.withAlphaComponent(0.6).cgColor
+				layer.borderWidth = 1.0
+				layer.cornerRadius = 6
+			} else {
+				layer.borderColor = UIColor.black.cgColor
+				layer.borderWidth = 0.0
+				layer.cornerRadius = 0
+			}
+		}
 	}
 	
 	// MARK: Initialisers
 	
 	init(character: String) {
 		self.character = character
+		self.isSelected = true
+
 		super.init(frame: CGRect(origin: .zero, size: defaultSize))
+
 		backgroundColor = .clear
 		isUserInteractionEnabled = true
 		
