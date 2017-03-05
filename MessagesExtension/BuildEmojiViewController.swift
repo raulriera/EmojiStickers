@@ -54,7 +54,6 @@ class BuildEmojiViewController: UIViewController {
 			createLongTapGestureRecognizer(targetView: canvas)
 			createRotateGestureRecognizer(targetView: canvas)
 			createPinchGestureRecognizer(targetView: canvas)
-			createPanGestureRecognizer(targetView: canvas)
 		}
 	}
 
@@ -176,7 +175,9 @@ class BuildEmojiViewController: UIViewController {
 				UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
 						emojiView.bounds.size = emojiView.defaultSize
 				}, completion: nil)
-			})
+		})
+
+		createPanGestureRecognizer(targetView: emojiView)
 
 		// Remove any existing child controllers.
 		removeChildViewControllers()
@@ -192,15 +193,22 @@ class BuildEmojiViewController: UIViewController {
 extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	
 	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+
+		if gestureRecognizer is UILongPressGestureRecognizer ||
+			gestureRecognizer is UITapGestureRecognizer ||
+			gestureRecognizer is UIPanGestureRecognizer {
+			return false
+		}
+
 		return true
 	}
 	
 	// MARK: Gesture Helpers
 	
 	func createTapGestureRecognizer(targetView: UIView) -> UITapGestureRecognizer {
-		// Don't include this gesture in the delegate, we don't want it
-		// to run simultaneously with any other gesture
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+		gesture.delegate = self
+
 		targetView.addGestureRecognizer(gesture)
 		return gesture
 	}
@@ -215,17 +223,17 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	}
 
 	func createLongTapGestureRecognizer(targetView: UIView) {
-		// Don't include this gesture in the delegate, we don't want it
-		// to run simultaneously with any other gesture
 		let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
 		gesture.minimumPressDuration = 2.0
+		gesture.delegate = self
+
 		targetView.addGestureRecognizer(gesture)
 	}
 	
 	func createPanGestureRecognizer(targetView: UIView) {
-		// Don't include this gesture in the delegate, we don't want it
-		// to run simultaneously with any other gesture
 		let gesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+		gesture.delegate = self
+
 		targetView.addGestureRecognizer(gesture)
 	}
 	
@@ -298,7 +306,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	}
 	
 	func handlePan(recognizer: UIPanGestureRecognizer) {
-		guard let view = canvas.subviews.last else { return }
+		guard let view = recognizer.view else { return }
 
 		let translation = recognizer.translation(in: self.view)
 		
