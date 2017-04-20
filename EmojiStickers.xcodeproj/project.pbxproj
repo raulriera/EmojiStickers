@@ -3894,6 +3894,48 @@
 			isa = PBXGroup;
 			children = (
 				4CCBF59B1DA99B2900E587A1 /* Halloween */,
+				4CC824501EA079E6003CC0D1 /* Regular Set */,
+			);
+			path = SVG;
+			sourceTree = "<group>";
+		};
+		4C95BF721D17078C00A0D90B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C95BF731D17079500A0D90B /* Emoji.swift */,
+				4CB85B601D272C8100F3227A /* EmojiOne.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C95BF7D1D17209F00A0D90B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CE8B79E1D2F2CFC00B929CF /* Emoji Picker */,
+				4C136A1D1D16F5F50065DC28 /* BuildEmojiViewController.swift */,
+				4C95BF701D1706CE00A0D90B /* StickersViewController.swift */,
+				4C1C17541D14C64000A20A15 /* MessagesViewController.swift */,
+				4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4C95BF801D1749D300A0D90B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C95BF831D174A4000A0D90B /* CreateCell.swift */,
+				4C95BF811D1749DF00A0D90B /* EmojiCell.swift */,
+				4C6D184F1D1F065A0083B12F /* EmojiCharacterCell.swift */,
+				4C6D18511D1F2FE60083B12F /* EmojiView.swift */,
+				4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */,
+				4CB285031D47F8A4002FC2CC /* EditCollectionReusableView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4CC824501EA079E6003CC0D1 /* Regular Set */ = {
+			isa = PBXGroup;
+			children = (
 				4C85BD241D2484D6003AAAEB /* 1f0cf.pdf */,
 				4C85BD341D2484D6003AAAEB /* 1f1e6-1f1e8.pdf */,
 				4C85BD351D2484D6003AAAEB /* 1f1e6-1f1e9.pdf */,
@@ -5727,41 +5769,7 @@
 				4C85BD211D2484D6003AAAEB /* a9.pdf */,
 				4C85BD221D2484D6003AAAEB /* ae.pdf */,
 			);
-			path = SVG;
-			sourceTree = "<group>";
-		};
-		4C95BF721D17078C00A0D90B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4C95BF731D17079500A0D90B /* Emoji.swift */,
-				4CB85B601D272C8100F3227A /* EmojiOne.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		4C95BF7D1D17209F00A0D90B /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4CE8B79E1D2F2CFC00B929CF /* Emoji Picker */,
-				4C136A1D1D16F5F50065DC28 /* BuildEmojiViewController.swift */,
-				4C95BF701D1706CE00A0D90B /* StickersViewController.swift */,
-				4C1C17541D14C64000A20A15 /* MessagesViewController.swift */,
-				4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		4C95BF801D1749D300A0D90B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				4C95BF831D174A4000A0D90B /* CreateCell.swift */,
-				4C95BF811D1749DF00A0D90B /* EmojiCell.swift */,
-				4C6D184F1D1F065A0083B12F /* EmojiCharacterCell.swift */,
-				4C6D18511D1F2FE60083B12F /* EmojiView.swift */,
-				4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */,
-				4CB285031D47F8A4002FC2CC /* EditCollectionReusableView.swift */,
-			);
-			name = Views;
+			name = "Regular Set";
 			sourceTree = "<group>";
 		};
 		4CCBF59B1DA99B2900E587A1 /* Halloween */ = {
