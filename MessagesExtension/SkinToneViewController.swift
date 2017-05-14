@@ -21,7 +21,7 @@ class SkinToneViewController: UIViewController {
 		}
 	}
 	
-	private let skinTones = [ "", "🏻", "🏼", "🏽", "🏾", "🏿" ]
+	private let skinTones = ["", "1f3fb", "1f3fc", "1f3fd", "1f3fe", "1f3ff"] // FIXME: Make this better
 	private let skinToneHistory = SkinToneCache.load()
 	var selectedSkinTone: String = "" {
 		didSet {

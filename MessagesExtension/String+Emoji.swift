@@ -1,73 +1,85 @@
 //
 //  String+Emoji.swift
-//  EmojiStickers
+//  EmojiKit
 //
-//  Created by Raúl Riera on 19/06/2016.
-//  Copyright © 2016 Raul Riera. All rights reserved.
+//  Created by Raul Riera on 13/05/2017.
+//  Copyright © 2017 Raul Riera. All rights reserved.
 //
 
 import Foundation
 
-// Create this private static version of the emoji dictionary
-// so we are not creating this every single time (which fetches the disk)
-private let _emojiDictionary = EmojiDictionary()
+let toneModifiers = ["1f3fb", "1f3fc", "1f3fd", "1f3fe", "1f3ff"]
+// 	[ "🏻", "🏼", "🏽", "🏾", "🏿" ]
+
+extension Array where Iterator.Element: Equatable {
+	@discardableResult
+	public mutating func remove(where condition: (Iterator.Element) -> Bool) -> Iterator.Element? {
+		guard let index = index(where: condition) else { return nil }
+		return remove(at: Int(index))
+	}
+
+	@discardableResult
+	public mutating func removeAll(where condition: (Iterator.Element) -> Bool) -> [Iterator.Element] {
+		var result: [Iterator.Element] = []
+
+		while let index = index(where: condition) {
+			result.append(remove(at: index))
+		}
+
+		return result
+	}
+}
 
 extension String {
-
-	private var emojiSkinToneModifiers: [String] {
-		return [ "🏻", "🏼", "🏽", "🏾", "🏿" ]
-	}
-	
 	var emojiVisibleLength: Int {
 		var count = 0
 		enumerateSubstrings(in: startIndex..<endIndex, options: .byComposedCharacterSequences) { _ in count = count + 1 }
 		return count
 	}
-	
+
 	var emojiUnmodified: String {
 		if characters.isEmpty {
 			return ""
 		}
-		
-		return "\(characters.first!)"
+
+		var components = self.components(separatedBy: "-")
+		let filtered = components.removeAll(where: { toneModifiers.contains($0) == false }).joined(separator: "-")
+
+		return filtered
 	}
 
-	var emojiUnmodifiedPreservingGenderSign: String {
-		if hasGenderSign {
-			let genderSign = characters.last!
-			return emojiUnmodified + String(genderSign)
-		}
-
-		return emojiUnmodified
-	}
-	
 	var canHaveSkinToneModifier: Bool {
-		guard _emojiDictionary.blacklist().contains(self) == false else { return false }
+		let copy = self.emojiUnmodified
+		let blacklist = ["😀", "😬", "😁", "😂", "😃", "😄", "😅", "😆", "😇", "😉", "😊", "🙂", "🙃", "☺️", "😋", "😌", "😍", "😘", "😗", "😙", "😚", "😜", "😝", "😛", "🤑", "🤓", "😎", "🤗", "😏", "😶", "😐", "😑", "😒", "🙄", "🤔", "😳", "😞", "😟", "😠", "😡", "😔", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "😤", "😮", "😱", "😨", "😰", "😯", "😦", "😧", "😢", "😥", "😪", "😓", "😭", "😵", "😲", "🤐", "😷", "🤒", "🤕", "😴", "😈", "👿", "🤝", "👯", "👫", "👭", "👬", "👪", "🛌", "🕴", "💃", "🕺", "🚶", "🏃", "👩‍❤️‍👩", "👨‍❤️‍👨", "👩‍❤️‍💋‍👩", "👨‍❤️‍💋‍👨", "👨‍👩‍👧", "👨‍👩‍👧‍👦", "👨‍👩‍👦‍👦", "👨‍👩‍👧‍👧", "👩‍👩‍👦", "👩‍👩‍👧", "👩‍👩‍👧‍👦", "👩‍👩‍👦‍👦", "👩‍👩‍👧‍👧", "👨‍👨‍👦", "👨‍👨‍👧", "👨‍👨‍👧‍👦", "👨‍👨‍👦‍👦", "👨‍👨‍👧‍👧", "👩‍👦", "👩‍👧", "👩‍👧‍👦", "👩‍👦‍👦", "👩‍👧‍👧", "👨‍👦", "👨‍👧", "👨‍👧‍👦", "👨‍👦‍👦", "👨‍👧‍👧"].map { $0.utf }
+
+		let whitelist = ["✌️", "☝️", "✍️", "👮‍♀️", "👷‍♀️", "💂‍♀️", "👩‍⚕️", "👨‍⚕️", "👩‍🌾", "👨‍🌾", "👩‍🍳", "👨‍🍳", "👩‍🎓", "👨‍🎓", "👩‍🎤", "👨‍🎤", "👩‍🏫", "👨‍🏫", "👩‍🏭", "👨‍🏭", "👩‍💻", "👨‍💻", "👩‍💼", "👨‍💼", "👩‍🔧", "👨‍🔧", "👩‍🔬", "👨‍🔬", "👩‍🎨", "👨‍🎨", "👩‍🚒", "👨‍🚒", "👩‍✈️", "👨‍✈️", "👩‍🚀", "👨‍🚀", "👩‍⚖️", "👨‍⚖️", "🙇‍♀️", "💁‍♂️", "🙅‍♂️", "🙆‍♂️", "🙋‍♂️", "🤦‍♀️", "🤦‍♂️", "🤷‍♀️", "🤷‍♂️", "🙎‍♂️", "🙍‍♂️", "💇‍♂️", "💆‍♂️"].map { $0.utf }
+		guard !whitelist.contains(copy) else { return true }
+		guard !blacklist.contains(copy) else { return false }
 
 		if characters.count == 0 {
 			return false
 		}
-		
-		let modified = emojiUnmodified + emojiSkinToneModifiers[0]
-		return modified.emojiVisibleLength == 1
+
+		let modified = copy + "-" + toneModifiers[0]
+		return modified.encoded.emojiVisibleLength == 1
 	}
-	
+
 	var utf: String {
-		// Remove the "fe0f" that seems to be added to some of them
-		return unicodeScalars.map { String($0.value, radix: 16, uppercase: false) }.filter { $0 != "fe0f" && $0 != "200d" }.joined(separator: "-")
+		return unicodeScalars.map { String($0.value, radix: 16, uppercase: false) }.joined(separator: "-")
 	}
 
 	func applying(skinTone: String) -> String {
-		if hasGenderSign == false {
-			return self + skinTone
-		} else {
-			let genderSign = characters.last!
-
-			return emojiUnmodified + skinTone + String(genderSign)
-		}
+		guard skinTone.isEmpty == false else { return self.emojiUnmodified }
+		var components = self.emojiUnmodified.components(separatedBy: "-")
+		components.insert(skinTone, at: 1)
+		return components.joined(separator: "-")
 	}
 
-	private var hasGenderSign: Bool {
-		return contains("♀️") || contains("♂")
+	var encoded: String {
+		return self.components(separatedBy: "-").flatMap { utf in
+			guard let asInt = Int(utf, radix: 16) else { return nil }
+			guard let scalar = UnicodeScalar(asInt) else { return nil }
+			return String(scalar)
+			}.joined()
 	}
 }

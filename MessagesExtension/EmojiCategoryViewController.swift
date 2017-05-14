@@ -158,7 +158,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 		}
 		
 		let emojiOne = EmojiOne(character: emojiCharacter) {
-			if let urlForDocument = Bundle.main.url(forResource: emojiCharacter.utf, withExtension: "pdf") {
+			if let urlForDocument = Bundle.main.url(forResource: emojiCharacter, withExtension: "pdf") {
 				let document = CGPDFDocument(urlForDocument as CFURL)!
 				let image = UIImage(document: document)
 				return image

@@ -105,15 +105,7 @@ extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
 		// Update the recently used emoji cache
 		var recentEmojis = RecentEmojiCache.load()
 
-		// If the emoji is one of the blacklisted ones, just append it. We can't modify
-		// those anyway
-		if emojiDictionary.blacklist().contains(emoji) {
-			recentEmojis.append(emoji)
-		} else {
-			// We need to use the unmodified version while keeping the gender sign
-			recentEmojis.append(emoji.emojiUnmodifiedPreservingGenderSign)
-		}
-
+		recentEmojis.append(emoji)
 		selectEmojiHandler?(emoji, currentIndex, rect)
 	}
 }

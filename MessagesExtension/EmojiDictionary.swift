@@ -18,6 +18,11 @@ struct EmojiDictionary {
 		var count: Int {
 			return value.count
 		}
+
+		init(key: Keys, value: [String]) {
+			self.key = key
+			self.value = value.map { $0.utf }
+		}
 	}
 	
 	enum Keys: String {
@@ -30,7 +35,6 @@ struct EmojiDictionary {
 		case objects = "Objects"
 		case symbols = "Symbols"
 		case flags = "Flags"
-		case custom = "Custom"
 	}
 	
 	init() {
@@ -47,26 +51,8 @@ struct EmojiDictionary {
 			Category(key: .travelAndPlaces, value: contentsOfFile[Keys.travelAndPlaces.rawValue]!),
 			Category(key: .objects, value: contentsOfFile[Keys.objects.rawValue]!),
 			Category(key: .symbols, value: contentsOfFile[Keys.symbols.rawValue]!),
-			Category(key: .flags, value: contentsOfFile[Keys.flags.rawValue]!),
-			Category(key: .custom, value: contentsOfFile[Keys.custom.rawValue]!)
+			Category(key: .flags, value: contentsOfFile[Keys.flags.rawValue]!)
 		]
-	}
-
-	// These emojis shouldn't have a skin tone modifier, but they act like they do
-	// so skip these
-	func blacklist() -> [String] {
-        var blacklist = ["😀", "😬", "😁", "😂", "😃", "😄", "😅", "😆", "😇", "😉", "😊", "🙂", "🙃", "☺️", "😋", "😌", "😍", "😘", "😗", "😙", "😚", "😜", "😝", "😛", "🤑", "🤓", "😎", "🤗", "😏", "😶", "😐", "😑", "😒", "🙄", "🤔", "😳", "😞", "😟", "😠", "😡", "😔", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "😤", "😮", "😱", "😨", "😰", "😯", "😦", "😧", "😢", "😥", "😪", "😓", "😭", "😵", "😲", "🤐", "😷", "🤒", "🤕", "😴", "😈", "👿", "👯", "👫", "👭", "👬", "👪", "🛌"]
-        
-        // FIXME:
-        // When EmojiOne 3.0 ships, revisit the ones we blacklisted because we don't have those assets
-        // yet. Revisit this list
-        blacklist.append(contentsOf: ["🏂", "🏌🏾", "🕴"])
-        
-		if let custom = categories.last?.value {
-			blacklist.append(contentsOf: custom)
-		}
-
-		return blacklist
 	}
 }
 

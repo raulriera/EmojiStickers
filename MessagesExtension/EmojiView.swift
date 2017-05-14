@@ -70,14 +70,14 @@ class EmojiView: UIImageView {
 	// MARK: Private
 	
 	private func updateImageFromPDF() {
-		if let urlForDocument = Bundle.main.url(forResource: character.utf, withExtension: "pdf") {
+		if let urlForDocument = Bundle.main.url(forResource: character, withExtension: "pdf") {
 			let document = CGPDFDocument(urlForDocument as CFURL)!
 			let image = UIImage(document: document, at: bounds.size)
 
 			// If the image was already rendered, maintain the current "flip" state
 			self.image = isFlipped ? UIImage(cgImage: image.cgImage!, scale: 0, orientation: .upMirrored) : image
 		} else {
-			print("Did not find document for \(character.utf)")
+			print("Did not find document for \(character)")
 		}
 	}
 }

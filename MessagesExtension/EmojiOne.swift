@@ -20,6 +20,6 @@ struct EmojiOne {
 
 extension EmojiOne: Cachable {
 	var identifier: String {
-		return character.utf
+		return character
 	}
 }
