@@ -29,7 +29,7 @@ struct RecentEmojiCache {
 		let defaults = UserDefaults.standard
 
 		if let recentEmojis = defaults.object(forKey: RecentEmojiCache.userDefaultsKey) as? [String] {
-			emojis = recentEmojis
+			emojis = recentEmojis.map { $0 }
 		}
 
 		return RecentEmojiCache(emojis: emojis)

@@ -105,7 +105,7 @@ extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
 		// Update the recently used emoji cache
 		var recentEmojis = RecentEmojiCache.load()
 
-		recentEmojis.append(emoji)
+		recentEmojis.append(emoji.emojiUnmodified)
 		selectEmojiHandler?(emoji, currentIndex, rect)
 	}
 }

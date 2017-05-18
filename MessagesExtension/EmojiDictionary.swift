@@ -43,7 +43,7 @@ struct EmojiDictionary {
 		let contentsOfFile = dictionary as! [String: [String]]
 		
 		self.categories = [
-			Category(key: .recent, value: RecentEmojiCache.load().emojis.reversed()),
+			Category(key: .recent, value: RecentEmojiCache.load().emojis.reversed().map { $0.encoded }),
 			Category(key: .people, value: contentsOfFile[Keys.people.rawValue]!),
 			Category(key: .nature, value: contentsOfFile[Keys.nature.rawValue]!),
 			Category(key: .foodAndDrinks, value: contentsOfFile[Keys.foodAndDrinks.rawValue]!),
