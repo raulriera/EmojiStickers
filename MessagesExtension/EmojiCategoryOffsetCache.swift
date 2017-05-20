@@ -36,4 +36,9 @@ struct EmojiCategoryOffsetCache {
 		let defaults = UserDefaults.standard
 		defaults.set(NSStringFromCGPoint(offset), forKey: EmojiCategoryOffsetCache.userDefaultsKey)
 	}
+
+	/// Deletes all the history
+	func clear() {
+		UserDefaults.standard.set(nil, forKey: EmojiCategoryOffsetCache.userDefaultsKey)
+	}
 }

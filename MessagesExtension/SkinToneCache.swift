@@ -35,6 +35,11 @@ struct SkinToneCache {
 		
 		return SkinToneCache(tone: tone)
 	}
+
+	/// Deletes all the history
+	func clear() {
+		UserDefaults.standard.set("", forKey: SkinToneCache.userDefaultsKey)
+	}
 	
 	/// Saves the history.
 	func save(tone: String) {

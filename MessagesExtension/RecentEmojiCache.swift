@@ -44,6 +44,11 @@ struct RecentEmojiCache {
 		defaults.set(emojisToSave as Any, forKey: RecentEmojiCache.userDefaultsKey)
 	}
 
+	/// Deletes all the history
+	func clear() {
+		UserDefaults.standard.set([], forKey: RecentEmojiCache.userDefaultsKey)
+	}
+
 	mutating func append(_ emoji: String) {
 		/*
 		Filter any existing instances of the new emoji from the current

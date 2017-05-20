@@ -34,6 +34,18 @@ class MessagesViewController: MSMessagesAppViewController {
         super.willBecomeActive(with: conversation)
 		// Present the view controller for the appropriate presentation style.
 		presentViewController(for: presentationStyle)
+
+		// Run this code only once per "Emoji assets update"
+		if !UserDefaults.standard.bool(forKey: "SwitchToTwitterEmoji") {
+			print("Deleting all cache content")
+
+			ImageCache.cache.clear()
+			SkinToneCache.load().clear()
+			EmojiCategoryOffsetCache.load().clear()
+			RecentEmojiCache.load().clear()
+
+			UserDefaults.standard.set(true, forKey: "SwitchToTwitterEmoji")
+		}
     }
     
     // MARK: MSMessagesAppViewController

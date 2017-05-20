@@ -57,10 +57,14 @@ final class ImageCache {
 		}
 	}
 	
-	deinit {
+	/// Clears the cache
+	func clear() {
 		let fileManager = FileManager.default
 		do {
-			try fileManager.removeItem(at: cacheURL)
+			let files = try fileManager.contentsOfDirectory(atPath: cacheURL.path)
+			try files.forEach {
+				try fileManager.removeItem(at: cacheURL.appendingPathComponent($0))
+			}
 		}
 		catch {
 			print("Unable to remove cache directory: \(error)")

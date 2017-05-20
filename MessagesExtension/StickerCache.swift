@@ -9,7 +9,6 @@
 import UIKit
 import Messages
 
-
 class StickerCache {
     static let cache = StickerCache()
     private let cacheURL: URL
