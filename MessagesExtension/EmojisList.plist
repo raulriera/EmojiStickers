@@ -79,12 +79,22 @@
 		<string>😷</string>
 		<string>🤒</string>
 		<string>🤕</string>
+		<string>🤩</string>
+		<string>🤨</string>
+		<string>🤯</string>
+		<string>🤪</string>
+		<string>🤬</string>
+		<string>🤮</string>
+		<string>🤫</string>
+		<string>🤭</string>
+		<string>🧐</string>
 		<string>😈</string>
 		<string>👿</string>
 		<string>👹</string>
 		<string>👺</string>
 		<string>💩</string>
 		<string>👻</string>
+		<string>🧠</string>
 		<string>💀</string>
 		<string>☠️</string>
 		<string>👽</string>
@@ -126,6 +136,8 @@
 		<string>🖖</string>
 		<string>👋</string>
 		<string>🤙</string>
+		<string>🤟</string>
+		<string>🤲</string>
 		<string>💪</string>
 		<string>🖕</string>
 		<string>✍️</string>
@@ -226,6 +238,12 @@
 		<string>💇‍♂️</string>
 		<string>💆</string>
 		<string>💆‍♂️</string>
+		<string>🧒</string>
+		<string>🧑</string>
+		<string>🧓</string>
+		<string>🧕</string>
+		<string>🧔</string>
+		<string>🤱</string>
 		<string>🕴</string>
 		<string>💃</string>
 		<string>🕺</string>
@@ -238,6 +256,20 @@
 		<string>👫</string>
 		<string>👭</string>
 		<string>👬</string>
+		<string>🧙‍♀️</string>
+		<string>🧙‍♂️</string>
+		<string>🧚‍♀️</string>
+		<string>🧚‍♂️</string>
+		<string>🧛‍♀️</string>
+		<string>🧛‍♂️</string>
+		<string>🧜‍♀️</string>
+		<string>🧜‍♂️</string>
+		<string>🧝‍♀️</string>
+		<string>🧝‍♂️</string>
+		<string>🧞‍♀️</string>
+		<string>🧞‍♂️</string>
+		<string>🧟‍♀️</string>
+		<string>🧟‍♂️</string>
 		<string>💑</string>
 		<string>👩‍❤️‍👩</string>
 		<string>👨‍❤️‍👨</string>
@@ -272,6 +304,11 @@
 		<string>👚</string>
 		<string>👕</string>
 		<string>👖</string>
+		<string>🧣</string>
+		<string>🧤</string>
+		<string>🧥</string>
+		<string>🧦</string>
+		<string>🧢</string>
 		<string>👔</string>
 		<string>👗</string>
 		<string>👙</string>
@@ -383,6 +420,12 @@
 		<string>🐁</string>
 		<string>🐀</string>
 		<string>🐿</string>
+		<string>🦓</string>
+		<string>🦒</string>
+		<string>🦔</string>
+		<string>🦕</string>
+		<string>🦖</string>
+		<string>🦗</string>
 		<string>🐾</string>
 		<string>🐉</string>
 		<string>🐲</string>
@@ -506,6 +549,19 @@
 		<string>🌯</string>
 		<string>🥗</string>
 		<string>🥘</string>
+		<string>🥥</string>
+		<string>🥦</string>
+		<string>🥨</string>
+		<string>🥩</string>
+		<string>🥪</string>
+		<string>🥣</string>
+		<string>🥫</string>
+		<string>🥟</string>
+		<string>🥠</string>
+		<string>🥡</string>
+		<string>🥧</string>
+		<string>🥤</string>
+		<string>🥢</string>
 		<string>🍝</string>
 		<string>🍜</string>
 		<string>🍲</string>
@@ -561,6 +617,8 @@
 		<string>🏸</string>
 		<string>🥅</string>
 		<string>🏒</string>
+		<string>🛷</string>
+		<string>🥌</string>
 		<string>🏑</string>
 		<string>🏏</string>
 		<string>⛳️</string>
@@ -598,6 +656,12 @@
 		<string>🚴</string>
 		<string>🚵‍♀️</string>
 		<string>🚵</string>
+		<string>🧖‍♀️</string>
+		<string>🧖‍♂️</string>
+		<string>🧗‍♀️</string>
+		<string>🧗‍♂️</string>
+		<string>🧘‍♀️</string>
+		<string>🧘‍♂️</string>
 		<string>🎽</string>
 		<string>🏅</string>
 		<string>🎖</string>
@@ -675,6 +739,7 @@
 		<string>🛫</string>
 		<string>🛬</string>
 		<string>🚀</string>
+		<string>🛸</string>
 		<string>🛰</string>
 		<string>💺</string>
 		<string>🛶</string>
@@ -937,6 +1002,7 @@
 	<key>Symbols</key>
 	<array>
 		<string>❤️</string>
+		<string>🧡</string>
 		<string>💛</string>
 		<string>💚</string>
 		<string>💙</string>
@@ -1281,6 +1347,7 @@
 		<string>🇪🇷</string>
 		<string>🇪🇪</string>
 		<string>🇪🇹</string>
+		<string>🏴󠁧󠁢󠁥󠁮󠁧󠁿</string>
 		<string>🇪🇺</string>
 		<string>🇫🇰</string>
 		<string>🇫🇴</string>
@@ -1411,6 +1478,7 @@
 		<string>🇿🇦</string>
 		<string>🇰🇷</string>
 		<string>🇸🇸</string>
+		<string>🏴󠁧󠁢󠁳󠁣󠁴󠁿</string>
 		<string>🇪🇸</string>
 		<string>🇱🇰</string>
 		<string>🇧🇱</string>
@@ -1452,6 +1520,7 @@
 		<string>🇻🇪</string>
 		<string>🇻🇳</string>
 		<string>🇼🇫</string>
+		<string>🏴󠁧󠁢󠁷󠁬󠁳󠁿</string>
 		<string>🇪🇭</string>
 		<string>🇾🇪</string>
 		<string>🇿🇲</string>
