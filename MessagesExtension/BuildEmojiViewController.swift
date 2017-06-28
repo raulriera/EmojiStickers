@@ -97,7 +97,7 @@ class BuildEmojiViewController: UIViewController {
 			removeChildViewControllers()
 		} else {
 			// Reset the offset to zero, because we don't want any
-			// unexpected "jumpts" to scrolls positions. Given that the app
+			// unexpected "jumps" to scrolls positions. Given that the app
 			// shut down but the position was still saved.
 			resetOffsetCache()
 		}
@@ -120,7 +120,7 @@ class BuildEmojiViewController: UIViewController {
 	
 	@IBAction func didTapPickEmoji(_ sender: UIButton) {
 		guard let controller = instantiateEmojiCategoriesController() as? EmojiCategoriesViewController else { return }
-		
+
 		// Remove any existing child controllers.
 		removeChildViewControllers()
 		
@@ -280,7 +280,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	
 	// MARK: Gesture Handlers
 	
-	func handleTap(recognizer: UITapGestureRecognizer) {
+	@objc func handleTap(recognizer: UITapGestureRecognizer) {
 		let point = recognizer.location(in: canvas)
 		guard let tappedView = canvas.hitTest(point, with: nil) else { return }
 
@@ -300,7 +300,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		}
 	}
 	
-	func handleDoubleTap(recognizer: UITapGestureRecognizer) {
+	@objc func handleDoubleTap(recognizer: UITapGestureRecognizer) {
 		let point = recognizer.location(in: canvas)
 		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
 
@@ -317,7 +317,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		}
 	}
 
-	func handleLongTap(recognizer: UILongPressGestureRecognizer) {
+	@objc func handleLongTap(recognizer: UILongPressGestureRecognizer) {
 		let point = recognizer.location(in: canvas)
 		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
 
@@ -334,7 +334,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		})
 	}
 	
-	func handlePan(recognizer: UIPanGestureRecognizer) {
+	@objc func handlePan(recognizer: UIPanGestureRecognizer) {
 		guard let view = recognizer.view else { return }
 
 		let translation = recognizer.translation(in: self.view)
@@ -364,7 +364,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		}
 	}
 	
-	func handlePinch(recognizer: UIPinchGestureRecognizer) {
+	@objc func handlePinch(recognizer: UIPinchGestureRecognizer) {
 		guard let lastView = canvas.subviews.last, let view = lastView as? EmojiView else { return }
 
 		// Prevent the emoji from growing too large
@@ -389,7 +389,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		}
 	}
 	
-	func handleRotate(recognizer: UIRotationGestureRecognizer) {
+	@objc func handleRotate(recognizer: UIRotationGestureRecognizer) {
 		guard let view = canvas.subviews.last else { return }
 		view.transform = view.transform.rotated(by: recognizer.rotation)
 		recognizer.rotation = 0

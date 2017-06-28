@@ -33,7 +33,7 @@ extension Array where Iterator.Element: Equatable {
 extension String {
 	var emojiVisibleLength: Int {
 		var count = 0
-		enumerateSubstrings(in: startIndex..<endIndex, options: .byComposedCharacterSequences) { _ in count = count + 1 }
+		enumerateSubstrings(in: startIndex..<endIndex, options: .byComposedCharacterSequences) { _, _, _, _ in count = count + 1 }
 		return count
 	}
 

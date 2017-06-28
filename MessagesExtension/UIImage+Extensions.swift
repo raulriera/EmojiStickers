@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIImage {
-	
     convenience init(view: UIView) {
 		UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 2)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)

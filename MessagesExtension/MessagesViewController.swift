@@ -10,7 +10,6 @@ import UIKit
 import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
-
 	var state: State = .browsing {
 		didSet {
 			if case .browsing = state {
@@ -49,7 +48,10 @@ class MessagesViewController: MSMessagesAppViewController {
     // MARK: MSMessagesAppViewController
 
 	override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-		super.didTransition(to: presentationStyle)
+		// FIXME: This has to be a bug, filed a radar about it
+		if #available(iOSApplicationExtension 11.0, *) {
+			super.didTransition(to: presentationStyle)
+		}
 
 		// If the state is "creating an emoji" but the presentation is "compact"
 		// then switch to "browsing emojis" because the creating state doesn't fit
