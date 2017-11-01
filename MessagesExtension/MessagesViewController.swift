@@ -48,10 +48,7 @@ class MessagesViewController: MSMessagesAppViewController {
     // MARK: MSMessagesAppViewController
 
 	override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-		// FIXME: This has to be a bug, filed a radar about it
-		if #available(iOSApplicationExtension 11.0, *) {
-			super.didTransition(to: presentationStyle)
-		}
+		super.didTransition(to: presentationStyle)
 
 		// If the state is "creating an emoji" but the presentation is "compact"
 		// then switch to "browsing emojis" because the creating state doesn't fit
@@ -112,7 +109,6 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     private func instantiateBuildEmojiController() -> UIViewController {
-        // Instantiate a `BuildEmojiViewController` and present it.
         guard let controller = storyboard?.instantiateViewController(withIdentifier: BuildEmojiViewController.storyboardIdentifier) as? BuildEmojiViewController else { fatalError("Unable to instantiate a BuildEmojiViewController from the storyboard") }
         
         controller.delegate = self
@@ -121,7 +117,6 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     private func instantiateStickersController() -> UIViewController {
-        // Instantiate a `IceCreamsViewController` and present it.
         guard let controller = storyboard?.instantiateViewController(withIdentifier: StickersViewController.storyboardIdentifier) as? StickersViewController else { fatalError("Unable to instantiate an StickersViewController from the storyboard") }
         
         controller.delegate = self
