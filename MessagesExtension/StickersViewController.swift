@@ -41,7 +41,7 @@ class StickersViewController: UICollectionViewController {
 	}
 	fileprivate var items: [CollectionViewItem] {
 		didSet {
-			let emojis: [Emoji] = items.dropFirst().flatMap { item in
+			let emojis: [Emoji] = items.dropFirst().compactMap { item in
 				switch item {
 				case .sticker(let emoji):
 					return emoji
@@ -131,7 +131,7 @@ class StickersViewController: UICollectionViewController {
 		// Remove the first index, that is always the create button
 		// transform everything to an emoji so it can be queried 
 		// easier. We don't need nils
-		let stickers: [Emoji] = items.dropFirst().flatMap { item in
+		let stickers: [Emoji] = items.dropFirst().compactMap { item in
 			switch item {
 			case .sticker(let emoji):
 				return emoji

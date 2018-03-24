@@ -41,7 +41,7 @@ struct EmojiHistory {
         let defaults = UserDefaults.standard
         
         if let savedEmojis = defaults.object(forKey: EmojiHistory.userDefaultsKey) as? [String] {
-            emojis = savedEmojis.flatMap { uuidString in
+            emojis = savedEmojis.compactMap { uuidString in
                 guard let uuid = UUID(uuidString: uuidString) else { return nil }
 				
                 return Emoji(uuid: uuid, image: nil)

@@ -38,7 +38,7 @@ extension String {
 	}
 
 	var emojiUnmodified: String {
-		if characters.isEmpty {
+		if isEmpty {
 			return ""
 		}
 
@@ -56,7 +56,7 @@ extension String {
 		guard !whitelist.contains(copy) else { return true }
 		guard !blacklist.contains(copy) else { return false }
 
-		if characters.count == 0 {
+		if count == 0 {
 			return false
 		}
 
@@ -76,7 +76,7 @@ extension String {
 	}
 
 	var encoded: String {
-		return self.components(separatedBy: "-").flatMap { utf in
+        return self.components(separatedBy: "-").compactMap { utf in
 			guard let asInt = Int(utf, radix: 16) else { return nil }
 			guard let scalar = UnicodeScalar(asInt) else { return nil }
 			return String(scalar)
