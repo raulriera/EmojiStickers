@@ -35,13 +35,13 @@ class MessagesViewController: MSMessagesAppViewController {
 		presentViewController(for: presentationStyle)
 
 		// Run this code only once per "Emoji assets update"
-		if !UserDefaults.standard.bool(forKey: "SwitchToTwitterEmoji2.5") {
+		if !UserDefaults.standard.bool(forKey: "SwitchToTwitterEmoji2.7") {
 			ImageCache.cache.clear()
 			SkinToneCache.load().clear()
 			EmojiCategoryOffsetCache.load().clear()
 			RecentEmojiCache.load().clear()
 
-			UserDefaults.standard.set(true, forKey: "SwitchToTwitterEmoji2.5")
+			UserDefaults.standard.set(true, forKey: "SwitchToTwitterEmoji2.7")
 		}
     }
     
