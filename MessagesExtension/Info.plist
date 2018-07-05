@@ -22,6 +22,11 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>20</string>
+	<key>MSSupportedPresentationContexts</key>
+	<array>
+		<string>MSMessagesAppPresentationContextMedia</string>
+		<string>MSMessagesAppPresentationContextMessages</string>
+	</array>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionMainStoryboard</key>
