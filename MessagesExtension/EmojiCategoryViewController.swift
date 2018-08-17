@@ -13,10 +13,10 @@ A delegate protocol for the `EmojiCategoryViewController` class.
 */
 protocol EmojiCategoryViewControllerDelegate: class {
 	/// Called when the user selects an emoji in the `EmojiCategoryViewController`.
-	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String, at rect: CGRect)
+	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: Emoji, at rect: CGRect)
 }
 
-class EmojiCategoryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+final class EmojiCategoryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	static let storyboardIdentifier = "EmojiCategoryViewController"
 	static let placeholderImage: UIImage = #imageLiteral(resourceName: "placeholder_image")
 	var category: EmojiDictionary.Category!
@@ -103,7 +103,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	// MARK: UICollectionViewDelegate
 	
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let representedEmoji = cell.representedEmoji {
+		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let emoji = cell.emoji {
 			let attributes = collectionView.layoutAttributesForItem(at: indexPath)
 			let rect = collectionView.convert(attributes?.frame ?? CGRect.zero, to: collectionView.superview)
 
@@ -111,7 +111,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 			EmojiCategoryOffsetCache.load().save(offset: collectionView.contentOffset)
 
 			// Notify the delegate that we selected an emoji
-			delegate?.emojiCategoryViewController(self, didSelect: representedEmoji, at: rect)
+			delegate?.emojiCategoryViewController(self, didSelect: emoji, at: rect)
 		}
 	}
 	
@@ -119,7 +119,7 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	// an option controller, we will override this and present out skin tone selector
 	
 	override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let representedEmoji = cell.representedEmoji, representedEmoji.canHaveSkinToneModifier {
+		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let emoji = cell.emoji, emoji.canHaveSkinToneModifier {
 			performSegue(withIdentifier: "Show Skin Tones", sender: cell)
 		}
 		
@@ -162,18 +162,18 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 	private func dequeueEmojiCharacterCell(at indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: EmojiCharacterCell.reuseIdentifier, for: indexPath) as? EmojiCharacterCell else { fatalError("Unable to dequeue am EmojiCharacterCell") }
 		
-		var emojiCharacter = category.value[indexPath.row]
-		if emojiCharacter.canHaveSkinToneModifier {
-			emojiCharacter = emojiCharacter.applying(skinTone: SkinToneCache.load().tone)
-		}
+		let emoji: Emoji = category.value[indexPath.row]
+		let skinTone = SkinToneCache.load().tone
 		
-		let emojiOne = EmojiOne(character: emojiCharacter) {
-			if let urlForDocument = Bundle.main.url(forResource: emojiCharacter, withExtension: "pdf") {
+		let emojiView = UnsavedEmojiSticker(character: emoji, tone: skinTone) {
+			let emojiHexcode = emoji.applying(skinTone: skinTone)
+			
+			if let urlForDocument = Bundle.main.url(forResource: emojiHexcode, withExtension: "pdf") {
 				let document = CGPDFDocument(urlForDocument as CFURL)!
 				let image = UIImage(document: document)
 				return image
 			} else {
-				print("Did not find document for \(emojiCharacter)")
+				print("Did not find document for \(emojiHexcode)")
 			}
 			
 			return EmojiCategoryViewController.placeholderImage
@@ -181,14 +181,14 @@ class EmojiCategoryViewController: UICollectionViewController, UICollectionViewD
 		
 		// Use a placeholder sticker while we fetch the real one from the cache.
 		let cache = ImageCache.cache
-		cell.representedEmoji = emojiCharacter
+		cell.emoji = emoji
 		cell.characterImage.image = cache.placeholderImage
 		
 		// Fetch the sticker for the emoji from the cache.
-		cache.image(for: emojiOne) { image in
+		cache.image(for: emojiView) { image in
 			OperationQueue.main.addOperation {
 				// Only update the cell if the emoji is the correct one
-				guard cell.representedEmoji == emojiCharacter else { return }
+				guard cell.emoji == emoji else { return }
 				cell.characterImage.image = image
 			}
 		}

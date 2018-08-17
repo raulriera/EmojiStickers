@@ -8,12 +8,12 @@
 
 import UIKit
 
-class EmojiView: UIImageView {
+final class EmojiView: UIImageView {
 	
 	// MARK: Properties
 
 	let defaultSize = CGSize(width: 250, height: 250)
-	let character: String
+	let hexcode: String
 	var isFlipped: Bool {
 		return image?.imageOrientation == .upMirrored
 	}
@@ -33,8 +33,8 @@ class EmojiView: UIImageView {
 	
 	// MARK: Initialisers
 	
-	init(character: String) {
-		self.character = character
+	init(hexcode: String) {
+		self.hexcode = hexcode
 		self.isSelected = true
 
 		super.init(frame: CGRect(origin: .zero, size: defaultSize))
@@ -43,7 +43,6 @@ class EmojiView: UIImageView {
 		isUserInteractionEnabled = true
 		
 		isAccessibilityElement = true
-		accessibilityLabel = "\(character) emoji"
 		accessibilityHint = "You can scale, rotate, move this emoji"
 		
 		updateImageFromPDF()
@@ -70,14 +69,14 @@ class EmojiView: UIImageView {
 	// MARK: Private
 	
 	private func updateImageFromPDF() {
-		if let urlForDocument = Bundle.main.url(forResource: character, withExtension: "pdf") {
+		if let urlForDocument = Bundle.main.url(forResource: hexcode, withExtension: "pdf") {
 			let document = CGPDFDocument(urlForDocument as CFURL)!
 			let image = UIImage(document: document, at: bounds.size)
 
 			// If the image was already rendered, maintain the current "flip" state
 			self.image = isFlipped ? UIImage(cgImage: image.cgImage!, scale: 0, orientation: .upMirrored) : image
 		} else {
-			print("Did not find document for \(character)")
+			print("Did not find document for \(hexcode)")
 		}
 	}
 }

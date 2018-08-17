@@ -8,8 +8,8 @@
 
 import UIKit
 
-class EmojiCategoriesViewController: UIPageViewController {
-	typealias SelectEmojiHandler = (String, Int, CGRect) -> ()
+final class EmojiCategoriesViewController: UIPageViewController {
+	typealias SelectEmojiHandler = (Emoji, Int, CGRect) -> ()
 	
 	// MARK: Properties
 	
@@ -101,11 +101,11 @@ class EmojiCategoriesViewController: UIPageViewController {
 }
 
 extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
-	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: String, at rect: CGRect) {
+	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: Emoji, at rect: CGRect) {
 		// Update the recently used emoji cache
 		var recentEmojis = RecentEmojiCache.load()
 
-		recentEmojis.append(emoji.emojiUnmodified)
+		recentEmojis.append(emoji)
 		selectEmojiHandler?(emoji, currentIndex, rect)
 	}
 }
@@ -123,7 +123,6 @@ extension EmojiCategoriesViewController: UIPageViewControllerDelegate {
 // MARK: UIPageViewControllerDataSource
 
 extension EmojiCategoriesViewController: UIPageViewControllerDataSource {
-	
 	func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 		let previousIndex = currentIndex - 1
 		

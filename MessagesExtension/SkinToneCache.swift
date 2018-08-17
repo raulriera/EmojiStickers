@@ -9,10 +9,8 @@
 import Foundation
 
 struct SkinToneCache {
-	// MARK: Properties
-	
 	private static let userDefaultsKey = "skinToneHistory"
-	private(set) var tone: String
+	private(set) var tone: Int
 	
 	// MARK: Initialization
 	
@@ -20,19 +18,13 @@ struct SkinToneCache {
 	`SkinToneCache`'s initializer is marked as private. Instead instances should
 	be loaded via the `load` method.
 	*/
-	private init(tone: String) {
+	private init(tone: Int) {
 		self.tone = tone
 	}
 	
 	/// Loads previously created `Emoji`s and returns a `EmojiHistory` instance.
 	static func load() -> SkinToneCache {
-		var tone = ""
-		let defaults = UserDefaults.standard
-		
-		if let previousTone = defaults.string(forKey: SkinToneCache.userDefaultsKey) {
-			tone = previousTone
-		}
-		
+		let tone = UserDefaults.standard.integer(forKey: SkinToneCache.userDefaultsKey)
 		return SkinToneCache(tone: tone)
 	}
 
@@ -42,7 +34,7 @@ struct SkinToneCache {
 	}
 	
 	/// Saves the history.
-	func save(tone: String) {
+	func save(tone: Int) {
 		let defaults = UserDefaults.standard
 		defaults.set(tone, forKey: SkinToneCache.userDefaultsKey)
 	}

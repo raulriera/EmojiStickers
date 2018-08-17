@@ -16,10 +16,10 @@ protocol StickersViewControllerDelegate: class {
 	func stickersViewControllerDidSelectCreate(_ controller: StickersViewController)
 }
 
-class StickersViewController: UICollectionViewController {
+final class StickersViewController: UICollectionViewController {
     /// An enumeration that represents an item in the collection view.
     enum CollectionViewItem {
-        case sticker(Emoji)
+        case sticker(EmojiSticker)
         case create
     }
 
@@ -41,7 +41,7 @@ class StickersViewController: UICollectionViewController {
 	}
 	fileprivate var items: [CollectionViewItem] {
 		didSet {
-			let emojis: [Emoji] = items.dropFirst().compactMap { item in
+			let emojis: [EmojiSticker] = items.dropFirst().compactMap { item in
 				switch item {
 				case .sticker(let emoji):
 					return emoji
@@ -81,9 +81,9 @@ class StickersViewController: UICollectionViewController {
 		
     // MARK: Convenience
 	
-    fileprivate func dequeueEmojiCell(for emoji: Emoji, at indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: EmojiCell.reuseIdentifier, for: indexPath) as? EmojiCell else { fatalError("Unable to dequeue am EmojiCell") }
-        
+    fileprivate func dequeueEmojiCell(for emoji: EmojiSticker, at indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: EmojiStickerCell.reuseIdentifier, for: indexPath) as? EmojiStickerCell else { fatalError("Unable to dequeue am EmojiStickerCell") }
+		
         cell.representedEmoji = emoji
         
         // Use a placeholder sticker while we fetch the real one from the cache.
@@ -127,11 +127,11 @@ class StickersViewController: UICollectionViewController {
 
 	// MARK:
 
-	fileprivate func handleDeleteEmojiSticker(sticker: Emoji) {
+	fileprivate func handleDeleteEmojiSticker(sticker: EmojiSticker) {
 		// Remove the first index, that is always the create button
 		// transform everything to an emoji so it can be queried 
 		// easier. We don't need nils
-		let stickers: [Emoji] = items.dropFirst().compactMap { item in
+		let stickers: [EmojiSticker] = items.dropFirst().compactMap { item in
 			switch item {
 			case .sticker(let emoji):
 				return emoji

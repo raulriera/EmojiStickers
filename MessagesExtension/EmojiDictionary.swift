@@ -1,49 +1,50 @@
 //
 //  EmojiDictionary.swift
-//  EmojiStickers
+//  EmojiKit
 //
-//  Created by Raul Riera on 27/06/2016.
-//  Copyright © 2016 Raul Riera. All rights reserved.
+//  Created by Raul Riera on 2018-08-12.
+//  Copyright © 2018 Raul Riera. All rights reserved.
 //
 
 import Foundation
 
-struct EmojiDictionary {
-	let categories: [Category]
-	
-	struct Category {
-		let key: Keys
-		let value: [String]
-		
-		var count: Int {
-			return value.count
-		}
 
-		init(key: Keys, value: [String]) {
-			self.key = key
-			self.value = value.map { $0.utf }
+public protocol Cache {
+	func load() -> [Emoji]
+}
+
+public struct EmojiDictionary {
+	public let categories: [Category]
+	
+	public struct Category: Equatable {
+		public let key: Keys
+		public let value: [Emoji]
+		
+		public var count: Int {
+			return value.count
 		}
 	}
 	
-	enum Keys: String {
+	public enum Keys: String {
 		case recent = "Recent"
-		case people = "People"
-		case nature = "Nature"
-		case foodAndDrinks = "FoodAndDrinks"
-		case activitiesAndSports = "ActivitiesAndSports"
-		case travelAndPlaces = "TravelAndPlaces"
+		case people = "Smileys & People"
+		case nature = "Animals & Nature"
+		case foodAndDrinks = "Food & Drink"
+		case activitiesAndSports = "Activities"
+		case travelAndPlaces = "Travel & Places"
 		case objects = "Objects"
 		case symbols = "Symbols"
 		case flags = "Flags"
 	}
 	
-	init() {
-		let path = Bundle.main.path(forResource: "EmojisList", ofType: "plist")!
-		let dictionary = NSDictionary(contentsOfFile: path)!
-		let contentsOfFile = dictionary as! [String: [String]]
+	public init() {
+		let bundle = Bundle.main
+		let url = bundle.url(forResource: "EmojiList", withExtension: "json")!
+		let data = try! Data(contentsOf: url)
+		let contentsOfFile = try! JSONDecoder().decode([String: [Emoji]].self, from: data)
 		
 		self.categories = [
-			Category(key: .recent, value: RecentEmojiCache.load().emojis.reversed().map { $0.encoded }),
+			Category(key: .recent, value: RecentEmojiCache.load().emojis.reversed()),
 			Category(key: .people, value: contentsOfFile[Keys.people.rawValue]!),
 			Category(key: .nature, value: contentsOfFile[Keys.nature.rawValue]!),
 			Category(key: .foodAndDrinks, value: contentsOfFile[Keys.foodAndDrinks.rawValue]!),
@@ -54,8 +55,4 @@ struct EmojiDictionary {
 			Category(key: .flags, value: contentsOfFile[Keys.flags.rawValue]!)
 		]
 	}
-}
-
-func ==(lhs: EmojiDictionary.Category, rhs: EmojiDictionary.Category) -> Bool {
-	return lhs.key.rawValue == rhs.key.rawValue
 }

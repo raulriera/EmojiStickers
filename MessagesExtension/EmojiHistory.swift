@@ -15,13 +15,13 @@ struct EmojiHistory {
     fileprivate static let userDefaultsKey = "emojiHistory"
     
     /// An array of previously created `Emoji`.
-    fileprivate var emojis: [Emoji]
+    fileprivate var emojis: [EmojiSticker]
     
     var count: Int {
         return emojis.count
     }
     
-    subscript(index: Int) -> Emoji {
+    subscript(index: Int) -> EmojiSticker {
         return emojis[index]
     }
     
@@ -31,20 +31,20 @@ struct EmojiHistory {
      `EmojiHistory`'s initializer is marked as private. Instead instances should
      be loaded via the `load` method.
      */
-    private init(emojis: [Emoji]) {
+    private init(emojis: [EmojiSticker]) {
         self.emojis = emojis
     }
     
     /// Loads previously created `Emoji`s and returns a `EmojiHistory` instance.
     static func load() -> EmojiHistory {
-        var emojis = [Emoji]()
+        var emojis = [EmojiSticker]()
         let defaults = UserDefaults.standard
         
         if let savedEmojis = defaults.object(forKey: EmojiHistory.userDefaultsKey) as? [String] {
             emojis = savedEmojis.compactMap { uuidString in
                 guard let uuid = UUID(uuidString: uuidString) else { return nil }
 				
-                return Emoji(uuid: uuid, image: nil)
+                return EmojiSticker(uuid: uuid, image: nil)
             }
         }
         
@@ -63,7 +63,7 @@ struct EmojiHistory {
         defaults.set(stickersUUIDStrings as AnyObject, forKey: EmojiHistory.userDefaultsKey)
     }
     
-    mutating func append(_ emoji: Emoji) {
+    mutating func append(_ emoji: EmojiSticker) {
         /*
          Filter any existing instances of the new emoji from the current
          history before adding it to the end of the history.
@@ -74,7 +74,7 @@ struct EmojiHistory {
         emojis = newEmojis
     }
 
-	mutating func update(with emojis: [Emoji]) {
+	mutating func update(with emojis: [EmojiSticker]) {
 		self.emojis = emojis
 		save()
 	}
@@ -85,7 +85,7 @@ Extends `EmojiHistory` to conform to the `Sequence` protocol so it can be used
 in for..in statements.
 */
 extension EmojiHistory: Sequence {
-	typealias Iterator = AnyIterator<Emoji>
+	typealias Iterator = AnyIterator<EmojiSticker>
 
 	func makeIterator() -> Iterator {
 		var index = 0

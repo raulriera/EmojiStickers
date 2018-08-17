@@ -9,7 +9,7 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController {
+final class MessagesViewController: MSMessagesAppViewController {
 	var state: State = .browsing {
 		didSet {
 			if case .browsing = state {
@@ -33,15 +33,16 @@ class MessagesViewController: MSMessagesAppViewController {
         super.willBecomeActive(with: conversation)
 		// Present the view controller for the appropriate presentation style.
 		presentViewController(for: presentationStyle)
-
+		
+		let key = "UpdatedToTwitterEmoji11.1"
 		// Run this code only once per "Emoji assets update"
-		if !UserDefaults.standard.bool(forKey: "SwitchToTwitterEmoji2.7") {
+		if !UserDefaults.standard.bool(forKey: key) {
 			ImageCache.cache.clear()
 			SkinToneCache.load().clear()
 			EmojiCategoryOffsetCache.load().clear()
 			RecentEmojiCache.load().clear()
 
-			UserDefaults.standard.set(true, forKey: "SwitchToTwitterEmoji2.7")
+			UserDefaults.standard.set(true, forKey: key)
 		}
     }
     
@@ -128,7 +129,7 @@ class MessagesViewController: MSMessagesAppViewController {
 // MARK: BuildEmojiViewControllerDelegate
 
 extension MessagesViewController: BuildEmojiViewControllerDelegate {
-    func buildEmojiViewController(_ controller: BuildEmojiViewController, didFinish emoji: Emoji) {
+    func buildEmojiViewController(_ controller: BuildEmojiViewController, didFinish emoji: EmojiSticker) {
 		state = .browsing
     }
 }

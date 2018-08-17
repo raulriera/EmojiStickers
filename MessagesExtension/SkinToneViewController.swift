@@ -9,7 +9,7 @@
 import UIKit
 
 class SkinToneViewController: UIViewController {
-	typealias onSelectedHandler = (String) -> ()
+	typealias onSelectedHandler = (Int) -> ()
 	
 	@IBOutlet private var skinToneButtons: [UIButton]! {
 		didSet {
@@ -23,7 +23,7 @@ class SkinToneViewController: UIViewController {
 	
 	private let skinTones = ["", "1f3fb", "1f3fc", "1f3fd", "1f3fe", "1f3ff"] // FIXME: Make this better
 	private let skinToneHistory = SkinToneCache.load()
-	var selectedSkinTone: String = "" {
+	var selectedSkinTone: Int = 0 {
 		didSet {
 			skinToneHistory.save(tone: selectedSkinTone)
 			onSelected?(selectedSkinTone)
@@ -35,8 +35,8 @@ class SkinToneViewController: UIViewController {
 		super.viewDidLoad()
 		preferredContentSize = CGSize(width: 300, height: 64)
 		
-		for (index, tone) in skinTones.enumerated() {
-			if tone == skinToneHistory.tone {
+		for (index, _) in skinTones.enumerated() {
+			if index == skinToneHistory.tone {
 				skinToneButtons[index].transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
 				return
 			}
@@ -46,7 +46,7 @@ class SkinToneViewController: UIViewController {
 	@IBAction func didTapSkinButton(sender: UIButton) {
 		for (index, button) in skinToneButtons.enumerated() {
 			if button == sender {
-				selectedSkinTone = skinTones[index]
+				selectedSkinTone = index
 				return
 			}
 		}

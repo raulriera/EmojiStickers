@@ -8,25 +8,23 @@
 
 import UIKit
 
-class EmojiCharacterCell: UICollectionViewCell {
+final class EmojiCharacterCell: UICollectionViewCell {
 	@IBOutlet weak var characterImage: UIImageView!
 	
 	static let reuseIdentifier = "EmojiCharacterCell"
 	
-	var representedEmoji: String? {
+	var emoji: Emoji? {
 		didSet {
-			guard let representedEmoji = representedEmoji else { return }
+			guard let emoji = emoji else { return }
 			
 			isAccessibilityElement = true
-			accessibilityValue = "\(representedEmoji) emoji"
+			accessibilityValue = emoji.name
 			accessibilityTraits = UIAccessibilityTraitImage | UIAccessibilityTraitButton
 		}
 	}
 	
 	override func prepareForReuse() {
 		super.prepareForReuse()
-		
 		characterImage.image = nil
 	}
 }
-

@@ -13,10 +13,10 @@ A delegate protocol for the `BuildEmojiViewController` class.
 */
 protocol BuildEmojiViewControllerDelegate: class {
 	/// Called when the user taps to finished the `Emoji` in the `BuildEmojiViewController`.
-	func buildEmojiViewController(_ controller: BuildEmojiViewController, didFinish emoji: Emoji)
+	func buildEmojiViewController(_ controller: BuildEmojiViewController, didFinish emoji: EmojiSticker)
 }
 
-class EmojiCanvas: UIView {
+final class EmojiCanvas: UIView {
 	func select(view: UIView) {
 		guard let view = view as? EmojiView else { return }
 		unselect()
@@ -37,7 +37,7 @@ class EmojiCanvas: UIView {
 	}
 }
 
-class BuildEmojiViewController: UIViewController {
+final class BuildEmojiViewController: UIViewController {
 
     // MARK: IBOutlets
 
@@ -154,7 +154,7 @@ class BuildEmojiViewController: UIViewController {
 		canvas.unselect()
 
 		let image = UIImage(view: canvas)
-		let emoji = Emoji(uuid: UUID(), image: image)
+		let emoji = EmojiSticker(uuid: UUID(), image: image)
 		
 		// Append this sticker to the history
 		var history = EmojiHistory.load()
@@ -182,9 +182,9 @@ class BuildEmojiViewController: UIViewController {
 		return controller
 	}
 
-	private func handleEmojiSelection(emoji: String, categoryIndex: Int, selectionRect: CGRect) -> () {
+	private func handleEmojiSelection(emoji: Emoji, categoryIndex: Int, selectionRect: CGRect) -> () {
 		lastUsedCategory = categoryIndex
-		let emojiView = EmojiView(character: emoji)
+		let emojiView = EmojiView(hexcode: emoji.hexcode)
 
 		// Convert the point to the canvas coordinates, while
 		// also inseting the point because it appears it won't take into

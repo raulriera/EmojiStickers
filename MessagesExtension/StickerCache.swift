@@ -9,7 +9,7 @@
 import UIKit
 import Messages
 
-class StickerCache {
+final class StickerCache {
     static let cache = StickerCache()
     private let cacheURL: URL
     private let queue = OperationQueue()
@@ -58,9 +58,9 @@ class StickerCache {
     
     // MARK
     
-    func sticker(for emoji: Emoji, completion: @escaping (_ sticker: MSSticker) -> Void) {        
+    func sticker(for emoji: EmojiSticker, completion: @escaping (_ sticker: MSSticker) -> Void) {
         // Determine the URL for the sticker.
-        let fileName = emoji.uuid.uuidString + ".png"
+		let fileName = "\(emoji.uuid.uuidString).png"
 		let url = cacheURL.appendingPathComponent(fileName, isDirectory: false)
 
         // Create an operation to process the request.
@@ -94,9 +94,9 @@ class StickerCache {
         queue.addOperation(operation)
     }
 
-	func delete(_ emoji: Emoji) {
+	func delete(_ emoji: EmojiSticker) {
 		// Determine the URL for the sticker.
-		let fileName = emoji.uuid.uuidString + ".png"
+		let fileName = "\(emoji.uuid.uuidString).png"
 		let url = cacheURL.appendingPathComponent(fileName, isDirectory: false)
 
 		// Create an operation to process the request.

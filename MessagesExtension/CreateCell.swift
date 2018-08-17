@@ -8,6 +8,6 @@
 
 import UIKit
 
-class CreateCell: UICollectionViewCell {
+final class CreateCell: UICollectionViewCell {
     static let reuseIdentifier = "CreateCell"
 }

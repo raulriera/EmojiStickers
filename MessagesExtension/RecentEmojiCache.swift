@@ -15,21 +15,20 @@ struct RecentEmojiCache {
 	fileprivate static let userDefaultsKey = "recentlyUsedEmojiHistory"
 
 	/// An array of previously used `Emoji`.
-	private(set) var emojis: [String]
+	private(set) var emojis: [Emoji]
 
 	// MARK: Initialization
 
-	private init(emojis: [String]) {
+	private init(emojis: [Emoji]) {
 		self.emojis = emojis
 	}
 
 	/// Loads previously created `Emoji`s and returns a `RecentEmojiCache` instance.
 	static func load() -> RecentEmojiCache {
-		var emojis = [String]()
-		let defaults = UserDefaults.standard
-
-		if let recentEmojis = defaults.object(forKey: RecentEmojiCache.userDefaultsKey) as? [String] {
-			emojis = recentEmojis.map { $0 }
+		var emojis: [Emoji] = []
+		
+		if let data = UserDefaults.standard.value(forKey: RecentEmojiCache.userDefaultsKey) as? Data, let decoded = try? PropertyListDecoder().decode([Emoji].self, from: data) {
+			emojis = decoded
 		}
 
 		return RecentEmojiCache(emojis: emojis)
@@ -39,9 +38,7 @@ struct RecentEmojiCache {
 	func save() {
 		// Save a maximum number of stickers.
 		let emojisToSave = Array(emojis.suffix(RecentEmojiCache.maximumHistorySize))
-
-		let defaults = UserDefaults.standard
-		defaults.set(emojisToSave as Any, forKey: RecentEmojiCache.userDefaultsKey)
+		UserDefaults.standard.set(try? PropertyListEncoder().encode(emojisToSave), forKey: RecentEmojiCache.userDefaultsKey)
 	}
 
 	/// Deletes all the history
@@ -49,7 +46,7 @@ struct RecentEmojiCache {
 		UserDefaults.standard.set([], forKey: RecentEmojiCache.userDefaultsKey)
 	}
 
-	mutating func append(_ emoji: String) {
+	mutating func append(_ emoji: Emoji) {
 		/*
 		Filter any existing instances of the new emoji from the current
 		history before adding it to the end of the history.
