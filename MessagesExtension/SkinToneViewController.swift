@@ -43,6 +43,11 @@ class SkinToneViewController: UIViewController {
 		}
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+	}
+	
 	@IBAction func didTapSkinButton(sender: UIButton) {
 		for (index, button) in skinToneButtons.enumerated() {
 			if button == sender {
