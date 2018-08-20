@@ -391,7 +391,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-wL-vvS">
-                                    <rect key="frame" x="319" y="28" width="48" height="8"/>
+                                    <rect key="frame" x="319" y="8" width="48" height="28"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     <state key="normal" title="Edit"/>
@@ -400,7 +400,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="EMOJI STICKERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-eO-LTY">
-                                    <rect key="frame" x="20" y="23" width="291" height="18"/>
+                                    <rect key="frame" x="20" y="13" width="291" height="18"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -408,7 +408,6 @@
                             </subviews>
                             <constraints>
                                 <constraint firstItem="0vx-wL-vvS" firstAttribute="trailing" secondItem="bZV-fC-OeE" secondAttribute="trailingMargin" id="7LD-a9-ziw"/>
-                                <constraint firstItem="0vx-wL-vvS" firstAttribute="top" secondItem="bZV-fC-OeE" secondAttribute="topMargin" id="NCu-hp-Rsp"/>
                                 <constraint firstItem="0vx-wL-vvS" firstAttribute="leading" secondItem="sxn-eO-LTY" secondAttribute="trailing" constant="8" id="Obt-rQ-wQs"/>
                                 <constraint firstAttribute="bottomMargin" secondItem="0vx-wL-vvS" secondAttribute="bottom" id="PBO-54-qHp"/>
                                 <constraint firstItem="sxn-eO-LTY" firstAttribute="centerY" secondItem="0vx-wL-vvS" secondAttribute="centerY" id="VZZ-4M-eqz"/>
