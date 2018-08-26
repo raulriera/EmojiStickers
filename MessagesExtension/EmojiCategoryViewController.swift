@@ -19,7 +19,11 @@ protocol EmojiCategoryViewControllerDelegate: class {
 final class EmojiCategoryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	static let storyboardIdentifier = "EmojiCategoryViewController"
 	static let placeholderImage: UIImage = #imageLiteral(resourceName: "placeholder_image")
-	var category: EmojiDictionary.Category!
+	public var category: EmojiDictionary.Category! {
+		didSet {
+			collectionView?.reloadData()
+		}
+	}
 	weak var delegate: EmojiCategoryViewControllerDelegate?
 	
 	private var cellSize: CGSize = CGSize(width: 50, height: 50)

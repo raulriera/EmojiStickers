@@ -14,7 +14,6 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	@IBOutlet private var searchBarContainer: UIVisualEffectView!
 	@IBOutlet private var searchBar: UISearchBar!
 	
-	@IBOutlet var asd: UIVisualEffectView!
 	static let storyboardIdentifier = "EmojiCategoriesViewController"
 	var selectEmojiHandler: SelectEmojiHandler?
 
@@ -126,7 +125,14 @@ extension EmojiCategoriesViewController: UISearchBarDelegate {
 	}
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-		print(searchText)
+		guard let emojiViewController = viewControllers?.first as? EmojiCategoryViewController else { return }
+		
+		if searchText.isEmpty == false {
+			let filteredEmojis = emojiDictionary.search(query: searchText)
+			emojiViewController.category = EmojiDictionary.Category(key: emojiViewController.category.key, value: filteredEmojis)
+		} else {
+			emojiViewController.category = emojiDictionary.categories.first { $0.key == emojiViewController.category.key }
+		}
 	}
 	
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
