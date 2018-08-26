@@ -11,8 +11,10 @@ import UIKit
 final class EmojiCategoriesViewController: UIPageViewController {
 	typealias SelectEmojiHandler = (Emoji, Int, CGRect) -> ()
 	
-	// MARK: Properties
+	@IBOutlet private var searchBarContainer: UIVisualEffectView!
+	@IBOutlet private var searchBar: UISearchBar!
 	
+	@IBOutlet var asd: UIVisualEffectView!
 	static let storyboardIdentifier = "EmojiCategoriesViewController"
 	var selectEmojiHandler: SelectEmojiHandler?
 
@@ -33,6 +35,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		
 		view.backgroundColor = UIColor.groupTableViewBackground
 
+		presentCartegorySearchBar()
 		presentCategoryPickerController()
 	}
 	
@@ -57,6 +60,20 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	
 	// MARK: Private
 	
+	private func presentCartegorySearchBar() {
+		searchBarContainer.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(searchBarContainer)
+		
+		NSLayoutConstraint.activate([
+			searchBarContainer.leftAnchor.constraint(equalTo: view.leftAnchor),
+			searchBarContainer.rightAnchor.constraint(equalTo: view.rightAnchor),
+			searchBarContainer.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor),
+			searchBarContainer.heightAnchor.constraint(equalToConstant: 56)
+		])
+		
+		searchBar.delegate = self
+	}
+	
 	private func presentCategoryPickerController() {
 		categoryPickerViewController = instantiateCategoryPickerViewController()
 		
@@ -68,10 +85,12 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		categoryPickerViewController.view.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(categoryPickerViewController.view)
 		
-		categoryPickerViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-		categoryPickerViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-		categoryPickerViewController.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.bottomAnchor).isActive = true
-		categoryPickerViewController.view.heightAnchor.constraint(equalToConstant: 34).isActive = true
+		NSLayoutConstraint.activate([
+			categoryPickerViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+			categoryPickerViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+			categoryPickerViewController.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.bottomAnchor),
+			categoryPickerViewController.view.heightAnchor.constraint(equalToConstant: 34)
+		])
 		
 		categoryPickerViewController.didMove(toParentViewController: self)
 		
@@ -93,10 +112,25 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		controller.category = category
 		controller.delegate = self
 		
-		controller.collectionView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 34, right: 0)
+		// top = for the search bar and 34 for the category picker
+		controller.collectionView?.contentInset = UIEdgeInsets(top: 56, left: 0, bottom: 34, right: 0)
 		controller.collectionView?.scrollIndicatorInsets = controller.collectionView!.contentInset
 		
 		return controller
+	}
+}
+
+extension EmojiCategoriesViewController: UISearchBarDelegate {
+	func clearSearchBar() {
+		searchBar.text = nil
+	}
+	
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		print(searchText)
+	}
+	
+	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+		searchBar.resignFirstResponder()
 	}
 }
 
@@ -114,8 +148,8 @@ extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
 
 extension EmojiCategoriesViewController: UIPageViewControllerDelegate {
 	func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-		
 		guard completed else { return }
+		clearSearchBar()
 		categoryPickerViewController?.selectedCategory = currentIndex
 	}
 }
@@ -159,7 +193,6 @@ extension EmojiCategoriesViewController: UIPageViewControllerDataSource {
 extension EmojiCategoriesViewController: EmojiCategoryPickerViewControllerDelegate {
 	func emojiCategoryPickerViewController(_ controller: EmojiCategoryPickerViewController, didChangePageTo page: Int) {
 		guard page != currentIndex else { return }
-
 		changePage(to: page)
 	}
 }

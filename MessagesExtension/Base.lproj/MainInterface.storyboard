@@ -109,8 +109,29 @@
         <!--Emoji Categories View Controller-->
         <scene sceneID="UEs-3A-xFU">
             <objects>
-                <pageViewController storyboardIdentifier="EmojiCategoriesViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="aFX-aU-bWo" customClass="EmojiCategoriesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="EmojiCategoriesViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="aFX-aU-bWo" customClass="EmojiCategoriesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <outlet property="searchBar" destination="un7-W1-tUp" id="BQ2-rB-G8J"/>
+                        <outlet property="searchBarContainer" destination="Q8H-vn-bPq" id="DEg-rW-afH"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2o-FG-7Xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="Q8H-vn-bPq" userLabel="Search Bar Container">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K2p-gx-N5w">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="56"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="un7-W1-tUp">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </searchBar>
+                        </subviews>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="2924" y="-627"/>
         </scene>
@@ -118,7 +139,7 @@
         <scene sceneID="srC-79-sRO">
             <objects>
                 <collectionViewController storyboardIdentifier="EmojiCategoryViewController" id="z95-RQ-jJJ" customClass="EmojiCategoryViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Gxu-J7-4ty">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" id="Gxu-J7-4ty">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
