@@ -62,7 +62,7 @@ final class BuildEmojiViewController: UIViewController {
 		}
 	}
 	
-	@IBOutlet fileprivate weak var canvas: EmojiCanvas! {
+	@IBOutlet private weak var canvas: EmojiCanvas! {
 		didSet {
 			canvas.superview?.layer.borderWidth = 0.5
 			canvas.superview?.layer.borderColor = UIColor.lightGray.cgColor
@@ -108,7 +108,7 @@ final class BuildEmojiViewController: UIViewController {
     static let storyboardIdentifier = "BuildEmojiViewController"
     weak var delegate: BuildEmojiViewControllerDelegate?
 	private var lastUsedCategory: Int = 0
-	fileprivate var isViewInsideCanvas: Bool = true {
+	private var isViewInsideCanvas: Bool = true {
 		didSet {
 			if oldValue != isViewInsideCanvas {
 				UIImpactFeedbackGenerator(style: .medium).impactOccurred()

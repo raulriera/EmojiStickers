@@ -11,11 +11,11 @@ import Foundation
 struct EmojiHistory {
     // MARK: Properties
     
-    fileprivate static let maximumHistorySize = 250
-    fileprivate static let userDefaultsKey = "emojiHistory"
+    private static let maximumHistorySize = 250
+    private static let userDefaultsKey = "emojiHistory"
     
     /// An array of previously created `Emoji`.
-    fileprivate var emojis: [EmojiSticker]
+    private var emojis: [EmojiSticker]
     
     var count: Int {
         return emojis.count

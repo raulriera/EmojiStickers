@@ -11,8 +11,8 @@ import Foundation
 struct RecentEmojiCache {
 	// MARK: Properties
 
-	fileprivate static let maximumHistorySize = 100
-	fileprivate static let userDefaultsKey = "recentlyUsedEmojiHistory"
+	private static let maximumHistorySize = 100
+	private static let userDefaultsKey = "recentlyUsedEmojiHistory"
 
 	/// An array of previously used `Emoji`.
 	private(set) var emojis: [Emoji]

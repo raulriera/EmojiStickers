@@ -16,9 +16,9 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	static let storyboardIdentifier = "EmojiCategoriesViewController"
 	var selectEmojiHandler: SelectEmojiHandler?
 
-	fileprivate let emojiDictionary = EmojiDictionary()
-	fileprivate weak var categoryPickerViewController: EmojiCategoryPickerViewController?
-	fileprivate var currentIndex: Int {
+	private let emojiDictionary = EmojiDictionary()
+	private weak var categoryPickerViewController: EmojiCategoryPickerViewController?
+	private var currentIndex: Int {
 		guard let visibleViewController = viewControllers?.first as? EmojiCategoryViewController,
 			let category = visibleViewController.category,
 			let index = emojiDictionary.categories.index(where: { $0 == category }) else { return 0 }
@@ -57,7 +57,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	
 	// MARK: Private
 	
-	fileprivate func presentCategoryPickerController() {
+	private func presentCategoryPickerController() {
 		categoryPickerViewController = instantiateCategoryPickerViewController()
 		
 		guard let categoryPickerViewController = categoryPickerViewController else { return }
@@ -78,7 +78,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		categoryPickerViewController.selectedCategory = currentIndex
 	}
 	
-	fileprivate func instantiateCategoryPickerViewController() -> EmojiCategoryPickerViewController {
+	private func instantiateCategoryPickerViewController() -> EmojiCategoryPickerViewController {
 		guard let controller = storyboard?.instantiateViewController(withIdentifier: EmojiCategoryPickerViewController.storyboardIdentifier) as? EmojiCategoryPickerViewController else { fatalError("Unable to instantiate a EmojiCategoryPickerViewController from the storyboard") }
 		
 		controller.categories = emojiDictionary.categories
@@ -87,7 +87,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		return controller
 	}
 	
-	fileprivate func newEmojiCategoryViewController(_ category: EmojiDictionary.Category) -> EmojiCategoryViewController {
+	private func newEmojiCategoryViewController(_ category: EmojiDictionary.Category) -> EmojiCategoryViewController {
 		guard let controller = storyboard?.instantiateViewController(withIdentifier: EmojiCategoryViewController.storyboardIdentifier) as? EmojiCategoryViewController else { fatalError("Unable to instantiate a EmojiCategoryViewController from the storyboard") }
 		
 		controller.category = category

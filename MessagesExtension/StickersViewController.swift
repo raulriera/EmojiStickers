@@ -34,12 +34,12 @@ final class StickersViewController: UICollectionViewController {
     static let storyboardIdentifier = "StickersViewController"
     weak var delegate: StickersViewControllerDelegate?
 
-	fileprivate var status: CollectionViewStatus = .browsing {
+	private var status: CollectionViewStatus = .browsing {
 		didSet {
 			collectionView?.reloadData()
 		}
 	}
-	fileprivate var items: [CollectionViewItem] {
+	private var items: [CollectionViewItem] {
 		didSet {
 			let emojis: [EmojiSticker] = items.dropFirst().compactMap { item in
 				switch item {
@@ -81,7 +81,7 @@ final class StickersViewController: UICollectionViewController {
 		
     // MARK: Convenience
 	
-    fileprivate func dequeueEmojiCell(for emoji: EmojiSticker, at indexPath: IndexPath) -> UICollectionViewCell {
+    private func dequeueEmojiCell(for emoji: EmojiSticker, at indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: EmojiStickerCell.reuseIdentifier, for: indexPath) as? EmojiStickerCell else { fatalError("Unable to dequeue am EmojiStickerCell") }
 		
         cell.representedEmoji = emoji
@@ -108,13 +108,13 @@ final class StickersViewController: UICollectionViewController {
         return cell
     }
     
-    fileprivate func dequeueCreateCell(at indexPath: IndexPath) -> UICollectionViewCell {
+    private func dequeueCreateCell(at indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: CreateCell.reuseIdentifier, for: indexPath) as? CreateCell else { fatalError("Unable to dequeue a CreateCell") }
         
         return cell
     }
 
-	fileprivate func dequeueEditStickersReusableView(at indexPath: IndexPath) -> UICollectionReusableView {
+	private func dequeueEditStickersReusableView(at indexPath: IndexPath) -> UICollectionReusableView {
 		guard let view = collectionView?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: EditCollectionReusableView.reuseIdentifier, for: indexPath) as? EditCollectionReusableView else { fatalError("Unable to dequeue a EditCollectionReusableView") }
 
 		view.collectionViewStatus = status
@@ -127,7 +127,7 @@ final class StickersViewController: UICollectionViewController {
 
 	// MARK:
 
-	fileprivate func handleDeleteEmojiSticker(sticker: EmojiSticker) {
+	private func handleDeleteEmojiSticker(sticker: EmojiSticker) {
 		// Remove the first index, that is always the create button
 		// transform everything to an emoji so it can be queried 
 		// easier. We don't need nils
