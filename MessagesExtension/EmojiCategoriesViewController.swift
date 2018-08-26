@@ -39,6 +39,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	}
 	
 	func changePage(to newPage: Int, animated: Bool = true) {
+		clearSearchBar()
 		let animationDirection: UIPageViewControllerNavigationDirection
 		
 		if newPage < currentIndex {
@@ -122,6 +123,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 extension EmojiCategoriesViewController: UISearchBarDelegate {
 	func clearSearchBar() {
 		searchBar.text = nil
+		searchBar(searchBar, textDidChange: "")
 	}
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -155,8 +157,11 @@ extension EmojiCategoriesViewController: EmojiCategoryViewControllerDelegate {
 extension EmojiCategoriesViewController: UIPageViewControllerDelegate {
 	func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
 		guard completed else { return }
-		clearSearchBar()
 		categoryPickerViewController?.selectedCategory = currentIndex
+	}
+	
+	func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+		clearSearchBar()
 	}
 }
 
