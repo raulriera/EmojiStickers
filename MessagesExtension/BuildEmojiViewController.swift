@@ -184,8 +184,9 @@ final class BuildEmojiViewController: UIViewController {
 
 	private func handleEmojiSelection(emoji: Emoji, categoryIndex: Int, selectionRect: CGRect) -> () {
 		lastUsedCategory = categoryIndex
-		let emojiView = EmojiView(hexcode: emoji.hexcode)
-
+		let emojiHexcode = emoji.applying(skinTone: SkinToneCache.load().tone)
+		let emojiView = EmojiView(hexcode: emojiHexcode)
+		
 		// Convert the point to the canvas coordinates, while
 		// also inseting the point because it appears it won't take into
 		// consideration the navigation bar
