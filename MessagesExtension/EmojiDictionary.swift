@@ -52,7 +52,7 @@ public struct EmojiDictionary {
 	}
 	
 	func search(query: String) -> [Emoji] {
-		let filtered = categories.flatMap { category in
+		let filtered = categories.dropFirst().flatMap { category in
 			category.value.filter { emoji in
 				emoji.keywords.contains(where: { keyword -> Bool in
 					return keyword.lowercased().range(of: query.lowercased()) != nil
