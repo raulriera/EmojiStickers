@@ -8,9 +8,17 @@
 
 import UIKit
 
-class EditCollectionReusableView: UICollectionReusableView {
+final class EditCollectionReusableView: UICollectionReusableView {
 	typealias ToggleEditModeHandler = (StickersViewController.CollectionViewStatus) -> Void
-
+	
+	@IBOutlet private weak var appNameLabel: UILabel! {
+		didSet {
+			if let appName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String, let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+				appNameLabel.text = "\(appName) \(appVersion)".uppercased()
+			}
+		}
+	}
+	
 	@IBOutlet private weak var editButton: UIButton! {
 		didSet {
 			let buttonTitle = NSLocalizedString("Edit", comment: "Button when the user wants to start editing the stickers")
