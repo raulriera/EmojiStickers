@@ -371,7 +371,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		guard let lastView = canvas.subviews.last, let view = lastView as? EmojiView else { return }
 
 		// Prevent the emoji from growing too large
-		let maximumSize: CGSize = CGSize(width: 900, height: 900)
+		let maximumSize: CGSize = CGSize(width: 1100, height: 1100)
 		
 		// If the view grows too large, the app will crash
 		guard view.bounds.size.height <= maximumSize.height else {
