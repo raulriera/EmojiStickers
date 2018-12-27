@@ -10,10 +10,10 @@ import UIKit
 
 extension UIViewController {
 	func removeChildViewControllers() {
-		for child in self.childViewControllers {
-			child.willMove(toParentViewController: nil)
+		for child in self.children {
+			child.willMove(toParent: nil)
 			child.view.removeFromSuperview()
-			child.removeFromParentViewController()
+			child.removeFromParent()
 		}
 	}
 }

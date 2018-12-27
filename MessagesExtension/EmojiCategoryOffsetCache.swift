@@ -25,7 +25,7 @@ struct EmojiCategoryOffsetCache {
 		let defaults = UserDefaults.standard
 
 		if let previousTone = defaults.string(forKey: EmojiCategoryOffsetCache.userDefaultsKey) {
-			offset = CGPointFromString(previousTone)
+			offset = NSCoder.cgPoint(for: previousTone)
 		}
 
 		return EmojiCategoryOffsetCache(offset: offset)
@@ -34,7 +34,7 @@ struct EmojiCategoryOffsetCache {
 	/// Saves the history.
 	func save(offset: CGPoint) {
 		let defaults = UserDefaults.standard
-		defaults.set(NSStringFromCGPoint(offset), forKey: EmojiCategoryOffsetCache.userDefaultsKey)
+		defaults.set(NSCoder.string(for: offset), forKey: EmojiCategoryOffsetCache.userDefaultsKey)
 	}
 
 	/// Deletes all the history

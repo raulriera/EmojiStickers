@@ -19,7 +19,7 @@ final class EmojiCharacterCell: UICollectionViewCell {
 			
 			isAccessibilityElement = true
 			accessibilityValue = emoji.name
-			accessibilityTraits = UIAccessibilityTraitImage | UIAccessibilityTraitButton
+			accessibilityTraits = [.image, .button]
 		}
 	}
 	

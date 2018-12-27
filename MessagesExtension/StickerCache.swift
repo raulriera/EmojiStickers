@@ -71,7 +71,7 @@ final class StickerCache {
             
             // Create the sticker image and write it to disk.
 			guard let image = emoji.image else { return }
-			guard let imageData = UIImagePNGRepresentation(image) else { fatalError("Unable to build image for the emoji") }
+			guard let imageData = image.pngData() else { fatalError("Unable to build image for the emoji") }
             
             do {
                 try imageData.write(to: url, options: [.atomicWrite])

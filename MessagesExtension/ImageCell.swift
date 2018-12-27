@@ -22,7 +22,7 @@ class ImageCell: UICollectionViewCell {
 			
 			isAccessibilityElement = true
 			accessibilityValue = "\(category.humanize()) category"
-			accessibilityTraits = UIAccessibilityTraitImage | UIAccessibilityTraitButton
+			accessibilityTraits = [.image, .button]
 		}
 	}
 	

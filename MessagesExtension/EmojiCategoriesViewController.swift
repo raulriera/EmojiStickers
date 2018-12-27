@@ -40,7 +40,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	
 	func changePage(to newPage: Int, animated: Bool = true) {
 		clearSearchBar()
-		let animationDirection: UIPageViewControllerNavigationDirection
+		let animationDirection: UIPageViewController.NavigationDirection
 		
 		if newPage < currentIndex {
 			animationDirection = .reverse
@@ -80,7 +80,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		guard let categoryPickerViewController = categoryPickerViewController else { return }
 		
 		// Embed the new controller.
-		addChildViewController(categoryPickerViewController)
+		addChild(categoryPickerViewController)
 		
 		categoryPickerViewController.view.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(categoryPickerViewController.view)
@@ -92,7 +92,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 			categoryPickerViewController.view.heightAnchor.constraint(equalToConstant: 34)
 		])
 		
-		categoryPickerViewController.didMove(toParentViewController: self)
+		categoryPickerViewController.didMove(toParent: self)
 		
 		categoryPickerViewController.selectedCategory = currentIndex
 	}

@@ -72,8 +72,8 @@ final class StickersViewController: UICollectionViewController {
 
 	// MARK: Life cycle
 
-	override func didMove(toParentViewController parent: UIViewController?) {
-		super.didMove(toParentViewController: parent)
+	override func didMove(toParent parent: UIViewController?) {
+		super.didMove(toParent: parent)
 
 		// Offset the collection view content to hide the "EditCollectionReusableView"
 		collectionView?.contentOffset = CGPoint(x: 0, y: 44)
@@ -115,7 +115,7 @@ final class StickersViewController: UICollectionViewController {
     }
 
 	private func dequeueEditStickersReusableView(at indexPath: IndexPath) -> UICollectionReusableView {
-		guard let view = collectionView?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: EditCollectionReusableView.reuseIdentifier, for: indexPath) as? EditCollectionReusableView else { fatalError("Unable to dequeue a EditCollectionReusableView") }
+		guard let view = collectionView?.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: EditCollectionReusableView.reuseIdentifier, for: indexPath) as? EditCollectionReusableView else { fatalError("Unable to dequeue a EditCollectionReusableView") }
 
 		view.collectionViewStatus = status
 		view.toggleEditModeHandler = { [weak self] newStatus in

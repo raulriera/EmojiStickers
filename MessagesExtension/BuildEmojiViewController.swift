@@ -89,8 +89,8 @@ final class BuildEmojiViewController: UIViewController {
 		resetOffsetCache()
 	}
 
-	override func willMove(toParentViewController parent: UIViewController?) {
-		super.willMove(toParentViewController: parent)
+	override func willMove(toParent parent: UIViewController?) {
+		super.willMove(toParent: parent)
 
 		// Are we closing this View Controller?
 		if parent == nil {
@@ -125,7 +125,7 @@ final class BuildEmojiViewController: UIViewController {
 		removeChildViewControllers()
 		
 		// Embed the new controller.
-		addChildViewController(controller)
+		addChild(controller)
 		
 		controller.view.frame = view.bounds
 		controller.view.translatesAutoresizingMaskIntoConstraints = false
@@ -136,7 +136,7 @@ final class BuildEmojiViewController: UIViewController {
 		controller.view.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor).isActive = true
 		controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.bottomAnchor).isActive = true
 		
-		controller.didMove(toParentViewController: self)
+		controller.didMove(toParent: self)
 		
 		controller.selectEmojiHandler = { [weak self] emoji, categoryIndex, selectionRect in
 			self?.handleEmojiSelection(emoji: emoji, categoryIndex: categoryIndex, selectionRect: selectionRect)
@@ -292,10 +292,10 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		for subview in canvas.subviews {
 			if subview.frame.intersects(tappedView.frame) {
 				if tappedView == subview {
-					tappedView.superview?.bringSubview(toFront: tappedView)
+					tappedView.superview?.bringSubviewToFront(tappedView)
 					canvas.select(view: tappedView)
 				} else {
-					subview.superview?.bringSubview(toFront: subview)
+					subview.superview?.bringSubviewToFront(subview)
 					canvas.select(view: subview)
 				}
 				return
@@ -310,7 +310,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		if case .ended = recognizer.state {
 			tappedView.isUserInteractionEnabled = false
 
-			let direction: UIViewAnimationOptions = tappedView.isFlipped ? .transitionFlipFromLeft : .transitionFlipFromRight
+			let direction: UIView.AnimationOptions = tappedView.isFlipped ? .transitionFlipFromLeft : .transitionFlipFromRight
 
 			UIView.transition(with: tappedView, duration: 0.20, options: direction, animations: {
 				tappedView.flipped()

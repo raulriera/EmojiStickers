@@ -71,19 +71,19 @@ final class MessagesViewController: MSMessagesAppViewController {
         }
         
         // Remove any existing child controllers.
-        for child in childViewControllers {
+		for child in children {
 			UIView.animate(withDuration: 0.25, animations: { 
 				child.view.alpha = 0
 
 			}, completion: { _ in
-				child.willMove(toParentViewController: nil)
+				child.willMove(toParent: nil)
 				child.view.removeFromSuperview()
-				child.removeFromParentViewController()
+				child.removeFromParent()
 			})
         }
         
         // Embed the new controller.
-        addChildViewController(controller)
+		addChild(controller)
 
 		controller.view.alpha = 0
         controller.view.frame = view.bounds
@@ -102,7 +102,7 @@ final class MessagesViewController: MSMessagesAppViewController {
 			controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
 		}
 
-        controller.didMove(toParentViewController: self)
+		controller.didMove(toParent: self)
 
 		UIView.animate(withDuration: 0.25) {
 			controller.view.alpha = 1

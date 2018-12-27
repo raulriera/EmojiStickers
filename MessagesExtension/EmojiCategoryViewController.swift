@@ -153,7 +153,7 @@ final class EmojiCategoryViewController: UICollectionViewController, UICollectio
 
 	override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
-		let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "PoweredByDisclaimer", for: indexPath)
+		let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "PoweredByDisclaimer", for: indexPath)
 
 		// Hide the disclaimer if there are just a few emojis (so that the recent tab doesn't look ugly
 		view.isHidden = collectionView.numberOfItems(inSection: 0) <= 50

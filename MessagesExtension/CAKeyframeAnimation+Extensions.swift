@@ -20,7 +20,7 @@ extension CAKeyframeAnimation {
 				NSValue(cgPoint: CGPoint(x: 0, y: -1)),
 				NSValue(cgPoint: CGPoint(x: -1, y: -1))
 			]
-			animation.calculationMode = "linear"
+			animation.calculationMode = .linear
 			animation.isRemovedOnCompletion = false
 			animation.repeatCount = Float.greatestFiniteMagnitude
 			animation.beginTime = Double(arc4random() % 25) / 100.0
@@ -33,13 +33,13 @@ extension CAKeyframeAnimation {
 			let animation = CAKeyframeAnimation(keyPath: "transform")
 			animation.beginTime = 2.6
 			animation.duration = 0.25
-			animation.valueFunction = CAValueFunction(name:kCAValueFunctionRotateZ)
+			animation.valueFunction = CAValueFunction(name: .rotateZ)
 			animation.values = [
 				-0.03525565,
 				0.03525565,
 				-0.03525565
 			]
-			animation.calculationMode = "linear"
+			animation.calculationMode = .linear
 			animation.isRemovedOnCompletion = false
 			animation.repeatCount = Float.greatestFiniteMagnitude
 			animation.beginTime = Double(arc4random() % 25) / 100.0

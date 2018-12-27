@@ -86,7 +86,7 @@ final class ImageCache {
 			}
 			
 			// Create the image and write it to disk.
-			guard let imageData = UIImagePNGRepresentation(cachable.image()) else {
+			guard let imageData = cachable.image().pngData() else {
 				fatalError("Unable to build image for cache")
 			}
 			
