@@ -2883,6 +2883,7 @@
 		4CC9FB121D6E569900376F33 /* RecentEmojiCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9FB111D6E569900376F33 /* RecentEmojiCache.swift */; };
 		4CCB4DD41D3C31E0001EF33E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */; };
 		4CCE3A812121B70B00EEF7A9 /* EmojiStickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE3A802121B70A00EEF7A9 /* EmojiStickerCell.swift */; };
+		4CDB4A5921D93E370050CB5B /* 1f346-1f351.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CDB4A5821D93E370050CB5B /* 1f346-1f351.pdf */; };
 		4CE102051D5566F300EAD044 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE102071D5566F300EAD044 /* Localizable.strings */; };
 		4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */; };
 		4CE8B7A01D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8B79F1D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift */; };
@@ -5792,6 +5793,7 @@
 		4CC9FB111D6E569900376F33 /* RecentEmojiCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentEmojiCache.swift; sourceTree = "<group>"; };
 		4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4CCE3A802121B70A00EEF7A9 /* EmojiStickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiStickerCell.swift; sourceTree = "<group>"; };
+		4CDB4A5821D93E370050CB5B /* 1f346-1f351.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f346-1f351.pdf"; sourceTree = "<group>"; };
 		4CE102061D5566F300EAD044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CE102081D5566F500EAD044 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CE102091D55689C00EAD044 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -5894,6 +5896,7 @@
 		4C8857732126380F007D3038 /* PDF */ = {
 			isa = PBXGroup;
 			children = (
+				4CDB4A5821D93E370050CB5B /* 1f346-1f351.pdf */,
 				4C8857742126380F007D3038 /* 1f481-1f3fd.pdf */,
 				4C8857752126380F007D3038 /* 1f448-1f3fd.pdf */,
 				4C8857762126380F007D3038 /* 1f44d-1f3fe.pdf */,
@@ -9096,6 +9099,7 @@
 				4C8867D921263825007D3038 /* 1f3c4-1f3fc-200d-2642-fe0f.pdf in Resources */,
 				4C88679821263825007D3038 /* 1f647.pdf in Resources */,
 				4C88661A21263825007D3038 /* 1f939-200d-2642-fe0f.pdf in Resources */,
+				4CDB4A5921D93E370050CB5B /* 1f346-1f351.pdf in Resources */,
 				4C886BC521263826007D3038 /* 1f401.pdf in Resources */,
 				4C8867C921263825007D3038 /* 1f5d2.pdf in Resources */,
 				4C886B7B21263826007D3038 /* 1f1f2-1f1f5.pdf in Resources */,

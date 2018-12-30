@@ -30,6 +30,7 @@ public struct EmojiDictionary {
 		case objects = "Objects"
 		case symbols = "Symbols"
 		case flags = "Flags"
+		case custom = "Custom"
 	}
 	
 	public init() {
@@ -52,7 +53,10 @@ public struct EmojiDictionary {
 	}
 	
 	func search(query: String) -> [Emoji] {
-		let filtered = categories.dropFirst().flatMap { category in
+		var categoriesWithoutRecent = categories.dropFirst()
+		categoriesWithoutRecent.append(customCategory())
+		
+		let filtered = categoriesWithoutRecent.flatMap { category in
 			category.value.filter { emoji in
 				emoji.keywords.contains(where: { keyword -> Bool in
 					return keyword.lowercased().range(of: query.lowercased()) != nil
@@ -61,5 +65,20 @@ public struct EmojiDictionary {
 		}
 		
 		return filtered
+	}
+	
+	// Add any crazy emojis we want to support that are only visible when
+	// using the search interface
+	func customCategory() -> Category {
+		let emojis = [
+			Emoji(id: 1,
+				  name: "Dick Butt",
+				  hexcode: "1f346-1f351",
+				  keywords: ["caio"],
+				  emoji: "",
+				  skins: [])
+		]
+		
+		return EmojiDictionary.Category(key: .custom, value: emojis)
 	}
 }
