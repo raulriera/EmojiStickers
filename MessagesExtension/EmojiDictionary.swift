@@ -58,8 +58,10 @@ public struct EmojiDictionary {
 		
 		let filtered = categoriesWithoutRecent.flatMap { category in
 			category.value.filter { emoji in
-				emoji.keywords.contains(where: { keyword -> Bool in
-					return keyword.lowercased().range(of: query.lowercased()) != nil
+				// Search all keywords and the emoji name
+				let searchTerms = emoji.keywords + [emoji.name]
+				return searchTerms.contains(where: { term -> Bool in
+					return term.lowercased().range(of: query.lowercased()) != nil
 				})
 			}
 		}
@@ -72,7 +74,7 @@ public struct EmojiDictionary {
 	func customCategory() -> Category {
 		let emojis = [
 			Emoji(id: 1,
-				  name: "Dick Butt",
+				  name: "",
 				  hexcode: "1f346-1f351",
 				  keywords: ["caio"],
 				  emoji: "",
