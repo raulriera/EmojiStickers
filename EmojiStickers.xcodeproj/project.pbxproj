@@ -5871,24 +5871,22 @@
 		4C1C17531D14C64000A20A15 /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				4C136A1A1D16E75F0065DC28 /* Extensions */,
-				4C95BF7D1D17209F00A0D90B /* View Controllers */,
-				4C95BF751D1707EB00A0D90B /* StickerCache.swift */,
-				4CB85B5E1D2724F500F3227A /* ImageCache.swift */,
-				4C95BF801D1749D300A0D90B /* Views */,
-				4C95BF7B1D170E8C00A0D90B /* EmojiHistory.swift */,
-				4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */,
-				4C3EF19B1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift */,
-				4CC9FB111D6E569900376F33 /* RecentEmojiCache.swift */,
-				4C8857732126380F007D3038 /* PDF */,
-				4C95BF721D17078C00A0D90B /* Model */,
-				4C1C17561D14C64000A20A15 /* MainInterface.storyboard */,
 				4C886DB021264669007D3038 /* EmojiKit */,
-				4C1C17591D14C64000A20A15 /* Assets.xcassets */,
-				4C1C175B1D14C64000A20A15 /* Info.plist */,
+				4C136A1A1D16E75F0065DC28 /* Extensions */,
+				4C95BF721D17078C00A0D90B /* Model */,
+				4C8857732126380F007D3038 /* PDF */,
+				4CB5418E21EA753000E27DFE /* Resources */,
+				4C95BF7D1D17209F00A0D90B /* View Controllers */,
+				4C95BF801D1749D300A0D90B /* Views */,
 				4C2510DD1D3D9D7A0084197B /* CenteredFlowLayout.swift */,
+				4C3EF19B1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift */,
+				4C95BF7B1D170E8C00A0D90B /* EmojiHistory.swift */,
+				4CB85B5E1D2724F500F3227A /* ImageCache.swift */,
 				4CE102071D5566F300EAD044 /* Localizable.strings */,
+				4CC9FB111D6E569900376F33 /* RecentEmojiCache.swift */,
+				4CC9E5F51D40392B00668D26 /* SkinToneCache.swift */,
 				4C33536F1D40FF0500B22375 /* sticker_placeholder.png */,
+				4C95BF751D1707EB00A0D90B /* StickerCache.swift */,
 			);
 			path = MessagesExtension;
 			sourceTree = "<group>";
@@ -8784,6 +8782,16 @@
 				4CE8B79C1D2F2C2C00B929CF /* ImageCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		4CB5418E21EA753000E27DFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C1C17561D14C64000A20A15 /* MainInterface.storyboard */,
+				4C1C17591D14C64000A20A15 /* Assets.xcassets */,
+				4C1C175B1D14C64000A20A15 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		4CE8B79E1D2F2CFC00B929CF /* Emoji Picker */ = {
