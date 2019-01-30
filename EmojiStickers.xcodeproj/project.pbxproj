@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C10BB682202263A0066B105 /* 1f1e8-1f1e6-1f1eb-1f1f7.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C10BB67220226390066B105 /* 1f1e8-1f1e6-1f1eb-1f1f7.pdf */; };
 		4C10E1FB1D28071C0002DBFC /* EmojiCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10E1FA1D28071C0002DBFC /* EmojiCategoriesViewController.swift */; };
 		4C10E1FD1D282F0E0002DBFC /* EmojiCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10E1FC1D282F0E0002DBFC /* EmojiCategoryViewController.swift */; };
 		4C136A1E1D16F5F50065DC28 /* BuildEmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C136A1D1D16F5F50065DC28 /* BuildEmojiViewController.swift */; };
@@ -2914,6 +2915,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C10BB67220226390066B105 /* 1f1e8-1f1e6-1f1eb-1f1f7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f1e8-1f1e6-1f1eb-1f1f7.pdf"; sourceTree = "<group>"; };
 		4C10E1FA1D28071C0002DBFC /* EmojiCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCategoriesViewController.swift; sourceTree = "<group>"; };
 		4C10E1FC1D282F0E0002DBFC /* EmojiCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCategoryViewController.swift; sourceTree = "<group>"; };
 		4C136A1D1D16F5F50065DC28 /* BuildEmojiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildEmojiViewController.swift; sourceTree = "<group>"; };
@@ -5894,6 +5896,7 @@
 		4C8857732126380F007D3038 /* PDF */ = {
 			isa = PBXGroup;
 			children = (
+				4C10BB67220226390066B105 /* 1f1e8-1f1e6-1f1eb-1f1f7.pdf */,
 				4CDB4A5821D93E370050CB5B /* 1f346-1f351.pdf */,
 				4C8857742126380F007D3038 /* 1f481-1f3fd.pdf */,
 				4C8857752126380F007D3038 /* 1f448-1f3fd.pdf */,
@@ -11377,6 +11380,7 @@
 				4C886C4821263826007D3038 /* 1f64e-1f3fc-200d-2640-fe0f.pdf in Resources */,
 				4C886B2021263826007D3038 /* 1f1f7-1f1ea.pdf in Resources */,
 				4C88687221263826007D3038 /* 1f6b4-1f3ff-200d-2640-fe0f.pdf in Resources */,
+				4C10BB682202263A0066B105 /* 1f1e8-1f1e6-1f1eb-1f1f7.pdf in Resources */,
 				4C88643E21263825007D3038 /* 1f468-200d-1f468-200d-1f467-200d-1f466.pdf in Resources */,
 				4C88646C21263825007D3038 /* 1f1f2-1f1e6.pdf in Resources */,
 				4C886C4221263826007D3038 /* 1f467-1f3fe.pdf in Resources */,
