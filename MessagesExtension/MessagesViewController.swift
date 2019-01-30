@@ -34,7 +34,7 @@ final class MessagesViewController: MSMessagesAppViewController {
 		// Present the view controller for the appropriate presentation style.
 		presentViewController(for: presentationStyle)
 		
-		let key = "UpdatedToTwitterEmoji11.2"
+		let key = "UpdatedToTwitterEmoji11.3"
 		// Run this code only once per "Emoji assets update"
 		if !UserDefaults.standard.bool(forKey: key) {
 			ImageCache.cache.clear()
