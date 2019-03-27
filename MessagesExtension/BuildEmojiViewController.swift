@@ -141,6 +141,9 @@ final class BuildEmojiViewController: UIViewController {
 		controller.selectEmojiHandler = { [weak self] emoji, categoryIndex, selectionRect in
 			self?.handleEmojiSelection(emoji: emoji, categoryIndex: categoryIndex, selectionRect: selectionRect)
 		}
+		controller.dismissHandler = { [weak self] in
+			self?.removeChildViewControllers()
+		}
 
 		// It's rude to show the user en empty page of emojis, if they have
 		// no recent emojis, just go to the next page

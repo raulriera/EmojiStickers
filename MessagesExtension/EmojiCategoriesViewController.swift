@@ -16,6 +16,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	
 	static let storyboardIdentifier = "EmojiCategoriesViewController"
 	var selectEmojiHandler: SelectEmojiHandler?
+	var dismissHandler: (() -> Void)?
 
 	private let emojiDictionary = EmojiDictionary()
 	private weak var categoryPickerViewController: EmojiCategoryPickerViewController?
@@ -59,6 +60,10 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	}
 	
 	// MARK: Private
+	
+	@IBAction func didSelectDismiss(_ sender: UIButton) {
+		dismissHandler?()
+	}
 	
 	private func presentCartegorySearchBar() {
 		searchBarContainer.translatesAutoresizingMaskIntoConstraints = false
