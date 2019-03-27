@@ -8865,14 +8865,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = R64MTWS872;
 						DevelopmentTeamName = "Raul Riera";
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 4C1C173F1D14C64000A20A15 /* Build configuration list for PBXProject "EmojiStickers" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -11960,6 +11960,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -11974,6 +11975,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

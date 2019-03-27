@@ -142,7 +142,7 @@ final class StickersViewController: UICollectionViewController {
 		
 		collectionView?.performBatchUpdates({ [weak self] in
 			// Find the index path we want to delete
-			guard let stickerIndex = stickers.index(where: { $0 == sticker }) else { return }
+			guard let stickerIndex = stickers.firstIndex(where: { $0 == sticker }) else { return }
 			// Shift the index by 1 because the first index is always the "create sticker" button
 			let indexPath = IndexPath(row: stickerIndex + 1, section: 0)
 			// Delete the item from the dataSource

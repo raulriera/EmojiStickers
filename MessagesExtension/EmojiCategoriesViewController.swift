@@ -22,7 +22,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 	private var currentIndex: Int {
 		guard let visibleViewController = viewControllers?.first as? EmojiCategoryViewController,
 			let category = visibleViewController.category,
-			let index = emojiDictionary.categories.index(where: { $0 == category }) else { return 0 }
+			let index = emojiDictionary.categories.firstIndex(where: { $0 == category }) else { return 0 }
 		
 		return index
 	}

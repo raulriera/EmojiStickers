@@ -11,7 +11,7 @@ import Foundation
 extension Array where Iterator.Element: Equatable {
 	@discardableResult
 	public mutating func remove(where condition: (Iterator.Element) -> Bool) -> Iterator.Element? {
-		guard let index = index(where: condition) else { return nil }
+		guard let index = firstIndex(where: condition) else { return nil }
 		return remove(at: Int(index))
 	}
 
@@ -19,7 +19,7 @@ extension Array where Iterator.Element: Equatable {
 	public mutating func removeAll(where condition: (Iterator.Element) -> Bool) -> [Iterator.Element] {
 		var result: [Iterator.Element] = []
 
-		while let index = index(where: condition) {
+		while let index = firstIndex(where: condition) {
 			result.append(remove(at: index))
 		}
 
