@@ -72,7 +72,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		NSLayoutConstraint.activate([
 			searchBarContainer.leftAnchor.constraint(equalTo: view.leftAnchor),
 			searchBarContainer.rightAnchor.constraint(equalTo: view.rightAnchor),
-			searchBarContainer.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor),
+			searchBarContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
 			searchBarContainer.heightAnchor.constraint(equalToConstant: 56)
 		])
 		
@@ -87,14 +87,26 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		// Embed the new controller.
 		addChild(categoryPickerViewController)
 		
-		categoryPickerViewController.view.translatesAutoresizingMaskIntoConstraints = false
-		view.addSubview(categoryPickerViewController.view)
+		let categoryPickerView: UIView! = categoryPickerViewController.view
+		categoryPickerView.translatesAutoresizingMaskIntoConstraints = false
+		
+		let wrapperView = UIView()
+		wrapperView.backgroundColor = .white
+		wrapperView.translatesAutoresizingMaskIntoConstraints = false
+		
+		wrapperView.addSubview(categoryPickerView)
+		view.addSubview(wrapperView)
 		
 		NSLayoutConstraint.activate([
-			categoryPickerViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
-			categoryPickerViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor),
-			categoryPickerViewController.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.bottomAnchor),
-			categoryPickerViewController.view.heightAnchor.constraint(equalToConstant: 34)
+			categoryPickerView.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor),
+			categoryPickerView.trailingAnchor.constraint(equalTo: wrapperView.trailingAnchor),
+			categoryPickerView.topAnchor.constraint(equalTo: wrapperView.topAnchor),
+			categoryPickerView.heightAnchor.constraint(equalToConstant: 34),
+
+			wrapperView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			wrapperView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+			wrapperView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -34),
+			wrapperView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 		])
 		
 		categoryPickerViewController.didMove(toParent: self)

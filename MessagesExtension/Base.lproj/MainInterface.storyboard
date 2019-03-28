@@ -403,7 +403,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-NR-ByN">
-                                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                             <state key="normal" image="Delete Sticker"/>
                                             <connections>
                                                 <action selector="deleteTapped:" destination="4m6-cT-qN7" eventType="touchUpInside" id="OlI-ll-oBv"/>

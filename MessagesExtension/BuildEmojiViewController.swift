@@ -131,10 +131,12 @@ final class BuildEmojiViewController: UIViewController {
 		controller.view.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(controller.view)
 		
-		controller.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-		controller.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-		controller.view.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor).isActive = true
-		controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.bottomAnchor).isActive = true
+		NSLayoutConstraint.activate([
+			controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+			controller.view.topAnchor.constraint(equalTo: view.topAnchor),
+			controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+		])
 		
 		controller.didMove(toParent: self)
 		

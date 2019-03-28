@@ -89,18 +89,13 @@ final class MessagesViewController: MSMessagesAppViewController {
         controller.view.frame = view.bounds
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(controller.view)
-        
-        controller.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        controller.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        controller.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
 		
-		// Attach the controller to the very bottom only if it's the compact style
-		// this one seems to already take into account the input field.
-		if presentationStyle == .compact {
-			controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-		} else {
-			controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
-		}
+		NSLayoutConstraint.activate([
+			controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+			controller.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+			controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+		])
 
 		controller.didMove(toParent: self)
 
