@@ -144,7 +144,7 @@
       ]
     },
     {
-      "name": "upside",
+      "name": "upside-down face",
       "hexcode": "1f643",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -220,7 +220,7 @@
       ]
     },
     {
-      "name": "smiling face with heart",
+      "name": "smiling face with heart-eyes",
       "hexcode": "1f60d",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -236,7 +236,7 @@
       ]
     },
     {
-      "name": "star",
+      "name": "star-struck",
       "hexcode": "1f929",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -405,7 +405,7 @@
       ]
     },
     {
-      "name": "money",
+      "name": "money-mouth face",
       "hexcode": "1f911",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -474,7 +474,7 @@
       ]
     },
     {
-      "name": "zipper",
+      "name": "zipper-mouth face",
       "hexcode": "1f910",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -725,7 +725,7 @@
       ]
     },
     {
-      "name": "face with head",
+      "name": "face with head-bandage",
       "hexcode": "1f915",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -1593,7 +1593,7 @@
       ]
     },
     {
-      "name": "smiling cat with heart",
+      "name": "smiling cat with heart-eyes",
       "hexcode": "1f63b",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -1691,7 +1691,7 @@
       ]
     },
     {
-      "name": "see",
+      "name": "see-no-evil monkey",
       "hexcode": "1f648",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -1708,7 +1708,7 @@
       ]
     },
     {
-      "name": "hear",
+      "name": "hear-no-evil monkey",
       "hexcode": "1f649",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -1725,7 +1725,7 @@
       ]
     },
     {
-      "name": "speak",
+      "name": "speak-no-evil monkey",
       "hexcode": "1f64a",
       "category": "Smileys & Emotion",
       "keywords": [
@@ -2520,7 +2520,7 @@
       ]
     },
     {
-      "name": "love",
+      "name": "love-you gesture",
       "hexcode": "1f91f",
       "category": "People & Body",
       "keywords": [
@@ -2530,67 +2530,26 @@
       ],
       "emoji": "🤟",
       "skins": [
-
-      ]
-    },
-    {
-      "name": "love",
-      "hexcode": "1f91f-1f3fb",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤟🏻",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "love",
-      "hexcode": "1f91f-1f3fc",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤟🏼",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "love",
-      "hexcode": "1f91f-1f3fd",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤟🏽",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "love",
-      "hexcode": "1f91f-1f3fe",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤟🏾",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "love",
-      "hexcode": "1f91f-1f3ff",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤟🏿",
-      "skins": [
-
+        {
+          "hexcode": "1f91f-1f3fb",
+          "emoji": "🤟🏻"
+        },
+        {
+          "hexcode": "1f91f-1f3fc",
+          "emoji": "🤟🏼"
+        },
+        {
+          "hexcode": "1f91f-1f3fd",
+          "emoji": "🤟🏽"
+        },
+        {
+          "hexcode": "1f91f-1f3fe",
+          "emoji": "🤟🏾"
+        },
+        {
+          "hexcode": "1f91f-1f3ff",
+          "emoji": "🤟🏿"
+        }
       ]
     },
     {
@@ -3010,7 +2969,7 @@
       ]
     },
     {
-      "name": "left",
+      "name": "left-facing fist",
       "hexcode": "1f91b",
       "category": "People & Body",
       "keywords": [
@@ -3020,71 +2979,30 @@
       ],
       "emoji": "🤛",
       "skins": [
-
+        {
+          "hexcode": "1f91b-1f3fb",
+          "emoji": "🤛🏻"
+        },
+        {
+          "hexcode": "1f91b-1f3fc",
+          "emoji": "🤛🏼"
+        },
+        {
+          "hexcode": "1f91b-1f3fd",
+          "emoji": "🤛🏽"
+        },
+        {
+          "hexcode": "1f91b-1f3fe",
+          "emoji": "🤛🏾"
+        },
+        {
+          "hexcode": "1f91b-1f3ff",
+          "emoji": "🤛🏿"
+        }
       ]
     },
     {
-      "name": "left",
-      "hexcode": "1f91b-1f3fb",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤛🏻",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "left",
-      "hexcode": "1f91b-1f3fc",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤛🏼",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "left",
-      "hexcode": "1f91b-1f3fd",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤛🏽",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "left",
-      "hexcode": "1f91b-1f3fe",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤛🏾",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "left",
-      "hexcode": "1f91b-1f3ff",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤛🏿",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "right",
+      "name": "right-facing fist",
       "hexcode": "1f91c",
       "category": "People & Body",
       "keywords": [
@@ -3094,67 +3012,26 @@
       ],
       "emoji": "🤜",
       "skins": [
-
-      ]
-    },
-    {
-      "name": "right",
-      "hexcode": "1f91c-1f3fb",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤜🏻",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "right",
-      "hexcode": "1f91c-1f3fc",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤜🏼",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "right",
-      "hexcode": "1f91c-1f3fd",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤜🏽",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "right",
-      "hexcode": "1f91c-1f3fe",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤜🏾",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "right",
-      "hexcode": "1f91c-1f3ff",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤜🏿",
-      "skins": [
-
+        {
+          "hexcode": "1f91c-1f3fb",
+          "emoji": "🤜🏻"
+        },
+        {
+          "hexcode": "1f91c-1f3fc",
+          "emoji": "🤜🏼"
+        },
+        {
+          "hexcode": "1f91c-1f3fd",
+          "emoji": "🤜🏽"
+        },
+        {
+          "hexcode": "1f91c-1f3fe",
+          "emoji": "🤜🏾"
+        },
+        {
+          "hexcode": "1f91c-1f3ff",
+          "emoji": "🤜🏿"
+        }
       ]
     },
     {
@@ -7230,7 +7107,7 @@
       ]
     },
     {
-      "name": "breast",
+      "name": "breast-feeding",
       "hexcode": "1f931",
       "category": "People & Body",
       "keywords": [
@@ -7241,67 +7118,26 @@
       ],
       "emoji": "🤱",
       "skins": [
-
-      ]
-    },
-    {
-      "name": "breast",
-      "hexcode": "1f931-1f3fb",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤱🏻",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "breast",
-      "hexcode": "1f931-1f3fc",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤱🏼",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "breast",
-      "hexcode": "1f931-1f3fd",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤱🏽",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "breast",
-      "hexcode": "1f931-1f3fe",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤱🏾",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "breast",
-      "hexcode": "1f931-1f3ff",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🤱🏿",
-      "skins": [
-
+        {
+          "hexcode": "1f931-1f3fb",
+          "emoji": "🤱🏻"
+        },
+        {
+          "hexcode": "1f931-1f3fc",
+          "emoji": "🤱🏼"
+        },
+        {
+          "hexcode": "1f931-1f3fd",
+          "emoji": "🤱🏽"
+        },
+        {
+          "hexcode": "1f931-1f3fe",
+          "emoji": "🤱🏾"
+        },
+        {
+          "hexcode": "1f931-1f3ff",
+          "emoji": "🤱🏿"
+        }
       ]
     },
     {
@@ -12017,7 +11853,7 @@
       ]
     },
     {
-      "name": "two",
+      "name": "two-hump camel",
       "hexcode": "1f42b",
       "category": "Animals & Nature",
       "keywords": [
@@ -12409,7 +12245,7 @@
       ]
     },
     {
-      "name": "front",
+      "name": "front-facing baby chick",
       "hexcode": "1f425",
       "category": "Animals & Nature",
       "keywords": [
@@ -12671,7 +12507,7 @@
       ]
     },
     {
-      "name": "T",
+      "name": "T-Rex",
       "hexcode": "1f996",
       "category": "Animals & Nature",
       "keywords": [
@@ -15014,7 +14850,7 @@
   ],
   "Travel & Places": [
     {
-      "name": "globe showing Europe",
+      "name": "globe showing Europe-Africa",
       "hexcode": "1f30d",
       "category": "Travel & Places",
       "keywords": [
@@ -15047,7 +14883,7 @@
       ]
     },
     {
-      "name": "globe showing Asia",
+      "name": "globe showing Asia-Australia",
       "hexcode": "1f30f",
       "category": "Travel & Places",
       "keywords": [
@@ -15121,7 +14957,7 @@
       ]
     },
     {
-      "name": "snow",
+      "name": "snow-capped mountain",
       "hexcode": "1f3d4-fe0f",
       "category": "Travel & Places",
       "keywords": [
@@ -15888,7 +15724,7 @@
       ]
     },
     {
-      "name": "high",
+      "name": "high-speed train",
       "hexcode": "1f684",
       "category": "Travel & Places",
       "keywords": [
@@ -16919,7 +16755,7 @@
       ]
     },
     {
-      "name": "twelve",
+      "name": "twelve-thirty",
       "hexcode": "1f567",
       "category": "Travel & Places",
       "keywords": [
@@ -16953,7 +16789,7 @@
       ]
     },
     {
-      "name": "one",
+      "name": "one-thirty",
       "hexcode": "1f55c",
       "category": "Travel & Places",
       "keywords": [
@@ -16987,7 +16823,7 @@
       ]
     },
     {
-      "name": "two",
+      "name": "two-thirty",
       "hexcode": "1f55d",
       "category": "Travel & Places",
       "keywords": [
@@ -17021,7 +16857,7 @@
       ]
     },
     {
-      "name": "three",
+      "name": "three-thirty",
       "hexcode": "1f55e",
       "category": "Travel & Places",
       "keywords": [
@@ -17055,7 +16891,7 @@
       ]
     },
     {
-      "name": "four",
+      "name": "four-thirty",
       "hexcode": "1f55f",
       "category": "Travel & Places",
       "keywords": [
@@ -17089,7 +16925,7 @@
       ]
     },
     {
-      "name": "five",
+      "name": "five-thirty",
       "hexcode": "1f560",
       "category": "Travel & Places",
       "keywords": [
@@ -17123,7 +16959,7 @@
       ]
     },
     {
-      "name": "six",
+      "name": "six-thirty",
       "hexcode": "1f561",
       "category": "Travel & Places",
       "keywords": [
@@ -17157,7 +16993,7 @@
       ]
     },
     {
-      "name": "seven",
+      "name": "seven-thirty",
       "hexcode": "1f562",
       "category": "Travel & Places",
       "keywords": [
@@ -17191,7 +17027,7 @@
       ]
     },
     {
-      "name": "eight",
+      "name": "eight-thirty",
       "hexcode": "1f563",
       "category": "Travel & Places",
       "keywords": [
@@ -17225,7 +17061,7 @@
       ]
     },
     {
-      "name": "nine",
+      "name": "nine-thirty",
       "hexcode": "1f564",
       "category": "Travel & Places",
       "keywords": [
@@ -17259,7 +17095,7 @@
       ]
     },
     {
-      "name": "ten",
+      "name": "ten-thirty",
       "hexcode": "1f565",
       "category": "Travel & Places",
       "keywords": [
@@ -17293,7 +17129,7 @@
       ]
     },
     {
-      "name": "eleven",
+      "name": "eleven-thirty",
       "hexcode": "1f566",
       "category": "Travel & Places",
       "keywords": [
@@ -17946,7 +17782,7 @@
   ],
   "Activities": [
     {
-      "name": "jack",
+      "name": "jack-o-lantern",
       "hexcode": "1f383",
       "category": "Activities",
       "keywords": [
@@ -18740,7 +18576,7 @@
       ]
     },
     {
-      "name": "yo",
+      "name": "yo-yo",
       "hexcode": "1fa80",
       "category": "Activities",
       "keywords": [
@@ -19176,7 +19012,7 @@
       ]
     },
     {
-      "name": "t",
+      "name": "t-shirt",
       "hexcode": "1f455",
       "category": "Objects",
       "keywords": [
@@ -19298,7 +19134,7 @@
       ]
     },
     {
-      "name": "one",
+      "name": "one-piece swimsuit",
       "hexcode": "1fa71",
       "category": "Objects",
       "keywords": [
@@ -19503,7 +19339,7 @@
       ]
     },
     {
-      "name": "high",
+      "name": "high-heeled shoe",
       "hexcode": "1f460",
       "category": "Objects",
       "keywords": [
@@ -20715,7 +20551,7 @@
       ]
     },
     {
-      "name": "rolled",
+      "name": "rolled-up newspaper",
       "hexcode": "1f5de-fe0f",
       "category": "Objects",
       "keywords": [
@@ -20956,7 +20792,7 @@
       ]
     },
     {
-      "name": "e",
+      "name": "e-mail",
       "hexcode": "1f4e7",
       "category": "Objects",
       "keywords": [
@@ -21294,7 +21130,7 @@
       ]
     },
     {
-      "name": "tear",
+      "name": "tear-off calendar",
       "hexcode": "1f4c6",
       "category": "Objects",
       "keywords": [
@@ -22656,7 +22492,7 @@
       ]
     },
     {
-      "name": "non",
+      "name": "non-potable water",
       "hexcode": "1f6b1",
       "category": "Symbols",
       "keywords": [
@@ -22757,7 +22593,7 @@
       ]
     },
     {
-      "name": "up",
+      "name": "up-right arrow",
       "hexcode": "2197-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -22781,7 +22617,7 @@
       ]
     },
     {
-      "name": "down",
+      "name": "down-right arrow",
       "hexcode": "2198-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -22805,7 +22641,7 @@
       ]
     },
     {
-      "name": "down",
+      "name": "down-left arrow",
       "hexcode": "2199-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -22829,7 +22665,7 @@
       ]
     },
     {
-      "name": "up",
+      "name": "up-left arrow",
       "hexcode": "2196-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -22841,7 +22677,7 @@
       ]
     },
     {
-      "name": "up",
+      "name": "up-down arrow",
       "hexcode": "2195-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -22853,7 +22689,7 @@
       ]
     },
     {
-      "name": "left",
+      "name": "left-right arrow",
       "hexcode": "2194-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -23153,7 +22989,7 @@
       ]
     },
     {
-      "name": "dotted six",
+      "name": "dotted six-pointed star",
       "hexcode": "1f52f",
       "category": "Symbols",
       "keywords": [
@@ -23411,7 +23247,7 @@
       ]
     },
     {
-      "name": "fast",
+      "name": "fast-forward button",
       "hexcode": "23e9",
       "category": "Symbols",
       "keywords": [
@@ -23752,7 +23588,7 @@
       ]
     },
     {
-      "name": "fleur",
+      "name": "fleur-de-lis",
       "hexcode": "269c-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -23997,7 +23833,7 @@
       ]
     },
     {
-      "name": "eight",
+      "name": "eight-spoked asterisk",
       "hexcode": "2733-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -24009,7 +23845,7 @@
       ]
     },
     {
-      "name": "eight",
+      "name": "eight-pointed star",
       "hexcode": "2734-fe0f",
       "category": "Symbols",
       "keywords": [
@@ -25141,7 +24977,7 @@
       ]
     },
     {
-      "name": "black medium",
+      "name": "black medium-small square",
       "hexcode": "25fe",
       "category": "Symbols",
       "keywords": [
@@ -25155,7 +24991,7 @@
       ]
     },
     {
-      "name": "white medium",
+      "name": "white medium-small square",
       "hexcode": "25fd",
       "category": "Symbols",
       "keywords": [
@@ -25918,7 +25754,7 @@
       ]
     },
     {
-      "name": "flag: Congo",
+      "name": "flag: Congo - Kinshasa",
       "hexcode": "1f1e8-1f1e9",
       "category": "Flags",
       "keywords": [
@@ -25942,7 +25778,7 @@
       ]
     },
     {
-      "name": "flag: Congo",
+      "name": "flag: Congo - Brazzaville",
       "hexcode": "1f1e8-1f1ec",
       "category": "Flags",
       "keywords": [
@@ -26602,7 +26438,7 @@
       ]
     },
     {
-      "name": "flag: Guinea",
+      "name": "flag: Guinea-Bissau",
       "hexcode": "1f1ec-1f1fc",
       "category": "Flags",
       "keywords": [
@@ -28162,7 +27998,7 @@
       ]
     },
     {
-      "name": "flag: Timor",
+      "name": "flag: Timor-Leste",
       "hexcode": "1f1f9-1f1f1",
       "category": "Flags",
       "keywords": [

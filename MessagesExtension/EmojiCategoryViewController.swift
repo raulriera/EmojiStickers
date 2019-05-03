@@ -177,7 +177,7 @@ final class EmojiCategoryViewController: UICollectionViewController, UICollectio
 				let image = UIImage(document: document)
 				return image
 			} else {
-				print("Did not find document for \(emoji)")
+				print("Did not find document for \(emoji.hexcode)")
 			}
 			
 			return EmojiCategoryViewController.placeholderImage
