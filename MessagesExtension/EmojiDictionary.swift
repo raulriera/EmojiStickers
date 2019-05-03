@@ -73,14 +73,12 @@ public struct EmojiDictionary {
 	// using the search interface
 	func customCategory() -> Category {
 		let emojis = [
-			Emoji(id: 1,
-				  name: "",
+			Emoji(name: "",
 				  hexcode: "1f346-1f351",
 				  keywords: ["caio"],
 				  emoji: "",
 				  skins: []),
-			Emoji(id: 2,
-				  name: "Flag of Quebec",
+			Emoji(name: "Flag of Quebec",
 				  hexcode: "1f1e8-1f1e6-1f1eb-1f1f7",
 				  keywords: ["quebec, marjolaine"],
 				  emoji: "",

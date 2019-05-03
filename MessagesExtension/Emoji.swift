@@ -14,7 +14,6 @@ public struct Skin: Codable, Equatable {
 }
 
 public struct Emoji: Codable, Equatable {
-	public let id: Int
 	public let name: String
 	public let hexcode: String
 	public let keywords: [String]
