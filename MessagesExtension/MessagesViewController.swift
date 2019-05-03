@@ -36,14 +36,14 @@ final class MessagesViewController: MSMessagesAppViewController {
 		
 		let key = "UpdatedToTwitterEmoji12.0"
 		// Run this code only once per "Emoji assets update"
-		//if !UserDefaults.standard.bool(forKey: key) {
+		if !UserDefaults.standard.bool(forKey: key) {
 			ImageCache.cache.clear()
 			SkinToneCache.load().clear()
 			EmojiCategoryOffsetCache.load().clear()
 			//RecentEmojiCache.load().clear()
 
 			UserDefaults.standard.set(true, forKey: key)
-		//}
+		}
     }
     
     // MARK: MSMessagesAppViewController
