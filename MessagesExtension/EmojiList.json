@@ -4358,39 +4358,6 @@
       ]
     },
     {
-      "name": "person frowning",
-      "hexcode": "1f64d",
-      "category": "People & Body",
-      "keywords": [
-        "frown",
-        "gesture",
-        "person frowning"
-      ],
-      "emoji": "🙍",
-      "skins": [
-        {
-          "hexcode": "1f64d-1f3fb",
-          "emoji": "🙍🏻"
-        },
-        {
-          "hexcode": "1f64d-1f3fc",
-          "emoji": "🙍🏼"
-        },
-        {
-          "hexcode": "1f64d-1f3fd",
-          "emoji": "🙍🏽"
-        },
-        {
-          "hexcode": "1f64d-1f3fe",
-          "emoji": "🙍🏾"
-        },
-        {
-          "hexcode": "1f64d-1f3ff",
-          "emoji": "🙍🏿"
-        }
-      ]
-    },
-    {
       "name": "man frowning",
       "hexcode": "1f64d-200d-2642-fe0f",
       "category": "People & Body",
@@ -4449,39 +4416,6 @@
         {
           "hexcode": "1f64d-1f3ff-200d-2640-fe0f",
           "emoji": "🙍🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person pouting",
-      "hexcode": "1f64e",
-      "category": "People & Body",
-      "keywords": [
-        "gesture",
-        "person pouting",
-        "pouting"
-      ],
-      "emoji": "🙎",
-      "skins": [
-        {
-          "hexcode": "1f64e-1f3fb",
-          "emoji": "🙎🏻"
-        },
-        {
-          "hexcode": "1f64e-1f3fc",
-          "emoji": "🙎🏼"
-        },
-        {
-          "hexcode": "1f64e-1f3fd",
-          "emoji": "🙎🏽"
-        },
-        {
-          "hexcode": "1f64e-1f3fe",
-          "emoji": "🙎🏾"
-        },
-        {
-          "hexcode": "1f64e-1f3ff",
-          "emoji": "🙎🏿"
         }
       ]
     },
@@ -4548,41 +4482,6 @@
       ]
     },
     {
-      "name": "person gesturing NO",
-      "hexcode": "1f645",
-      "category": "People & Body",
-      "keywords": [
-        "forbidden",
-        "gesture",
-        "hand",
-        "person gesturing NO",
-        "prohibited"
-      ],
-      "emoji": "🙅",
-      "skins": [
-        {
-          "hexcode": "1f645-1f3fb",
-          "emoji": "🙅🏻"
-        },
-        {
-          "hexcode": "1f645-1f3fc",
-          "emoji": "🙅🏼"
-        },
-        {
-          "hexcode": "1f645-1f3fd",
-          "emoji": "🙅🏽"
-        },
-        {
-          "hexcode": "1f645-1f3fe",
-          "emoji": "🙅🏾"
-        },
-        {
-          "hexcode": "1f645-1f3ff",
-          "emoji": "🙅🏿"
-        }
-      ]
-    },
-    {
       "name": "man gesturing NO",
       "hexcode": "1f645-200d-2642-fe0f",
       "category": "People & Body",
@@ -4641,40 +4540,6 @@
         {
           "hexcode": "1f645-1f3ff-200d-2640-fe0f",
           "emoji": "🙅🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person gesturing OK",
-      "hexcode": "1f646",
-      "category": "People & Body",
-      "keywords": [
-        "gesture",
-        "hand",
-        "OK",
-        "person gesturing OK"
-      ],
-      "emoji": "🙆",
-      "skins": [
-        {
-          "hexcode": "1f646-1f3fb",
-          "emoji": "🙆🏻"
-        },
-        {
-          "hexcode": "1f646-1f3fc",
-          "emoji": "🙆🏼"
-        },
-        {
-          "hexcode": "1f646-1f3fd",
-          "emoji": "🙆🏽"
-        },
-        {
-          "hexcode": "1f646-1f3fe",
-          "emoji": "🙆🏾"
-        },
-        {
-          "hexcode": "1f646-1f3ff",
-          "emoji": "🙆🏿"
         }
       ]
     },
@@ -4741,42 +4606,6 @@
       ]
     },
     {
-      "name": "person tipping hand",
-      "hexcode": "1f481",
-      "category": "People & Body",
-      "keywords": [
-        "hand",
-        "help",
-        "information",
-        "person tipping hand",
-        "sassy",
-        "tipping"
-      ],
-      "emoji": "💁",
-      "skins": [
-        {
-          "hexcode": "1f481-1f3fb",
-          "emoji": "💁🏻"
-        },
-        {
-          "hexcode": "1f481-1f3fc",
-          "emoji": "💁🏼"
-        },
-        {
-          "hexcode": "1f481-1f3fd",
-          "emoji": "💁🏽"
-        },
-        {
-          "hexcode": "1f481-1f3fe",
-          "emoji": "💁🏾"
-        },
-        {
-          "hexcode": "1f481-1f3ff",
-          "emoji": "💁🏿"
-        }
-      ]
-    },
-    {
       "name": "man tipping hand",
       "hexcode": "1f481-200d-2642-fe0f",
       "category": "People & Body",
@@ -4835,41 +4664,6 @@
         {
           "hexcode": "1f481-1f3ff-200d-2640-fe0f",
           "emoji": "💁🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person raising hand",
-      "hexcode": "1f64b",
-      "category": "People & Body",
-      "keywords": [
-        "gesture",
-        "hand",
-        "happy",
-        "person raising hand",
-        "raised"
-      ],
-      "emoji": "🙋",
-      "skins": [
-        {
-          "hexcode": "1f64b-1f3fb",
-          "emoji": "🙋🏻"
-        },
-        {
-          "hexcode": "1f64b-1f3fc",
-          "emoji": "🙋🏼"
-        },
-        {
-          "hexcode": "1f64b-1f3fd",
-          "emoji": "🙋🏽"
-        },
-        {
-          "hexcode": "1f64b-1f3fe",
-          "emoji": "🙋🏾"
-        },
-        {
-          "hexcode": "1f64b-1f3ff",
-          "emoji": "🙋🏿"
         }
       ]
     },
@@ -5033,41 +4827,6 @@
       ]
     },
     {
-      "name": "person bowing",
-      "hexcode": "1f647",
-      "category": "People & Body",
-      "keywords": [
-        "apology",
-        "bow",
-        "gesture",
-        "person bowing",
-        "sorry"
-      ],
-      "emoji": "🙇",
-      "skins": [
-        {
-          "hexcode": "1f647-1f3fb",
-          "emoji": "🙇🏻"
-        },
-        {
-          "hexcode": "1f647-1f3fc",
-          "emoji": "🙇🏼"
-        },
-        {
-          "hexcode": "1f647-1f3fd",
-          "emoji": "🙇🏽"
-        },
-        {
-          "hexcode": "1f647-1f3fe",
-          "emoji": "🙇🏾"
-        },
-        {
-          "hexcode": "1f647-1f3ff",
-          "emoji": "🙇🏿"
-        }
-      ]
-    },
-    {
       "name": "man bowing",
       "hexcode": "1f647-200d-2642-fe0f",
       "category": "People & Body",
@@ -5130,41 +4889,6 @@
       ]
     },
     {
-      "name": "person facepalming",
-      "hexcode": "1f926",
-      "category": "People & Body",
-      "keywords": [
-        "disbelief",
-        "exasperation",
-        "face",
-        "palm",
-        "person facepalming"
-      ],
-      "emoji": "🤦",
-      "skins": [
-        {
-          "hexcode": "1f926-1f3fb",
-          "emoji": "🤦🏻"
-        },
-        {
-          "hexcode": "1f926-1f3fc",
-          "emoji": "🤦🏼"
-        },
-        {
-          "hexcode": "1f926-1f3fd",
-          "emoji": "🤦🏽"
-        },
-        {
-          "hexcode": "1f926-1f3fe",
-          "emoji": "🤦🏾"
-        },
-        {
-          "hexcode": "1f926-1f3ff",
-          "emoji": "🤦🏿"
-        }
-      ]
-    },
-    {
       "name": "man facepalming",
       "hexcode": "1f926-200d-2642-fe0f",
       "category": "People & Body",
@@ -5223,41 +4947,6 @@
         {
           "hexcode": "1f926-1f3ff-200d-2640-fe0f",
           "emoji": "🤦🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person shrugging",
-      "hexcode": "1f937",
-      "category": "People & Body",
-      "keywords": [
-        "doubt",
-        "ignorance",
-        "indifference",
-        "person shrugging",
-        "shrug"
-      ],
-      "emoji": "🤷",
-      "skins": [
-        {
-          "hexcode": "1f937-1f3fb",
-          "emoji": "🤷🏻"
-        },
-        {
-          "hexcode": "1f937-1f3fc",
-          "emoji": "🤷🏼"
-        },
-        {
-          "hexcode": "1f937-1f3fd",
-          "emoji": "🤷🏽"
-        },
-        {
-          "hexcode": "1f937-1f3fe",
-          "emoji": "🤷🏾"
-        },
-        {
-          "hexcode": "1f937-1f3ff",
-          "emoji": "🤷🏿"
         }
       ]
     },
@@ -6844,38 +6533,6 @@
       ]
     },
     {
-      "name": "person wearing turban",
-      "hexcode": "1f473",
-      "category": "People & Body",
-      "keywords": [
-        "person wearing turban",
-        "turban"
-      ],
-      "emoji": "👳",
-      "skins": [
-        {
-          "hexcode": "1f473-1f3fb",
-          "emoji": "👳🏻"
-        },
-        {
-          "hexcode": "1f473-1f3fc",
-          "emoji": "👳🏼"
-        },
-        {
-          "hexcode": "1f473-1f3fd",
-          "emoji": "👳🏽"
-        },
-        {
-          "hexcode": "1f473-1f3fe",
-          "emoji": "👳🏾"
-        },
-        {
-          "hexcode": "1f473-1f3ff",
-          "emoji": "👳🏿"
-        }
-      ]
-    },
-    {
       "name": "man wearing turban",
       "hexcode": "1f473-200d-2642-fe0f",
       "category": "People & Body",
@@ -8036,40 +7693,6 @@
       ]
     },
     {
-      "name": "person getting massage",
-      "hexcode": "1f486",
-      "category": "People & Body",
-      "keywords": [
-        "face",
-        "massage",
-        "person getting massage",
-        "salon"
-      ],
-      "emoji": "💆",
-      "skins": [
-        {
-          "hexcode": "1f486-1f3fb",
-          "emoji": "💆🏻"
-        },
-        {
-          "hexcode": "1f486-1f3fc",
-          "emoji": "💆🏼"
-        },
-        {
-          "hexcode": "1f486-1f3fd",
-          "emoji": "💆🏽"
-        },
-        {
-          "hexcode": "1f486-1f3fe",
-          "emoji": "💆🏾"
-        },
-        {
-          "hexcode": "1f486-1f3ff",
-          "emoji": "💆🏿"
-        }
-      ]
-    },
-    {
       "name": "man getting massage",
       "hexcode": "1f486-200d-2642-fe0f",
       "category": "People & Body",
@@ -8128,41 +7751,6 @@
         {
           "hexcode": "1f486-1f3ff-200d-2640-fe0f",
           "emoji": "💆🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person getting haircut",
-      "hexcode": "1f487",
-      "category": "People & Body",
-      "keywords": [
-        "barber",
-        "beauty",
-        "haircut",
-        "parlor",
-        "person getting haircut"
-      ],
-      "emoji": "💇",
-      "skins": [
-        {
-          "hexcode": "1f487-1f3fb",
-          "emoji": "💇🏻"
-        },
-        {
-          "hexcode": "1f487-1f3fc",
-          "emoji": "💇🏼"
-        },
-        {
-          "hexcode": "1f487-1f3fd",
-          "emoji": "💇🏽"
-        },
-        {
-          "hexcode": "1f487-1f3fe",
-          "emoji": "💇🏾"
-        },
-        {
-          "hexcode": "1f487-1f3ff",
-          "emoji": "💇🏿"
         }
       ]
     },
@@ -8229,40 +7817,6 @@
       ]
     },
     {
-      "name": "person walking",
-      "hexcode": "1f6b6",
-      "category": "People & Body",
-      "keywords": [
-        "hike",
-        "person walking",
-        "walk",
-        "walking"
-      ],
-      "emoji": "🚶",
-      "skins": [
-        {
-          "hexcode": "1f6b6-1f3fb",
-          "emoji": "🚶🏻"
-        },
-        {
-          "hexcode": "1f6b6-1f3fc",
-          "emoji": "🚶🏼"
-        },
-        {
-          "hexcode": "1f6b6-1f3fd",
-          "emoji": "🚶🏽"
-        },
-        {
-          "hexcode": "1f6b6-1f3fe",
-          "emoji": "🚶🏾"
-        },
-        {
-          "hexcode": "1f6b6-1f3ff",
-          "emoji": "🚶🏿"
-        }
-      ]
-    },
-    {
       "name": "man walking",
       "hexcode": "1f6b6-200d-2642-fe0f",
       "category": "People & Body",
@@ -8325,39 +7879,6 @@
       ]
     },
     {
-      "name": "person standing",
-      "hexcode": "1f9cd",
-      "category": "People & Body",
-      "keywords": [
-        "person standing",
-        "stand",
-        "standing"
-      ],
-      "emoji": "🧍",
-      "skins": [
-        {
-          "hexcode": "1f9cd-1f3fb",
-          "emoji": "🧍🏻"
-        },
-        {
-          "hexcode": "1f9cd-1f3fc",
-          "emoji": "🧍🏼"
-        },
-        {
-          "hexcode": "1f9cd-1f3fd",
-          "emoji": "🧍🏽"
-        },
-        {
-          "hexcode": "1f9cd-1f3fe",
-          "emoji": "🧍🏾"
-        },
-        {
-          "hexcode": "1f9cd-1f3ff",
-          "emoji": "🧍🏿"
-        }
-      ]
-    },
-    {
       "name": "man standing",
       "hexcode": "1f9cd-200d-2642-fe0f",
       "category": "People & Body",
@@ -8416,39 +7937,6 @@
         {
           "hexcode": "1f9cd-1f3ff-200d-2640-fe0f",
           "emoji": "🧍🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person kneeling",
-      "hexcode": "1f9ce",
-      "category": "People & Body",
-      "keywords": [
-        "kneel",
-        "kneeling",
-        "person kneeling"
-      ],
-      "emoji": "🧎",
-      "skins": [
-        {
-          "hexcode": "1f9ce-1f3fb",
-          "emoji": "🧎🏻"
-        },
-        {
-          "hexcode": "1f9ce-1f3fc",
-          "emoji": "🧎🏼"
-        },
-        {
-          "hexcode": "1f9ce-1f3fd",
-          "emoji": "🧎🏽"
-        },
-        {
-          "hexcode": "1f9ce-1f3fe",
-          "emoji": "🧎🏾"
-        },
-        {
-          "hexcode": "1f9ce-1f3ff",
-          "emoji": "🧎🏿"
         }
       ]
     },
@@ -8719,39 +8207,6 @@
       ]
     },
     {
-      "name": "person running",
-      "hexcode": "1f3c3",
-      "category": "People & Body",
-      "keywords": [
-        "marathon",
-        "person running",
-        "running"
-      ],
-      "emoji": "🏃",
-      "skins": [
-        {
-          "hexcode": "1f3c3-1f3fb",
-          "emoji": "🏃🏻"
-        },
-        {
-          "hexcode": "1f3c3-1f3fc",
-          "emoji": "🏃🏼"
-        },
-        {
-          "hexcode": "1f3c3-1f3fd",
-          "emoji": "🏃🏽"
-        },
-        {
-          "hexcode": "1f3c3-1f3fe",
-          "emoji": "🏃🏾"
-        },
-        {
-          "hexcode": "1f3c3-1f3ff",
-          "emoji": "🏃🏿"
-        }
-      ]
-    },
-    {
       "name": "man running",
       "hexcode": "1f3c3-200d-2642-fe0f",
       "category": "People & Body",
@@ -8949,39 +8404,6 @@
       ]
     },
     {
-      "name": "person in steamy room",
-      "hexcode": "1f9d6",
-      "category": "People & Body",
-      "keywords": [
-        "person in steamy room",
-        "sauna",
-        "steam room"
-      ],
-      "emoji": "🧖",
-      "skins": [
-        {
-          "hexcode": "1f9d6-1f3fb",
-          "emoji": "🧖🏻"
-        },
-        {
-          "hexcode": "1f9d6-1f3fc",
-          "emoji": "🧖🏼"
-        },
-        {
-          "hexcode": "1f9d6-1f3fd",
-          "emoji": "🧖🏽"
-        },
-        {
-          "hexcode": "1f9d6-1f3fe",
-          "emoji": "🧖🏾"
-        },
-        {
-          "hexcode": "1f9d6-1f3ff",
-          "emoji": "🧖🏿"
-        }
-      ]
-    },
-    {
       "name": "man in steamy room",
       "hexcode": "1f9d6-200d-2642-fe0f",
       "category": "People & Body",
@@ -9040,38 +8462,6 @@
         {
           "hexcode": "1f9d6-1f3ff-200d-2640-fe0f",
           "emoji": "🧖🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person climbing",
-      "hexcode": "1f9d7",
-      "category": "People & Body",
-      "keywords": [
-        "climber",
-        "person climbing"
-      ],
-      "emoji": "🧗",
-      "skins": [
-        {
-          "hexcode": "1f9d7-1f3fb",
-          "emoji": "🧗🏻"
-        },
-        {
-          "hexcode": "1f9d7-1f3fc",
-          "emoji": "🧗🏼"
-        },
-        {
-          "hexcode": "1f9d7-1f3fd",
-          "emoji": "🧗🏽"
-        },
-        {
-          "hexcode": "1f9d7-1f3fe",
-          "emoji": "🧗🏾"
-        },
-        {
-          "hexcode": "1f9d7-1f3ff",
-          "emoji": "🧗🏿"
         }
       ]
     },
@@ -9135,21 +8525,6 @@
           "hexcode": "1f9d7-1f3ff-200d-2640-fe0f",
           "emoji": "🧗🏿‍♀️"
         }
-      ]
-    },
-    {
-      "name": "person fencing",
-      "hexcode": "1f93a",
-      "category": "People & Body",
-      "keywords": [
-        "fencer",
-        "fencing",
-        "person fencing",
-        "sword"
-      ],
-      "emoji": "🤺",
-      "skins": [
-
       ]
     },
     {
@@ -9233,37 +8608,6 @@
       ]
     },
     {
-      "name": "person golfing",
-      "hexcode": "1f3cc-fe0f",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🏌️",
-      "skins": [
-        {
-          "hexcode": "1f3cc-1f3fb",
-          "emoji": "🏌🏻"
-        },
-        {
-          "hexcode": "1f3cc-1f3fc",
-          "emoji": "🏌🏼"
-        },
-        {
-          "hexcode": "1f3cc-1f3fd",
-          "emoji": "🏌🏽"
-        },
-        {
-          "hexcode": "1f3cc-1f3fe",
-          "emoji": "🏌🏾"
-        },
-        {
-          "hexcode": "1f3cc-1f3ff",
-          "emoji": "🏌🏿"
-        }
-      ]
-    },
-    {
       "name": "man golfing",
       "hexcode": "1f3cc-fe0f-200d-2642-fe0f",
       "category": "People & Body",
@@ -9322,38 +8666,6 @@
         {
           "hexcode": "1f3cc-1f3ff-200d-2640-fe0f",
           "emoji": "🏌🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person surfing",
-      "hexcode": "1f3c4",
-      "category": "People & Body",
-      "keywords": [
-        "person surfing",
-        "surfing"
-      ],
-      "emoji": "🏄",
-      "skins": [
-        {
-          "hexcode": "1f3c4-1f3fb",
-          "emoji": "🏄🏻"
-        },
-        {
-          "hexcode": "1f3c4-1f3fc",
-          "emoji": "🏄🏼"
-        },
-        {
-          "hexcode": "1f3c4-1f3fd",
-          "emoji": "🏄🏽"
-        },
-        {
-          "hexcode": "1f3c4-1f3fe",
-          "emoji": "🏄🏾"
-        },
-        {
-          "hexcode": "1f3c4-1f3ff",
-          "emoji": "🏄🏿"
         }
       ]
     },
@@ -9420,39 +8732,6 @@
       ]
     },
     {
-      "name": "person rowing boat",
-      "hexcode": "1f6a3",
-      "category": "People & Body",
-      "keywords": [
-        "boat",
-        "person rowing boat",
-        "rowboat"
-      ],
-      "emoji": "🚣",
-      "skins": [
-        {
-          "hexcode": "1f6a3-1f3fb",
-          "emoji": "🚣🏻"
-        },
-        {
-          "hexcode": "1f6a3-1f3fc",
-          "emoji": "🚣🏼"
-        },
-        {
-          "hexcode": "1f6a3-1f3fd",
-          "emoji": "🚣🏽"
-        },
-        {
-          "hexcode": "1f6a3-1f3fe",
-          "emoji": "🚣🏾"
-        },
-        {
-          "hexcode": "1f6a3-1f3ff",
-          "emoji": "🚣🏿"
-        }
-      ]
-    },
-    {
       "name": "man rowing boat",
       "hexcode": "1f6a3-200d-2642-fe0f",
       "category": "People & Body",
@@ -9511,38 +8790,6 @@
         {
           "hexcode": "1f6a3-1f3ff-200d-2640-fe0f",
           "emoji": "🚣🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person swimming",
-      "hexcode": "1f3ca",
-      "category": "People & Body",
-      "keywords": [
-        "person swimming",
-        "swim"
-      ],
-      "emoji": "🏊",
-      "skins": [
-        {
-          "hexcode": "1f3ca-1f3fb",
-          "emoji": "🏊🏻"
-        },
-        {
-          "hexcode": "1f3ca-1f3fc",
-          "emoji": "🏊🏼"
-        },
-        {
-          "hexcode": "1f3ca-1f3fd",
-          "emoji": "🏊🏽"
-        },
-        {
-          "hexcode": "1f3ca-1f3fe",
-          "emoji": "🏊🏾"
-        },
-        {
-          "hexcode": "1f3ca-1f3ff",
-          "emoji": "🏊🏿"
         }
       ]
     },
@@ -9609,37 +8856,6 @@
       ]
     },
     {
-      "name": "person bouncing ball",
-      "hexcode": "26f9-fe0f",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "⛹️",
-      "skins": [
-        {
-          "hexcode": "26f9-1f3fb",
-          "emoji": "⛹🏻"
-        },
-        {
-          "hexcode": "26f9-1f3fc",
-          "emoji": "⛹🏼"
-        },
-        {
-          "hexcode": "26f9-1f3fd",
-          "emoji": "⛹🏽"
-        },
-        {
-          "hexcode": "26f9-1f3fe",
-          "emoji": "⛹🏾"
-        },
-        {
-          "hexcode": "26f9-1f3ff",
-          "emoji": "⛹🏿"
-        }
-      ]
-    },
-    {
       "name": "man bouncing ball",
       "hexcode": "26f9-fe0f-200d-2642-fe0f",
       "category": "People & Body",
@@ -9698,37 +8914,6 @@
         {
           "hexcode": "26f9-1f3ff-200d-2640-fe0f",
           "emoji": "⛹🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person lifting weights",
-      "hexcode": "1f3cb-fe0f",
-      "category": "People & Body",
-      "keywords": [
-
-      ],
-      "emoji": "🏋️",
-      "skins": [
-        {
-          "hexcode": "1f3cb-1f3fb",
-          "emoji": "🏋🏻"
-        },
-        {
-          "hexcode": "1f3cb-1f3fc",
-          "emoji": "🏋🏼"
-        },
-        {
-          "hexcode": "1f3cb-1f3fd",
-          "emoji": "🏋🏽"
-        },
-        {
-          "hexcode": "1f3cb-1f3fe",
-          "emoji": "🏋🏾"
-        },
-        {
-          "hexcode": "1f3cb-1f3ff",
-          "emoji": "🏋🏿"
         }
       ]
     },
@@ -9795,40 +8980,6 @@
       ]
     },
     {
-      "name": "person biking",
-      "hexcode": "1f6b4",
-      "category": "People & Body",
-      "keywords": [
-        "bicycle",
-        "biking",
-        "cyclist",
-        "person biking"
-      ],
-      "emoji": "🚴",
-      "skins": [
-        {
-          "hexcode": "1f6b4-1f3fb",
-          "emoji": "🚴🏻"
-        },
-        {
-          "hexcode": "1f6b4-1f3fc",
-          "emoji": "🚴🏼"
-        },
-        {
-          "hexcode": "1f6b4-1f3fd",
-          "emoji": "🚴🏽"
-        },
-        {
-          "hexcode": "1f6b4-1f3fe",
-          "emoji": "🚴🏾"
-        },
-        {
-          "hexcode": "1f6b4-1f3ff",
-          "emoji": "🚴🏿"
-        }
-      ]
-    },
-    {
       "name": "man biking",
       "hexcode": "1f6b4-200d-2642-fe0f",
       "category": "People & Body",
@@ -9891,42 +9042,6 @@
       ]
     },
     {
-      "name": "person mountain biking",
-      "hexcode": "1f6b5",
-      "category": "People & Body",
-      "keywords": [
-        "bicycle",
-        "bicyclist",
-        "bike",
-        "cyclist",
-        "mountain",
-        "person mountain biking"
-      ],
-      "emoji": "🚵",
-      "skins": [
-        {
-          "hexcode": "1f6b5-1f3fb",
-          "emoji": "🚵🏻"
-        },
-        {
-          "hexcode": "1f6b5-1f3fc",
-          "emoji": "🚵🏼"
-        },
-        {
-          "hexcode": "1f6b5-1f3fd",
-          "emoji": "🚵🏽"
-        },
-        {
-          "hexcode": "1f6b5-1f3fe",
-          "emoji": "🚵🏾"
-        },
-        {
-          "hexcode": "1f6b5-1f3ff",
-          "emoji": "🚵🏿"
-        }
-      ]
-    },
-    {
       "name": "man mountain biking",
       "hexcode": "1f6b5-200d-2642-fe0f",
       "category": "People & Body",
@@ -9985,39 +9100,6 @@
         {
           "hexcode": "1f6b5-1f3ff-200d-2640-fe0f",
           "emoji": "🚵🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person cartwheeling",
-      "hexcode": "1f938",
-      "category": "People & Body",
-      "keywords": [
-        "cartwheel",
-        "gymnastics",
-        "person cartwheeling"
-      ],
-      "emoji": "🤸",
-      "skins": [
-        {
-          "hexcode": "1f938-1f3fb",
-          "emoji": "🤸🏻"
-        },
-        {
-          "hexcode": "1f938-1f3fc",
-          "emoji": "🤸🏼"
-        },
-        {
-          "hexcode": "1f938-1f3fd",
-          "emoji": "🤸🏽"
-        },
-        {
-          "hexcode": "1f938-1f3fe",
-          "emoji": "🤸🏾"
-        },
-        {
-          "hexcode": "1f938-1f3ff",
-          "emoji": "🤸🏿"
         }
       ]
     },
@@ -10122,39 +9204,6 @@
       ]
     },
     {
-      "name": "person playing water polo",
-      "hexcode": "1f93d",
-      "category": "People & Body",
-      "keywords": [
-        "person playing water polo",
-        "polo",
-        "water"
-      ],
-      "emoji": "🤽",
-      "skins": [
-        {
-          "hexcode": "1f93d-1f3fb",
-          "emoji": "🤽🏻"
-        },
-        {
-          "hexcode": "1f93d-1f3fc",
-          "emoji": "🤽🏼"
-        },
-        {
-          "hexcode": "1f93d-1f3fd",
-          "emoji": "🤽🏽"
-        },
-        {
-          "hexcode": "1f93d-1f3fe",
-          "emoji": "🤽🏾"
-        },
-        {
-          "hexcode": "1f93d-1f3ff",
-          "emoji": "🤽🏿"
-        }
-      ]
-    },
-    {
       "name": "man playing water polo",
       "hexcode": "1f93d-200d-2642-fe0f",
       "category": "People & Body",
@@ -10213,39 +9262,6 @@
         {
           "hexcode": "1f93d-1f3ff-200d-2640-fe0f",
           "emoji": "🤽🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person playing handball",
-      "hexcode": "1f93e",
-      "category": "People & Body",
-      "keywords": [
-        "ball",
-        "handball",
-        "person playing handball"
-      ],
-      "emoji": "🤾",
-      "skins": [
-        {
-          "hexcode": "1f93e-1f3fb",
-          "emoji": "🤾🏻"
-        },
-        {
-          "hexcode": "1f93e-1f3fc",
-          "emoji": "🤾🏼"
-        },
-        {
-          "hexcode": "1f93e-1f3fd",
-          "emoji": "🤾🏽"
-        },
-        {
-          "hexcode": "1f93e-1f3fe",
-          "emoji": "🤾🏾"
-        },
-        {
-          "hexcode": "1f93e-1f3ff",
-          "emoji": "🤾🏿"
         }
       ]
     },
@@ -10312,41 +9328,6 @@
       ]
     },
     {
-      "name": "person juggling",
-      "hexcode": "1f939",
-      "category": "People & Body",
-      "keywords": [
-        "balance",
-        "juggle",
-        "multitask",
-        "person juggling",
-        "skill"
-      ],
-      "emoji": "🤹",
-      "skins": [
-        {
-          "hexcode": "1f939-1f3fb",
-          "emoji": "🤹🏻"
-        },
-        {
-          "hexcode": "1f939-1f3fc",
-          "emoji": "🤹🏼"
-        },
-        {
-          "hexcode": "1f939-1f3fd",
-          "emoji": "🤹🏽"
-        },
-        {
-          "hexcode": "1f939-1f3fe",
-          "emoji": "🤹🏾"
-        },
-        {
-          "hexcode": "1f939-1f3ff",
-          "emoji": "🤹🏿"
-        }
-      ]
-    },
-    {
       "name": "man juggling",
       "hexcode": "1f939-200d-2642-fe0f",
       "category": "People & Body",
@@ -10409,39 +9390,6 @@
       ]
     },
     {
-      "name": "person in lotus position",
-      "hexcode": "1f9d8",
-      "category": "People & Body",
-      "keywords": [
-        "meditation",
-        "person in lotus position",
-        "yoga"
-      ],
-      "emoji": "🧘",
-      "skins": [
-        {
-          "hexcode": "1f9d8-1f3fb",
-          "emoji": "🧘🏻"
-        },
-        {
-          "hexcode": "1f9d8-1f3fc",
-          "emoji": "🧘🏼"
-        },
-        {
-          "hexcode": "1f9d8-1f3fd",
-          "emoji": "🧘🏽"
-        },
-        {
-          "hexcode": "1f9d8-1f3fe",
-          "emoji": "🧘🏾"
-        },
-        {
-          "hexcode": "1f9d8-1f3ff",
-          "emoji": "🧘🏿"
-        }
-      ]
-    },
-    {
       "name": "man in lotus position",
       "hexcode": "1f9d8-200d-2642-fe0f",
       "category": "People & Body",
@@ -10500,72 +9448,6 @@
         {
           "hexcode": "1f9d8-1f3ff-200d-2640-fe0f",
           "emoji": "🧘🏿‍♀️"
-        }
-      ]
-    },
-    {
-      "name": "person taking bath",
-      "hexcode": "1f6c0",
-      "category": "People & Body",
-      "keywords": [
-        "bath",
-        "bathtub",
-        "person taking bath"
-      ],
-      "emoji": "🛀",
-      "skins": [
-        {
-          "hexcode": "1f6c0-1f3fb",
-          "emoji": "🛀🏻"
-        },
-        {
-          "hexcode": "1f6c0-1f3fc",
-          "emoji": "🛀🏼"
-        },
-        {
-          "hexcode": "1f6c0-1f3fd",
-          "emoji": "🛀🏽"
-        },
-        {
-          "hexcode": "1f6c0-1f3fe",
-          "emoji": "🛀🏾"
-        },
-        {
-          "hexcode": "1f6c0-1f3ff",
-          "emoji": "🛀🏿"
-        }
-      ]
-    },
-    {
-      "name": "person in bed",
-      "hexcode": "1f6cc",
-      "category": "People & Body",
-      "keywords": [
-        "hotel",
-        "person in bed",
-        "sleep"
-      ],
-      "emoji": "🛌",
-      "skins": [
-        {
-          "hexcode": "1f6cc-1f3fb",
-          "emoji": "🛌🏻"
-        },
-        {
-          "hexcode": "1f6cc-1f3fc",
-          "emoji": "🛌🏼"
-        },
-        {
-          "hexcode": "1f6cc-1f3fd",
-          "emoji": "🛌🏽"
-        },
-        {
-          "hexcode": "1f6cc-1f3fe",
-          "emoji": "🛌🏾"
-        },
-        {
-          "hexcode": "1f6cc-1f3ff",
-          "emoji": "🛌🏿"
         }
       ]
     },
