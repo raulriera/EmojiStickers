@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2.2</string>
+	<string>12.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>34</string>
+	<string>36</string>
 	<key>MSSupportedPresentationContexts</key>
 	<array>
 		<string>MSMessagesAppPresentationContextMedia</string>
