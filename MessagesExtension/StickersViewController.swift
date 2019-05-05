@@ -90,8 +90,6 @@ final class StickersViewController: UICollectionViewController {
         let cache = StickerCache.cache
         cell.stickerView.sticker = cache.placeholderSticker
 		cell.collectionViewStatus = status
-		// Wrap around in a closure so we can break the retain cycle
-		// if we assign the value directly
 		cell.deleteHandler = { [weak self] in
 			self?.handleDeleteEmojiSticker(sticker: $0)
 		}
@@ -159,7 +157,6 @@ final class StickersViewController: UICollectionViewController {
 // MARK: UICollectionViewDataSource
 
 extension StickersViewController {
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -185,7 +182,6 @@ extension StickersViewController {
 // MARK: UICollectionViewDelegate
 
 extension StickersViewController {
-
 	override func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
 		guard status == .editing else { return false }
 		// We can move all cells except the first one
@@ -196,7 +192,7 @@ extension StickersViewController {
 		// Copy the array so we are not calling the observer more times than we actually need to
 		var items = self.items
 
-		// Move the item to the new posiiton
+		// Move the item to the new position
 		let item = items[sourceIndexPath.row]
 		items.remove(at: sourceIndexPath.row)
 		items.insert(item, at: destinationIndexPath.row)

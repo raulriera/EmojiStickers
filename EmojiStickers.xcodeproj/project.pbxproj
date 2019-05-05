@@ -22,7 +22,6 @@
 		4C3353701D40FF0500B22375 /* sticker_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C33536F1D40FF0500B22375 /* sticker_placeholder.png */; };
 		4C3EF19C1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EF19B1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift */; };
 		4C51F2721D3EC720006A3C15 /* SkinToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */; };
-		4C5293B51EC8FC260012243B /* String+Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5293B41EC8FC260012243B /* String+Emoji.swift */; };
 		4C5524D51D45372F00B3BF99 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5524D41D45372F00B3BF99 /* CGPoint+Geometry.swift */; };
 		4C614450227BC53000FA371A /* 1fa71.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C614366227BC4DE00FA371A /* 1fa71.pdf */; };
 		4C614451227BC53000FA371A /* 1f469-1f3fd-200d-1f9bc.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C614367227BC4DE00FA371A /* 1f469-1f3fd-200d-1f9bc.pdf */; };
@@ -460,7 +459,6 @@
 		4C6146C9227BCF5400FA371A /* 25fc-fe0f.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C614601227BCF5400FA371A /* 25fc-fe0f.pdf */; };
 		4C6D18501D1F065A0083B12F /* EmojiCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D184F1D1F065A0083B12F /* EmojiCharacterCell.swift */; };
 		4C6D18521D1F2FE60083B12F /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D18511D1F2FE60083B12F /* EmojiView.swift */; };
-		4C85E67B1D31A525009C1B1D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C85E67A1D31A525009C1B1D /* String+Extensions.swift */; };
 		4C88628D21263825007D3038 /* 1f481-1f3fd.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8857742126380F007D3038 /* 1f481-1f3fd.pdf */; };
 		4C88628E21263825007D3038 /* 1f448-1f3fd.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8857752126380F007D3038 /* 1f448-1f3fd.pdf */; };
 		4C88628F21263825007D3038 /* 1f44d-1f3fe.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8857762126380F007D3038 /* 1f44d-1f3fe.pdf */; };
@@ -3367,7 +3365,6 @@
 		4C33536F1D40FF0500B22375 /* sticker_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_placeholder.png; sourceTree = "<group>"; };
 		4C3EF19B1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCategoryOffsetCache.swift; sourceTree = "<group>"; };
 		4C51F2711D3EC720006A3C15 /* SkinToneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkinToneViewController.swift; sourceTree = "<group>"; };
-		4C5293B41EC8FC260012243B /* String+Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Emoji.swift"; sourceTree = "<group>"; };
 		4C5524D41D45372F00B3BF99 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
 		4C614366227BC4DE00FA371A /* 1fa71.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1fa71.pdf; sourceTree = "<group>"; };
 		4C614367227BC4DE00FA371A /* 1f469-1f3fd-200d-1f9bc.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f469-1f3fd-200d-1f9bc.pdf"; sourceTree = "<group>"; };
@@ -3805,7 +3802,6 @@
 		4C614601227BCF5400FA371A /* 25fc-fe0f.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "25fc-fe0f.pdf"; sourceTree = "<group>"; };
 		4C6D184F1D1F065A0083B12F /* EmojiCharacterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCharacterCell.swift; sourceTree = "<group>"; };
 		4C6D18511D1F2FE60083B12F /* EmojiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
-		4C85E67A1D31A525009C1B1D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		4C8857742126380F007D3038 /* 1f481-1f3fd.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f481-1f3fd.pdf"; sourceTree = "<group>"; };
 		4C8857752126380F007D3038 /* 1f448-1f3fd.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f448-1f3fd.pdf"; sourceTree = "<group>"; };
 		4C8857762126380F007D3038 /* 1f44d-1f3fe.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1f44d-1f3fe.pdf"; sourceTree = "<group>"; };
@@ -6693,8 +6689,6 @@
 			isa = PBXGroup;
 			children = (
 				4C5524D41D45372F00B3BF99 /* CGPoint+Geometry.swift */,
-				4C5293B41EC8FC260012243B /* String+Emoji.swift */,
-				4C85E67A1D31A525009C1B1D /* String+Extensions.swift */,
 				4C95BF7E1D17241600A0D90B /* UIImage+Extensions.swift */,
 				4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */,
 				4C240AB01D4A174D003927A2 /* CAKeyframeAnimation+Extensions.swift */,
@@ -13506,14 +13500,12 @@
 			files = (
 				4C136A1E1D16F5F50065DC28 /* BuildEmojiViewController.swift in Sources */,
 				4C5524D51D45372F00B3BF99 /* CGPoint+Geometry.swift in Sources */,
-				4C85E67B1D31A525009C1B1D /* String+Extensions.swift in Sources */,
 				4C2510DE1D3D9D7A0084197B /* CenteredFlowLayout.swift in Sources */,
 				4CE8B7A01D2F2D1600B929CF /* EmojiCategoryPickerViewController.swift in Sources */,
 				4CCE3A812121B70B00EEF7A9 /* EmojiStickerCell.swift in Sources */,
 				4C886DAE21264664007D3038 /* Emoji.swift in Sources */,
 				4C240AB11D4A174D003927A2 /* CAKeyframeAnimation+Extensions.swift in Sources */,
 				4C95BF741D17079500A0D90B /* EmojiSticker.swift in Sources */,
-				4C5293B51EC8FC260012243B /* String+Emoji.swift in Sources */,
 				4C95BF841D174A4000A0D90B /* CreateCell.swift in Sources */,
 				4CE8B79D1D2F2C2C00B929CF /* ImageCell.swift in Sources */,
 				4C3EF19C1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift in Sources */,

@@ -23,4 +23,14 @@ public struct Emoji: Codable, Equatable {
 	public var canHaveSkinToneModifier: Bool {
 		return skins.isEmpty == false
 	}
+	
+	public func applying(skinTone: Int) -> String {
+		guard skins.isEmpty == false else { return hexcode }
+		
+		if skinTone != 0 {
+			return skins[skinTone-1].hexcode
+		} else {
+			return self.hexcode
+		}
+	}
 }

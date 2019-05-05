@@ -71,7 +71,7 @@ public struct EmojiDictionary {
 	
 	// Add any crazy emojis we want to support that are only visible when
 	// using the search interface
-	func customCategory() -> Category {
+	private func customCategory() -> Category {
 		let emojis = [
 			Emoji(name: "",
 				  hexcode: "1f346-1f351",

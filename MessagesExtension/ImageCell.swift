@@ -21,7 +21,7 @@ class ImageCell: UICollectionViewCell {
 			imageView.image = UIImage(named: category)
 			
 			isAccessibilityElement = true
-			accessibilityValue = "\(category.humanize()) category"
+			accessibilityValue = "\(category.description) category"
 			accessibilityTraits = [.image, .button]
 		}
 	}
