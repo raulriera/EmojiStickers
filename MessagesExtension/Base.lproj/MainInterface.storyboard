@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -36,17 +36,17 @@
                         <viewControllerLayoutGuide type="bottom" id="plY-Zq-kIY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ihJ-Mh-2Ve">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V5K-q7-6dQ">
-                                <rect key="frame" x="33" y="144" width="309" height="379"/>
+                                <rect key="frame" x="38.333333333333343" y="219" width="337.33333333333326" height="458"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvj-nD-dUg">
-                                        <rect key="frame" x="0.0" y="0.0" width="309" height="309"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="337.33333333333331" height="388"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTW-2p-5ww" customClass="EmojiCanvas" customModule="MessagesExtension" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="309" height="309"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="337.33333333333331" height="388"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Canvas, this is where you compose your stickers" label="Canvas">
                                                     <bool key="isElement" value="YES"/>
                                                 </accessibility>
@@ -54,16 +54,16 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="309" id="7ko-AT-peC"/>
-                                            <constraint firstAttribute="height" constant="309" id="Qxf-c9-eVw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="320" id="7ko-AT-peC"/>
                                             <constraint firstAttribute="bottom" secondItem="uTW-2p-5ww" secondAttribute="bottom" id="RYa-u7-4su"/>
                                             <constraint firstAttribute="trailing" secondItem="uTW-2p-5ww" secondAttribute="trailing" id="TuU-Mw-Buz"/>
                                             <constraint firstItem="uTW-2p-5ww" firstAttribute="leading" secondItem="rvj-nD-dUg" secondAttribute="leading" id="XjG-jv-y0M"/>
                                             <constraint firstItem="uTW-2p-5ww" firstAttribute="top" secondItem="rvj-nD-dUg" secondAttribute="top" id="Yme-E2-vX9"/>
+                                            <constraint firstAttribute="width" secondItem="rvj-nD-dUg" secondAttribute="height" multiplier="1:1.15" id="mXF-tR-uKk"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-7e-wzA">
-                                        <rect key="frame" x="92.5" y="325" width="124" height="54"/>
+                                        <rect key="frame" x="106.66666666666666" y="404" width="124" height="54"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-uS-ipf" userLabel="Pick Emoji">
                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
@@ -94,6 +94,7 @@
                         <constraints>
                             <constraint firstItem="V5K-q7-6dQ" firstAttribute="centerY" secondItem="ihJ-Mh-2Ve" secondAttribute="centerY" id="2le-bp-kTh"/>
                             <constraint firstItem="V5K-q7-6dQ" firstAttribute="centerX" secondItem="ihJ-Mh-2Ve" secondAttribute="centerX" id="hHO-3D-xsd"/>
+                            <constraint firstItem="rvj-nD-dUg" firstAttribute="width" relation="lessThanOrEqual" secondItem="ihJ-Mh-2Ve" secondAttribute="width" constant="-16" id="lIV-hC-eYm"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -158,7 +159,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="EmojiCategoryViewController" id="z95-RQ-jJJ" customClass="EmojiCategoryViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" id="Gxu-J7-4ty">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Qld-8m-0Ve">
@@ -191,12 +192,12 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PoweredByDisclaimer" id="mXB-cq-1xL">
-                            <rect key="frame" x="0.0" y="70" width="375" height="50"/>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PoweredByDisclaimer" id="mXB-cq-1xL">
+                            <rect key="frame" x="0.0" y="70" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Twemoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxu-Gi-A9V">
-                                    <rect key="frame" x="8" y="16.5" width="359" height="17"/>
+                                    <rect key="frame" x="8" y="16.666666666666668" width="398" height="17.000000000000004"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -226,7 +227,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="EmojiCategoryPickerViewController" id="tgQ-mh-8yL" customClass="EmojiCategoryPickerViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ix2-BT-frC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
@@ -283,45 +284,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8hy-hv-hLk">
-                                <rect key="frame" x="16" y="0.0" width="343" height="100"/>
+                                <rect key="frame" x="16" y="44" width="343" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7o-yq-mrS">
-                                        <rect key="frame" x="0.0" y="28" width="52" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="22"/>
                                         <state key="normal" image="Skin-Tone-1"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Ef8-BX-Rrb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shL-4W-oGk">
-                                        <rect key="frame" x="58" y="28" width="52.5" height="44"/>
+                                        <rect key="frame" x="58.333333333333329" y="0.0" width="52" height="22"/>
                                         <state key="normal" image="Skin-Tone-2"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Sup-BR-J2a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kA-Je-4Ht">
-                                        <rect key="frame" x="116.5" y="28" width="52" height="44"/>
+                                        <rect key="frame" x="116.33333333333333" y="0.0" width="52.333333333333329" height="22"/>
                                         <state key="normal" image="Skin-Tone-3"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="34d-LK-VZJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-jI-SFn">
-                                        <rect key="frame" x="174.5" y="28" width="52" height="44"/>
+                                        <rect key="frame" x="174.66666666666666" y="0.0" width="52" height="22"/>
                                         <state key="normal" image="Skin-Tone-4"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="pjF-0a-PVx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZk-aC-YCe">
-                                        <rect key="frame" x="232.5" y="28" width="52.5" height="44"/>
+                                        <rect key="frame" x="232.66666666666666" y="0.0" width="52.333333333333343" height="22"/>
                                         <state key="normal" image="Skin-Tone-5"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Ysx-ey-55f"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw4-19-3Pg">
-                                        <rect key="frame" x="291" y="28" width="52" height="44"/>
+                                        <rect key="frame" x="291" y="0.0" width="52" height="22"/>
                                         <state key="normal" image="Skin-Tone-6"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="ngC-ha-XRk"/>
@@ -358,7 +359,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="StickersViewController" id="LtT-uZ-YfB" customClass="StickersViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="SS6-EY-F8d">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UK3-ut-Aov">
@@ -392,7 +393,7 @@
                                 </constraints>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiStickerCell" id="4m6-cT-qN7" userLabel="EmojiStickerCell" customClass="EmojiStickerCell" customModule="MessagesExtension" customModuleProvider="target">
-                                <rect key="frame" x="101.5" y="54" width="80" height="80"/>
+                                <rect key="frame" x="114.66666666666667" y="54" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -403,7 +404,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-NR-ByN">
-                                            <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
                                             <state key="normal" image="Delete Sticker"/>
                                             <connections>
                                                 <action selector="deleteTapped:" destination="4m6-cT-qN7" eventType="touchUpInside" id="OlI-ll-oBv"/>
@@ -425,12 +426,12 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EditCollectionReusableView" id="bZV-fC-OeE" customClass="EditCollectionReusableView" customModule="MessagesExtension" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="EditCollectionReusableView" id="bZV-fC-OeE" customClass="EditCollectionReusableView" customModule="MessagesExtension" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-wL-vvS">
-                                    <rect key="frame" x="319" y="8" width="48" height="28"/>
+                                    <rect key="frame" x="358" y="8" width="48" height="28"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     <state key="normal" title="Edit"/>
@@ -439,7 +440,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="EMOJI STICKERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-eO-LTY">
-                                    <rect key="frame" x="20" y="13" width="291" height="18"/>
+                                    <rect key="frame" x="20" y="13" width="330" height="18"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
