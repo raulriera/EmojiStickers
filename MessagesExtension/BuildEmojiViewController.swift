@@ -65,7 +65,7 @@ final class BuildEmojiViewController: UIViewController {
 	@IBOutlet private weak var canvas: EmojiCanvas! {
 		didSet {
 			canvas.superview?.layer.borderWidth = 0.5
-			canvas.superview?.layer.borderColor = UIColor.lightGray.cgColor
+			canvas.superview?.layer.borderColor = UIColor.systemGray3.cgColor
 			canvas.superview?.layer.cornerRadius = 12.0
 
 			let singleTap = createTapGestureRecognizer(targetView: canvas)
