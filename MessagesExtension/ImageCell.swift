@@ -11,7 +11,7 @@ import UIKit
 class ImageCell: UICollectionViewCell {
 	@IBOutlet private weak var imageView: UIImageView! {
 		didSet {
-			imageView?.tintColor = #colorLiteral(red: 0.4235294118, green: 0.4588235294, blue: 0.5019607843, alpha: 1)
+			imageView?.tintColor = .systemGray
 		}
 	}
 	static let reuseIdentifier = "ImageCell"
@@ -31,7 +31,7 @@ class ImageCell: UICollectionViewCell {
 			if isSelected {
 				imageView?.tintColor = tintColor
 			} else {
-				imageView?.tintColor = #colorLiteral(red: 0.4235294118, green: 0.4588235294, blue: 0.5019607843, alpha: 1)
+				imageView?.tintColor = .systemGray
 			}
 		}
 	}
