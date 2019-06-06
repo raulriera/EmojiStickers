@@ -51,14 +51,16 @@ final class BuildEmojiViewController: UIViewController {
 			pickEmojiButton.imageView?.animationImages = [frame1, frame2, frame3, frame4, frame3, frame2, frame1]
 			pickEmojiButton.imageView?.animationDuration = 0.35
 			pickEmojiButton.imageView?.animationRepeatCount = 1
+			pickEmojiButton.tintColor = .systemYellow
+			pickEmojiButton.imageView?.tintColor = .systemYellow
 
-			Timer.scheduledTimer(withTimeInterval: 3.5, repeats: true) { [weak self] timer in
-				self?.pickEmojiButton.imageView?.startAnimating()
-
-				if self == nil {
-					timer.invalidate()
-				}
-			}
+//			Timer.scheduledTimer(withTimeInterval: 3.5, repeats: true) { [weak self] timer in
+//				self?.pickEmojiButton.imageView?.startAnimating()
+//
+//				if self == nil {
+//					timer.invalidate()
+//				}
+//			}
 		}
 	}
 	

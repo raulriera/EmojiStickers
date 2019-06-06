@@ -9,9 +9,12 @@
 import UIKit
 
 class ImageCell: UICollectionViewCell {
+	let selectedColor: UIColor = .systemYellow
+	let deselectedColor: UIColor = .systemGray
+	
 	@IBOutlet private weak var imageView: UIImageView! {
 		didSet {
-			imageView?.tintColor = .systemGray
+			imageView?.tintColor = deselectedColor
 		}
 	}
 	static let reuseIdentifier = "ImageCell"
@@ -29,9 +32,9 @@ class ImageCell: UICollectionViewCell {
 	override var isSelected: Bool {
 		didSet {
 			if isSelected {
-				imageView?.tintColor = tintColor
+				imageView?.tintColor = selectedColor
 			} else {
-				imageView?.tintColor = .systemGray
+				imageView?.tintColor = deselectedColor
 			}
 		}
 	}
