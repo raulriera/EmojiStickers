@@ -9,7 +9,7 @@
 import UIKit
 
 class ImageCell: UICollectionViewCell {
-	let selectedColor: UIColor = .systemYellow
+	let selectedColor: UIColor = UIColor(named: "Accent")!
 	let deselectedColor: UIColor = .systemGray
 	
 	@IBOutlet private weak var imageView: UIImageView! {

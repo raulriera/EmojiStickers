@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
@@ -67,7 +68,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-uS-ipf" userLabel="Pick Emoji">
                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                                                 <accessibility key="accessibilityConfiguration" label="Add Emoji"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="systemYellowColor"/>
+                                                <color key="tintColor" name="Accent"/>
                                                 <state key="normal" image="Add Sticker-1"/>
                                                 <connections>
                                                     <action selector="didTapPickEmoji:" destination="dZJ-bQ-Lo3" eventType="touchUpInside" id="VCI-Wf-qhG"/>
@@ -76,7 +77,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-1V-P3n">
                                                 <rect key="frame" x="70" y="0.0" width="54" height="54"/>
                                                 <accessibility key="accessibilityConfiguration" label="Save as sticker"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="systemYellowColor"/>
+                                                <color key="tintColor" name="Accent"/>
                                                 <state key="normal" image="Save Sticker"/>
                                                 <connections>
                                                     <action selector="didTapSave:" destination="dZJ-bQ-Lo3" eventType="touchUpInside" id="a06-Jv-jxs"/>
@@ -130,7 +131,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8j-Xf-R4i">
                                         <rect key="frame" x="0.0" y="0.0" width="74" height="56"/>
-                                        <color key="tintColor" cocoaTouchSystemColor="systemYellowColor"/>
+                                        <color key="tintColor" name="Accent"/>
                                         <inset key="contentEdgeInsets" minX="6" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="Back Button"/>
                                         <connections>
@@ -380,7 +381,7 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Create Sticker" translatesAutoresizingMaskIntoConstraints="NO" id="DJW-nI-14V">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                            <color key="tintColor" cocoaTouchSystemColor="systemYellowColor"/>
+                                            <color key="tintColor" name="Accent"/>
                                             <accessibility key="accessibilityConfiguration" label="Create new sticker">
                                                 <accessibilityTraits key="traits" button="YES" image="YES"/>
                                                 <bool key="isElement" value="YES"/>
@@ -408,7 +409,7 @@
                                         </view>
                                         <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-NR-ByN">
                                             <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
-                                            <color key="tintColor" cocoaTouchSystemColor="systemYellowColor"/>
+                                            <color key="tintColor" name="Accent"/>
                                             <state key="normal" image="Delete Sticker"/>
                                             <connections>
                                                 <action selector="deleteTapped:" destination="4m6-cT-qN7" eventType="touchUpInside" id="OlI-ll-oBv"/>
@@ -437,7 +438,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-wL-vvS">
                                     <rect key="frame" x="319" y="8" width="48" height="28"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                    <color key="tintColor" cocoaTouchSystemColor="systemYellowColor"/>
+                                    <color key="tintColor" name="Accent"/>
                                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     <state key="normal" title="Edit"/>
                                     <connections>
@@ -488,5 +489,8 @@
         <image name="Skin-Tone-4" width="44" height="44"/>
         <image name="Skin-Tone-5" width="44" height="44"/>
         <image name="Skin-Tone-6" width="44" height="44"/>
+        <namedColor name="Accent">
+            <color red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
