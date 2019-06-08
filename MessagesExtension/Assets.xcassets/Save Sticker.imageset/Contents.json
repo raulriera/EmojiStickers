@@ -3,6 +3,16 @@
     {
       "idiom" : "universal",
       "filename" : "Save Sticker.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Save Sticker-Dark.pdf",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
     }
   ],
   "info" : {
