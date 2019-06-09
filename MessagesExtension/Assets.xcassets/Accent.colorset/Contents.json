@@ -20,8 +20,13 @@
         }
       ],
       "color" : {
-        "platform" : "ios",
-        "reference" : "systemYellowColor"
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0xFF",
+          "alpha" : "1.000",
+          "blue" : "0x4D",
+          "green" : "0xCC"
+        }
       }
     }
   ]
