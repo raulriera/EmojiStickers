@@ -33,7 +33,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		dataSource = self
 		delegate = self
 		
-		view.backgroundColor = UIColor.systemGroupedBackground
+		view.backgroundColor = UIColor.secondarySystemGroupedBackground
 
 		presentCartegorySearchBar()
 		presentCategoryPickerController()
@@ -91,7 +91,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		categoryPickerView.translatesAutoresizingMaskIntoConstraints = false
 		
 		let wrapperView = UIView()
-		wrapperView.backgroundColor = UIColor.systemGroupedBackground
+		wrapperView.backgroundColor = UIColor.secondarySystemGroupedBackground
 		wrapperView.translatesAutoresizingMaskIntoConstraints = false
 		
 		wrapperView.addSubview(categoryPickerView)
