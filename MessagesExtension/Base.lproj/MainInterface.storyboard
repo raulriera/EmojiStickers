@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--Messages View Controller-->
@@ -40,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V5K-q7-6dQ">
-                                <rect key="frame" x="19" y="104.5" width="337" height="458"/>
+                                <rect key="frame" x="19" y="77.5" width="337" height="512"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvj-nD-dUg">
                                         <rect key="frame" x="0.0" y="0.0" width="337" height="388"/>
@@ -52,7 +51,7 @@
                                                 </accessibility>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="320" id="7ko-AT-peC"/>
                                             <constraint firstAttribute="bottom" secondItem="uTW-2p-5ww" secondAttribute="bottom" id="RYa-u7-4su"/>
@@ -63,10 +62,10 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-7e-wzA">
-                                        <rect key="frame" x="106.5" y="404" width="124" height="54"/>
+                                        <rect key="frame" x="52.5" y="404" width="232" height="108"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-uS-ipf" userLabel="Pick Emoji">
-                                                <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
                                                 <accessibility key="accessibilityConfiguration" label="Add Emoji"/>
                                                 <color key="tintColor" name="Accent"/>
                                                 <state key="normal" image="Add Sticker-1"/>
@@ -75,7 +74,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-1V-P3n">
-                                                <rect key="frame" x="70" y="0.0" width="54" height="54"/>
+                                                <rect key="frame" x="124" y="0.0" width="108" height="108"/>
                                                 <accessibility key="accessibilityConfiguration" label="Save as sticker"/>
                                                 <color key="tintColor" name="Accent"/>
                                                 <state key="normal" image="Save Sticker"/>
@@ -232,7 +231,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ix2-BT-frC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemGroupedBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="scrollIndicatorInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OSI-Br-eRW" customClass="CenteredFlowLayout" customModule="MessagesExtension" customModuleProvider="target">
                             <size key="itemSize" width="34" height="34"/>
@@ -408,8 +407,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-NR-ByN">
-                                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
-                                            <color key="tintColor" name="Accent"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                                            <color key="tintColor" systemColor="systemGrayColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" image="Delete Sticker"/>
                                             <connections>
                                                 <action selector="deleteTapped:" destination="4m6-cT-qN7" eventType="touchUpInside" id="OlI-ll-oBv"/>
@@ -448,7 +447,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="EMOJI STICKERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-eO-LTY">
                                     <rect key="frame" x="20" y="13" width="291" height="18"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                    <color key="textColor" cocoaTouchSystemColor="secondaryLabelColor"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -490,7 +489,7 @@
         <image name="Skin-Tone-5" width="44" height="44"/>
         <image name="Skin-Tone-6" width="44" height="44"/>
         <namedColor name="Accent">
-            <color red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.80000000000000004" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -13756,6 +13756,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = R64MTWS872;
+				GCC_WARN_PEDANTIC = YES;
 				INFOPLIST_FILE = EmojiStickers/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -13771,6 +13772,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = R64MTWS872;
+				GCC_WARN_PEDANTIC = YES;
 				INFOPLIST_FILE = EmojiStickers/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
