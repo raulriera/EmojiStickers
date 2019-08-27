@@ -17,10 +17,19 @@ protocol BuildEmojiViewControllerDelegate: class {
 }
 
 final class EmojiCanvas: UIView {
+	var isEmpty: Bool {
+		return subviews.isEmpty
+	}
+	var selectedView: EmojiView? {
+		return subviews.compactMap { $0 as? EmojiView }.first { $0.isSelected }
+	}
+	var onSelection: ((EmojiView) -> Void)?
+	
 	func select(view: UIView) {
 		guard let view = view as? EmojiView else { return }
 		unselect()
 		view.isSelected = true
+		onSelection?(view)
 	}
 
 	func selectLastView() {
@@ -38,30 +47,9 @@ final class EmojiCanvas: UIView {
 }
 
 final class BuildEmojiViewController: UIViewController {
-
-    // MARK: IBOutlets
-
-	@IBOutlet private weak var pickEmojiButton: UIButton! {
-		didSet {
-//			let frame1 = UIImage(named: "Add Sticker-1")!
-//			let frame2 = UIImage(named: "Add Sticker-2")!
-//			let frame3 = UIImage(named: "Add Sticker-3")!
-//			let frame4 = UIImage(named: "Add Sticker-4")!
-//
-//			pickEmojiButton.imageView?.animationImages = [frame1, frame2, frame3, frame4, frame3, frame2, frame1]
-//			pickEmojiButton.imageView?.animationDuration = 0.35
-//			pickEmojiButton.imageView?.animationRepeatCount = 1
-//
-//			Timer.scheduledTimer(withTimeInterval: 3.5, repeats: true) { [weak self] timer in
-//				self?.pickEmojiButton.imageView?.startAnimating()
-//
-//				if self == nil {
-//					timer.invalidate()
-//				}
-//			}
-		}
-	}
-	
+	@IBOutlet private weak var pickEmojiButton: UIButton!
+	@IBOutlet private weak var toggleLockButton: UIButton!
+	@IBOutlet private weak var saveButton: UIButton!
 	@IBOutlet private weak var canvas: EmojiCanvas! {
 		didSet {
 			canvas.superview?.layer.borderWidth = 0.5
@@ -80,7 +68,18 @@ final class BuildEmojiViewController: UIViewController {
 	}
 
 	// MARK: Overrides
-
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		canvas.onSelection = { [weak self] selectedView in
+			self?.toggleLockEmoji(selectedView: selectedView)
+			
+			self?.toggleLockButton.isEnabled = true
+			self?.saveButton.isEnabled = true
+		}
+	}
+	
 	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 		super.viewWillTransition(to: size, with: coordinator)
 
@@ -155,6 +154,12 @@ final class BuildEmojiViewController: UIViewController {
 			controller.changePage(to: lastUsedCategory, animated: false)
 		}
 	}
+	
+	@IBAction func didTapToggleLock(_ sender: UIButton) {
+		guard let selectedView = canvas.selectedView else { return }
+		selectedView.isLocked = !selectedView.isLocked
+		toggleLockEmoji(selectedView: selectedView)
+	}
 
 	@IBAction func didTapSave(_ sender: UIButton) {
 		guard canvas.subviews.isEmpty == false else { return }
@@ -181,6 +186,10 @@ final class BuildEmojiViewController: UIViewController {
 	}
 	
 	// MARK: Private
+	
+	private func toggleLockEmoji(selectedView: EmojiView) {
+		toggleLockButton.setImage(UIImage(named: selectedView.isLocked ? "Unlock Sticker" : "Lock Sticker"), for: .normal)
+	}
 	
 	private func instantiateEmojiCategoriesController() -> UIViewController {
 		// Instantiate a `EmojiCategoriesViewController` and present it.
@@ -226,7 +235,6 @@ final class BuildEmojiViewController: UIViewController {
 // MARK: UIGestureRecognizerDelegate
 
 extension BuildEmojiViewController: UIGestureRecognizerDelegate {
-	
 	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
 
 		if gestureRecognizer is UILongPressGestureRecognizer ||
@@ -240,7 +248,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	
 	// MARK: Gesture Helpers
 	
-	func createTapGestureRecognizer(targetView: UIView) -> UITapGestureRecognizer {
+	private func createTapGestureRecognizer(targetView: UIView) -> UITapGestureRecognizer {
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
 		gesture.delegate = self
 
@@ -248,7 +256,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		return gesture
 	}
 	
-	func createDoubleTapGestureRecognizer(targetView: UIView) -> UITapGestureRecognizer {
+	private func createDoubleTapGestureRecognizer(targetView: UIView) -> UITapGestureRecognizer {
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap))
 		gesture.numberOfTapsRequired = 2
 		gesture.delegate = self
@@ -257,7 +265,7 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		return gesture
 	}
 
-	func createLongTapGestureRecognizer(targetView: UIView) {
+	private func createLongTapGestureRecognizer(targetView: UIView) {
 		let gesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
 		gesture.minimumPressDuration = 2.0
 		gesture.delegate = self
@@ -265,21 +273,21 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		targetView.addGestureRecognizer(gesture)
 	}
 	
-	func createPanGestureRecognizer(targetView: UIView) {
+	private func createPanGestureRecognizer(targetView: UIView) {
 		let gesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
 		gesture.delegate = self
 
 		targetView.addGestureRecognizer(gesture)
 	}
 	
-	func createPinchGestureRecognizer(targetView: UIView) {
+	private func createPinchGestureRecognizer(targetView: UIView) {
 		let gesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch))
 		gesture.delegate = self
 		
 		targetView.addGestureRecognizer(gesture)
 	}
 	
-	func createRotateGestureRecognizer(targetView: UIView) {
+	private func createRotateGestureRecognizer(targetView: UIView) {
 		let gesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotate))
 		gesture.delegate = self
 		
@@ -288,10 +296,10 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 	
 	// MARK: Gesture Handlers
 	
-	@objc func handleTap(recognizer: UITapGestureRecognizer) {
+	@objc private func handleTap(recognizer: UITapGestureRecognizer) {
 		let point = recognizer.location(in: canvas)
 		guard let tappedView = canvas.hitTest(point, with: nil) else { return }
-
+		
 		// Check the tapped view against all subviews
 		// if it intersect with any, bring it to the front.
 		for subview in canvas.subviews {
@@ -308,9 +316,9 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		}
 	}
 	
-	@objc func handleDoubleTap(recognizer: UITapGestureRecognizer) {
+	@objc private func handleDoubleTap(recognizer: UITapGestureRecognizer) {
 		let point = recognizer.location(in: canvas)
-		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
+		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView, !tappedView.isLocked else { return }
 
 		if case .ended = recognizer.state {
 			tappedView.isUserInteractionEnabled = false
@@ -325,9 +333,9 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		}
 	}
 
-	@objc func handleLongTap(recognizer: UILongPressGestureRecognizer) {
+	@objc private func handleLongTap(recognizer: UILongPressGestureRecognizer) {
 		let point = recognizer.location(in: canvas)
-		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView else { return }
+		guard let tappedView = canvas.hitTest(point, with: nil) as? EmojiView, !tappedView.isLocked else { return }
 
 		UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
 			tappedView.transform = .identity
@@ -342,8 +350,8 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		})
 	}
 	
-	@objc func handlePan(recognizer: UIPanGestureRecognizer) {
-		guard let view = recognizer.view else { return }
+	@objc private func handlePan(recognizer: UIPanGestureRecognizer) {
+		guard let view = recognizer.view as? EmojiView, !view.isLocked else { return }
 
 		let translation = recognizer.translation(in: self.view)
 		
@@ -367,13 +375,15 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 				}) { _ in
 					view.removeFromSuperview()
 					self.canvas.selectLastView()
+					self.toggleLockButton.isEnabled = self.canvas?.isEmpty == false
+					self.saveButton.isEnabled = self.canvas?.isEmpty == false
 				}
 			}
 		}
 	}
 	
-	@objc func handlePinch(recognizer: UIPinchGestureRecognizer) {
-		guard let lastView = canvas.subviews.last, let view = lastView as? EmojiView else { return }
+	@objc private func handlePinch(recognizer: UIPinchGestureRecognizer) {
+		guard let lastView = canvas.subviews.last, let view = lastView as? EmojiView, !view.isLocked else { return }
 
 		// Prevent the emoji from growing too large
 		let maximumSize: CGSize = CGSize(width: 1100, height: 1100)
@@ -397,8 +407,8 @@ extension BuildEmojiViewController: UIGestureRecognizerDelegate {
 		}
 	}
 	
-	@objc func handleRotate(recognizer: UIRotationGestureRecognizer) {
-		guard let view = canvas.subviews.last else { return }
+	@objc private func handleRotate(recognizer: UIRotationGestureRecognizer) {
+		guard let view = canvas.subviews.last as? EmojiView, !view.isLocked else { return }
 		view.transform = view.transform.rotated(by: recognizer.rotation)
 		recognizer.rotation = 0
 	}

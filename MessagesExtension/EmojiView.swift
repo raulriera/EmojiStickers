@@ -9,9 +9,6 @@
 import UIKit
 
 final class EmojiView: UIImageView {
-	
-	// MARK: Properties
-
 	let defaultSize = CGSize(width: 250, height: 250)
 	let hexcode: String
 	var isFlipped: Bool {
@@ -28,15 +25,24 @@ final class EmojiView: UIImageView {
 				layer.borderWidth = 0.0
 				layer.cornerRadius = 0
 			}
+			
+			lockStatus.isHidden = !isSelected
 		}
 	}
-	
-	// MARK: Initialisers
-	
+	var isLocked: Bool {
+		didSet {
+			guard isLocked != oldValue else { return }
+			lockStatus.text = isLocked ? "🔒" : "🔓"
+		}
+	}
+	let lockStatus: UILabel
+		
 	init(hexcode: String) {
 		self.hexcode = hexcode
 		self.isSelected = true
-
+		self.isLocked = false
+		self.lockStatus = UILabel()
+		
 		super.init(frame: CGRect(origin: .zero, size: defaultSize))
 
 		backgroundColor = .clear
@@ -46,13 +52,21 @@ final class EmojiView: UIImageView {
 		accessibilityHint = "You can scale, rotate, move this emoji"
 		
 		updateImageFromPDF()
+		
+		lockStatus.text = "🔓"
+		lockStatus.alpha = 0.7
+		lockStatus.translatesAutoresizingMaskIntoConstraints = false
+		addSubview(lockStatus)
+		
+		NSLayoutConstraint.activate([
+			lockStatus.centerXAnchor.constraint(equalTo: centerXAnchor),
+			lockStatus.topAnchor.constraint(equalTo: topAnchor, constant: -12)
+		])
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-
-	// MARK:
 
 	func setNeedsImageUpdate() {
 		updateImageFromPDF()
@@ -65,9 +79,7 @@ final class EmojiView: UIImageView {
 			image = UIImage(cgImage: image!.cgImage!, scale: 0, orientation: .upMirrored)
 		}
 	}
-	
-	// MARK: Private
-	
+		
 	private func updateImageFromPDF() {
 		if let urlForDocument = Bundle.main.url(forResource: hexcode, withExtension: "pdf") {
 			let document = CGPDFDocument(urlForDocument as CFURL)!

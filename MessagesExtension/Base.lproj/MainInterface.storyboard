@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,10 +39,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V5K-q7-6dQ">
-                                <rect key="frame" x="19" y="77.5" width="337" height="512"/>
+                                <rect key="frame" x="9.5" y="77.5" width="356" height="512"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvj-nD-dUg">
-                                        <rect key="frame" x="0.0" y="0.0" width="337" height="388"/>
+                                        <rect key="frame" x="9.5" y="0.0" width="337" height="388"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTW-2p-5ww" customClass="EmojiCanvas" customModule="MessagesExtension" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="337" height="388"/>
@@ -62,7 +62,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-7e-wzA">
-                                        <rect key="frame" x="52.5" y="404" width="232" height="108"/>
+                                        <rect key="frame" x="0.0" y="404" width="356" height="108"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-uS-ipf" userLabel="Pick Emoji">
                                                 <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
@@ -73,8 +73,18 @@
                                                     <action selector="didTapPickEmoji:" destination="dZJ-bQ-Lo3" eventType="touchUpInside" id="VCI-Wf-qhG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-1V-P3n">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w4X-JR-p9M" userLabel="Toggle Lock">
                                                 <rect key="frame" x="124" y="0.0" width="108" height="108"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration" label="Add Emoji"/>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="Lock Sticker"/>
+                                                <connections>
+                                                    <action selector="didTapToggleLock:" destination="dZJ-bQ-Lo3" eventType="touchUpInside" id="s2S-RO-Pgs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-1V-P3n" userLabel="Save">
+                                                <rect key="frame" x="248" y="0.0" width="108" height="108"/>
                                                 <accessibility key="accessibilityConfiguration" label="Save as sticker"/>
                                                 <color key="tintColor" name="Accent"/>
                                                 <state key="normal" image="Save Sticker"/>
@@ -102,6 +112,8 @@
                     <connections>
                         <outlet property="canvas" destination="uTW-2p-5ww" id="zM4-NU-JN9"/>
                         <outlet property="pickEmojiButton" destination="mzX-uS-ipf" id="wam-LR-pBS"/>
+                        <outlet property="saveButton" destination="7Us-1V-P3n" id="5Jn-U5-Xol"/>
+                        <outlet property="toggleLockButton" destination="w4X-JR-p9M" id="avQ-2l-gfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGG-SL-nZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -408,7 +420,7 @@
                                         </view>
                                         <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-NR-ByN">
                                             <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
-                                            <color key="tintColor" systemColor="systemGrayColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" image="Delete Sticker"/>
                                             <connections>
                                                 <action selector="deleteTapped:" destination="4m6-cT-qN7" eventType="touchUpInside" id="OlI-ll-oBv"/>
@@ -447,7 +459,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="EMOJI STICKERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-eO-LTY">
                                     <rect key="frame" x="20" y="13" width="291" height="18"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -481,6 +493,7 @@
         <image name="Back Button" width="34" height="34"/>
         <image name="Create Sticker" width="54" height="54"/>
         <image name="Delete Sticker" width="34" height="34"/>
+        <image name="Lock Sticker" width="54" height="54"/>
         <image name="Save Sticker" width="54" height="54"/>
         <image name="Skin-Tone-1" width="44" height="44"/>
         <image name="Skin-Tone-2" width="44" height="44"/>
