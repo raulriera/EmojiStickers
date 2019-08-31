@@ -24,24 +24,15 @@ final class EmojiView: UIImageView {
 				layer.borderColor = UIColor.black.cgColor
 				layer.borderWidth = 0.0
 				layer.cornerRadius = 0
-			}
-			
-			lockStatus.isHidden = !isSelected
+			}			
 		}
 	}
-	var isLocked: Bool {
-		didSet {
-			guard isLocked != oldValue else { return }
-			lockStatus.text = isLocked ? "🔒" : "🔓"
-		}
-	}
-	let lockStatus: UILabel
+	var isLocked: Bool
 		
 	init(hexcode: String) {
 		self.hexcode = hexcode
 		self.isSelected = true
 		self.isLocked = false
-		self.lockStatus = UILabel()
 		
 		super.init(frame: CGRect(origin: .zero, size: defaultSize))
 
@@ -52,16 +43,6 @@ final class EmojiView: UIImageView {
 		accessibilityHint = "You can scale, rotate, move this emoji"
 		
 		updateImageFromPDF()
-		
-		lockStatus.text = "🔓"
-		lockStatus.alpha = 0.7
-		lockStatus.translatesAutoresizingMaskIntoConstraints = false
-		addSubview(lockStatus)
-		
-		NSLayoutConstraint.activate([
-			lockStatus.centerXAnchor.constraint(equalTo: centerXAnchor),
-			lockStatus.topAnchor.constraint(equalTo: topAnchor, constant: -12)
-		])
 	}
 	
 	required init?(coder aDecoder: NSCoder) {

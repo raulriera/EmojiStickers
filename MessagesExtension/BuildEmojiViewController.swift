@@ -188,7 +188,7 @@ final class BuildEmojiViewController: UIViewController {
 	// MARK: Private
 	
 	private func toggleLockEmoji(selectedView: EmojiView) {
-		toggleLockButton.setImage(UIImage(named: selectedView.isLocked ? "Unlock Sticker" : "Lock Sticker"), for: .normal)
+		toggleLockButton.setImage(UIImage(named: selectedView.isLocked ? "Lock Sticker" : "Unlock Sticker"), for: .normal)
 	}
 	
 	private func instantiateEmojiCategoriesController() -> UIViewController {

@@ -78,7 +78,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration" label="Add Emoji"/>
                                                 <color key="tintColor" name="Accent"/>
-                                                <state key="normal" image="Lock Sticker"/>
+                                                <state key="normal" image="Unlock Sticker"/>
                                                 <connections>
                                                     <action selector="didTapToggleLock:" destination="dZJ-bQ-Lo3" eventType="touchUpInside" id="s2S-RO-Pgs"/>
                                                 </connections>
@@ -375,7 +375,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="SS6-EY-F8d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UK3-ut-Aov">
                             <size key="itemSize" width="80" height="80"/>
                             <size key="headerReferenceSize" width="50" height="44"/>
@@ -420,7 +420,7 @@
                                         </view>
                                         <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-NR-ByN">
                                             <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
-                                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" systemColor="systemGrayColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" image="Delete Sticker"/>
                                             <connections>
                                                 <action selector="deleteTapped:" destination="4m6-cT-qN7" eventType="touchUpInside" id="OlI-ll-oBv"/>
@@ -459,7 +459,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="EMOJI STICKERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-eO-LTY">
                                     <rect key="frame" x="20" y="13" width="291" height="18"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -493,7 +493,6 @@
         <image name="Back Button" width="34" height="34"/>
         <image name="Create Sticker" width="54" height="54"/>
         <image name="Delete Sticker" width="34" height="34"/>
-        <image name="Lock Sticker" width="54" height="54"/>
         <image name="Save Sticker" width="54" height="54"/>
         <image name="Skin-Tone-1" width="44" height="44"/>
         <image name="Skin-Tone-2" width="44" height="44"/>
@@ -501,6 +500,7 @@
         <image name="Skin-Tone-4" width="44" height="44"/>
         <image name="Skin-Tone-5" width="44" height="44"/>
         <image name="Skin-Tone-6" width="44" height="44"/>
+        <image name="Unlock Sticker" width="54" height="54"/>
         <namedColor name="Accent">
             <color red="1" green="0.80000000000000004" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
