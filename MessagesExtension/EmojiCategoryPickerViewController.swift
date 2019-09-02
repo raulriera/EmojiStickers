@@ -13,9 +13,7 @@ protocol EmojiCategoryPickerViewControllerDelegate: class {
 	func emojiCategoryPickerViewController(_ controller: EmojiCategoryPickerViewController, didChangePageTo page: Int)
 }
 
-class EmojiCategoryPickerViewController: UICollectionViewController {
-	
-	// MARK: Properties
+final class EmojiCategoryPickerViewController: UICollectionViewController {
 	weak var delegate: EmojiCategoryPickerViewControllerDelegate?
 	static let storyboardIdentifier = "EmojiCategoryPickerViewController"
 	var categories: [EmojiDictionary.Category] = [] {

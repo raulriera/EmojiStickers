@@ -33,8 +33,6 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		dataSource = self
 		delegate = self
 		
-		view.backgroundColor = UIColor.secondarySystemGroupedBackground
-
 		presentCartegorySearchBar()
 		presentCategoryPickerController()
 	}
@@ -97,6 +95,12 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		wrapperView.addSubview(categoryPickerView)
 		view.addSubview(wrapperView)
 		
+		let divider = UIView()
+		divider.backgroundColor = .tertiarySystemGroupedBackground
+		divider.translatesAutoresizingMaskIntoConstraints = false
+		
+		view.addSubview(divider)
+		
 		NSLayoutConstraint.activate([
 			categoryPickerView.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor),
 			categoryPickerView.trailingAnchor.constraint(equalTo: wrapperView.trailingAnchor),
@@ -107,6 +111,11 @@ final class EmojiCategoriesViewController: UIPageViewController {
 			wrapperView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 			wrapperView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -34),
 			wrapperView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+			
+			divider.heightAnchor.constraint(equalToConstant: 0.5),
+			divider.topAnchor.constraint(equalTo: categoryPickerView.topAnchor),
+			divider.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			divider.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 		])
 		
 		categoryPickerViewController.didMove(toParent: self)
