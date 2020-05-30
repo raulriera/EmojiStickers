@@ -308,6 +308,23 @@
       ]
     },
     {
+      "name": "SMILING FACE WITH TEAR",
+      "hexcode": "1f972",
+      "category": "Smileys & People",
+      "keywords": [
+        "grateful",
+        "proud",
+        "relieved",
+        "smiling",
+        "tear",
+        "touched"
+      ],
+      "emoji": "🥲",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "FACE SAVOURING DELICIOUS FOOD",
       "hexcode": "1f60b",
       "category": "Smileys & People",
@@ -811,6 +828,7 @@
       "hexcode": "1f92f",
       "category": "Smileys & People",
       "keywords": [
+        "mind blown",
         "shocked"
       ],
       "emoji": "🤯",
@@ -844,6 +862,22 @@
         "party"
       ],
       "emoji": "🥳",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "DISGUISED FACE",
+      "hexcode": "1f978",
+      "category": "Smileys & People",
+      "keywords": [
+        "disguise",
+        "face",
+        "glasses",
+        "incognito",
+        "nose"
+      ],
+      "emoji": "🥸",
       "skins": [
 
       ]
@@ -2324,6 +2358,41 @@
       ]
     },
     {
+      "name": "PINCHED FINGERS",
+      "hexcode": "1f90c",
+      "category": "Smileys & People",
+      "keywords": [
+        "fingers",
+        "hand gesture",
+        "interrogation",
+        "pinched",
+        "sarcastic"
+      ],
+      "emoji": "🤌",
+      "skins": [
+        {
+          "hexcode": "1f90c-1f3fb",
+          "emoji": "🤌🏻"
+        },
+        {
+          "hexcode": "1f90c-1f3fc",
+          "emoji": "🤌🏼"
+        },
+        {
+          "hexcode": "1f90c-1f3fd",
+          "emoji": "🤌🏽"
+        },
+        {
+          "hexcode": "1f90c-1f3fe",
+          "emoji": "🤌🏾"
+        },
+        {
+          "hexcode": "1f90c-1f3ff",
+          "emoji": "🤌🏿"
+        }
+      ]
+    },
+    {
       "name": "PINCHING HAND",
       "hexcode": "1f90f",
       "category": "Smileys & People",
@@ -3436,6 +3505,38 @@
       ]
     },
     {
+      "name": "ANATOMICAL HEART",
+      "hexcode": "1fac0",
+      "category": "Smileys & People",
+      "keywords": [
+        "anatomical",
+        "cardiology",
+        "heart",
+        "organ",
+        "pulse"
+      ],
+      "emoji": "🫀",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "LUNGS",
+      "hexcode": "1fac1",
+      "category": "Smileys & People",
+      "keywords": [
+        "breath",
+        "exhalation",
+        "inhalation",
+        "organ",
+        "respiration"
+      ],
+      "emoji": "🫁",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "TOOTH",
       "hexcode": "1f9b7",
       "category": "Smileys & People",
@@ -3734,40 +3835,6 @@
       ]
     },
     {
-      "name": "PERSON WITH BLOND HAIR, MALE SIGN",
-      "hexcode": "1f471-200d-2642-fe0f",
-      "category": "Smileys & People",
-      "keywords": [
-        "blond",
-        "blond-haired man",
-        "hair",
-        "man"
-      ],
-      "emoji": "👱‍♂️",
-      "skins": [
-        {
-          "hexcode": "1f471-1f3fb-200d-2642-fe0f",
-          "emoji": "👱🏻‍♂️"
-        },
-        {
-          "hexcode": "1f471-1f3fc-200d-2642-fe0f",
-          "emoji": "👱🏼‍♂️"
-        },
-        {
-          "hexcode": "1f471-1f3fd-200d-2642-fe0f",
-          "emoji": "👱🏽‍♂️"
-        },
-        {
-          "hexcode": "1f471-1f3fe-200d-2642-fe0f",
-          "emoji": "👱🏾‍♂️"
-        },
-        {
-          "hexcode": "1f471-1f3ff-200d-2642-fe0f",
-          "emoji": "👱🏿‍♂️"
-        }
-      ]
-    },
-    {
       "name": "MAN, EMOJI COMPONENT RED HAIR",
       "hexcode": "1f468-200d-1f9b0",
       "category": "Smileys & People",
@@ -3931,40 +3998,6 @@
       ]
     },
     {
-      "name": "PERSON WITH BLOND HAIR, FEMALE SIGN",
-      "hexcode": "1f471-200d-2640-fe0f",
-      "category": "Smileys & People",
-      "keywords": [
-        "blond-haired woman",
-        "blonde",
-        "hair",
-        "woman"
-      ],
-      "emoji": "👱‍♀️",
-      "skins": [
-        {
-          "hexcode": "1f471-1f3fb-200d-2640-fe0f",
-          "emoji": "👱🏻‍♀️"
-        },
-        {
-          "hexcode": "1f471-1f3fc-200d-2640-fe0f",
-          "emoji": "👱🏼‍♀️"
-        },
-        {
-          "hexcode": "1f471-1f3fd-200d-2640-fe0f",
-          "emoji": "👱🏽‍♀️"
-        },
-        {
-          "hexcode": "1f471-1f3fe-200d-2640-fe0f",
-          "emoji": "👱🏾‍♀️"
-        },
-        {
-          "hexcode": "1f471-1f3ff-200d-2640-fe0f",
-          "emoji": "👱🏿‍♀️"
-        }
-      ]
-    },
-    {
       "name": "WOMAN, EMOJI COMPONENT RED HAIR",
       "hexcode": "1f469-200d-1f9b0",
       "category": "Smileys & People",
@@ -3994,6 +4027,41 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f9b0",
           "emoji": "👩🏿‍🦰"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, EMOJI COMPONENT RED HAIR",
+      "hexcode": "1f9d1-200d-1f9b0",
+      "category": "Smileys & People",
+      "keywords": [
+        "adult",
+        "gender-neutral",
+        "person",
+        "red hair",
+        "unspecified gender"
+      ],
+      "emoji": "🧑‍🦰",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f9b0",
+          "emoji": "🧑🏻‍🦰"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f9b0",
+          "emoji": "🧑🏼‍🦰"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f9b0",
+          "emoji": "🧑🏽‍🦰"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f9b0",
+          "emoji": "🧑🏾‍🦰"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f9b0",
+          "emoji": "🧑🏿‍🦰"
         }
       ]
     },
@@ -4031,6 +4099,41 @@
       ]
     },
     {
+      "name": "ADULT, EMOJI COMPONENT CURLY HAIR",
+      "hexcode": "1f9d1-200d-1f9b1",
+      "category": "Smileys & People",
+      "keywords": [
+        "adult",
+        "curly hair",
+        "gender-neutral",
+        "person",
+        "unspecified gender"
+      ],
+      "emoji": "🧑‍🦱",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f9b1",
+          "emoji": "🧑🏻‍🦱"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f9b1",
+          "emoji": "🧑🏼‍🦱"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f9b1",
+          "emoji": "🧑🏽‍🦱"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f9b1",
+          "emoji": "🧑🏾‍🦱"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f9b1",
+          "emoji": "🧑🏿‍🦱"
+        }
+      ]
+    },
+    {
       "name": "WOMAN, EMOJI COMPONENT WHITE HAIR",
       "hexcode": "1f469-200d-1f9b3",
       "category": "Smileys & People",
@@ -4064,6 +4167,41 @@
       ]
     },
     {
+      "name": "ADULT, EMOJI COMPONENT WHITE HAIR",
+      "hexcode": "1f9d1-200d-1f9b3",
+      "category": "Smileys & People",
+      "keywords": [
+        "adult",
+        "gender-neutral",
+        "person",
+        "unspecified gender",
+        "white hair"
+      ],
+      "emoji": "🧑‍🦳",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f9b3",
+          "emoji": "🧑🏻‍🦳"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f9b3",
+          "emoji": "🧑🏼‍🦳"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f9b3",
+          "emoji": "🧑🏽‍🦳"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f9b3",
+          "emoji": "🧑🏾‍🦳"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f9b3",
+          "emoji": "🧑🏿‍🦳"
+        }
+      ]
+    },
+    {
       "name": "WOMAN, EMOJI COMPONENT BALD",
       "hexcode": "1f469-200d-1f9b2",
       "category": "Smileys & People",
@@ -4093,6 +4231,109 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f9b2",
           "emoji": "👩🏿‍🦲"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, EMOJI COMPONENT BALD",
+      "hexcode": "1f9d1-200d-1f9b2",
+      "category": "Smileys & People",
+      "keywords": [
+        "adult",
+        "bald",
+        "gender-neutral",
+        "person",
+        "unspecified gender"
+      ],
+      "emoji": "🧑‍🦲",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f9b2",
+          "emoji": "🧑🏻‍🦲"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f9b2",
+          "emoji": "🧑🏼‍🦲"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f9b2",
+          "emoji": "🧑🏽‍🦲"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f9b2",
+          "emoji": "🧑🏾‍🦲"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f9b2",
+          "emoji": "🧑🏿‍🦲"
+        }
+      ]
+    },
+    {
+      "name": "PERSON WITH BLOND HAIR, FEMALE SIGN",
+      "hexcode": "1f471-200d-2640-fe0f",
+      "category": "Smileys & People",
+      "keywords": [
+        "blond-haired woman",
+        "blonde",
+        "hair",
+        "woman"
+      ],
+      "emoji": "👱‍♀️",
+      "skins": [
+        {
+          "hexcode": "1f471-1f3fb-200d-2640-fe0f",
+          "emoji": "👱🏻‍♀️"
+        },
+        {
+          "hexcode": "1f471-1f3fc-200d-2640-fe0f",
+          "emoji": "👱🏼‍♀️"
+        },
+        {
+          "hexcode": "1f471-1f3fd-200d-2640-fe0f",
+          "emoji": "👱🏽‍♀️"
+        },
+        {
+          "hexcode": "1f471-1f3fe-200d-2640-fe0f",
+          "emoji": "👱🏾‍♀️"
+        },
+        {
+          "hexcode": "1f471-1f3ff-200d-2640-fe0f",
+          "emoji": "👱🏿‍♀️"
+        }
+      ]
+    },
+    {
+      "name": "PERSON WITH BLOND HAIR, MALE SIGN",
+      "hexcode": "1f471-200d-2642-fe0f",
+      "category": "Smileys & People",
+      "keywords": [
+        "blond",
+        "blond-haired man",
+        "hair",
+        "man"
+      ],
+      "emoji": "👱‍♂️",
+      "skins": [
+        {
+          "hexcode": "1f471-1f3fb-200d-2642-fe0f",
+          "emoji": "👱🏻‍♂️"
+        },
+        {
+          "hexcode": "1f471-1f3fc-200d-2642-fe0f",
+          "emoji": "👱🏼‍♂️"
+        },
+        {
+          "hexcode": "1f471-1f3fd-200d-2642-fe0f",
+          "emoji": "👱🏽‍♂️"
+        },
+        {
+          "hexcode": "1f471-1f3fe-200d-2642-fe0f",
+          "emoji": "👱🏾‍♂️"
+        },
+        {
+          "hexcode": "1f471-1f3ff-200d-2642-fe0f",
+          "emoji": "👱🏿‍♂️"
         }
       ]
     },
@@ -4877,6 +5118,40 @@
       ]
     },
     {
+      "name": "ADULT, STAFF OF AESCULAPIUS",
+      "hexcode": "1f9d1-200d-2695-fe0f",
+      "category": "Smileys & People",
+      "keywords": [
+        "doctor",
+        "healthcare",
+        "nurse",
+        "therapist"
+      ],
+      "emoji": "🧑‍⚕️",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-2695-fe0f",
+          "emoji": "🧑🏻‍⚕️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-2695-fe0f",
+          "emoji": "🧑🏼‍⚕️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-2695-fe0f",
+          "emoji": "🧑🏽‍⚕️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-2695-fe0f",
+          "emoji": "🧑🏾‍⚕️"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-2695-fe0f",
+          "emoji": "🧑🏿‍⚕️"
+        }
+      ]
+    },
+    {
       "name": "MAN, STAFF OF AESCULAPIUS",
       "hexcode": "1f468-200d-2695-fe0f",
       "category": "Smileys & People",
@@ -4947,6 +5222,37 @@
       ]
     },
     {
+      "name": "ADULT, GRADUATION CAP",
+      "hexcode": "1f9d1-200d-1f393",
+      "category": "Smileys & People",
+      "keywords": [
+        "graduate"
+      ],
+      "emoji": "🧑‍🎓",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f393",
+          "emoji": "🧑🏻‍🎓"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f393",
+          "emoji": "🧑🏼‍🎓"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f393",
+          "emoji": "🧑🏽‍🎓"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f393",
+          "emoji": "🧑🏾‍🎓"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f393",
+          "emoji": "🧑🏿‍🎓"
+        }
+      ]
+    },
+    {
       "name": "MAN, GRADUATION CAP",
       "hexcode": "1f468-200d-1f393",
       "category": "Smileys & People",
@@ -5009,6 +5315,38 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f393",
           "emoji": "👩🏿‍🎓"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, SCHOOL",
+      "hexcode": "1f9d1-200d-1f3eb",
+      "category": "Smileys & People",
+      "keywords": [
+        "instructor",
+        "professor"
+      ],
+      "emoji": "🧑‍🏫",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f3eb",
+          "emoji": "🧑🏻‍🏫"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f3eb",
+          "emoji": "🧑🏼‍🏫"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f3eb",
+          "emoji": "🧑🏽‍🏫"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f3eb",
+          "emoji": "🧑🏾‍🏫"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f3eb",
+          "emoji": "🧑🏿‍🏫"
         }
       ]
     },
@@ -5081,6 +5419,37 @@
       ]
     },
     {
+      "name": "ADULT, SCALES",
+      "hexcode": "1f9d1-200d-2696-fe0f",
+      "category": "Smileys & People",
+      "keywords": [
+        "scales"
+      ],
+      "emoji": "🧑‍⚖️",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-2696-fe0f",
+          "emoji": "🧑🏻‍⚖️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-2696-fe0f",
+          "emoji": "🧑🏼‍⚖️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-2696-fe0f",
+          "emoji": "🧑🏽‍⚖️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-2696-fe0f",
+          "emoji": "🧑🏾‍⚖️"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-2696-fe0f",
+          "emoji": "🧑🏿‍⚖️"
+        }
+      ]
+    },
+    {
       "name": "MAN, SCALES",
       "hexcode": "1f468-200d-2696-fe0f",
       "category": "Smileys & People",
@@ -5143,6 +5512,38 @@
         {
           "hexcode": "1f469-1f3ff-200d-2696-fe0f",
           "emoji": "👩🏿‍⚖️"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, EAR OF RICE",
+      "hexcode": "1f9d1-200d-1f33e",
+      "category": "Smileys & People",
+      "keywords": [
+        "gardener",
+        "rancher"
+      ],
+      "emoji": "🧑‍🌾",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f33e",
+          "emoji": "🧑🏻‍🌾"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f33e",
+          "emoji": "🧑🏼‍🌾"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f33e",
+          "emoji": "🧑🏽‍🌾"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f33e",
+          "emoji": "🧑🏾‍🌾"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f33e",
+          "emoji": "🧑🏿‍🌾"
         }
       ]
     },
@@ -5215,6 +5616,37 @@
       ]
     },
     {
+      "name": "ADULT, COOKING",
+      "hexcode": "1f9d1-200d-1f373",
+      "category": "Smileys & People",
+      "keywords": [
+        "chef"
+      ],
+      "emoji": "🧑‍🍳",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f373",
+          "emoji": "🧑🏻‍🍳"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f373",
+          "emoji": "🧑🏼‍🍳"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f373",
+          "emoji": "🧑🏽‍🍳"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f373",
+          "emoji": "🧑🏾‍🍳"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f373",
+          "emoji": "🧑🏿‍🍳"
+        }
+      ]
+    },
+    {
       "name": "MAN, COOKING",
       "hexcode": "1f468-200d-1f373",
       "category": "Smileys & People",
@@ -5277,6 +5709,39 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f373",
           "emoji": "👩🏿‍🍳"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, WRENCH",
+      "hexcode": "1f9d1-200d-1f527",
+      "category": "Smileys & People",
+      "keywords": [
+        "electrician",
+        "plumber",
+        "tradesperson"
+      ],
+      "emoji": "🧑‍🔧",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f527",
+          "emoji": "🧑🏻‍🔧"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f527",
+          "emoji": "🧑🏼‍🔧"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f527",
+          "emoji": "🧑🏽‍🔧"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f527",
+          "emoji": "🧑🏾‍🔧"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f527",
+          "emoji": "🧑🏿‍🔧"
         }
       ]
     },
@@ -5351,6 +5816,40 @@
       ]
     },
     {
+      "name": "ADULT, FACTORY",
+      "hexcode": "1f9d1-200d-1f3ed",
+      "category": "Smileys & People",
+      "keywords": [
+        "assembly",
+        "factory",
+        "industrial",
+        "worker"
+      ],
+      "emoji": "🧑‍🏭",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f3ed",
+          "emoji": "🧑🏻‍🏭"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f3ed",
+          "emoji": "🧑🏼‍🏭"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f3ed",
+          "emoji": "🧑🏽‍🏭"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f3ed",
+          "emoji": "🧑🏾‍🏭"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f3ed",
+          "emoji": "🧑🏿‍🏭"
+        }
+      ]
+    },
+    {
       "name": "MAN, FACTORY",
       "hexcode": "1f468-200d-1f3ed",
       "category": "Smileys & People",
@@ -5421,6 +5920,40 @@
       ]
     },
     {
+      "name": "ADULT, BRIEFCASE",
+      "hexcode": "1f9d1-200d-1f4bc",
+      "category": "Smileys & People",
+      "keywords": [
+        "architect",
+        "business",
+        "manager",
+        "white-collar"
+      ],
+      "emoji": "🧑‍💼",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f4bc",
+          "emoji": "🧑🏻‍💼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f4bc",
+          "emoji": "🧑🏼‍💼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f4bc",
+          "emoji": "🧑🏽‍💼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f4bc",
+          "emoji": "🧑🏾‍💼"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f4bc",
+          "emoji": "🧑🏿‍💼"
+        }
+      ]
+    },
+    {
       "name": "MAN, BRIEFCASE",
       "hexcode": "1f468-200d-1f4bc",
       "category": "Smileys & People",
@@ -5487,6 +6020,40 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f4bc",
           "emoji": "👩🏿‍💼"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, MICROSCOPE",
+      "hexcode": "1f9d1-200d-1f52c",
+      "category": "Smileys & People",
+      "keywords": [
+        "biologist",
+        "chemist",
+        "engineer",
+        "physicist"
+      ],
+      "emoji": "🧑‍🔬",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f52c",
+          "emoji": "🧑🏻‍🔬"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f52c",
+          "emoji": "🧑🏼‍🔬"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f52c",
+          "emoji": "🧑🏽‍🔬"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f52c",
+          "emoji": "🧑🏾‍🔬"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f52c",
+          "emoji": "🧑🏿‍🔬"
         }
       ]
     },
@@ -5563,6 +6130,40 @@
       ]
     },
     {
+      "name": "ADULT, PERSONAL COMPUTER",
+      "hexcode": "1f9d1-200d-1f4bb",
+      "category": "Smileys & People",
+      "keywords": [
+        "coder",
+        "developer",
+        "inventor",
+        "software"
+      ],
+      "emoji": "🧑‍💻",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f4bb",
+          "emoji": "🧑🏻‍💻"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f4bb",
+          "emoji": "🧑🏼‍💻"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f4bb",
+          "emoji": "🧑🏽‍💻"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f4bb",
+          "emoji": "🧑🏾‍💻"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f4bb",
+          "emoji": "🧑🏿‍💻"
+        }
+      ]
+    },
+    {
       "name": "MAN, PERSONAL COMPUTER",
       "hexcode": "1f468-200d-1f4bb",
       "category": "Smileys & People",
@@ -5631,6 +6232,40 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f4bb",
           "emoji": "👩🏿‍💻"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, MICROPHONE",
+      "hexcode": "1f9d1-200d-1f3a4",
+      "category": "Smileys & People",
+      "keywords": [
+        "actor",
+        "entertainer",
+        "rock",
+        "star"
+      ],
+      "emoji": "🧑‍🎤",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f3a4",
+          "emoji": "🧑🏻‍🎤"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f3a4",
+          "emoji": "🧑🏼‍🎤"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f3a4",
+          "emoji": "🧑🏽‍🎤"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f3a4",
+          "emoji": "🧑🏾‍🎤"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f3a4",
+          "emoji": "🧑🏿‍🎤"
         }
       ]
     },
@@ -5707,6 +6342,37 @@
       ]
     },
     {
+      "name": "ADULT, ARTIST PALETTE",
+      "hexcode": "1f9d1-200d-1f3a8",
+      "category": "Smileys & People",
+      "keywords": [
+        "palette"
+      ],
+      "emoji": "🧑‍🎨",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f3a8",
+          "emoji": "🧑🏻‍🎨"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f3a8",
+          "emoji": "🧑🏼‍🎨"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f3a8",
+          "emoji": "🧑🏽‍🎨"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f3a8",
+          "emoji": "🧑🏾‍🎨"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f3a8",
+          "emoji": "🧑🏿‍🎨"
+        }
+      ]
+    },
+    {
       "name": "MAN, ARTIST PALETTE",
       "hexcode": "1f468-200d-1f3a8",
       "category": "Smileys & People",
@@ -5769,6 +6435,37 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f3a8",
           "emoji": "👩🏿‍🎨"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, AIRPLANE",
+      "hexcode": "1f9d1-200d-2708-fe0f",
+      "category": "Smileys & People",
+      "keywords": [
+        "plane"
+      ],
+      "emoji": "🧑‍✈️",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-2708-fe0f",
+          "emoji": "🧑🏻‍✈️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-2708-fe0f",
+          "emoji": "🧑🏼‍✈️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-2708-fe0f",
+          "emoji": "🧑🏽‍✈️"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-2708-fe0f",
+          "emoji": "🧑🏾‍✈️"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-2708-fe0f",
+          "emoji": "🧑🏿‍✈️"
         }
       ]
     },
@@ -5839,6 +6536,37 @@
       ]
     },
     {
+      "name": "ADULT, ROCKET",
+      "hexcode": "1f9d1-200d-1f680",
+      "category": "Smileys & People",
+      "keywords": [
+        "rocket"
+      ],
+      "emoji": "🧑‍🚀",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f680",
+          "emoji": "🧑🏻‍🚀"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f680",
+          "emoji": "🧑🏼‍🚀"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f680",
+          "emoji": "🧑🏽‍🚀"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f680",
+          "emoji": "🧑🏾‍🚀"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f680",
+          "emoji": "🧑🏿‍🚀"
+        }
+      ]
+    },
+    {
       "name": "MAN, ROCKET",
       "hexcode": "1f468-200d-1f680",
       "category": "Smileys & People",
@@ -5901,6 +6629,37 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f680",
           "emoji": "👩🏿‍🚀"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, FIRE ENGINE",
+      "hexcode": "1f9d1-200d-1f692",
+      "category": "Smileys & People",
+      "keywords": [
+        "firetruck"
+      ],
+      "emoji": "🧑‍🚒",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f692",
+          "emoji": "🧑🏻‍🚒"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f692",
+          "emoji": "🧑🏼‍🚒"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f692",
+          "emoji": "🧑🏽‍🚒"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f692",
+          "emoji": "🧑🏾‍🚒"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f692",
+          "emoji": "🧑🏿‍🚒"
         }
       ]
     },
@@ -6171,6 +6930,39 @@
       ]
     },
     {
+      "name": "NINJA",
+      "hexcode": "1f977",
+      "category": "Smileys & People",
+      "keywords": [
+        "fighter",
+        "hidden",
+        "stealth"
+      ],
+      "emoji": "🥷",
+      "skins": [
+        {
+          "hexcode": "1f977-1f3fb",
+          "emoji": "🥷🏻"
+        },
+        {
+          "hexcode": "1f977-1f3fc",
+          "emoji": "🥷🏼"
+        },
+        {
+          "hexcode": "1f977-1f3fd",
+          "emoji": "🥷🏽"
+        },
+        {
+          "hexcode": "1f977-1f3fe",
+          "emoji": "🥷🏾"
+        },
+        {
+          "hexcode": "1f977-1f3ff",
+          "emoji": "🥷🏿"
+        }
+      ]
+    },
+    {
       "name": "CONSTRUCTION WORKER, MALE SIGN",
       "hexcode": "1f477-200d-2642-fe0f",
       "category": "Smileys & People",
@@ -6368,10 +7160,11 @@
       "hexcode": "1f472",
       "category": "Smileys & People",
       "keywords": [
+        "cap",
         "gua pi mao",
         "hat",
-        "man",
-        "man with chinese cap"
+        "person",
+        "skullcap"
       ],
       "emoji": "👲",
       "skins": [
@@ -6432,68 +7225,130 @@
       ]
     },
     {
-      "name": "MAN IN TUXEDO",
-      "hexcode": "1f935",
+      "name": "MAN IN TUXEDO, MALE SIGN",
+      "hexcode": "1f935-200d-2642-fe0f",
       "category": "Smileys & People",
       "keywords": [
-        "groom",
         "man",
         "tuxedo"
       ],
-      "emoji": "🤵",
+      "emoji": "🤵‍♂️",
       "skins": [
         {
-          "hexcode": "1f935-1f3fb",
-          "emoji": "🤵🏻"
+          "hexcode": "1f935-1f3fb-200d-2642-fe0f",
+          "emoji": "🤵🏻‍♂️"
         },
         {
-          "hexcode": "1f935-1f3fc",
-          "emoji": "🤵🏼"
+          "hexcode": "1f935-1f3fc-200d-2642-fe0f",
+          "emoji": "🤵🏼‍♂️"
         },
         {
-          "hexcode": "1f935-1f3fd",
-          "emoji": "🤵🏽"
+          "hexcode": "1f935-1f3fd-200d-2642-fe0f",
+          "emoji": "🤵🏽‍♂️"
         },
         {
-          "hexcode": "1f935-1f3fe",
-          "emoji": "🤵🏾"
+          "hexcode": "1f935-1f3fe-200d-2642-fe0f",
+          "emoji": "🤵🏾‍♂️"
         },
         {
-          "hexcode": "1f935-1f3ff",
-          "emoji": "🤵🏿"
+          "hexcode": "1f935-1f3ff-200d-2642-fe0f",
+          "emoji": "🤵🏿‍♂️"
         }
       ]
     },
     {
-      "name": "BRIDE WITH VEIL",
-      "hexcode": "1f470",
+      "name": "MAN IN TUXEDO, FEMALE SIGN",
+      "hexcode": "1f935-200d-2640-fe0f",
       "category": "Smileys & People",
       "keywords": [
-        "bride",
-        "veil",
-        "wedding"
+        "tuxedo",
+        "woman"
       ],
-      "emoji": "👰",
+      "emoji": "🤵‍♀️",
       "skins": [
         {
-          "hexcode": "1f470-1f3fb",
-          "emoji": "👰🏻"
+          "hexcode": "1f935-1f3fb-200d-2640-fe0f",
+          "emoji": "🤵🏻‍♀️"
         },
         {
-          "hexcode": "1f470-1f3fc",
-          "emoji": "👰🏼"
+          "hexcode": "1f935-1f3fc-200d-2640-fe0f",
+          "emoji": "🤵🏼‍♀️"
         },
         {
-          "hexcode": "1f470-1f3fd",
-          "emoji": "👰🏽"
+          "hexcode": "1f935-1f3fd-200d-2640-fe0f",
+          "emoji": "🤵🏽‍♀️"
         },
         {
-          "hexcode": "1f470-1f3fe",
-          "emoji": "👰🏾"
+          "hexcode": "1f935-1f3fe-200d-2640-fe0f",
+          "emoji": "🤵🏾‍♀️"
         },
         {
-          "hexcode": "1f470-1f3ff",
-          "emoji": "👰🏿"
+          "hexcode": "1f935-1f3ff-200d-2640-fe0f",
+          "emoji": "🤵🏿‍♀️"
+        }
+      ]
+    },
+    {
+      "name": "BRIDE WITH VEIL, MALE SIGN",
+      "hexcode": "1f470-200d-2642-fe0f",
+      "category": "Smileys & People",
+      "keywords": [
+        "man",
+        "veil"
+      ],
+      "emoji": "👰‍♂️",
+      "skins": [
+        {
+          "hexcode": "1f470-1f3fb-200d-2642-fe0f",
+          "emoji": "👰🏻‍♂️"
+        },
+        {
+          "hexcode": "1f470-1f3fc-200d-2642-fe0f",
+          "emoji": "👰🏼‍♂️"
+        },
+        {
+          "hexcode": "1f470-1f3fd-200d-2642-fe0f",
+          "emoji": "👰🏽‍♂️"
+        },
+        {
+          "hexcode": "1f470-1f3fe-200d-2642-fe0f",
+          "emoji": "👰🏾‍♂️"
+        },
+        {
+          "hexcode": "1f470-1f3ff-200d-2642-fe0f",
+          "emoji": "👰🏿‍♂️"
+        }
+      ]
+    },
+    {
+      "name": "BRIDE WITH VEIL, FEMALE SIGN",
+      "hexcode": "1f470-200d-2640-fe0f",
+      "category": "Smileys & People",
+      "keywords": [
+        "veil",
+        "woman"
+      ],
+      "emoji": "👰‍♀️",
+      "skins": [
+        {
+          "hexcode": "1f470-1f3fb-200d-2640-fe0f",
+          "emoji": "👰🏻‍♀️"
+        },
+        {
+          "hexcode": "1f470-1f3fc-200d-2640-fe0f",
+          "emoji": "👰🏼‍♀️"
+        },
+        {
+          "hexcode": "1f470-1f3fd-200d-2640-fe0f",
+          "emoji": "👰🏽‍♀️"
+        },
+        {
+          "hexcode": "1f470-1f3fe-200d-2640-fe0f",
+          "emoji": "👰🏾‍♀️"
+        },
+        {
+          "hexcode": "1f470-1f3ff-200d-2640-fe0f",
+          "emoji": "👰🏿‍♀️"
         }
       ]
     },
@@ -6559,6 +7414,108 @@
         {
           "hexcode": "1f931-1f3ff",
           "emoji": "🤱🏿"
+        }
+      ]
+    },
+    {
+      "name": "WOMAN, BABY BOTTLE",
+      "hexcode": "1f469-200d-1f37c",
+      "category": "Smileys & People",
+      "keywords": [
+        "baby",
+        "feeding",
+        "nursing",
+        "woman"
+      ],
+      "emoji": "👩‍🍼",
+      "skins": [
+        {
+          "hexcode": "1f469-1f3fb-200d-1f37c",
+          "emoji": "👩🏻‍🍼"
+        },
+        {
+          "hexcode": "1f469-1f3fc-200d-1f37c",
+          "emoji": "👩🏼‍🍼"
+        },
+        {
+          "hexcode": "1f469-1f3fd-200d-1f37c",
+          "emoji": "👩🏽‍🍼"
+        },
+        {
+          "hexcode": "1f469-1f3fe-200d-1f37c",
+          "emoji": "👩🏾‍🍼"
+        },
+        {
+          "hexcode": "1f469-1f3ff-200d-1f37c",
+          "emoji": "👩🏿‍🍼"
+        }
+      ]
+    },
+    {
+      "name": "MAN, BABY BOTTLE",
+      "hexcode": "1f468-200d-1f37c",
+      "category": "Smileys & People",
+      "keywords": [
+        "baby",
+        "feeding",
+        "man",
+        "nursing"
+      ],
+      "emoji": "👨‍🍼",
+      "skins": [
+        {
+          "hexcode": "1f468-1f3fb-200d-1f37c",
+          "emoji": "👨🏻‍🍼"
+        },
+        {
+          "hexcode": "1f468-1f3fc-200d-1f37c",
+          "emoji": "👨🏼‍🍼"
+        },
+        {
+          "hexcode": "1f468-1f3fd-200d-1f37c",
+          "emoji": "👨🏽‍🍼"
+        },
+        {
+          "hexcode": "1f468-1f3fe-200d-1f37c",
+          "emoji": "👨🏾‍🍼"
+        },
+        {
+          "hexcode": "1f468-1f3ff-200d-1f37c",
+          "emoji": "👨🏿‍🍼"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, BABY BOTTLE",
+      "hexcode": "1f9d1-200d-1f37c",
+      "category": "Smileys & People",
+      "keywords": [
+        "baby",
+        "feeding",
+        "nursing",
+        "person"
+      ],
+      "emoji": "🧑‍🍼",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f37c",
+          "emoji": "🧑🏻‍🍼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f37c",
+          "emoji": "🧑🏼‍🍼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f37c",
+          "emoji": "🧑🏽‍🍼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f37c",
+          "emoji": "🧑🏾‍🍼"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f37c",
+          "emoji": "🧑🏿‍🍼"
         }
       ]
     },
@@ -6666,6 +7623,37 @@
         {
           "hexcode": "1f936-1f3ff",
           "emoji": "🤶🏿"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, CHRISTMAS TREE",
+      "hexcode": "1f9d1-200d-1f384",
+      "category": "Smileys & People",
+      "keywords": [
+        "claus, christmas"
+      ],
+      "emoji": "🧑‍🎄",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f384",
+          "emoji": "🧑🏻‍🎄"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f384",
+          "emoji": "🧑🏼‍🎄"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f384",
+          "emoji": "🧑🏽‍🎄"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f384",
+          "emoji": "🧑🏾‍🎄"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f384",
+          "emoji": "🧑🏿‍🎄"
         }
       ]
     },
@@ -7497,6 +8485,38 @@
       ]
     },
     {
+      "name": "ADULT, PROBING CANE",
+      "hexcode": "1f9d1-200d-1f9af",
+      "category": "Smileys & People",
+      "keywords": [
+        "accessibility",
+        "blind"
+      ],
+      "emoji": "🧑‍🦯",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f9af",
+          "emoji": "🧑🏻‍🦯"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f9af",
+          "emoji": "🧑🏼‍🦯"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f9af",
+          "emoji": "🧑🏽‍🦯"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f9af",
+          "emoji": "🧑🏾‍🦯"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f9af",
+          "emoji": "🧑🏿‍🦯"
+        }
+      ]
+    },
+    {
       "name": "MAN, PROBING CANE",
       "hexcode": "1f468-200d-1f9af",
       "category": "Smileys & People",
@@ -7563,6 +8583,38 @@
       ]
     },
     {
+      "name": "ADULT, MOTORIZED WHEELCHAIR",
+      "hexcode": "1f9d1-200d-1f9bc",
+      "category": "Smileys & People",
+      "keywords": [
+        "accessibility",
+        "wheelchair"
+      ],
+      "emoji": "🧑‍🦼",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f9bc",
+          "emoji": "🧑🏻‍🦼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f9bc",
+          "emoji": "🧑🏼‍🦼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f9bc",
+          "emoji": "🧑🏽‍🦼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f9bc",
+          "emoji": "🧑🏾‍🦼"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f9bc",
+          "emoji": "🧑🏿‍🦼"
+        }
+      ]
+    },
+    {
       "name": "MAN, MOTORIZED WHEELCHAIR",
       "hexcode": "1f468-200d-1f9bc",
       "category": "Smileys & People",
@@ -7625,6 +8677,38 @@
         {
           "hexcode": "1f469-1f3ff-200d-1f9bc",
           "emoji": "👩🏿‍🦼"
+        }
+      ]
+    },
+    {
+      "name": "ADULT, MANUAL WHEELCHAIR",
+      "hexcode": "1f9d1-200d-1f9bd",
+      "category": "Smileys & People",
+      "keywords": [
+        "accessibility",
+        "wheelchair"
+      ],
+      "emoji": "🧑‍🦽",
+      "skins": [
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f9bd",
+          "emoji": "🧑🏻‍🦽"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f9bd",
+          "emoji": "🧑🏼‍🦽"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f9bd",
+          "emoji": "🧑🏽‍🦽"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f9bd",
+          "emoji": "🧑🏾‍🦽"
+        },
+        {
+          "hexcode": "1f9d1-1f3ff-200d-1f9bd",
+          "emoji": "🧑🏿‍🦽"
         }
       ]
     },
@@ -7832,7 +8916,7 @@
       "category": "Smileys & People",
       "keywords": [
         "business",
-        "man",
+        "person",
         "suit"
       ],
       "emoji": "🕴️",
@@ -9066,12 +10150,40 @@
           "emoji": "🧑🏻‍🤝‍🧑🏻"
         },
         {
+          "hexcode": "1f9d1-1f3fb-200d-1f91d-200d-1f9d1-1f3fc",
+          "emoji": "🧑🏻‍🤝‍🧑🏼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f91d-200d-1f9d1-1f3fd",
+          "emoji": "🧑🏻‍🤝‍🧑🏽"
+        },
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f91d-200d-1f9d1-1f3fe",
+          "emoji": "🧑🏻‍🤝‍🧑🏾"
+        },
+        {
+          "hexcode": "1f9d1-1f3fb-200d-1f91d-200d-1f9d1-1f3ff",
+          "emoji": "🧑🏻‍🤝‍🧑🏿"
+        },
+        {
           "hexcode": "1f9d1-1f3fc-200d-1f91d-200d-1f9d1-1f3fb",
           "emoji": "🧑🏼‍🤝‍🧑🏻"
         },
         {
           "hexcode": "1f9d1-1f3fc-200d-1f91d-200d-1f9d1-1f3fc",
           "emoji": "🧑🏼‍🤝‍🧑🏼"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f91d-200d-1f9d1-1f3fd",
+          "emoji": "🧑🏼‍🤝‍🧑🏽"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f91d-200d-1f9d1-1f3fe",
+          "emoji": "🧑🏼‍🤝‍🧑🏾"
+        },
+        {
+          "hexcode": "1f9d1-1f3fc-200d-1f91d-200d-1f9d1-1f3ff",
+          "emoji": "🧑🏼‍🤝‍🧑🏿"
         },
         {
           "hexcode": "1f9d1-1f3fd-200d-1f91d-200d-1f9d1-1f3fb",
@@ -9084,6 +10196,14 @@
         {
           "hexcode": "1f9d1-1f3fd-200d-1f91d-200d-1f9d1-1f3fd",
           "emoji": "🧑🏽‍🤝‍🧑🏽"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f91d-200d-1f9d1-1f3fe",
+          "emoji": "🧑🏽‍🤝‍🧑🏾"
+        },
+        {
+          "hexcode": "1f9d1-1f3fd-200d-1f91d-200d-1f9d1-1f3ff",
+          "emoji": "🧑🏽‍🤝‍🧑🏿"
         },
         {
           "hexcode": "1f9d1-1f3fe-200d-1f91d-200d-1f9d1-1f3fb",
@@ -9100,6 +10220,10 @@
         {
           "hexcode": "1f9d1-1f3fe-200d-1f91d-200d-1f9d1-1f3fe",
           "emoji": "🧑🏾‍🤝‍🧑🏾"
+        },
+        {
+          "hexcode": "1f9d1-1f3fe-200d-1f91d-200d-1f9d1-1f3ff",
+          "emoji": "🧑🏾‍🤝‍🧑🏿"
         },
         {
           "hexcode": "1f9d1-1f3ff-200d-1f91d-200d-1f9d1-1f3fb",
@@ -9156,8 +10280,36 @@
           "emoji": "👭🏿"
         },
         {
+          "hexcode": "1f469-1f3fb-200d-1f91d-200d-1f469-1f3fc",
+          "emoji": "👩🏻‍🤝‍👩🏼"
+        },
+        {
+          "hexcode": "1f469-1f3fb-200d-1f91d-200d-1f469-1f3fd",
+          "emoji": "👩🏻‍🤝‍👩🏽"
+        },
+        {
+          "hexcode": "1f469-1f3fb-200d-1f91d-200d-1f469-1f3fe",
+          "emoji": "👩🏻‍🤝‍👩🏾"
+        },
+        {
+          "hexcode": "1f469-1f3fb-200d-1f91d-200d-1f469-1f3ff",
+          "emoji": "👩🏻‍🤝‍👩🏿"
+        },
+        {
           "hexcode": "1f469-1f3fc-200d-1f91d-200d-1f469-1f3fb",
           "emoji": "👩🏼‍🤝‍👩🏻"
+        },
+        {
+          "hexcode": "1f469-1f3fc-200d-1f91d-200d-1f469-1f3fd",
+          "emoji": "👩🏼‍🤝‍👩🏽"
+        },
+        {
+          "hexcode": "1f469-1f3fc-200d-1f91d-200d-1f469-1f3fe",
+          "emoji": "👩🏼‍🤝‍👩🏾"
+        },
+        {
+          "hexcode": "1f469-1f3fc-200d-1f91d-200d-1f469-1f3ff",
+          "emoji": "👩🏼‍🤝‍👩🏿"
         },
         {
           "hexcode": "1f469-1f3fd-200d-1f91d-200d-1f469-1f3fb",
@@ -9166,6 +10318,14 @@
         {
           "hexcode": "1f469-1f3fd-200d-1f91d-200d-1f469-1f3fc",
           "emoji": "👩🏽‍🤝‍👩🏼"
+        },
+        {
+          "hexcode": "1f469-1f3fd-200d-1f91d-200d-1f469-1f3fe",
+          "emoji": "👩🏽‍🤝‍👩🏾"
+        },
+        {
+          "hexcode": "1f469-1f3fd-200d-1f91d-200d-1f469-1f3ff",
+          "emoji": "👩🏽‍🤝‍👩🏿"
         },
         {
           "hexcode": "1f469-1f3fe-200d-1f91d-200d-1f469-1f3fb",
@@ -9178,6 +10338,10 @@
         {
           "hexcode": "1f469-1f3fe-200d-1f91d-200d-1f469-1f3fd",
           "emoji": "👩🏾‍🤝‍👩🏽"
+        },
+        {
+          "hexcode": "1f469-1f3fe-200d-1f91d-200d-1f469-1f3ff",
+          "emoji": "👩🏾‍🤝‍👩🏿"
         },
         {
           "hexcode": "1f469-1f3ff-200d-1f91d-200d-1f469-1f3fb",
@@ -9349,8 +10513,36 @@
           "emoji": "👬🏿"
         },
         {
+          "hexcode": "1f468-1f3fb-200d-1f91d-200d-1f468-1f3fc",
+          "emoji": "👨🏻‍🤝‍👨🏼"
+        },
+        {
+          "hexcode": "1f468-1f3fb-200d-1f91d-200d-1f468-1f3fd",
+          "emoji": "👨🏻‍🤝‍👨🏽"
+        },
+        {
+          "hexcode": "1f468-1f3fb-200d-1f91d-200d-1f468-1f3fe",
+          "emoji": "👨🏻‍🤝‍👨🏾"
+        },
+        {
+          "hexcode": "1f468-1f3fb-200d-1f91d-200d-1f468-1f3ff",
+          "emoji": "👨🏻‍🤝‍👨🏿"
+        },
+        {
           "hexcode": "1f468-1f3fc-200d-1f91d-200d-1f468-1f3fb",
           "emoji": "👨🏼‍🤝‍👨🏻"
+        },
+        {
+          "hexcode": "1f468-1f3fc-200d-1f91d-200d-1f468-1f3fd",
+          "emoji": "👨🏼‍🤝‍👨🏽"
+        },
+        {
+          "hexcode": "1f468-1f3fc-200d-1f91d-200d-1f468-1f3fe",
+          "emoji": "👨🏼‍🤝‍👨🏾"
+        },
+        {
+          "hexcode": "1f468-1f3fc-200d-1f91d-200d-1f468-1f3ff",
+          "emoji": "👨🏼‍🤝‍👨🏿"
         },
         {
           "hexcode": "1f468-1f3fd-200d-1f91d-200d-1f468-1f3fb",
@@ -9359,6 +10551,14 @@
         {
           "hexcode": "1f468-1f3fd-200d-1f91d-200d-1f468-1f3fc",
           "emoji": "👨🏽‍🤝‍👨🏼"
+        },
+        {
+          "hexcode": "1f468-1f3fd-200d-1f91d-200d-1f468-1f3fe",
+          "emoji": "👨🏽‍🤝‍👨🏾"
+        },
+        {
+          "hexcode": "1f468-1f3fd-200d-1f91d-200d-1f468-1f3ff",
+          "emoji": "👨🏽‍🤝‍👨🏿"
         },
         {
           "hexcode": "1f468-1f3fe-200d-1f91d-200d-1f468-1f3fb",
@@ -9371,6 +10571,10 @@
         {
           "hexcode": "1f468-1f3fe-200d-1f91d-200d-1f468-1f3fd",
           "emoji": "👨🏾‍🤝‍👨🏽"
+        },
+        {
+          "hexcode": "1f468-1f3fe-200d-1f91d-200d-1f468-1f3ff",
+          "emoji": "👨🏾‍🤝‍👨🏿"
         },
         {
           "hexcode": "1f468-1f3ff-200d-1f91d-200d-1f468-1f3fb",
@@ -9919,6 +11123,21 @@
       ]
     },
     {
+      "name": "PEOPLE HUGGING",
+      "hexcode": "1fac2",
+      "category": "Smileys & People",
+      "keywords": [
+        "goodbye",
+        "hello",
+        "hug",
+        "thanks"
+      ],
+      "emoji": "🫂",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "FOOTPRINTS",
       "hexcode": "1f463",
       "category": "Smileys & People",
@@ -9931,6 +11150,103 @@
       "skins": [
 
       ]
+    }
+  ],
+  "2": [
+    {
+      "name": "EMOJI MODIFIER FITZPATRICK TYPE-1-2",
+      "hexcode": "1f3fb",
+      "category": 2,
+      "keywords": [
+        "skin tone",
+        "type 1–2"
+      ],
+      "emoji": "🏻"
+    },
+    {
+      "name": "EMOJI MODIFIER FITZPATRICK TYPE-3",
+      "hexcode": "1f3fc",
+      "category": 2,
+      "keywords": [
+        "skin tone",
+        "type 3"
+      ],
+      "emoji": "🏼"
+    },
+    {
+      "name": "EMOJI MODIFIER FITZPATRICK TYPE-4",
+      "hexcode": "1f3fd",
+      "category": 2,
+      "keywords": [
+        "skin tone",
+        "type 4"
+      ],
+      "emoji": "🏽"
+    },
+    {
+      "name": "EMOJI MODIFIER FITZPATRICK TYPE-5",
+      "hexcode": "1f3fe",
+      "category": 2,
+      "keywords": [
+        "skin tone",
+        "type 5"
+      ],
+      "emoji": "🏾"
+    },
+    {
+      "name": "EMOJI MODIFIER FITZPATRICK TYPE-6",
+      "hexcode": "1f3ff",
+      "category": 2,
+      "keywords": [
+        "skin tone",
+        "type 6"
+      ],
+      "emoji": "🏿"
+    },
+    {
+      "name": "EMOJI COMPONENT RED HAIR",
+      "hexcode": "1f9b0",
+      "category": 2,
+      "keywords": [
+        "ginger",
+        "redhead"
+      ],
+      "emoji": "🦰"
+    },
+    {
+      "name": "EMOJI COMPONENT CURLY HAIR",
+      "hexcode": "1f9b1",
+      "category": 2,
+      "keywords": [
+        "afro",
+        "curly",
+        "ringlets"
+      ],
+      "emoji": "🦱"
+    },
+    {
+      "name": "EMOJI COMPONENT WHITE HAIR",
+      "hexcode": "1f9b3",
+      "category": 2,
+      "keywords": [
+        "gray",
+        "hair",
+        "old",
+        "white"
+      ],
+      "emoji": "🦳"
+    },
+    {
+      "name": "EMOJI COMPONENT BALD",
+      "hexcode": "1f9b2",
+      "category": 2,
+      "keywords": [
+        "chemotherapy",
+        "hairless",
+        "no hair",
+        "shaven"
+      ],
+      "emoji": "🦲"
     }
   ],
   "Animals & Nature": [
@@ -10114,6 +11430,20 @@
       ]
     },
     {
+      "name": "CAT, BLACK LARGE SQUARE",
+      "hexcode": "1f408-200d-2b1b",
+      "category": "Animals & Nature",
+      "keywords": [
+        "black",
+        "cat",
+        "unlucky"
+      ],
+      "emoji": "🐈‍⬛",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "LION FACE",
       "hexcode": "1f981",
       "category": "Animals & Nature",
@@ -10223,6 +11553,20 @@
         "deer"
       ],
       "emoji": "🦌",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "BISON",
+      "hexcode": "1f9ac",
+      "category": "Animals & Nature",
+      "keywords": [
+        "buffalo",
+        "herd",
+        "wisent"
+      ],
+      "emoji": "🦬",
       "skins": [
 
       ]
@@ -10438,6 +11782,21 @@
       ]
     },
     {
+      "name": "MAMMOTH",
+      "hexcode": "1f9a3",
+      "category": "Animals & Nature",
+      "keywords": [
+        "extinction",
+        "large",
+        "tusk",
+        "woolly"
+      ],
+      "emoji": "🦣",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "RHINOCEROS",
       "hexcode": "1f98f",
       "category": "Animals & Nature",
@@ -10552,6 +11911,18 @@
       ]
     },
     {
+      "name": "BEAVER",
+      "hexcode": "1f9ab",
+      "category": "Animals & Nature",
+      "keywords": [
+        "dam"
+      ],
+      "emoji": "🦫",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "HEDGEHOG",
       "hexcode": "1f994",
       "category": "Animals & Nature",
@@ -10583,6 +11954,20 @@
         "face"
       ],
       "emoji": "🐻",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "BEAR FACE, SNOWFLAKE",
+      "hexcode": "1f43b-200d-2744-fe0f",
+      "category": "Animals & Nature",
+      "keywords": [
+        "arctic",
+        "bear",
+        "white"
+      ],
+      "emoji": "🐻‍❄️",
       "skins": [
 
       ]
@@ -10860,6 +12245,35 @@
       ]
     },
     {
+      "name": "DODO",
+      "hexcode": "1f9a4",
+      "category": "Animals & Nature",
+      "keywords": [
+        "extinction",
+        "large",
+        "mauritius"
+      ],
+      "emoji": "🦤",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "FEATHER",
+      "hexcode": "1fab6",
+      "category": "Animals & Nature",
+      "keywords": [
+        "bird",
+        "flight",
+        "light",
+        "plumage"
+      ],
+      "emoji": "🪶",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "FLAMINGO",
       "hexcode": "1f9a9",
       "category": "Animals & Nature",
@@ -11057,6 +12471,18 @@
       ]
     },
     {
+      "name": "SEAL",
+      "hexcode": "1f9ad",
+      "category": "Animals & Nature",
+      "keywords": [
+        "sea lion"
+      ],
+      "emoji": "🦭",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "FISH",
       "hexcode": "1f41f",
       "category": "Animals & Nature",
@@ -11194,6 +12620,19 @@
       ]
     },
     {
+      "name": "BEETLE",
+      "hexcode": "1fab2",
+      "category": "Animals & Nature",
+      "keywords": [
+        "bug",
+        "insect"
+      ],
+      "emoji": "🪲",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "LADY BEETLE",
       "hexcode": "1f41e",
       "category": "Animals & Nature",
@@ -11216,6 +12655,20 @@
         "grasshopper"
       ],
       "emoji": "🦗",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "COCKROACH",
+      "hexcode": "1fab3",
+      "category": "Animals & Nature",
+      "keywords": [
+        "insect",
+        "pest",
+        "roach"
+      ],
+      "emoji": "🪳",
       "skins": [
 
       ]
@@ -11265,11 +12718,40 @@
       "keywords": [
         "disease",
         "fever",
-        "insect",
         "malaria",
+        "pest",
         "virus"
       ],
       "emoji": "🦟",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "FLY",
+      "hexcode": "1fab0",
+      "category": "Animals & Nature",
+      "keywords": [
+        "disease",
+        "maggot",
+        "pest",
+        "rotting"
+      ],
+      "emoji": "🪰",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "WORM",
+      "hexcode": "1fab1",
+      "category": "Animals & Nature",
+      "keywords": [
+        "annelid",
+        "earthworm",
+        "parasite"
+      ],
+      "emoji": "🪱",
       "skins": [
 
       ]
@@ -11420,6 +12902,23 @@
         "young"
       ],
       "emoji": "🌱",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "POTTED PLANT",
+      "hexcode": "1fab4",
+      "category": "Animals & Nature",
+      "keywords": [
+        "boring",
+        "grow",
+        "house",
+        "nurturing",
+        "plant",
+        "useless"
+      ],
+      "emoji": "🪴",
       "skins": [
 
       ]
@@ -11754,6 +13253,21 @@
       ]
     },
     {
+      "name": "BLUEBERRIES",
+      "hexcode": "1fad0",
+      "category": "Food & Drink",
+      "keywords": [
+        "berry",
+        "bilberry",
+        "blue",
+        "blueberry"
+      ],
+      "emoji": "🫐",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "KIWIFRUIT",
       "hexcode": "1f95d",
       "category": "Food & Drink",
@@ -11776,6 +13290,18 @@
         "vegetable"
       ],
       "emoji": "🍅",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "OLIVE",
+      "hexcode": "1fad2",
+      "category": "Food & Drink",
+      "keywords": [
+        "food"
+      ],
+      "emoji": "🫒",
       "skins": [
 
       ]
@@ -11869,6 +13395,20 @@
         "pepper"
       ],
       "emoji": "🌶️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "BELL PEPPER",
+      "hexcode": "1fad1",
+      "category": "Food & Drink",
+      "keywords": [
+        "capsicum",
+        "pepper",
+        "vegetable"
+      ],
+      "emoji": "🫑",
       "skins": [
 
       ]
@@ -11995,9 +13535,10 @@
       "category": "Food & Drink",
       "keywords": [
         "bread",
-        "crescent roll",
+        "breakfast",
         "food",
-        "french"
+        "french",
+        "roll"
       ],
       "emoji": "🥐",
       "skins": [
@@ -12020,6 +13561,21 @@
       ]
     },
     {
+      "name": "FLATBREAD",
+      "hexcode": "1fad3",
+      "category": "Food & Drink",
+      "keywords": [
+        "arepa",
+        "lavash",
+        "naan",
+        "pita"
+      ],
+      "emoji": "🫓",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "PRETZEL",
       "hexcode": "1f968",
       "category": "Food & Drink",
@@ -12037,6 +13593,7 @@
       "category": "Food & Drink",
       "keywords": [
         "bakery",
+        "breakfast",
         "schmear"
       ],
       "emoji": "🥯",
@@ -12049,6 +13606,7 @@
       "hexcode": "1f95e",
       "category": "Food & Drink",
       "keywords": [
+        "breakfast",
         "crêpe",
         "food",
         "hotcake",
@@ -12064,6 +13622,7 @@
       "hexcode": "1f9c7",
       "category": "Food & Drink",
       "keywords": [
+        "breakfast",
         "indecisive",
         "iron"
       ],
@@ -12133,6 +13692,7 @@
       "hexcode": "1f953",
       "category": "Food & Drink",
       "keywords": [
+        "breakfast",
         "food",
         "meat"
       ],
@@ -12231,6 +13791,19 @@
       ]
     },
     {
+      "name": "TAMALE",
+      "hexcode": "1fad4",
+      "category": "Food & Drink",
+      "keywords": [
+        "mexican",
+        "wrapped"
+      ],
+      "emoji": "🫔",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "STUFFED FLATBREAD",
       "hexcode": "1f959",
       "category": "Food & Drink",
@@ -12265,6 +13838,7 @@
       "hexcode": "1f95a",
       "category": "Food & Drink",
       "keywords": [
+        "breakfast",
         "food"
       ],
       "emoji": "🥚",
@@ -12277,6 +13851,7 @@
       "hexcode": "1f373",
       "category": "Food & Drink",
       "keywords": [
+        "breakfast",
         "egg",
         "frying",
         "pan"
@@ -12311,6 +13886,22 @@
         "stew"
       ],
       "emoji": "🍲",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "FONDUE",
+      "hexcode": "1fad5",
+      "category": "Food & Drink",
+      "keywords": [
+        "cheese",
+        "chocolate",
+        "melted",
+        "pot",
+        "swiss"
+      ],
+      "emoji": "🫕",
       "skins": [
 
       ]
@@ -12745,6 +14336,7 @@
       "hexcode": "1f369",
       "category": "Food & Drink",
       "keywords": [
+        "breakfast",
         "dessert",
         "donut",
         "sweet"
@@ -12944,6 +14536,20 @@
       ]
     },
     {
+      "name": "TEAPOT",
+      "hexcode": "1fad6",
+      "category": "Food & Drink",
+      "keywords": [
+        "drink",
+        "pot",
+        "tea"
+      ],
+      "emoji": "🫖",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "TEACUP WITHOUT HANDLE",
       "hexcode": "1f375",
       "category": "Food & Drink",
@@ -13112,11 +14718,30 @@
       ]
     },
     {
+      "name": "BUBBLE TEA",
+      "hexcode": "1f9cb",
+      "category": "Food & Drink",
+      "keywords": [
+        "bubble",
+        "milk",
+        "pearl",
+        "tea"
+      ],
+      "emoji": "🧋",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "BEVERAGE BOX",
       "hexcode": "1f9c3",
       "category": "Food & Drink",
       "keywords": [
-        "juice box"
+        "beverage",
+        "box",
+        "juice",
+        "straw",
+        "sweet"
       ],
       "emoji": "🧃",
       "skins": [
@@ -13504,6 +15129,49 @@
         "wall"
       ],
       "emoji": "🧱",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "ROCK",
+      "hexcode": "1faa8",
+      "category": "Travel & Places",
+      "keywords": [
+        "boulder",
+        "heavy",
+        "solid",
+        "stone"
+      ],
+      "emoji": "🪨",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "WOOD",
+      "hexcode": "1fab5",
+      "category": "Travel & Places",
+      "keywords": [
+        "log",
+        "lumber",
+        "timber"
+      ],
+      "emoji": "🪵",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "HUT",
+      "hexcode": "1f6d6",
+      "category": "Travel & Places",
+      "keywords": [
+        "house",
+        "roundhouse",
+        "yurt"
+      ],
+      "emoji": "🛖",
       "skins": [
 
       ]
@@ -14395,6 +16063,20 @@
       ]
     },
     {
+      "name": "PICKUP TRUCK",
+      "hexcode": "1f6fb",
+      "category": "Travel & Places",
+      "keywords": [
+        "pick-up",
+        "pickup",
+        "truck"
+      ],
+      "emoji": "🛻",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "DELIVERY TRUCK",
       "hexcode": "1f69a",
       "category": "Travel & Places",
@@ -14540,6 +16222,19 @@
         "board"
       ],
       "emoji": "🛹",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "ROLLER SKATE",
+      "hexcode": "1f6fc",
+      "category": "Travel & Places",
+      "keywords": [
+        "roller",
+        "skate"
+      ],
+      "emoji": "🛼",
       "skins": [
 
       ]
@@ -16936,6 +18631,20 @@
       ]
     },
     {
+      "name": "MAGIC WAND",
+      "hexcode": "1fa84",
+      "category": "Activities",
+      "keywords": [
+        "magic",
+        "witch",
+        "wizard"
+      ],
+      "emoji": "🪄",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "NAZAR AMULET",
       "hexcode": "1f9ff",
       "category": "Activities",
@@ -17031,6 +18740,33 @@
         "toy"
       ],
       "emoji": "🧸",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "PINATA",
+      "hexcode": "1fa85",
+      "category": "Activities",
+      "keywords": [
+        "celebration",
+        "party"
+      ],
+      "emoji": "🪅",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "NESTING DOLLS",
+      "hexcode": "1fa86",
+      "category": "Activities",
+      "keywords": [
+        "doll",
+        "nesting",
+        "russia"
+      ],
+      "emoji": "🪆",
       "skins": [
 
       ]
@@ -17208,6 +18944,23 @@
       ]
     },
     {
+      "name": "SEWING NEEDLE",
+      "hexcode": "1faa1",
+      "category": "Activities",
+      "keywords": [
+        "embroidery",
+        "needle",
+        "sewing",
+        "stitches",
+        "sutures",
+        "tailoring"
+      ],
+      "emoji": "🪡",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "BALL OF YARN",
       "hexcode": "1f9f6",
       "category": "Activities",
@@ -17217,6 +18970,22 @@
         "knit"
       ],
       "emoji": "🧶",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "KNOT",
+      "hexcode": "1faa2",
+      "category": "Activities",
+      "keywords": [
+        "rope",
+        "tangled",
+        "tie",
+        "twine",
+        "twist"
+      ],
+      "emoji": "🪢",
       "skins": [
 
       ]
@@ -17559,6 +19328,22 @@
       ]
     },
     {
+      "name": "THONG SANDAL",
+      "hexcode": "1fa74",
+      "category": "Objects",
+      "keywords": [
+        "beach sandals",
+        "sandals",
+        "thong sandals",
+        "thongs",
+        "zōri"
+      ],
+      "emoji": "🩴",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "MANS SHOE",
       "hexcode": "1f45e",
       "category": "Objects",
@@ -17741,6 +19526,22 @@
         "baseball cap"
       ],
       "emoji": "🧢",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "MILITARY HELMET",
+      "hexcode": "1fa96",
+      "category": "Objects",
+      "keywords": [
+        "army",
+        "helmet",
+        "military",
+        "soldier",
+        "warrior"
+      ],
+      "emoji": "🪖",
       "skins": [
 
       ]
@@ -18069,6 +19870,20 @@
       ]
     },
     {
+      "name": "ACCORDION",
+      "hexcode": "1fa97",
+      "category": "Objects",
+      "keywords": [
+        "accordian",
+        "concertina",
+        "squeeze box"
+      ],
+      "emoji": "🪗",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "GUITAR",
       "hexcode": "1f3b8",
       "category": "Objects",
@@ -18144,6 +19959,21 @@
         "music"
       ],
       "emoji": "🥁",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "LONG DRUM",
+      "hexcode": "1fa98",
+      "category": "Objects",
+      "keywords": [
+        "beat",
+        "conga",
+        "drum",
+        "rhythm"
+      ],
+      "emoji": "🪘",
       "skins": [
 
       ]
@@ -18865,6 +20695,22 @@
       ]
     },
     {
+      "name": "COIN",
+      "hexcode": "1fa99",
+      "category": "Objects",
+      "keywords": [
+        "gold",
+        "metal",
+        "money",
+        "silver",
+        "treasure"
+      ],
+      "emoji": "🪙",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "BANKNOTE WITH YEN SIGN",
       "hexcode": "1f4b4",
       "category": "Objects",
@@ -18989,35 +20835,6 @@
         "yen"
       ],
       "emoji": "💹",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "CURRENCY EXCHANGE",
-      "hexcode": "1f4b1",
-      "category": "Objects",
-      "keywords": [
-        "bank",
-        "currency",
-        "exchange",
-        "money"
-      ],
-      "emoji": "💱",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "HEAVY DOLLAR SIGN",
-      "hexcode": "1f4b2",
-      "category": "Objects",
-      "keywords": [
-        "currency",
-        "dollar",
-        "money"
-      ],
-      "emoji": "💲",
       "skins": [
 
       ]
@@ -19807,6 +21624,20 @@
       ]
     },
     {
+      "name": "BOOMERANG",
+      "hexcode": "1fa83",
+      "category": "Objects",
+      "keywords": [
+        "australia",
+        "rebound",
+        "repercussion"
+      ],
+      "emoji": "🪃",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "BOW AND ARROW",
       "hexcode": "1f3f9",
       "category": "Objects",
@@ -19835,6 +21666,21 @@
       ]
     },
     {
+      "name": "CARPENTRY SAW",
+      "hexcode": "1fa9a",
+      "category": "Objects",
+      "keywords": [
+        "carpenter",
+        "lumber",
+        "saw",
+        "tool"
+      ],
+      "emoji": "🪚",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "WRENCH",
       "hexcode": "1f527",
       "category": "Objects",
@@ -19843,6 +21689,19 @@
         "tool"
       ],
       "emoji": "🔧",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "SCREWDRIVER",
+      "hexcode": "1fa9b",
+      "category": "Objects",
+      "keywords": [
+        "screw",
+        "tool"
+      ],
+      "emoji": "🪛",
       "skins": [
 
       ]
@@ -19943,6 +21802,22 @@
       ]
     },
     {
+      "name": "HOOK",
+      "hexcode": "1fa9d",
+      "category": "Objects",
+      "keywords": [
+        "catch",
+        "crook",
+        "curve",
+        "ensnare",
+        "selling point"
+      ],
+      "emoji": "🪝",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "TOOLBOX",
       "hexcode": "1f9f0",
       "category": "Objects",
@@ -19966,6 +21841,20 @@
         "magnetic"
       ],
       "emoji": "🧲",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "LADDER",
+      "hexcode": "1fa9c",
+      "category": "Objects",
+      "keywords": [
+        "climb",
+        "rung",
+        "step"
+      ],
+      "emoji": "🪜",
       "skins": [
 
       ]
@@ -20155,6 +22044,50 @@
       ]
     },
     {
+      "name": "ELEVATOR",
+      "hexcode": "1f6d7",
+      "category": "Objects",
+      "keywords": [
+        "accessibility",
+        "hoist",
+        "lift"
+      ],
+      "emoji": "🛗",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "MIRROR",
+      "hexcode": "1fa9e",
+      "category": "Objects",
+      "keywords": [
+        "reflection",
+        "reflector",
+        "speculum"
+      ],
+      "emoji": "🪞",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "WINDOW",
+      "hexcode": "1fa9f",
+      "category": "Objects",
+      "keywords": [
+        "frame",
+        "fresh air",
+        "opening",
+        "transparent",
+        "view"
+      ],
+      "emoji": "🪟",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "BED",
       "hexcode": "1f6cf",
       "category": "Objects",
@@ -20207,6 +22140,21 @@
       ]
     },
     {
+      "name": "PLUNGER",
+      "hexcode": "1faa0",
+      "category": "Objects",
+      "keywords": [
+        "force cup",
+        "plumber",
+        "suction",
+        "toilet"
+      ],
+      "emoji": "🪠",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "SHOWER",
       "hexcode": "1f6bf",
       "category": "Objects",
@@ -20226,6 +22174,21 @@
         "bath"
       ],
       "emoji": "🛁",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "MOUSE TRAP",
+      "hexcode": "1faa4",
+      "category": "Objects",
+      "keywords": [
+        "bait",
+        "mousetrap",
+        "snare",
+        "trap"
+      ],
+      "emoji": "🪤",
       "skins": [
 
       ]
@@ -20313,6 +22276,20 @@
       ]
     },
     {
+      "name": "BUCKET",
+      "hexcode": "1faa3",
+      "category": "Objects",
+      "keywords": [
+        "cask",
+        "pail",
+        "vat"
+      ],
+      "emoji": "🪣",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "BAR OF SOAP",
       "hexcode": "1f9fc",
       "category": "Objects",
@@ -20324,6 +22301,23 @@
         "soapdish"
       ],
       "emoji": "🧼",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "TOOTHBRUSH",
+      "hexcode": "1faa5",
+      "category": "Objects",
+      "keywords": [
+        "bathroom",
+        "brush",
+        "clean",
+        "dental",
+        "hygiene",
+        "teeth"
+      ],
+      "emoji": "🪥",
       "skins": [
 
       ]
@@ -20395,6 +22389,21 @@
       ]
     },
     {
+      "name": "HEADSTONE",
+      "hexcode": "1faa6",
+      "category": "Objects",
+      "keywords": [
+        "cemetery",
+        "grave",
+        "graveyard",
+        "tombstone"
+      ],
+      "emoji": "🪦",
+      "skins": [
+
+      ]
+    },
+    {
       "name": "FUNERAL URN",
       "hexcode": "26b1",
       "category": "Objects",
@@ -20419,6 +22428,21 @@
         "statue"
       ],
       "emoji": "🗿",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "PLACARD",
+      "hexcode": "1faa7",
+      "category": "Objects",
+      "keywords": [
+        "demonstration",
+        "picket",
+        "protest",
+        "sign"
+      ],
+      "emoji": "🪧",
       "skins": [
 
       ]
@@ -21818,15 +23842,73 @@
       ]
     },
     {
-      "name": "STAFF OF AESCULAPIUS",
-      "hexcode": "2695",
+      "name": "MALE WITH STROKE AND MALE AND FEMALE SIGN",
+      "hexcode": "26a7",
       "category": "Symbols",
       "keywords": [
-        "aesculapius",
-        "medicine",
-        "staff"
+        "transgender"
       ],
-      "emoji": "⚕️",
+      "emoji": "⚧️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "HEAVY MULTIPLICATION X",
+      "hexcode": "2716",
+      "category": "Symbols",
+      "keywords": [
+        "cancel",
+        "multiplication",
+        "sign",
+        "x",
+        "×"
+      ],
+      "emoji": "✖️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "HEAVY PLUS SIGN",
+      "hexcode": "2795",
+      "category": "Symbols",
+      "keywords": [
+        "+",
+        "math",
+        "sign"
+      ],
+      "emoji": "➕",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "HEAVY MINUS SIGN",
+      "hexcode": "2796",
+      "category": "Symbols",
+      "keywords": [
+        "-",
+        "math",
+        "sign",
+        "−"
+      ],
+      "emoji": "➖",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "HEAVY DIVISION SIGN",
+      "hexcode": "2797",
+      "category": "Symbols",
+      "keywords": [
+        "division",
+        "math",
+        "sign",
+        "÷"
+      ],
+      "emoji": "➗",
       "skins": [
 
       ]
@@ -21841,6 +23923,160 @@
         "universal"
       ],
       "emoji": "♾️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "DOUBLE EXCLAMATION MARK",
+      "hexcode": "203c",
+      "category": "Symbols",
+      "keywords": [
+        "!",
+        "!!",
+        "bangbang",
+        "exclamation",
+        "mark"
+      ],
+      "emoji": "‼️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "EXCLAMATION QUESTION MARK",
+      "hexcode": "2049",
+      "category": "Symbols",
+      "keywords": [
+        "!",
+        "!?",
+        "?",
+        "exclamation",
+        "interrobang",
+        "mark",
+        "punctuation",
+        "question"
+      ],
+      "emoji": "⁉️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "BLACK QUESTION MARK ORNAMENT",
+      "hexcode": "2753",
+      "category": "Symbols",
+      "keywords": [
+        "?",
+        "mark",
+        "punctuation",
+        "question"
+      ],
+      "emoji": "❓️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "WHITE QUESTION MARK ORNAMENT",
+      "hexcode": "2754",
+      "category": "Symbols",
+      "keywords": [
+        "?",
+        "mark",
+        "outlined",
+        "punctuation",
+        "question"
+      ],
+      "emoji": "❔",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "WHITE EXCLAMATION MARK ORNAMENT",
+      "hexcode": "2755",
+      "category": "Symbols",
+      "keywords": [
+        "!",
+        "exclamation",
+        "mark",
+        "outlined",
+        "punctuation"
+      ],
+      "emoji": "❕",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "HEAVY EXCLAMATION MARK SYMBOL",
+      "hexcode": "2757",
+      "category": "Symbols",
+      "keywords": [
+        "!",
+        "exclamation",
+        "mark",
+        "punctuation"
+      ],
+      "emoji": "❗️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "WAVY DASH",
+      "hexcode": "3030",
+      "category": "Symbols",
+      "keywords": [
+        "dash",
+        "punctuation",
+        "wavy"
+      ],
+      "emoji": "〰️",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "CURRENCY EXCHANGE",
+      "hexcode": "1f4b1",
+      "category": "Symbols",
+      "keywords": [
+        "bank",
+        "currency",
+        "exchange",
+        "money"
+      ],
+      "emoji": "💱",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "HEAVY DOLLAR SIGN",
+      "hexcode": "1f4b2",
+      "category": "Symbols",
+      "keywords": [
+        "currency",
+        "dollar",
+        "money"
+      ],
+      "emoji": "💲",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "STAFF OF AESCULAPIUS",
+      "hexcode": "2695",
+      "category": "Symbols",
+      "keywords": [
+        "aesculapius",
+        "medicine",
+        "staff"
+      ],
+      "emoji": "⚕️",
       "skins": [
 
       ]
@@ -21973,23 +24209,6 @@
       ]
     },
     {
-      "name": "HEAVY MULTIPLICATION X",
-      "hexcode": "2716",
-      "category": "Symbols",
-      "keywords": [
-        "cancel",
-        "multiplication",
-        "multiply",
-        "sign",
-        "x",
-        "×"
-      ],
-      "emoji": "✖️",
-      "skins": [
-
-      ]
-    },
-    {
       "name": "CROSS MARK",
       "hexcode": "274c",
       "category": "Symbols",
@@ -22018,52 +24237,6 @@
         "×"
       ],
       "emoji": "❎",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "HEAVY PLUS SIGN",
-      "hexcode": "2795",
-      "category": "Symbols",
-      "keywords": [
-        "+",
-        "math",
-        "plus",
-        "sign"
-      ],
-      "emoji": "➕",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "HEAVY MINUS SIGN",
-      "hexcode": "2796",
-      "category": "Symbols",
-      "keywords": [
-        "-",
-        "math",
-        "minus",
-        "sign",
-        "−"
-      ],
-      "emoji": "➖",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "HEAVY DIVISION SIGN",
-      "hexcode": "2797",
-      "category": "Symbols",
-      "keywords": [
-        "division",
-        "math",
-        "sign",
-        "÷"
-      ],
-      "emoji": "➗",
       "skins": [
 
       ]
@@ -22142,117 +24315,6 @@
         "*"
       ],
       "emoji": "❇️",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "DOUBLE EXCLAMATION MARK",
-      "hexcode": "203c",
-      "category": "Symbols",
-      "keywords": [
-        "!",
-        "!!",
-        "bangbang",
-        "exclamation",
-        "mark"
-      ],
-      "emoji": "‼️",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "EXCLAMATION QUESTION MARK",
-      "hexcode": "2049",
-      "category": "Symbols",
-      "keywords": [
-        "!",
-        "!?",
-        "?",
-        "exclamation",
-        "interrobang",
-        "mark",
-        "punctuation",
-        "question"
-      ],
-      "emoji": "⁉️",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "BLACK QUESTION MARK ORNAMENT",
-      "hexcode": "2753",
-      "category": "Symbols",
-      "keywords": [
-        "?",
-        "mark",
-        "punctuation",
-        "question"
-      ],
-      "emoji": "❓️",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "WHITE QUESTION MARK ORNAMENT",
-      "hexcode": "2754",
-      "category": "Symbols",
-      "keywords": [
-        "?",
-        "mark",
-        "outlined",
-        "punctuation",
-        "question"
-      ],
-      "emoji": "❔",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "WHITE EXCLAMATION MARK ORNAMENT",
-      "hexcode": "2755",
-      "category": "Symbols",
-      "keywords": [
-        "!",
-        "exclamation",
-        "mark",
-        "outlined",
-        "punctuation"
-      ],
-      "emoji": "❕",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "HEAVY EXCLAMATION MARK SYMBOL",
-      "hexcode": "2757",
-      "category": "Symbols",
-      "keywords": [
-        "!",
-        "exclamation",
-        "mark",
-        "punctuation"
-      ],
-      "emoji": "❗️",
-      "skins": [
-
-      ]
-    },
-    {
-      "name": "WAVY DASH",
-      "hexcode": "3030",
-      "category": "Symbols",
-      "keywords": [
-        "dash",
-        "punctuation",
-        "wavy"
-      ],
-      "emoji": "〰️",
       "skins": [
 
       ]
@@ -23554,9 +25616,26 @@
       "hexcode": "1f3f3-fe0f-200d-1f308",
       "category": "Flags",
       "keywords": [
+        "pride",
         "rainbow"
       ],
       "emoji": "🏳️‍🌈",
+      "skins": [
+
+      ]
+    },
+    {
+      "name": "WAVING WHITE FLAG, MALE WITH STROKE AND MALE AND FEMALE SIGN",
+      "hexcode": "1f3f3-fe0f-200d-26a7-fe0f",
+      "category": "Flags",
+      "keywords": [
+        "flag",
+        "light blue",
+        "pink",
+        "transgender",
+        "white"
+      ],
+      "emoji": "🏳️‍⚧️",
       "skins": [
 
       ]
@@ -25514,7 +27593,7 @@
       ]
     },
     {
-      "name": "FLAG: MACEDONIA",
+      "name": "FLAG: NORTH MACEDONIA",
       "hexcode": "1f1f2-1f1f0",
       "category": "Flags",
       "keywords": [
