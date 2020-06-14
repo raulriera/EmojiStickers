@@ -209,15 +209,20 @@ final class BuildEmojiViewController: UIViewController {
 		emojiView.frame = emojiView.convert(selectionRect, to: canvas)
 		emojiView.frame.origin = emojiView.frame.origin.insetBy(dx: 0, dy: view.frame.origin.y)
 		canvas.addSubview(emojiView)
-
-		UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: {
+				
+		CATransaction.begin()
+		CATransaction.setCompletionBlock {
 			emojiView.center = self.canvas.convert(self.canvas.center, to: self.canvas.superview)
-			}, completion: { _ in
-
-				UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
-						emojiView.bounds.size = emojiView.defaultSize
-				}, completion: nil)
-		})
+			emojiView.layer.removeAnimation(forKey: "translation")
+			
+			UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .beginFromCurrentState, animations: {
+					emojiView.bounds.size = emojiView.defaultSize
+			}, completion: nil)
+		}
+		
+		let flyAnimation = CAKeyframeAnimation.fly(from: emojiView.frame.origin, to: canvas.center)
+		emojiView.layer.add(flyAnimation, forKey: "translation")
+		CATransaction.commit()
 
 		createPanGestureRecognizer(targetView: emojiView)
 

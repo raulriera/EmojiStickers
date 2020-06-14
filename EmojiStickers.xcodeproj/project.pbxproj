@@ -3648,6 +3648,7 @@
 		4C95BF7C1D170E8C00A0D90B /* EmojiHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF7B1D170E8C00A0D90B /* EmojiHistory.swift */; };
 		4C95BF7F1D17241600A0D90B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF7E1D17241600A0D90B /* UIImage+Extensions.swift */; };
 		4C95BF841D174A4000A0D90B /* CreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C95BF831D174A4000A0D90B /* CreateCell.swift */; };
+		4CA91ED22495F6DD001E0AB4 /* CGRect+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA91ED12495F6DD001E0AB4 /* CGRect+Geometry.swift */; };
 		4CB285041D47F8A4002FC2CC /* EditCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB285031D47F8A4002FC2CC /* EditCollectionReusableView.swift */; };
 		4CB85B5F1D2724F500F3227A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB85B5E1D2724F500F3227A /* ImageCache.swift */; };
 		4CB85B611D272C8100F3227A /* UnsavedEmojiSticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB85B601D272C8100F3227A /* UnsavedEmojiSticker.swift */; };
@@ -7330,6 +7331,7 @@
 		4C95BF7B1D170E8C00A0D90B /* EmojiHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiHistory.swift; sourceTree = "<group>"; };
 		4C95BF7E1D17241600A0D90B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		4C95BF831D174A4000A0D90B /* CreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCell.swift; sourceTree = "<group>"; };
+		4CA91ED12495F6DD001E0AB4 /* CGRect+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Geometry.swift"; sourceTree = "<group>"; };
 		4CB285031D47F8A4002FC2CC /* EditCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCollectionReusableView.swift; sourceTree = "<group>"; };
 		4CB85B5E1D2724F500F3227A /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		4CB85B601D272C8100F3227A /* UnsavedEmojiSticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsavedEmojiSticker.swift; sourceTree = "<group>"; };
@@ -7367,6 +7369,7 @@
 			isa = PBXGroup;
 			children = (
 				4C5524D41D45372F00B3BF99 /* CGPoint+Geometry.swift */,
+				4CA91ED12495F6DD001E0AB4 /* CGRect+Geometry.swift */,
 				4C95BF7E1D17241600A0D90B /* UIImage+Extensions.swift */,
 				4CCB4DD31D3C31E0001EF33E /* UIViewController+Extensions.swift */,
 				4C240AB01D4A174D003927A2 /* CAKeyframeAnimation+Extensions.swift */,
@@ -14908,6 +14911,7 @@
 				4C3EF19C1D71D3A60083F7D9 /* EmojiCategoryOffsetCache.swift in Sources */,
 				4CCB4DD41D3C31E0001EF33E /* UIViewController+Extensions.swift in Sources */,
 				4CB85B5F1D2724F500F3227A /* ImageCache.swift in Sources */,
+				4CA91ED22495F6DD001E0AB4 /* CGRect+Geometry.swift in Sources */,
 				4CC9E5F61D40392B00668D26 /* SkinToneCache.swift in Sources */,
 				4C886DAF21264664007D3038 /* EmojiDictionary.swift in Sources */,
 				4C51F2721D3EC720006A3C15 /* SkinToneViewController.swift in Sources */,
