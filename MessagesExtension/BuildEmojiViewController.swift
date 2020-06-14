@@ -209,7 +209,8 @@ final class BuildEmojiViewController: UIViewController {
 		emojiView.frame = emojiView.convert(selectionRect, to: canvas)
 		emojiView.frame.origin = emojiView.frame.origin.insetBy(dx: 0, dy: view.frame.origin.y)
 		canvas.addSubview(emojiView)
-				
+		
+		// Create a transaction so we can listen for completion in a block instead of delegate
 		CATransaction.begin()
 		CATransaction.setCompletionBlock {
 			emojiView.center = self.canvas.convert(self.canvas.center, to: self.canvas.superview)
@@ -220,12 +221,11 @@ final class BuildEmojiViewController: UIViewController {
 			}, completion: nil)
 		}
 		
-		let flyAnimation = CAKeyframeAnimation.fly(from: emojiView.frame.origin, to: canvas.center)
-		emojiView.layer.add(flyAnimation, forKey: "translation")
+		let animation: CAKeyframeAnimation = .moveAlongCurve(from: emojiView.center, to: canvas.center)
+		emojiView.layer.add(animation, forKey: "translation")
 		CATransaction.commit()
 
 		createPanGestureRecognizer(targetView: emojiView)
-
 		canvas.select(view: emojiView)
 
 		// Remove any existing child controllers.

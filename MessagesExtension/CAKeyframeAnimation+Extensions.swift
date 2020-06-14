@@ -9,14 +9,14 @@
 import UIKit
 
 extension CAKeyframeAnimation {
-	static func fly(from origin: CGPoint, to destination: CGPoint) -> CAKeyframeAnimation {
+	static func moveAlongCurve(from origin: CGPoint, to destination: CGPoint) -> CAKeyframeAnimation {
 		let rectBetweenPoints = CGRect(startPoint: origin, endPoint: destination)
 		let controlPoint = CGPoint(x: rectBetweenPoints.midX, y: rectBetweenPoints.minY)
 		let path = UIBezierPath()
 		path.move(to: origin)
 		path.addQuadCurve(to: destination, controlPoint: controlPoint)
 		
-		let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
+		let animation = CAKeyframeAnimation(keyPath: "position")
 		animation.duration = 0.25
 		animation.isRemovedOnCompletion = false
 		animation.fillMode = .forwards
