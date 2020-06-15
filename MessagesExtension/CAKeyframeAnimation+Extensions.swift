@@ -11,7 +11,8 @@ import UIKit
 extension CAKeyframeAnimation {
 	static func moveAlongCurve(from origin: CGPoint, to destination: CGPoint) -> CAKeyframeAnimation {
 		let rectBetweenPoints = CGRect(startPoint: origin, endPoint: destination)
-		let controlPoint = CGPoint(x: rectBetweenPoints.midX, y: rectBetweenPoints.minY)
+		let randomYControl = [rectBetweenPoints.maxY, rectBetweenPoints.minY].randomElement() ?? rectBetweenPoints.minY
+		let controlPoint = CGPoint(x: rectBetweenPoints.midX, y: randomYControl)
 		let path = UIBezierPath()
 		path.move(to: origin)
 		path.addQuadCurve(to: destination, controlPoint: controlPoint)
