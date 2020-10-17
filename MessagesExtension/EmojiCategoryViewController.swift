@@ -119,28 +119,18 @@ final class EmojiCategoryViewController: UICollectionViewController, UICollectio
 		}
 	}
 	
-	// These following 3 methods take care of long pressing the cells and display
+	// The following methods take care of long pressing the cells and display
 	// an option controller, we will override this and present out skin tone selector
 	
-	override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+	override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
 		if let cell = collectionView.cellForItem(at: indexPath) as? EmojiCharacterCell, let emoji = cell.emoji, emoji.canHaveSkinToneModifier {
 			performSegue(withIdentifier: "Show Skin Tones", sender: cell)
 		}
 		
-		// We alwas return true in this method because we don't want the user to select the emoji
-		// if they are "trying out" to see which one brings up the skin tone chooser
-		return true
+		// Return an empty configuration to indicate that no action can take place
+		return UIContextMenuConfiguration()
 	}
-	
-	override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-		// Don't do anything here, see collectionView:shouldShowMenuForItemAt instead
-		return false
-	}
-	
-	override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-		// Don't do anything here, see collectionView:shouldShowMenuForItemAt instead
-	}
-	
+			
 	// MARK: UICollectionViewDataSource
 	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
