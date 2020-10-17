@@ -15088,7 +15088,7 @@
 				DEVELOPMENT_TEAM = R64MTWS872;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 13.0.1;
+				MARKETING_VERSION = 13.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -15104,7 +15104,7 @@
 				DEVELOPMENT_TEAM = R64MTWS872;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 13.0.1;
+				MARKETING_VERSION = 13.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -15122,7 +15122,7 @@
 				DEVELOPMENT_TEAM = R64MTWS872;
 				GCC_WARN_PEDANTIC = YES;
 				INFOPLIST_FILE = EmojiStickers/Info.plist;
-				MARKETING_VERSION = 13.0.1;
+				MARKETING_VERSION = 13.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -15139,7 +15139,7 @@
 				DEVELOPMENT_TEAM = R64MTWS872;
 				GCC_WARN_PEDANTIC = YES;
 				INFOPLIST_FILE = EmojiStickers/Info.plist;
-				MARKETING_VERSION = 13.0.1;
+				MARKETING_VERSION = 13.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.EmojiStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
