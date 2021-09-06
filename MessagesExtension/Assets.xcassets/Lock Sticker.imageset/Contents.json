@@ -3,16 +3,6 @@
     {
       "filename" : "Lock Sticker.pdf",
       "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "Lock Sticker Dark.pdf",
-      "idiom" : "universal"
     }
   ],
   "info" : {

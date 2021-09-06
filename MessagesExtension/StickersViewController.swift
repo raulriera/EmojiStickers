@@ -11,7 +11,7 @@ import UIKit
 /**
 A delegate protocl for the `StickersViewController` class.
 */
-protocol StickersViewControllerDelegate: class {
+protocol StickersViewControllerDelegate: AnyObject {
 	/// Called when an user choses to create a new `Sticker` in the `StickersViewController`.
 	func stickersViewControllerDidSelectCreate(_ controller: StickersViewController)
 }
