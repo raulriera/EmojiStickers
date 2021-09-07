@@ -19,4 +19,4 @@ Don't want to compile it yourself? Download from the [AppStore](https://apps.app
 
 ## Credits
 
-Assets by [Twemoji](https://twemoji.twitter.com)
+Assets by [Openmoji](https://openmoji.org/)

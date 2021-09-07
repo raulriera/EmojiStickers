@@ -96,7 +96,7 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		view.addSubview(wrapperView)
 		
 		let divider = UIView()
-		divider.backgroundColor = .tertiarySystemGroupedBackground
+        divider.backgroundColor = UIColor.separator
 		divider.translatesAutoresizingMaskIntoConstraints = false
 		
 		view.addSubview(divider)
@@ -104,16 +104,16 @@ final class EmojiCategoriesViewController: UIPageViewController {
 		NSLayoutConstraint.activate([
 			categoryPickerView.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor),
 			categoryPickerView.trailingAnchor.constraint(equalTo: wrapperView.trailingAnchor),
-			categoryPickerView.topAnchor.constraint(equalTo: wrapperView.topAnchor),
-			categoryPickerView.heightAnchor.constraint(equalToConstant: 34),
+			categoryPickerView.topAnchor.constraint(equalTo: wrapperView.topAnchor, constant: 8),
+			categoryPickerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 34),
 
 			wrapperView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			wrapperView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-			wrapperView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -34),
+			wrapperView.topAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -44), // 34 height + 8 margin of the categoryPickerView... yeah
 			wrapperView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 			
 			divider.heightAnchor.constraint(equalToConstant: 0.5),
-			divider.topAnchor.constraint(equalTo: categoryPickerView.topAnchor),
+			divider.topAnchor.constraint(equalTo: view.topAnchor),
 			divider.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			divider.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 		])

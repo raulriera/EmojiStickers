@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -51,7 +52,7 @@
                                                 </accessibility>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="320" id="7ko-AT-peC"/>
                                             <constraint firstAttribute="bottom" secondItem="uTW-2p-5ww" secondAttribute="bottom" id="RYa-u7-4su"/>
@@ -61,8 +62,8 @@
                                             <constraint firstAttribute="width" secondItem="rvj-nD-dUg" secondAttribute="height" multiplier="1:1.15" id="mXF-tR-uKk"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-7e-wzA">
-                                        <rect key="frame" x="71.5" y="404" width="194" height="54"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-7e-wzA">
+                                        <rect key="frame" x="59.5" y="404" width="218" height="54"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-uS-ipf" userLabel="Pick Emoji">
                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
@@ -74,7 +75,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w4X-JR-p9M" userLabel="Toggle Lock">
-                                                <rect key="frame" x="70" y="0.0" width="54" height="54"/>
+                                                <rect key="frame" x="82" y="0.0" width="54" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration" label="Add Emoji"/>
                                                 <color key="tintColor" name="Accent"/>
@@ -84,7 +85,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-1V-P3n" userLabel="Save">
-                                                <rect key="frame" x="140" y="0.0" width="54" height="54"/>
+                                                <rect key="frame" x="164" y="0.0" width="54" height="54"/>
                                                 <accessibility key="accessibilityConfiguration" label="Save as sticker"/>
                                                 <color key="tintColor" name="Accent"/>
                                                 <state key="normal" image="Save Sticker"/>
@@ -101,7 +102,7 @@
                                 <variation key="widthClass=regular" axis="horizontal"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="V5K-q7-6dQ" firstAttribute="centerY" secondItem="ihJ-Mh-2Ve" secondAttribute="centerY" id="2le-bp-kTh"/>
                             <constraint firstItem="V5K-q7-6dQ" firstAttribute="centerX" secondItem="ihJ-Mh-2Ve" secondAttribute="centerX" id="hHO-3D-xsd"/>
@@ -175,7 +176,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" id="Gxu-J7-4ty">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Qld-8m-0Ve">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -210,7 +211,7 @@
                             <rect key="frame" x="0.0" y="70" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Twemoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxu-Gi-A9V">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Openmoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxu-Gi-A9V">
                                     <rect key="frame" x="8" y="16.5" width="359" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,7 +244,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ix2-BT-frC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <inset key="scrollIndicatorInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OSI-Br-eRW" customClass="CenteredFlowLayout" customModule="MessagesExtension" customModuleProvider="target">
                             <size key="itemSize" width="34" height="34"/>
@@ -301,42 +302,42 @@
                                 <rect key="frame" x="16" y="0.0" width="343" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7o-yq-mrS">
-                                        <rect key="frame" x="0.0" y="28" width="52" height="44"/>
+                                        <rect key="frame" x="0.0" y="14" width="52" height="72"/>
                                         <state key="normal" image="Skin-Tone-1"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Ef8-BX-Rrb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shL-4W-oGk">
-                                        <rect key="frame" x="58" y="28" width="52.5" height="44"/>
+                                        <rect key="frame" x="58" y="14" width="52.5" height="72"/>
                                         <state key="normal" image="Skin-Tone-2"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Sup-BR-J2a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kA-Je-4Ht">
-                                        <rect key="frame" x="116.5" y="28" width="52" height="44"/>
+                                        <rect key="frame" x="116.5" y="14" width="52" height="72"/>
                                         <state key="normal" image="Skin-Tone-3"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="34d-LK-VZJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-jI-SFn">
-                                        <rect key="frame" x="174.5" y="28" width="52" height="44"/>
+                                        <rect key="frame" x="174.5" y="14" width="52" height="72"/>
                                         <state key="normal" image="Skin-Tone-4"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="pjF-0a-PVx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZk-aC-YCe">
-                                        <rect key="frame" x="232.5" y="28" width="52.5" height="44"/>
+                                        <rect key="frame" x="232.5" y="14" width="52.5" height="72"/>
                                         <state key="normal" image="Skin-Tone-5"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="Ysx-ey-55f"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw4-19-3Pg">
-                                        <rect key="frame" x="291" y="28" width="52" height="44"/>
+                                        <rect key="frame" x="291" y="14" width="52" height="72"/>
                                         <state key="normal" image="Skin-Tone-6"/>
                                         <connections>
                                             <action selector="didTapSkinButtonWithSender:" destination="B24-Wd-FZZ" eventType="touchUpInside" id="ngC-ha-XRk"/>
@@ -345,7 +346,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8hy-hv-hLk" firstAttribute="top" secondItem="xII-BS-xnW" secondAttribute="bottom" id="DrT-4U-kiZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8hy-hv-hLk" secondAttribute="trailing" id="M4k-gE-Hna"/>
@@ -375,7 +376,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="SS6-EY-F8d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UK3-ut-Aov">
                             <size key="itemSize" width="80" height="80"/>
                             <size key="headerReferenceSize" width="50" height="44"/>
@@ -420,7 +421,7 @@
                                         </view>
                                         <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-NR-ByN">
                                             <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
-                                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" systemColor="systemGrayColor"/>
                                             <state key="normal" image="Delete Sticker"/>
                                             <connections>
                                                 <action selector="deleteTapped:" destination="4m6-cT-qN7" eventType="touchUpInside" id="OlI-ll-oBv"/>
@@ -446,7 +447,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="1000" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-wL-vvS">
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="1000" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-wL-vvS">
                                     <rect key="frame" x="319" y="8" width="48" height="28"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <color key="tintColor" name="Accent"/>
@@ -457,9 +458,9 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="EMOJI STICKERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-eO-LTY">
-                                    <rect key="frame" x="20" y="13" width="291" height="18"/>
+                                    <rect key="frame" x="20" y="15" width="291" height="14.5"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -494,15 +495,27 @@
         <image name="Create Sticker" width="54" height="54"/>
         <image name="Delete Sticker" width="34" height="34"/>
         <image name="Save Sticker" width="54" height="54"/>
-        <image name="Skin-Tone-1" width="44" height="44"/>
-        <image name="Skin-Tone-2" width="44" height="44"/>
-        <image name="Skin-Tone-3" width="44" height="44"/>
-        <image name="Skin-Tone-4" width="44" height="44"/>
-        <image name="Skin-Tone-5" width="44" height="44"/>
-        <image name="Skin-Tone-6" width="44" height="44"/>
+        <image name="Skin-Tone-1" width="72" height="72"/>
+        <image name="Skin-Tone-2" width="72" height="72"/>
+        <image name="Skin-Tone-3" width="72" height="72"/>
+        <image name="Skin-Tone-4" width="72" height="72"/>
+        <image name="Skin-Tone-5" width="72" height="72"/>
+        <image name="Skin-Tone-6" width="72" height="72"/>
         <image name="Unlock Sticker" width="54" height="54"/>
         <namedColor name="Accent">
             <color red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

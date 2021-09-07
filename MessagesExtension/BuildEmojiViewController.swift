@@ -11,7 +11,7 @@ import UIKit
 /**
 A delegate protocol for the `BuildEmojiViewController` class.
 */
-protocol BuildEmojiViewControllerDelegate: class {
+protocol BuildEmojiViewControllerDelegate: AnyObject {
 	/// Called when the user taps to finished the `Emoji` in the `BuildEmojiViewController`.
 	func buildEmojiViewController(_ controller: BuildEmojiViewController, didFinish emoji: EmojiSticker)
 }
@@ -55,6 +55,7 @@ final class BuildEmojiViewController: UIViewController {
 			canvas.superview?.layer.borderWidth = 0.5
 			canvas.superview?.layer.borderColor = UIColor.systemGray3.cgColor
 			canvas.superview?.layer.cornerRadius = 12.0
+            canvas.superview?.layer.cornerCurve = .continuous
 
 			let singleTap = createTapGestureRecognizer(targetView: canvas)
 			let doubleTap = createDoubleTapGestureRecognizer(targetView: canvas)

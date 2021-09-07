@@ -30,6 +30,7 @@ public struct EmojiDictionary {
 		case objects = "Objects"
 		case symbols = "Symbols"
 		case flags = "Flags"
+        case extras = "Extras"
 		case custom = "Custom"
 	}
 	
@@ -48,7 +49,8 @@ public struct EmojiDictionary {
 			Category(key: .travelAndPlaces, value: contentsOfFile[Keys.travelAndPlaces.rawValue]!),
 			Category(key: .objects, value: contentsOfFile[Keys.objects.rawValue]!),
 			Category(key: .symbols, value: contentsOfFile[Keys.symbols.rawValue]!),
-			Category(key: .flags, value: contentsOfFile[Keys.flags.rawValue]!)
+			Category(key: .flags, value: contentsOfFile[Keys.flags.rawValue]!),
+            Category(key: .extras, value: contentsOfFile[Keys.extras.rawValue]!)
 		]
 	}
 	
@@ -72,19 +74,7 @@ public struct EmojiDictionary {
 	// Add any crazy emojis we want to support that are only visible when
 	// using the search interface
 	private func customCategory() -> Category {
-		let emojis = [
-			Emoji(name: "",
-				  hexcode: "1f346-1f351",
-				  keywords: ["caio"],
-				  emoji: "",
-				  skins: []),
-			Emoji(name: "Flag of Quebec",
-				  hexcode: "1f1e8-1f1e6-1f1eb-1f1f7",
-				  keywords: ["quebec, marjolaine"],
-				  emoji: "",
-				  skins: [])
-		]
-		
+        let emojis: [Emoji] = []
 		return EmojiDictionary.Category(key: .custom, value: emojis)
 	}
 }
