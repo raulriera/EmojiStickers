@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol EmojiCategoryPickerViewControllerDelegate: class {
+protocol EmojiCategoryPickerViewControllerDelegate: AnyObject {
 	/// Called when the user selects an emoji in the `EmojiCategoryPickerViewController`.
 	func emojiCategoryPickerViewController(_ controller: EmojiCategoryPickerViewController, didChangePageTo page: Int)
 }

@@ -11,7 +11,7 @@ import UIKit
 /**
 A delegate protocol for the `BuildEmojiViewController` class.
 */
-protocol BuildEmojiViewControllerDelegate: class {
+protocol BuildEmojiViewControllerDelegate: AnyObject {
 	/// Called when the user taps to finished the `Emoji` in the `BuildEmojiViewController`.
 	func buildEmojiViewController(_ controller: BuildEmojiViewController, didFinish emoji: EmojiSticker)
 }

@@ -11,7 +11,7 @@ import UIKit
 /**
 A delegate protocol for the `EmojiCategoryViewController` class.
 */
-protocol EmojiCategoryViewControllerDelegate: class {
+protocol EmojiCategoryViewControllerDelegate: AnyObject {
 	/// Called when the user selects an emoji in the `EmojiCategoryViewController`.
 	func emojiCategoryViewController(_ controller: EmojiCategoryViewController, didSelect emoji: Emoji, at rect: CGRect)
 }
